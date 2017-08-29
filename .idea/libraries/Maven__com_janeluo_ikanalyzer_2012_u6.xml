@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.janeluo:ikanalyzer:2012_u6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/janeluo/ikanalyzer/2012_u6/ikanalyzer-2012_u6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/janeluo/ikanalyzer/2012_u6/ikanalyzer-2012_u6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/janeluo/ikanalyzer/2012_u6/ikanalyzer-2012_u6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
