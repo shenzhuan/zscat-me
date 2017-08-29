@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zscat.shop.mapper.ConsultMapper" >
+  <resultMap id="BaseResultMap" type="com.zscat.shop.model.Consult" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="goods_id" property="goodsId" jdbcType="BIGINT" />
+    <result column="cgoods_name" property="cgoodsName" jdbcType="VARCHAR" />
+    <result column="member_id" property="memberId" jdbcType="BIGINT" />
+    <result column="cmember_name" property="cmemberName" jdbcType="VARCHAR" />
+    <result column="store_id" property="storeId" jdbcType="BIGINT" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="consult_content" property="consultContent" jdbcType="VARCHAR" />
+    <result column="consult_addtime" property="consultAddtime" jdbcType="BIGINT" />
+    <result column="consult_reply" property="consultReply" jdbcType="VARCHAR" />
+    <result column="consult_reply_time" property="consultReplyTime" jdbcType="BIGINT" />
+    <result column="isanonymous" property="isanonymous" jdbcType="BIT" />
+    <result column="is_del" property="isDel" jdbcType="BIT" />
+    <result column="create_time" property="createTime" jdbcType="BIGINT" />
+    <result column="update_time" property="updateTime" jdbcType="BIGINT" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,116 @@
+package ${controller.packageName};
+import java.util.Map;
+import java.util.List;
+import java.util.ArrayList;
+import com.stylefeng.guns.modular.ConvertUtils;
+import com.stylefeng.guns.common.exception.BizExceptionEnum;
+import org.springframework.web.bind.annotation.RequestParam;
+import com.alibaba.dubbo.config.annotation.Reference;
+<% for(import in controller.imports!){ %>
+import ${import};
+<% } %>
+
+/**
+ * ${context.bizChName}控制器
+ *
+ * @author fengshuonan
+ * @Date ${tool.currentTime()}
+ */
+@Controller
+@RequestMapping("/${context.bizEnName}")
+public class ${context.bizEnBigName}Controller extends BaseController {
+
+   @Reference(version = "1.0.0")
+    private ${context.bizEnBigName}Service ${context.bizEnName}Service;
+    
+    private String PREFIX = "/${context.moduleName}/${context.bizEnName}/";
+
+    /**
+     * 跳转到${context.bizChName}首页
+     */
+    @RequestMapping("")
+    public String index() {
+        return PREFIX + "${context.bizEnName}.html";
+    }
+
+    /**
+     * 跳转到添加${context.bizChName}
+     */
+    @RequestMapping("/${context.bizEnName}_add")
+    public String ${context.bizEnName}Add() {
+        return PREFIX + "${context.bizEnName}_add.html";
+    }
+
+    /**
+     * 跳转到修改${context.bizChName}
+     */
+    @RequestMapping("/${context.bizEnName}_edit/{id}")
+    public String ${context.bizEnName}Update(@PathVariable Long id, Model model) {
+     ${context.bizEnBigName} record = ${context.bizEnName}Service.selectByPrimaryKey(id);
+            model.addAttribute("record",record);
+        return PREFIX + "${context.bizEnName}_edit.html";
+    }
+
+    /**
+     * 获取${context.bizChName}列表
+     */
+    @RequestMapping(value = "/list")
+    @ResponseBody
+    public Object list(String condition) {
+        try {
+                    List<${context.bizEnBigName}> list =this.${context.bizEnName}Service.select(new ${context.bizEnBigName}());
+                    List<Map<String,Object>> mapList = new ArrayList<Map<String,Object>>();
+                    for(int i=0, n=list.size(); i<n; i++){
+                        Object bean = list.get(i);
+                        Map  map = ConvertUtils.convertBean2Map(bean);
+                        mapList.add(map);
+                    }
+                    return super.warpObject(new NullWarpper(mapList));
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return null;
+    }
+
+    /**
+     * 新增${context.bizChName}
+     */
+    @RequestMapping(value = "/add")
+    @ResponseBody
+    public Object add(${context.bizEnBigName} record) {
+     return this.${context.bizEnName}Service.insertSelective(record);
+    }
+
+    /**
+     * 删除${context.bizChName}
+     */
+    @RequestMapping(value = "/delete")
+    @ResponseBody
+    public Object delete(@RequestParam Long id) {
+         ${context.bizEnName}Service.deleteByPrimaryKey(id);
+         return SUCCESS_TIP;
+    }
+
+
+    /**
+     * 修改${context.bizChName}
+     */
+    @RequestMapping(value = "/edit")
+    @ResponseBody
+    public Object update(${context.bizEnBigName} record) {
+       if (ToolUtil.isEmpty(record)) {
+                   throw new BussinessException(BizExceptionEnum.REQUEST_NULL);
+          }
+          ${context.bizEnName}Service.updateByPrimaryKeySelective(record);
+         return super.SUCCESS_TIP;
+    }
+
+    /**
+     * ${context.bizChName}详情
+     */
+    @RequestMapping(value = "/detail/{id}")
+    @ResponseBody
+    public Object detail(@PathVariable("id") Long id) {
+         return ${context.bizEnName}Service.selectByPrimaryKey(id);
+    }
+}

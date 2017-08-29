@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>发表问题 编辑问题 公用</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zsCat,layui,前端社区">
+  <meta name="description" content="zsCat社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+  <link rel="stylesheet" href="${ctxPath!}/static/blog/shequ/layui/css/layui.css">
+  <link rel="stylesheet" href="${ctxPath!}/static/blog/shequ/css/global.css">
+</head>
+<body>
+
+@layout("/blog/community/layout/SheQuHeader.html"){}
+
+<div class="main layui-clear">
+  <h2 class="page-title">发表问题</h2>
+  
+  <!-- <div class="zsCat-none">并无权限</div> -->
+
+  <div class="layui-form layui-form-pane">
+    <form action="${ctxPath}/person/saves" method="post">
+      <div class="layui-form-item">
+        <label for="L_title" class="layui-form-label">标题</label>
+        <div class="layui-input-block">
+          <input type="text" id="L_title" name="title" required lay-verify="required" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item layui-form-text">
+        <div class="layui-input-block">
+          <textarea id="L_content" name="content" required lay-verify="required" placeholder="请输入内容" class="layui-textarea zsCat-editor" style="height: 260px;"></textarea>
+        </div>
+        <label for="L_content" class="layui-form-label" style="top: -2px;">描述</label>
+      </div>
+      <div class="layui-form-item">
+        <div class="layui-inline">
+          <label class="layui-form-label">所在类别</label>
+          <div class="layui-input-block">
+            <select lay-verify="required" name="typeid">
+             @for(item in typeList!){
+              <option value="${item.id!}" >${item.typename!}</option> 
+             @} 
+              
+            </select>
+          </div>
+        </div>
+        <div class="layui-inline">
+          <label class="layui-form-label">悬赏飞吻</label>
+          <div class="layui-input-block">
+            <select name="experience">
+              <option value="5" selected>5</option>
+              <option value="20">20</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label for="L_vercode" class="layui-form-label">人类验证</label>
+        <div class="layui-input-inline">
+          <input type="text" id="L_vercode" name="vercode" required lay-verify="required" placeholder="请回答后面的问题" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid">
+          <span style="color: #c00;">3711111</span>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <button class="layui-btn" lay-filter="*" type="submit">立即发布</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<div class="footer">
+  <p><a href="http://zsCat.layui.com/">zsCat社区</a> 2016 &copy; <a href="http://www.layui.com/">layui.com</a></p>
+  <p>
+    <a href="http://zsCat.layui.com/auth/get" target="_blank">产品授权</a>
+    <a href="http://zsCat.layui.com/jie/3147.html" target="_blank">VIP说明</a>
+    <a href="http://www.layui.com/" target="_blank">商务合作</a>
+    <a href="http://weibo.com/SentsinXu" target="_blank" rel="nofollow">微博</a>
+    <a href="http://zsCat.layui.com/jie/2461.html" target="_blank">微信公众号</a>
+  </p>
+</div>
+<script src="${ctxPath!}/static/blog/shequ/layui/layui.js"></script>
+<script>
+layui.cache.page = 'jie';
+layui.cache.user = {
+  username: '游客'
+  ,uid: -1
+  ,avatar: '${ctxPath!}/static/blog/shequ/images/avatar/00.jpg'
+  ,experience: 83
+  ,sex: '男'
+};
+layui.config({
+  version: "1.0.0"
+  ,base: '${ctxPath!}/static/blog/shequ/mods/'
+}).extend({
+	  zsCat: 'index'
+	}).use('zsCat');
+</script>
+
+</body>
+</html>

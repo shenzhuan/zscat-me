@@ -1,0 +1,27 @@
+<div class="footer">
+  <p><a href="http://zsCat.layui.com/">zsCat社区</a> 2016 &copy; <a href="http://www.layui.com/">layui.com</a></p>
+  <p>
+    <a href="http://zsCat.layui.com/auth/get" target="_blank">产品授权</a>
+    <a href="http://zsCat.layui.com/jie/3147.html" target="_blank">VIP说明</a>
+    <a href="http://www.layui.com/" target="_blank">商务合作</a>
+    <a href="http://weibo.com/SentsinXu" target="_blank" rel="nofollow">微博</a>
+    <a href="http://zsCat.layui.com/jie/2461.html" target="_blank">微信公众号</a>
+  </p>
+</div>
+<script src="${ctxPath!}/static/blog/shequ/layui/layui.js"></script>
+<script>
+layui.cache.page = '';
+layui.cache.user = {
+  username: '游客'
+  ,uid: -1
+  ,avatar: '${ctxPath!}/static/blog/shequ/images/avatar/00.jpg'
+  ,experience: 123
+  ,sex: '男'
+};
+layui.config({
+  version: "1.0.0"
+  ,base: '${ctxPath!}/static/blog/shequ/mods/'
+}).extend({
+  zsCat: 'index'
+}).use('zsCat');
+</script>

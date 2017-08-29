@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>执子之手，与子偕老</title>
+<link href="${ctxPath}/static/blog/nvshengblog/css/styles.css"
+	rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="${ctxPath}/static/blog/nvshengblog/js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+	<header>
+		<nav id="nav">
+			<ul>
+				<li><a href="#">网站首页</a></li>
+				<li><a href="#" target="_blank">模板</a></li>
+				<li><a href="#" target="_blank">关于我们</a></li>
+				<li><a href="#" target="_blank">我们的故事</a></li>
+				<li><a href="#" target="_blank">我们的蜜月</a></li>
+				<li><a href="#" target="_blank">婚礼现场</a></li>
+				<li><a href="#" target="_blank">婚纱摄影</a></li>
+				<li><a href="#" target="_blank">我们的博客</a></li>
+				<li><a href="#" target="_blank">联系我们</a></li>
+			</ul>
+			<script src="${ctxPath}/static/blog/nvshengblog/js/silder.js"></script>
+			<!--获取当前页导航 高亮显示标题-->
+		</nav>
+	</header>
+	<div class="mainContent">
+		<aside>
+			<div class="avatar">
+				<a href="#"><span>青轻飞扬</span></a>
+			</div>
+			<section class="topspaceinfo">
+				<h1>执子之手，与子偕老</h1>
+				<p>于千万人之中，我遇见了我所遇见的人....</p>
+			</section>
+			<div class="userinfo">
+				<p class="q-fans">
+					粉丝：<a href="/" target="_blank">167</a>
+				</p>
+				<p class="btns">
+					<a href="/" target="_blank">私信</a><a href="/" target="_blank">相册</a><a
+						href="/" target="_blank">存档</a>
+				</p>
+			</div>
+			<section class="newpic">
+				<h2>最新照片</h2>
+				<ul>
+					<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/01.jpg"></a></li>
+					<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/02.jpg"></a></li>
+					<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/03.jpg"></a></li>
+					<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/04.jpg"></a></li>
+					<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/05.jpg"></a></li>
+					<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/06.jpg"></a></li>
+					<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/07.jpg"></a></li>
+					<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/08.jpg"></a></li>
+				</ul>
+			</section>
+			<section class="taglist">
+				<h2>全部标签</h2>
+				<ul>
+					<li><a href="/">青空</a></li>
+					<li><a href="/">情感聊吧</a></li>
+					<li><a href="/">study</a></li>
+					<li><a href="/">青青唠叨</a></li>
+				</ul>
+			</section>
+		</aside>
+		<div class="blogitem">
+		@for(item in blogList){
+			<article>
+				<h2 class="title">
+					<a href="/">${item.title!}</a>
+				</h2>
+				<ul class="text">
+					<p>${item.summary!}</p>
+					
+				</ul>
+				<div class="textfoot">
+					<a href="/">阅读全文</a><a href="/">评论</a><a href="/">转载</a>
+				</div>
+			</article>
+		@}
+			<div class="pages">
+				<span>1</span><a href="/" hidefocus="">2</a><a href="/" hidefocus="">3</a><a
+					href="/" class="next">下一页&gt;&gt;</a>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="footavatar">
+			<img src="images/photo.jpg" class="footphoto">
+			<ul class="footinfo">
+				<p class="fname">
+					<a href="/dancesmile">青轻飞扬</a>
+				</p>
+				<p class="finfo">性别：女 年龄：25岁</p>
+				<p>现居：四川成都</p>
+			</ul>
+		</div>
+		<section class="visitor">
+			<h2>最近访客</h2>
+			<ul>
+				<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/s0.jpg"></a></li>
+				<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/s1.jpg"></a></li>
+				<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/s2.jpg"></a></li>
+				<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/s3.jpg"></a></li>
+				<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/s5.jpg"></a></li>
+				<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/s6.jpg"></a></li>
+				<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/s7.jpg"></a></li>
+				<li><a href="/"><img src="${ctxPath}/static/blog/nvshengblog/images/s8.jpg"></a></li>
+			</ul>
+		</section>
+		<div class="Copyright">
+			<ul>
+				<a href="/">帮助中心</a>
+				<a href="/">空间客服</a>
+				<a href="/">投诉中心</a>
+				<a href="/">空间协议</a>
+			</ul>
+			<p>Design by DanceSmile</p>
+		</div>
+	</footer>
+	<div style="text-align: center;">
+		<p>
+			来源：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+		</p>
+	</div>
+</body>
+</html>

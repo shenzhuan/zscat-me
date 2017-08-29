@@ -1,0 +1,14 @@
+package ${dao.packageName};
+<% for(import in dao.imports!){ %>
+import ${import};
+<% } %>
+/**
+ * ${context.bizChName}Dao
+ *
+ * @author fengshuonan
+ * @Date ${tool.currentTime()}
+ */
+public interface ${context.bizEnBigName}Dao extends BaseMapper<${context.bizEnBigName}>{
+
+
+}

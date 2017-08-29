@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zscat.shop.mapper.OrderLogMapper" >
+  <resultMap id="BaseResultMap" type="com.zscat.shop.model.OrderLog" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="order_id" property="orderId" jdbcType="BIGINT" />
+    <result column="order_state" property="orderState" jdbcType="VARCHAR" />
+    <result column="change_state" property="changeState" jdbcType="VARCHAR" />
+    <result column="state_info" property="stateInfo" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="BIGINT" />
+    <result column="operator" property="operator" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

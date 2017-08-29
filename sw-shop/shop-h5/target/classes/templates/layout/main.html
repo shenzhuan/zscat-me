@@ -1,0 +1,45 @@
+<div class="main-container" id="main-container">
+	<script type="text/javascript">
+		try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+	</script>
+	
+
+	@layout("/layout/sidebar.html",{menuList:menuList!}){}
+
+	<div class="main-content">
+		<div class="breadcrumbs" id="breadcrumbs">
+			<script type="text/javascript">
+				try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+			</script>
+
+			<ul class="tab" id="breadcrumb">
+				 <!-- <li class="active" >
+				菜单配置<i class="fa fa-times close"></i>
+				</li>  -->
+			</ul><!-- /.breadcrumb -->
+			<div id="tab-menu">
+				<ul class="dropdown-menu dropdown-caret" style="min-width: 0px;">
+					<li><a href="javascript:void(0);" data-right-menu="all_close">全部关闭</a></li>
+					<li><a href="javascript:void(0);" data-right-menu="other_close">关闭其他</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="page-content">
+			@layout("aceSetting.html"){}
+			<div class="page-header">
+				<!-- <h1>Welcome</h1> -->
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					${layoutContent!}
+				</div>
+			</div>
+		</div><!-- /.page-content -->
+		
+	</div><!-- /.main-content -->
+
+	<a href="javascript:void(0);" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse"  style="z-index:1111">
+		<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+	</a>
+</div><!-- /.main-container -->

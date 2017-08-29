@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zscat.cms.mapper.CmsArticleMapper" >
+  <resultMap id="BaseResultMap" type="com.zscat.cms.model.CmsArticle" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="color" property="color" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="DATE" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="hits" property="hits" jdbcType="INTEGER" />
+    <result column="htmlid" property="htmlid" jdbcType="VARCHAR" />
+    <result column="image" property="image" jdbcType="VARCHAR" />
+    <result column="isWord" property="isword" jdbcType="INTEGER" />
+    <result column="keywords" property="keywords" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="weight" property="weight" jdbcType="INTEGER" />
+    <result column="CATEGORY_ID" property="categoryId" jdbcType="BIGINT" />
+    <result column="delFlag" property="delflag" jdbcType="INTEGER" />
+    <result column="updateDate" property="updatedate" jdbcType="DATE" />
+    <result column="createby_id" property="createbyId" jdbcType="BIGINT" />
+    <result column="updateby_id" property="updatebyId" jdbcType="BIGINT" />
+    <result column="moreimage" property="moreimage" jdbcType="VARCHAR" />
+    <result column="CATEGORYNAME" property="categoryname" jdbcType="VARCHAR" />
+    <result column="siteid" property="siteid" jdbcType="BIGINT" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+</mapper>

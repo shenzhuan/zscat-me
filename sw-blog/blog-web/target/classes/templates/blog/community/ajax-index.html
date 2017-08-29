@@ -1,0 +1,17 @@
+@for(item in artList!){
+					<li class="zsCat-list-li"><a href="user/home.html"
+						class="zsCat-list-avatar"> <img
+							src="${imgServer!}/${item.img!}" alt="">
+					</a>
+						<h2 class="zsCat-tip">
+							<a href="${ctxPath}/front/blog/shequDetail/${item.id!}">${item.title!}</a> <span
+								class="zsCat-tip-stick">置顶</span> <span class="zsCat-tip-jing">精帖</span>
+						</h2>
+						<p>
+							<span><a href="user/home.html">ZSCAT</a></span> <span>${item.releasedate!}</span> <span>${item.blogType.typename!}</span>
+							<span class="zsCat-list-hint"> <i class="iconfont"
+								title="回答">&#xe60c;</i> 317 <i class="iconfont" title="人气">&#xe60b;</i>
+								6830
+							</span>
+						</p></li>
+					@}	

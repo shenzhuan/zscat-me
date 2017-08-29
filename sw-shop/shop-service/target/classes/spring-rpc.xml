@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
+
+
+    <!-- service implemention bean -->
+    <context:annotation-config/>
+    <context:component-scan base-package="com.zscat.blog"/>
+    <context:property-placeholder location="classpath:application.properties" />
+    <dubbo:application name="blog-service" logger="slf4j"/>
+    <dubbo:provider filter="logfilter" />
+    <dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}" id="pig"/>
+    <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" threads="1000" accesslog="true"/>
+
+  
+    <dubbo:service interface="com.zscat.blog.api.service.BlogService" ref="blogService"  registry="pig" protocol="dubbo"/>
+
+    <dubbo:service interface="com.zscat.blog.api.service.BloggerService" ref="bloggerService" registry="pig" protocol="dubbo"/>
+
+    <dubbo:service interface="com.zscat.blog.api.service.BlogTypeService" ref="blogTypeService" registry="pig" protocol="dubbo"/>
+    <dubbo:service interface="com.zscat.blog.api.service.BlogCommentService" ref="blogCommentService" registry="pig" protocol="dubbo"/>
+    <dubbo:service interface="com.zscat.blog.api.service.BlogLinkService" ref="blogLinkService" registry="pig" protocol="dubbo"/>
+    <dubbo:service interface="com.zscat.blog.api.service.BlogTemplateService" ref="blogTemplateService" registry="pig" protocol="dubbo"/>
+</beans>

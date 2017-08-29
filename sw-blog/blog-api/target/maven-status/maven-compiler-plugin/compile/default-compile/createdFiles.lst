@@ -1,0 +1,12 @@
+com\zscat\blog\api\model\Blog.class
+com\zscat\blog\api\service\BlogService.class
+com\zscat\blog\api\model\BlogComment.class
+com\zscat\blog\api\service\BlogLinkService.class
+com\zscat\blog\api\service\BlogTypeService.class
+com\zscat\blog\api\model\BlogLink.class
+com\zscat\blog\api\model\BlogType.class
+com\zscat\blog\api\service\BlogCommentService.class
+com\zscat\blog\api\model\BlogTemplate.class
+com\zscat\blog\api\service\BloggerService.class
+com\zscat\blog\api\model\Blogger.class
+com\zscat\blog\api\service\BlogTemplateService.class

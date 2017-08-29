@@ -1,236 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50a1741c-2800-4118-acd9-eec4b08d927c" name="Default" comment="123">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/1290740006.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/bd_logo1_31bdc765.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/copy_rignt_24.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/loading_72b1da62.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/logo_top_ca79a146.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=1114831545,1486900620&amp;fm=173&amp;s=8037C73410234719C8AC78E90300A020&amp;w=218&amp;h=146&amp;img.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=1120325148,1492578561&amp;fm=173&amp;s=ECE09747443394330D8814AA03001012&amp;w=218&amp;h=146&amp;img.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=1131312435,1508457774&amp;fm=173&amp;s=938049A06E310B981A1C8DB30300F012&amp;w=218&amp;h=146&amp;img.JPG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=1627732295,3845488461&amp;fm=173&amp;s=BF8A5023C152EE6D0E55B5CB010050B2&amp;w=218&amp;h=146&amp;img.JPEG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=2414901755,2028757809&amp;fm=173&amp;s=E53A30D40C532AC69CA6198C03007088&amp;w=218&amp;h=146&amp;img.JPEG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=2762133191,2137590777&amp;fm=173&amp;s=3384BC4C56F7AA6E10AB34880300F08A&amp;w=218&amp;h=146&amp;img.JPEG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=3045908794,2515516683&amp;fm=173&amp;s=A5125795461879C615AA89D90300C0BB&amp;w=218&amp;h=146&amp;img.JPEG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=3676348664,1347477344&amp;fm=173&amp;s=D12401F3C2700796DBA0603D03008040&amp;w=218&amp;h=146&amp;img.JPEG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=681892989,3814779436&amp;fm=173&amp;s=D69A5229C3E3F7474C3500DE0100D0B2&amp;w=218&amp;h=146&amp;img.JPEG" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/upload_22619202_1490164695645.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/upload_22619202_1490164705421.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/upload_22619202_1490164712642.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/upload_22619202_1490164715905.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-common/src/main/java/com/zsCat/common/utils/DateUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/ServletInitializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexSolrController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/5d4e9b24-dcc5-483a-b6da-be1e9e621891.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/activity_start_52498d2c.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/all_async_search_4679168.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/config_982f6a08.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/init_6151c8b8.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery-1.10.2_d88366fd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/message_041c3208.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/min_super_af0391fe.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/min_tips_e4616384.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/sbase_f1d73ac3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/soutu.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/swfobject_0178953.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/tu_329aca4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/404.ftl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/error.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index1.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_3_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-blog/blog-service/src/main/resources/spring-rpc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery-1.11.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery-2.1.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery.mobile.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery1x.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/extend/layer.ext.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/layer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/layer.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/icon_ext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/textbg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_ico0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_loading0.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_loading1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_loading2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_loading3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_title0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/layer.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/layer.ext.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/css/amazeui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/css/animate.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/css/petshow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/a1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/a2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/a3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/azd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/banner_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/bannner_smallbg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/d.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/font_line.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/font_yjy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/font_zty.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/footdon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/grey.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/kj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/l_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/loading1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/pgd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/r_bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/tm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/transparent.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/tx.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/what_do.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/white.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/wx.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/xx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/amazeui.lazyload.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/amazeui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/countUp.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/petshow.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/Validform_v5.3.2_min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/css/validform.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/arrow1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/arrow2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/error.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/header-bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/navbg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/onLoad.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/right.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/totop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/css/amazeui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/css/animate.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/css/wap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/iconfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/iconfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/iconfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/iconfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/aa1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/aa2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/aa3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/fl01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/fl02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/fl03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/flshadow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/footdon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/gg1g.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/ggg - 副本.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/ggg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/goTop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/n1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qqq1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/s1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/wikibg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/z1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/js/amazeui.lazyload.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/js/amazeui.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/druid/DruidAutoConfiguration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/druid/DruidProperties.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sw_portl/src/main/resources/META-INF/spring.factories" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/blog_service_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_service_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/blog_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/search_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/search_web_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="50a1741c-2800-4118-acd9-eec4b08d927c" name="Default" comment="搜索测试">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spring-boot-starter-dubbo" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/sw_portl_war.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/sw_portl_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zsCat_sw_cms_api_0_0_1_SNAPSHOT.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_43.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_3.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_7_25.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/weixin.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-common/pom.xml" afterPath="$PROJECT_DIR$/sw-common/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/SolrSearchService.java" afterPath="$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/SolrSearchService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/pom.xml" afterPath="$PROJECT_DIR$/sw-search/search-service/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneDao.java" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/LuceneServiceImpl.java" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/LuceneServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-web/pom.xml" afterPath="$PROJECT_DIR$/sw-search/search-web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexController.java" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/pom.xml" afterPath="$PROJECT_DIR$/sw_portl/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/sw_portl/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/src/test/java/AuthControllerTest.java" afterPath="$PROJECT_DIR$/sw_portl/src/test/java/AuthControllerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/src/test/java/MockMvcBase.java" afterPath="$PROJECT_DIR$/sw_portl/src/test/java/MockMvcBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/src/test/java/MyBatis331Test.java" afterPath="$PROJECT_DIR$/sw_portl/src/test/java/MyBatis331Test.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index.htm" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/cms/controller/ErrorHandler404.java" afterPath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/portl/controller/ErrorHandler404.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/cms/controller/ErrorHandler500.java" afterPath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/portl/controller/ErrorHandler500.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/cms/controller/IndexCmsController.java" afterPath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/portl/controller/IndexCmsController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/cms/controller/IndexWapCmsController.java" afterPath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/portl/controller/IndexWapCmsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/sw-cms/cms-web/target/" />
     <ignored path="$PROJECT_DIR$/sw-shop/target/" />
@@ -265,18 +56,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="117" column="13" lean-forward="false" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="IndexSolrController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexSolrController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -289,12 +68,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sw-search/README.md">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-blog/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="204">
-                <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -302,72 +81,94 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DocumentUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-cms/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-shop/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GunsApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw_manager/src/main/java/com/stylefeng/guns/GunsApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="32" column="93" lean-forward="false" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
+            <state relative-caret-position="255">
+              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/QueryUtil.java">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw_manager/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+            <state relative-caret-position="-1264">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IKAnalyzer5x.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/IKAnalyzer5x.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PathUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/PathUtil.java">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-523">
+                <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-boot-starter-dubbo/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+            <state relative-caret-position="136">
+              <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SolrSearchServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="149" column="52" lean-forward="false" selection-start-line="149" selection-start-column="52" selection-end-line="149" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SolrSearchService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/SolrSearchService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="39" column="19" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LuceneDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="157" column="38" lean-forward="false" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="38" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="238">
+                <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -424,7 +225,6 @@
       <list>
         <option value="$PROJECT_DIR$/sw-blog/blog-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/PortlWebApplication.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/ErrorHandler500.java" />
         <option value="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/ErrorHandler404.java" />
         <option value="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index.htm" />
@@ -456,6 +256,7 @@
         <option value="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java" />
         <option value="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java" />
         <option value="$PROJECT_DIR$/sw-search/README.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -549,49 +350,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sw_portl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zscat_sw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="sw-search" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zscat_sw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sw-cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zscat_sw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sw-blog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -628,11 +387,11 @@
       <recent name="com.zscat" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\zscat_sw\sw-shop" />
+      <recent name="D:\zscat_sw\sw-cms" />
+      <recent name="D:\zscat_sw\sw-blog" />
       <recent name="D:\zscat_sw\sw-search" />
       <recent name="D:\zscat_sw\sw-search\search-web\src\main\resources\templates" />
-      <recent name="D:\zscat_sw\sw-search\search-web\src\main\resources\static" />
-      <recent name="D:\zscat_sw\sw-search\search-service\src\main\resources" />
-      <recent name="D:\zscat_sw\sw-search\search-service\src\main\java\com\zscat" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -647,7 +406,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SearchServiceApplication">
+  <component name="RunManager" selected="Spring Boot.GunsApplication (1)">
+    <configuration default="false" name="GunsApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.stylefeng.guns.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.stylefeng.guns.GunsApplication" />
+      <module name="sw_manager" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -1107,7 +878,7 @@
       <envs />
       <method />
     </configuration>
-    <list size="7">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.GunsApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.CmsServiceApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.BlogWebApplication" />
@@ -1115,7 +886,13 @@
       <item index="4" class="java.lang.String" itemvalue="Spring Boot.ShopServiceApplication" />
       <item index="5" class="java.lang.String" itemvalue="Spring Boot.SearchServiceApplication" />
       <item index="6" class="java.lang.String" itemvalue="Spring Boot.SearchWebApplication" />
+      <item index="7" class="java.lang.String" itemvalue="Spring Boot.GunsApplication (1)" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Spring Boot.GunsApplication (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1129,7 +906,7 @@
       <updated>1503979181083</updated>
       <workItem from="1503979185838" duration="98000" />
       <workItem from="1503979476085" duration="9951000" />
-      <workItem from="1503994690481" duration="13790000" />
+      <workItem from="1503994690481" duration="15557000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1503981558030</created>
@@ -1145,14 +922,29 @@
       <option name="project" value="LOCAL" />
       <updated>1503999228229</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="搜索测试">
+      <created>1504008740207</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1504008740207</updated>
+    </task>
+    <task id="LOCAL-00004" summary="搜索测试">
+      <created>1504009708567</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1504009708567</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23839000" />
+    <option name="totallyTimeSpent" value="25606000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1165,14 +957,14 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31026787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4453125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14732143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14732143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4888393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1197,7 +989,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
-    <option name="LAST_COMMIT_MESSAGE" value="123" />
+    <MESSAGE value="搜索测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="搜索测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1210,64 +1003,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/ServletInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw_portl/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw_portl/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-578">
-          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-search/search-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/ErrorHandler500.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/404.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1408,14 +1143,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1619,11 +1346,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sw-blog/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-cms/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-shop/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw_manager/src/main/java/com/stylefeng/guns/GunsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw_manager/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1264">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sw-search/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="204">
-            <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <first_editor relative-caret-position="238">
+            <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-starter-dubbo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-523">
+            <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />

@@ -1,6 +1,7 @@
 # zscat_sw
 springboot dubbo redis solr mq kafka 商城 blog cms
-
+ qq群 483681368
+ 
 zscat
 
 
@@ -28,7 +29,7 @@ zscat
 - |    ├── shop-h5-- h5消费者 前端展示
 
 1.项目部署，根据doc目录下的 zsboot.sql，weixin.sql，分别创建数据库，相关数据库配置 参考application.properties
-
+先安装 spring-boot-starter-dubbo模块到本地
 ### 2.blog模块为例  
 
 

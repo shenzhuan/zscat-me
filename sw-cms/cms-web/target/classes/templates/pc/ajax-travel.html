@@ -1,0 +1,26 @@
+
+			@for(article in artList){
+				<!--缩略图在标题左边-->
+				<li
+					class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left am_list_li">
+					<div class="am-u-sm-3 am-list-thumb am_list_thumb">
+						<a href="${ctxPath!}/web/cms/travelDetails/${article.id!}" class=""> <img src="${imgServer!}/${article.image!}"
+							class="am_news_list_img" alt="${article.title!}" />
+						</a>
+					</div>
+					<div class=" am-u-sm-9 am-list-main am_list_main">
+						<h3 class="am-list-item-hd am_list_title">
+							<a href="${ctxPath!}/web/cms/travelDetails/${article.id!}" class="">${article.title!}</a>
+						</h3>
+						<div class="am_list_author">
+							<a href="javascript:void(0)"><span class="am_list_author_ico"
+								style="background-image: url(${imgServer!}/${article.image!});"></span><span
+								class="name">zscat</span></a><span class="am_news_time">&nbsp;•&nbsp;<time
+									class="timeago" title="2015-08-13 08:02:40 +0800"
+									datetime="2015-08-13 08:02:40 +0800"> ${article.createdate!}</time></span>
+						</div>
+						<div class="am-list-item-text am_list_item_text ">${strutil.subStringLen(article.description!'',30)} ...</div>
+					</div>
+				</li>
+				@}
+			

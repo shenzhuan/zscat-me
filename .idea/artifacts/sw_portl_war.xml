@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sw-portl:war">
+    <output-path>$PROJECT_DIR$/sw_portl/target</output-path>
+    <root id="archive" name="sw-portl.war">
+      <element id="artifact" artifact-name="sw-portl:war exploded" />
+    </root>
+  </artifact>
+</component>

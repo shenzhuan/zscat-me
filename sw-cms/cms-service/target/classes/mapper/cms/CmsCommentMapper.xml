@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zscat.cms.mapper.CmsCommentMapper" >
+  <resultMap id="BaseResultMap" type="com.zscat.cms.model.CmsComment" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="auditDate" property="auditdate" jdbcType="DATE" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="createDate" property="createdate" jdbcType="TIMESTAMP" />
+    <result column="delFlag" property="delflag" jdbcType="INTEGER" />
+    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="article_id" property="articleId" jdbcType="BIGINT" />
+    <result column="auditer_id" property="auditerId" jdbcType="BIGINT" />
+    <result column="headPath" property="headpath" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登入</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="zsCat,layui,前端社区">
+<meta name="description"
+	content="zsCat社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+<link rel="stylesheet"
+	href="${ctxPath!}/static/blog/shequ/layui/css/layui.css">
+<link rel="stylesheet"
+	href="${ctxPath!}/static/blog/shequ/css/global.css">
+</head>
+<body>
+
+	@layout("/blog/community/layout/SheQuHeader.html"){}
+
+
+	<div class="main layui-clear">
+		<h2 class="page-title">登入</h2>
+		<div class="layui-form layui-form-pane">
+			<form method="post" action="${ctxPath}/front/blog/login"
+				id="login1-form">
+				<div class="layui-form-item">
+					<label for="L_email" class="layui-form-label">用户名</label>
+					<div class="layui-input-inline">
+						<input type="text" id="L_email" name="username" required
+							lay-verify="required" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label for="L_pass" class="layui-form-label">密码</label>
+					<div class="layui-input-inline">
+						<input type="password" id="L_pass" name="password" required
+							lay-verify="required" autocomplete="off" class="layui-input">
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label for="L_vercode" class="layui-form-label">人类验证</label>
+					<div class="layui-input-inline">
+						<input type="text" id="L_vercode" name="vercode" required
+							lay-verify="required" placeholder="请回答后面的问题" autocomplete="off"
+							class="layui-input">
+					</div>
+					<div class="layui-form-mid">
+						<span style="color: #c00;">3711111</span>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<button class="layui-btn" lay-filter="*" type="submit">立即登录</button>
+					<span style="padding-left: 20px;"> <a href="/user/forget">忘记密码？</a>
+					</span>
+				</div>
+				<div class="layui-form-item zsCat-form-app">
+					<span>或者使用社交账号登入</span> <a href=""
+						onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
+						class="iconfont icon-qq" title="QQ登入"></a> <a href=""
+						onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
+						class="iconfont icon-weibo" title="微博登入"></a>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="footer">
+		<p>
+			<a href="http://zsCat.layui.com/">zsCat社区</a> 2016 &copy; <a
+				href="http://www.layui.com/">layui.com</a>
+		</p>
+		<p>
+			<a href="http://zsCat.layui.com/auth/get" target="_blank">产品授权</a> <a
+				href="http://zsCat.layui.com/jie/3147.html" target="_blank">VIP说明</a>
+			<a href="http://www.layui.com/" target="_blank">商务合作</a> <a
+				href="http://weibo.com/SentsinXu" target="_blank" rel="nofollow">微博</a>
+			<a href="http://zsCat.layui.com/jie/2461.html" target="_blank">微信公众号</a>
+		</p>
+	</div>
+	<script src="${ctxPath!}/static/blog/shequ/layui/layui.js"></script>
+	<script>
+		layui.cache.page = 'user';
+		layui.cache.user = {
+			username : '游客',
+			uid : -1,
+			avatar : '{ctxPath!}/static/blog/shequ/images/avatar/00.jpg',
+			experience : 83,
+			sex : '男'
+		};
+		layui.config({
+			version : "1.0.0",
+			base : '${ctxPath!}/static/blog/shequ/mods/'
+		}).extend({
+			zsCat : 'index'
+		}).use('zsCat');
+	</script>
+<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='${ctxPath!}/static/jquery/jquery.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+		<script type="text/javascript" src="${ctxPath!}/static/layer/layer.min.js"></script>
+		<script type="text/javascript" src="${ctxPath}/static/validate/Validform_v5.3.2_min.js"></script>
+		<script type="text/javascript">
+			
+
+			jQuery(function($) {
+				$("#login1-form").Validform({
+					btnSubmit:"#login1",
+					ajaxPost:true,
+					beforeSubmit:function(curform){
+						$("#login1").attr("disabled","disabled").find("span").text("登录中…");
+					},
+					callback:function(data){
+						if(undefined != data.error){
+							$("#login1").removeAttr("disabled").find("span").text("登 录");
+							var obj = $("#login1-form input[data-error='"+data.error+"']");
+							layer.tips(data.error,obj, {
+								guide:0,
+								time: 4,
+								style : ['background-color:#F26C4F; color:#fff','#F26C4F' ],
+							});
+						}else{
+							window.location.href = "${ctxPath!}/front/blog/indexs";
+						}
+					},
+					tiptype : function(msg, o, cssctl) {
+						if (!o.obj.is("form")) {
+							if (o.type != 2) {
+								layer.tips(msg, o.obj, {
+									guide:3,
+									time: 4,
+									style : ['background-color:#F26C4F; color:#fff','#F26C4F' ],
+								});
+							}
+						}
+					},
+					tipSweep : true
+				});
+				
+				$("#login1-form").keydown(function(e){
+					 var e = e || event,
+					 keycode = e.which || e.keyCode;
+					 if (keycode==13) {
+					  $("#login1").trigger("click");
+					 }
+				});
+				
+			});
+		</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>基于Layui的轻量级问答社区页面模版</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="keywords" content="zsCat,layui,前端社区">
+<meta name="description"
+	content="zsCat社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+<link rel="stylesheet"
+	href="${ctxPath!}/static/blog/shequ/layui/css/layui.css">
+<link rel="stylesheet"
+	href="${ctxPath!}/static/blog/shequ/css/global.css">
+</head>
+<body>
+
+	@layout("/blog/community/layout/SheQuHeader.html"){}
+
+	<div class="main layui-clear">
+		<div class="wrap">
+			<div class="content detail">
+				<h1>${blog.title!}</h1>
+				<div class="zsCat-tip zsCat-detail-hint" data-id="{{rows.id}}">
+					<span class="zsCat-tip-stick">置顶帖</span> <span
+						class="zsCat-tip-jing">精帖</span> <span>未结贴</span>
+					<!-- <span class="zsCat-tip-jie">已采纳</span> -->
+
+					<!-- <span class="jie-admin" type="del" style="margin-left: 20px;">删除</span>
+        <span class="jie-admin" type="set" field="stick" rank="1">置顶</span> 
+        <span class="jie-admin" type="set" field="stick" rank="0" style="background-color:#ccc;">取消置顶</span>
+        <span class="jie-admin" type="set" field="status" rank="1">加精</span> 
+        <span class="jie-admin" type="set" field="status" rank="0" style="background-color:#ccc;">取消加精</span> -->
+
+					<div class="zsCat-list-hint">
+						<i class="iconfont" title="回答">&#xe60c;</i> 517 <i
+							class="iconfont" title="人气">&#xe60b;</i> 98032
+					</div>
+				</div>
+				<div class="detail-about">
+					<a class="jie-user" href=""> <img
+						src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" alt="">
+						<cite> ZSCAT <em>${blog.releasedate!}发布</em>
+					</cite>
+					</a>
+					<div class="detail-hits" data-id="{{rows.id}}">
+						<span style="color: #FF7200">悬赏：20飞吻</span> <span
+							class="jie-admin" type="edit"><a
+							href="/jie/edit/{{rows.id}}">编辑此贴</a></span>
+					</div>
+				</div>
+
+				<div class="detail-body photos" style="margin-bottom: 20px;">
+					<p>${blog.content!}</p>
+					<p>
+						<img src="${ctxPath!}/static/blog/shequ/images/pay.jpg"
+							style="border: 1px solid #e2e2e2">
+					</p>
+
+					<div class="zsCat-ad"
+						style="margin-top: 30px; height: 90px; overflow: hidden;"></div>
+				</div>
+
+				<a name="comment"></a>
+				<h2 class="page-title">
+					热忱回答<span>（<em id="jiedaCount">18</em>）
+					</span>
+				</h2>
+
+				<ul class="jieda photos" id="jieda">
+				 @for(comment in commList.list!){
+					<li data-id="12" class="jieda-daan"><a
+						name="item-121212121212"></a>
+						<div class="detail-about detail-about-reply">
+							<a class="jie-user" href=""> <img
+								src="${ctxPath!}/static/blog/shequ/images/avatar/default.png" alt=""> <cite>
+									<i>${comment.blogger!}</i> <!-- <em>(楼主)</em>
+								                <em style="color:#5FB878">(管理员)</em>
+								                <em style="color:#FF9E3F">（活雷锋）</em>
+								                <em style="color:#999">（该号已被封）</em> -->
+							</cite>
+							</a>
+							<div class="detail-hits">
+								<span>${comment.commentdate!}</span>
+							</div>
+							<i class="iconfont icon-caina" title="最佳答案"></i>
+						</div>
+						<div class="detail-body jieda-body">
+							<p>${comment.content!}</p>
+						</div>
+						<div class="jieda-reply">
+							<span class="jieda-zan zanok" type="zan"><i
+								class="iconfont icon-zan"></i><em>12</em></span> <span type="reply"><i
+								class="iconfont icon-svgmoban53"></i>回复</span>
+							<!-- <div class="jieda-admin">
+					              <span type="edit">编辑</span>
+					              <span type="del">删除</span>
+					              <span class="jieda-accept" type="accept">采纳</span>
+					            </div> -->
+						</div></li>
+						@}
+
+
+				<div class="layui-form layui-form-pane">
+					<form action="${ctxPath}/person/reply" method="post">
+						<div class="layui-form-item layui-form-text">
+							<div class="layui-input-block">
+								<textarea id="L_content" name="content" required
+									lay-verify="required" placeholder="我要回答'"
+									class="layui-textarea zsCat-editor" style="height: 150px;"></textarea>
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<input type="hidden" name="blogid" value="${blog.id!}">
+							<input type="hidden" name="blogtitle" value="${blog.title!}">
+							<button class="layui-btn" lay-filter="*" lay-submit>提交回答</button>
+						</div>
+					</form>
+				</div>
+
+			</div>
+		</div>
+		<div class="edge">
+
+			<h3 class="page-title">最近热帖</h3>
+			<ol class="zsCat-list-one">
+				
+				@for(top1 in blogTopList.list){
+				<li><a href="${ctxPath}/front/blog/shequDetail/${top1.id!}">${top1.title!}</a>
+					<span><i class="iconfont">&#xe60b;</i> 6087</span></li>
+				 
+				@}
+			</ol>
+
+			<h3 class="page-title">近期热议</h3>
+			<ol class="zsCat-list-one">
+				@for(top2 in blogRamList.list){
+				<li><a href="${ctxPath}/front/blog/shequDetail/${top2.id!}">${top2.title!}</a>
+					<span><i class="iconfont">&#xe60b;</i> 6087</span></li>
+				 
+				@}
+			</ol>
+
+		</div>
+	</div>
+
+
+	<!-- <h2 class="page-title">404</h2>
+<div class="zsCat-none">该问题并不存在，可能已被删除</div> -->
+
+
+
+	<div class="footer">
+		<p>
+			<a href="http://zsCat.layui.com/">zsCat社区</a> 2016 &copy; <a
+				href="http://www.layui.com/">layui.com</a>
+		</p>
+		<p>
+			<a href="http://zsCat.layui.com/auth/get" target="_blank">产品授权</a> <a
+				href="http://zsCat.layui.com/jie/3147.html" target="_blank">VIP说明</a>
+			<a href="http://www.layui.com/" target="_blank">商务合作</a> <a
+				href="http://weibo.com/SentsinXu" target="_blank" rel="nofollow">微博</a>
+			<a href="http://zsCat.layui.com/jie/2461.html" target="_blank">微信公众号</a>
+		</p>
+	</div>
+	<script src="${ctxPath!}/static/blog/shequ/res/layui/layui.js"></script>
+	<script>
+layui.cache.page = 'jie';
+layui.cache.user = {
+  username: '游客'
+  ,uid: -1
+  ,avatar: '${ctxPath!}/static/blog/shequ/images/avatar/00.jpg'
+  ,experience: 83
+  ,sex: '男'
+};
+layui.config({
+  version: "1.0.0"
+  ,base: '${ctxPath!}/static/blog/shequ/mods/'
+}).extend({
+  zsCat: 'index'
+}).use('zsCat');
+</script>
+
+</body>
+</html>

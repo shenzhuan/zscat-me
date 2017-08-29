@@ -1,0 +1,467 @@
+html,body { background:#ececec;}
+/* 覆盖 */
+ul,li { list-style: none; padding: 0; margin: 0}
+/* 轮播 */
+.am-slider-a1 .am-control-nav li { position: relative;}
+.am-slider-a1 .am-control-nav li a { background: #bcbcbc; opacity: .5;  }
+.am-slider-a1 .am-control-nav li a:hover {}
+.am-slider-a1 .am-control-nav li a.am-active { background: #bcbcbc;-webkit-box-shadow:none;box-shadow:none;  opacity: 1;}
+.am-slider-a1 .am-control-nav {bottom: 18px; z-index: 2;}
+.pet_slider_shadow { position: absolute;  background: url(../img/flshadow.png) bottom no-repeat; -webkit-background-size: 100%;
+background-size: 100%; width: 100%; height: 100%; bottom: 0; left: 0; z-index: 1;}
+.pet_slider_font {position: absolute; bottom: 35px; left: 20px; z-index: 8; color: #fff;}
+.pet_slider_emoji { display: block; font-size: 12px; }
+
+/* 外挂图形文字 */
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+    @keyframes more_list {
+      from {
+        left: 0;
+        bottom: -900px;
+      }
+      to {
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    @-webkit-keyframes more_list {
+      from {
+        left: 0;
+        bottom: -900px;
+      }
+      to {
+        left:0;
+        bottom: 0;
+      }
+    }
+/* 主体 */
+.pet_mian { max-width: 640px; margin: 0 auto; background: #ececec; position: relative;}
+.pet_content_main { max-width: 100%; background: #fff; padding:10px 20px; -webkit-box-shadow:  0 0 3px rgba(100,100,100,.1); box-shadow: 0 0 3px rgba(100,100,100,.1);}
+/* 圆形按钮 */
+.pet_circle_nav {padding:25px 10px 5px;max-width: 100%;  }
+.pet_circle_nav_list{ max-width: 100%; overflow: hidden;}
+.pet_circle_nav_list li { width: 25%; float: left; margin-bottom: 15px;}
+.pet_circle_nav_list a {border-radius: 50%; width: 55px; height: 55px; display: block; margin: 0 auto; color: #fff; text-align: center; line-height: 55px; font-size: 35px;-webkit-transition: all 0.2s ease;transition: all 0.2s ease;}
+.pet_circle_nav_list a:hover { -webkit-box-shadow: inset 0 0 40px rgba(0,0,0,.3); box-shadow: inset 0 0 40px rgba(0,0,0,.3);-webkit-transition: all 0.2s ease;transition: all 0.2s ease; }
+.pet_circle_nav_list span { display: block; width: 100%; text-align: center; padding-top: 5px; font-size: 14px;}
+.pet_nav_xinxianshi { background: #fe9700; }
+.pet_nav_zhangzhishi {background: #f26765; }
+.pet_nav_kantuya {background: #6f68df; }
+.pet_nav_mengzhuanti {background: #7f2d00;}
+.pet_nav_meirong {background: #fd7a49;}
+.pet_nav_gengduo { background: #7fd02b;}
+.pet_nav_yiyuan {background: #19cf8a; }
+.pet_nav_dianpu {background: #4493f7;}
+.pet_nav_bk {background: #6f67e0; }
+.pet_nav_wd {background: #fd7949; }
+.pet_nav_sy {background: #ff9702; }
+.pet_nav_xx {background: #00c2ea; }
+.pet_nav_sz {background: #3296ee; }
+.pet_nav_ms {background: #7fd02b; }
+.pet_nav_qs {background: #19ce8b; }
+.pet_nav_qt {background: #fe618e; }
+/* 文章列表 */
+.am-list-news-default { margin-top: 0;}
+.pet_content_main .am-list>li {margin-bottom: 0; border: none; border-bottom: 1px solid #f1f1f1;}
+.am-list-news-default .am-list .am-list-item-desced .am-list-item-text { margin: 0;}
+.pet_content_main .am-list, .am-topbar { margin-bottom: 0;}
+.pet_content_main .am-list-news-default { margin: 0;}
+.pet_content_main .am-list-item-hd a  { color: #222; font-weight: bold;}
+.pet_content_main .am-list-news-default .pet_list_one_bt {margin-top: -4px; line-height: 22px;}
+.pet_content_main .am-list-news-default  .pet_list_one_nr { }
+.pet_content_main .am-list-news-default  .pet_list_one_info { width: 100%; clear: both; height: 30px; margin-bottom: 10px;}
+.pet_content_main .am-list-news-default  .pet_list_one_info_l { float: left;}
+.pet_content_main .am-list-news-default  .pet_list_one_info_ico { width: 26px; height: 26px; float: left;}
+.am-list-news-default .am-list .pet_list_one_block { padding-bottom: 20px; margin-bottom: 7px;}
+.pet_content_main .am-list-news-default  .pet_list_one_info_ico img {width: 100%;border-radius: 50%;}
+.pet_content_main .am-list-news-default  .pet_list_one_info_name { color: #757575; float: left; font-size: 12px; height: 26px; line-height: 26px; text-indent: .5em;}
+.pet_content_main .am-list-news-default  .pet_list_one_info_r { float: right;}
+.am-list-news-default .am-list .am-list-item-desced  .pet_list_two_text { margin-top: 5px; }
+.pet_list_one_info_tytj { float: left; font-size: 16px; color: #222; font-weight: bold;}
+.pet_list_one_list { padding: 8px 0;}
+.pet_list_one_list li{ padding: 0;}
+.pet_list_one_list li:nth-of-type(1) { padding-right: 6px;}
+.pet_list_one_list li:nth-of-type(2) { padding: 0 3px;}
+.pet_list_one_list li:nth-of-type(3) { padding-left: 6px;}
+.pet_list_one_list li:nth-of-type(4) { padding-right: 6px; padding-top: 6px;}
+.pet_list_one_list li:nth-of-type(5) { padding: 0 3px; padding-top: 6px;}
+.pet_list_one_list li:nth-of-type(6) { padding-left: 6px; padding-top: 6px;}
+.pet_list_tag {height: 20px; line-height: 20px;padding-right: 8px; margin: 3px 0; font-size: 12px;}
+.pet_list_tag_xxs { border-right: 3px solid #fe9700; color: #fe9700;  }
+.pet_list_tag_zzs { border-right: 3px solid #f26765; color: #f26765;  }
+.pet_list_tag_stj { border-right: 3px solid #764f9c; color: #764f9c;  }
+.pet_list_tag_kty { border-right: 3px solid #6f68df; color: #6f68df;  }
+.pet_list_tag_mzt { border-right: 3px solid #7f2d00; color: #7f2d00;  }
+.pet_content_main .am-list-news-default .pet_list_one_text { position: absolute; left: 0px; bottom: 0px;/*-webkit-line-clamp: 1;*/}
+.pet_content_main .am-list-news-default .pet_list_zt_img { width: 100%;padding: 8px 0;}
+.pet_content_main .am-list-news-default .pet_list_zt_img img { width: 100%;}
+.pet_list_one_tytj { padding: 0px}
+
+/* 弹出更多列表 */
+.pet_more_list { width: 100%; left: 0; height: 80%;background:rgba(48,52,53,.9);   position: fixed; bottom: -9900px; z-index: 9999;-webkit-transition: all .5s;
+      transition: all 0.5s;}
+.pet_more_list_block {max-width: 640px; margin: 0 auto; color: #fff; }
+.pet_more_close { text-align: right; height: 35px; width: 100%; line-height: 45px; padding-right: 15px;font-size: 30px;color: #cbc8d9; }
+.pet_more_list_show {bottom: 0;left: 0;animation: more_list 0.5s;-webkit-animation: more_list 0.5s;}
+.pet_more_list_block { width: 98%; margin: 0 auto; text-align: center;}
+.pet_more_list_block_name_title { color: #918f90; font-size: 15px; padding-bottom: 10px; clear: both; }
+.pet_more_list_block_name_ico { font-size: 18px;}
+.pet_more_list_block_line { cursor: pointer; color: #fff; height: 30px; line-height: 30px; width: 90px; margin: 5px;margin-left: 0px; display: inline-block; background: #303435; border-radius: 5px;}
+.pet_more_list_block_line:hover { color: #fff;}
+.pet_more_list_block_line_height { padding-top: 10px;}
+.pet_more_list_block_line_ico { margin: 5px 0 0 5px; display: block; float: left; width: 20px; height: 20px; margin-right: 5px; line-height: 20px; border-radius: 50%; color: #fff; font-size: 14px; text-align: center; }
+.pet_more_list_block_line_font {display: block; float: left; height: 25px; line-height: 22px; padding-left: 8px;padding-top: 4px; font-size: 14px; }
+.pet_list_tytj_ico { margin: 0; margin-top: 2px; margin-right: 5px;}
+/* 内页头部 */
+.pet_head {position: fixed; height: 49px; width: 100%; left: 0; right: 0; z-index: 999; }
+.pet_head_block {background: #303435; max-width: 640px; margin: 0 auto; line-height: 53px; }
+.pet_head_jt_ico { font-size: 25px; border-right: 1px solid #4c4a4b;  }
+.pet_head_gd_ico { font-size: 27px; }
+.pet_head_block .am-header-nav>a {color: #918f90; height: 30px; line-height: 30px; min-width: 48px;}
+
+/* 内页文章 */
+.pet_content { width: 100%; background: #ececec; padding-top: 49px;}
+.am-paragraph-default a { color: #ff5656;}
+.pet_content_block { width: 100%; background: #fff; margin: 0 auto;  box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+.pet_content_block .am-paragraph-default img { border: none; padding: 0; margin: 0 auto;max-width: 100%;}
+.pet_content_block .am-paragraph-default p {font-size: 17px;line-height: 1.8;}
+.pet_content_article {padding: 20px 8px 0;}
+.pet_content_article img { border-radius: 5px;}
+.pet_content_article blockquote p { margin-top: 0;}
+.pet_content_article embed { width: 100%;}
+
+/* 原创文章 */
+.pet_article_user_block { width: 100%; }
+.pet_article_user_img { width: 100%;position: relative; }
+.pet_article_user_img img { width: 100%; display: block;}
+.pet_article_user_title { left: 0; bottom: 5px; position: absolute; width: 100%; text-indent: 85px; z-index: 6; color: #fff;}
+.pet_article_user_info { width: 100%; height: 50px; line-height: 35px; position: relative; padding-left: 85px; font-size: 14px;}
+.pet_article_user_info_ico { width: 62px;height: 62px; top:-31px; left:10px; position: absolute; border-radius: 50%; overflow: hidden;}
+.pet_article_user_info_ico  img { width: 100%;}
+.pet_article_user_shadow { width: 100%; height: 100%;position: absolute; opacity: .7; bottom: 0; left: 0; background:url(../img/flshadow.png) bottom no-repeat;}
+.pet_article_user_nr { width: 100%;    margin-top: 5px; color: #757575;}
+
+/* 视频*/
+.pet_video_tag {border-right: 3px solid #19cf8a;color: #19cf8a;}
+.pet_video_info { position: relative;}
+.pet_video_info_tag { position: absolute; font-size: 14px; bottom: 5px; right: 5px; padding:0 10px;display: inline-block; text-align: center; height: 20px; background:rgba(0,0,0,0.5); border-radius: 10px; line-height: 22px; color: #fff;}
+.pet_video_info_tag i { font-size: 15px;float: left;margin-right: 3px;}
+
+/*  喜欢 分享*/
+.like_share_block { width:100%; padding:25px 15px 10px; overflow: hidden;   margin-top: 15px;}
+.like_share_block li { width: 33.33%; padding:0 5px; float: left;}
+.link_share_button i { display: inline-block; margin-right: 5px;}
+.link_share_button { color: #979797;  font-size: 14px;height: 36px; line-height: 36px; text-align: center; display: block; border-radius: 20px; border: 1px solid #dcdcdc;}
+.link_share_button:hover { color: #e86060;  }
+.link_share_button .share_ico_link { color:#e86060; }
+.link_share_button .share_ico_wx { color:#6dc35e;}
+.link_share_button .share_ico_pyq { color:#6959f0;}
+.pet_content_list { padding-top: 29px;}
+
+/* 评论 */
+.pet_comment_list { width: 100%; padding-top: 20px;}
+.pet_comment_list_wap { background: #fff;padding: 18px; position: relative;    box-shadow: 0 1px 2px rgba(0,0,0,0.05);}
+.pet_comment_list_title { position: relative; font-weight: bold; color: #222; font-size: 16px; width: 100%; border-bottom: 1px solid #f1f1f1; padding-bottom: 15px; margin-bottom: 5px;}
+.pet_comment_list_wap .am-tabs-default .am-tabs-nav { padding: 0 10px; background: none; border-radius: 20px;  width: 140px; height: 30px; border: 1px solid #f1f1f1;}
+.pet_comment_list_wap .am-tabs-default .am-tabs-nav li { padding-top: 6px;}
+.pet_comment_list_wap .am-tabs-default .am-tabs-nav>.am-active a {  padding: 0 5px; background: none; color: #979797;height: 16px; line-height: 16px; font-size: 12px;}
+.pet_comment_list_wap .am-tabs-default .am-tabs-nav a {padding: 0 5px; border-right: 1px solid #f1f1f1; background: none;color: #cacaca;height: 16px; line-height: 16px;font-size: 12px;}
+.pet_comment_list_title_tab { position: absolute; display: inline-block; float: right; right: 18px; top: 16px;}
+.pet_comment_list_wap .am-tabs-default .am-tabs-nav li:last-child a{ border: none; }
+.pet_comment_list_tab { margin: 0;}
+.pet_comment_list_tab .am-tabs-bd {border: none;}
+.pet_comment_list_tab .am-tab-panel { padding: 0; }
+.pet_comment_list_block { width: 100%; padding: 15px 0; border-bottom: 1px solid #f1f1f1; overflow: hidden;}
+.pet_comment_list_block_l { width: 50px; height: 50px; float: left; position: relative; border-radius: 50%; overflow: hidden;}
+.pet_comment_list_block_l img { width: 100%;}
+.pet_comment_list_block_r {position: relative; margin-left: 65px;}
+.pet_comment_list_block_r_info { color: #222; font-size: 18px;}
+.pet_comment_list_block_r_text { color: #222; font-size: 14px;}
+.pet_comment_list_block_r_text span { color:#ff5656; padding-right: 5px;}
+.pet_comment_list_block_r_bottom { font-size: 14px; color: #757575; padding-top: 5px;}
+.pet_comment_list_bottom_info_l { position: relative; float: left;}
+.pet_comment_list_bottom_info_r { position: relative; text-align: right;}
+.pet_comment_list_bottom_info_r span { display: inline-block;  padding-right: 8px; padding-left: 3px;  }
+.pet_pl_list .pet_comment_list_block:last-child{ border: none;}
+/* 文章作者 */
+.pet_article_title { font-weight:bold; margin: 0;}
+.pet_head_block .pet_article_user { margin: 0;margin-left: 65px; position: relative; overflow: visible;}
+.pet_article_user_info_tab { text-align: left;position: absolute;  background: #fff; top: -50px; left: -30px; border: 1px solid rgba(0,0,0,0.01); width: 160px; height:38px;  box-shadow: 0px 1px 3px rgba(0,0,0,0.08);}
+.pet_article_user_info_tab_show {top: 45px;left: -30px;animation: pet_article_user_info 0.5s;-webkit-animation: pet_article_user_info 0.5s; }
+.pet_article_user_info_tab_cloes { top: -50px; left: -30px; animation: pet_article_user_info_over 0.5s;-webkit-animation: pet_article_user_info_over 0.5s;}
+.pet_article_user_info_tab_font { font-size: 12px; color: #222; position: relative;padding: 10px;}
+.pet_article_user_info_tab_font_center { width: 100%; height: 18px; line-height: 15px;}
+.pet_article_user_info_tab_font_center i { font-style: normal; display:block; float: left; font-size: 10px; text-align: center;  border:1px solid #b9b8b8; color: #b9b8b8; border-radius: 8px; width: 35px; line-height: 15px; height: 15px;}
+.pet_article_user_info_tab_font_center span {display:block; margin-left: 40px;  line-height: 16px; height: 15px;}
+.pet_article_user_info_tab_font_center_line { border-bottom: 1px solid #f7f7f7; padding-top: 3px;}
+.pet_head .pet_article_user_info_tab_font_center a { color: #b9b8b8; display: block; width: 100%; padding-top: 5px;}
+.pet_article_user_info_tab_font_triangle {position: absolute; top:-9px; left: 69px; height:0;width:0;border-bottom:solid 8px #fff;border-left:solid 8px #303435;border-right:solid 8px #303435;}
+.pet_article_user_info_tab_ico{}
+.pet_article_user_ico { width: 26px; height: 50px; display:block; float: left; }
+.pet_article_user_ico img { width: 100%;border-radius: 50%;}
+.pet_head_block .pet_article_user_name { font-size: 16px;line-height: 50px; margin-left: 35px; text-align: left; height: 50px;color: #918f90; display:block;}
+.pet_article_user_time {color: #aaaaaa;font-size: 14px; margin-bottom: 10px;}
+.pet_article_dowload { border-top: 1px solid #f2f2f2; width: 100%; margin: 15px 0 0; overflow: hidden; padding-top: 15px;}
+.pet_article_dowload_ico { width: 35px; height: 35px; position: relative; float: left;}
+.pet_article_dowload_ico img { width: 100%;}
+.pet_article_dowload_title { width: 100%;font-size: 15px;  color: #b2b2b2;padding: 0 16px 15px;}
+.pet_article_dowload_content { width: 100%; position: relative; background: #fafafa; padding:23px 16px;}
+.pet_article_dowload_triangle { position: absolute; top:-41px; left: 13px; margin:30px;height:0;width:0;border-bottom:solid 11px #f7f7f7;border-left:solid 11px #fff;border-right:solid 11px #fff;}
+.pet_article_dowload_content_font { color: #b2b2b2; font-size: 12px; position: relative; margin-left: 45px;  margin-top: -2px;}
+.pet_article_dowload_all { width: 100%; text-align: right; font-size: 13px; padding-top: 10px;}
+.pet_article_dowload_Az { display:inline-block; text-align: center;  border:1px solid #b9b8b8; color: #b9b8b8; border-radius: 10px; width: 85px; line-height: 19px; height: 21px;}
+.pet_article_dowload_Pg {  display:inline-block; text-align: center;  border:1px solid #b9b8b8; color: #b9b8b8; border-radius: 10px; width: 85px; height: 21px; line-height: 19px;}
+.pet_article_dowload_Az:hover { border: 1px solid #ff5656; color: #ff5656;}
+.pet_article_dowload_Pg:hover { border: 1px solid #54d669 ; color: #54d669 ;}
+.pet_article_footer_info {  text-align: center; font-size: 12px; color:#b9b8b8; height: 30px; line-height: 30px; margin:17px;}
+.pet_article_like {  width: 100%; background: #fff; margin: 0 auto;  box-shadow: 0 1px 2px rgba(0,0,0,0.05); margin-top: 20px; padding: 18px;}
+.pet_article_like_delete { padding: 0;box-shadow:none;}
+.pet_article_like_title {font-weight: bold; color: #222; font-size: 16px; width: 100%;border-bottom: 1px solid #f1f1f1; padding-bottom: 15px; margin-bottom: 5px;}
+
+
+/* 百科 */
+.pet_wiki { width: 100%; background: #fff; padding-top: 50px;}
+.pet_wiki_head { max-width: 640px;background: url(../img/wikibg.png) no-repeat; -webkit-background-size: 100%;
+background-size: 100%; padding-bottom: 9%; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.pet_wiki_head_info {max-width: 640px;}
+.pet_wiki_head_info_ico { width: 38%; margin: 0 auto; padding-top: 7%;}
+.pet_wiki_head_info_ico img { width: 100%; border-radius: 50%;}
+.pet_wiki_head_info_title { width: 100%; font-size: 28px; color: #222; text-align: center; line-height: 35px; padding-top: 10px; }
+.pet_wiki_head_info_title span { display: block; font-size: 11px; line-height: 18px;}
+.pet_wiki_tab { margin: 0; width: 93%; margin: 0 auto;}
+.pet_wiki_tab .pet_wiki_tab_content { display: block;background: #fff;}
+.pet_wiki_tab .pet_wiki_tab_block { border: none;}
+.pet_wiki_tab .am-tabs-nav li { width: 100px; float: left; height: auto; background: #fff;font-size: 18px;flex:none;margin-right: 20px;position: relative;  padding: 8px 0;}
+.pet_wiki_tab .am-tabs-nav>.am-active {background: #fff;    border-bottom: 1px solid #0ba4ea;}
+.pet_wiki_tab .am-tabs-nav>.am-active a { color: #222; background: #fff;}
+.pet_wiki_tab .am-tabs-nav>.am-active:after { display: none;}
+.pet_wiki_text_line { width: 100%; border-bottom: 1px solid #f6f6f6; font-size: 13px; height: 60px; line-height: 60px; clear: both;}
+.pet_wiki_text_line_l { display: inline-block; color: #afafaf; width: 20%;}
+.pet_wiki_text_line_c { display: inline-block;}
+.pet_wiki_text_line_r { display: inline-block; float: right;}
+.pet_wiki_text_line_r i {  font-size: 25px; color: #afafaf; border-left: 1px solid #f6f6f6; padding:0 10px;}
+.pet_wiki_tab .pet_wiki_tab_block_content {padding: 0;}
+.pet_dowload_more_top_off { border:none;}
+.pet_dowload_more_top_san {border-bottom:solid 11px #fff;border-left:solid 11px #ececec;border-right:solid 11px #ececec;}
+.pet_dowload_more_top_bg { background: #fff;}
+
+.pet_wiki_more_info { width: 100%; padding-top: 15px;}
+.pet_wiki_more_info_title { font-size: 18px; line-height: 20px; padding-bottom: 7px; color: #222; border-bottom: 1px solid #f6f6f6; clear: both;}
+.pet_wiki_more_info_title i { color: #fff; border-radius: 50%; width: 26px; height: 26px; text-align: center;  line-height: 26px; font-size: 20px; display: block; float: left; margin-top: 3px; margin-right: 5px;}
+.pet_wiki_more_info_text { font-size: 16px; clear: #222; padding: 8px 0;}
+.pet_wiki_more_info_title_font { display: block; padding-top: 2px; }
+.pet_wiki_more_info_title_font span { display: block; color: #b1b1b1; font-size: 11px;margin-top: -3px;}
+
+    @keyframes pet_article_user_info {
+      from {
+        left: -30px;
+        top: 20px;
+        opacity: 0;
+      }
+      to {
+        left: -30px;
+        top: 45px;
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes pet_article_user_info {
+      from {
+        left: -30px;
+        top: 20px;
+        opacity: 0;
+      }
+      to {
+        left: -30px;
+        top: 45px;
+        opacity: 1;
+      }
+    }
+    @keyframes pet_article_user_info_over {
+      from {
+        left: -30px;
+        top: 45px;
+        opacity: 1;
+      }
+      to {
+        left: -30px;
+        top: 20px;
+        opacity: 0;
+      }
+    }
+
+    @-webkit-keyframes pet_article_user_info_over {
+      from {
+        left: -30px;
+        top: 45px;
+        opacity: 1;
+      }
+      to {
+        left: -30px;
+        top: 20px;
+        opacity: 0;
+      }
+    }
+// 视频
+.pet_topci { width: 100%;}
+.pet_content_main .am-list .pet_topci_list { width: 100%; border: none;}
+.pet_topci .pet_article_like { padding: 10px;}
+.pet_topci_block { width: 100%; position: relative; display: block;}
+.pet_topci_block img { width: 100%;}
+.pet_topci_video { color: #fff; text-align: center; position: absolute; top: 10px; right: 10px; background:rgba(0, 0, 0, 0.3); border-radius: 10px; height: 18px; line-height: 20px; font-size: 12px; width: 55px;}
+.pet_topci_shadow { position: absolute;  background: url(../img/flshadow.png) bottom no-repeat; -webkit-background-size: 100%;
+background-size: 100%; width: 100%; height: 100%; bottom: 0; left: 0; z-index: 1; opacity: .8;}
+.pet_topci_shadow_font { font-size: 14px; line-height: 20px;color: #fff; position: absolute;padding: 10px; bottom: 0; left: 0; z-index: 2;}
+.pet_news_list_tag_name{    display: block;width: 100%;text-align: center;line-height: 49px;color: #fff;}
+// 活动
+.pet_hd { width: 100%;}
+.pet_hd_list { width: 100%;}
+.pet_hd_block { width: 100%; display: block;color: #222;}
+.pet_hd_block:hover { color: #222;}
+.pet_hd_block_title { width: 100%; font-size: 20px;  }
+.pet_hd_block_map { margin: 5px 0 10px; width: 100%; font-size: 14px; line-height: 20px; height: 20px; }
+.pet_hd_block_map i { padding-right: 5px;}
+.pet_hd_block_tag { width: 100%; font-size: 14px;}
+.pet_hd_block_tag span { display: inline-block; text-align: center; background: #f28d00; border-radius: 4px; width: 70px; height: 22px; line-height: 22px; color: #fff;}
+.pet_hd_block_tag span.hd_tag_jh { background: #00a0e9;}
+.pet_hd_block_tag span.hd_tag_js { background: #999999;}
+// 活动内页
+.pet_hd_con {width: 100%;}
+.pet_hd_con_head {width: 100%;}
+.pet_hd_con_head img { width: 100%;}
+.pet_hd_con_time { font-size: 14px; margin: 0; margin-top: 5px;}
+.pet_hd_con_time i { padding-right: 8px;}
+.pet_hd_con_map { font-size: 14px; margin: 0; margin-top: 3px; margin-bottom: 3px;}
+.pet_hd_con_map i { padding-right: 8px;}
+.pet_hd_con_gp { width: 100%; padding-top: 10px;}
+.pet_hd_con_gp_title { font-size: 18px;}
+.pet_hd_con_gp_list { width: 100%; padding-top: 10px}
+.pet_hd_con_gp_list span i { font-style: normal; display: block; font-size: 16px; color: #222; }
+.pet_hd_con_gp_list span:hover { background: #ff5656; border: 1px solid #ff5656; color: #fff;}
+.pet_hd_con_gp_list span:hover i { color: #fff;}
+.pet_hd_con_gp_list span { position: relative;  color: #a1a1a1; font-size: 12px; border: 1px solid #aaa; border-radius: 5px;  display: inline-block; width: 25%; padding: 5px 10px; line-height: 18px; color: #222;}
+.pet_hd_con_gp_list .pet_hd_con_gp_list_on { background: #ff5656; border: 1px solid #ff5656; color: #fff;}
+.pet_hd_con_gp_list .pet_hd_con_gp_list_on i { color: #fff;}
+.pet_hd_con_gp_list_sm { width: 100%; font-size: 12px; color: #222; padding: 10px 0;}
+.pet_hd_con_gp_list_sm i { font-style: normal; color: #ff5656; font-weight: bold;}
+.pet_hd_con_gp_list_xl { width: 100%; font-size: 12px; line-height: 30px;padding-bottom: 15px;}
+.pet_hd_con_gp_list_xl select { font-size: 14px; width: 70px; height: 30px; margin-top: -2px;}
+.pet_hd_con_gp_list_xl_m { border: none; color:#fff; background:#ffa125;    font-size: 14px;width: 116px; text-align: center; height: 40px;}
+.pet_hd_con_gp_list_xl_m:hover { background: #f3900d;}
+.pet_hd_con_gp_list_nr { width: 100%; padding-top: 20px;}
+.pet_hd_con_gp_list_nr_title { font-size: 18px; line-height: 40px; line-height: 40px; margin-bottom: 15px; border-bottom: 1px solid #f1f1f1;}
+.pet_hd_con_gp_list_nr_tag { color: #ff5656; display: inline-block; height: 30px; line-height: 30px; font-size: 16px; font-weight: bold; border-bottom: 2px solid #ff5656;}
+.pet_zlnr { width: 100%; background: #fff;}
+.pet_zlnr_user { width: 40px; width: 100%;  padding: 40px 20px 0; overflow: hidden;}
+.pet_zlnr_user_l { width: 40px; height: 40px; overflow: hidden; border-radius: 50%; float: left; position: relative;}
+.pet_zlnr_user_l img { width: 100%;}
+.pet_zlnr_user_r { position: relative; margin-left: 50px;}
+.pet_zlnr_user_r_name { display: block; font-size: 16px; line-height: 22px; color: #ff5656;}
+.pet_zlnr_user_r_map { display: block; font-size: 12px; line-height: 16px; color: #a1a1a1;}
+.pet_zlnr_nr { width: 100%; padding: 20px 20px 0; overflow: hidden;}
+.pet_zlnr_nr img { width: 100%;}
+.pet_zlnr_nr p { color: #a1a1a1;}
+.pet_zlnr_nr .am-paragraph-default { margin: 0;}
+.pet_zlnr_nr .am-paragraph-default img {max-width:100%;width: 100%; margin: 0; padding: 0; border: none;}
+.pet_zlnr_user_list { width: 100%; padding: 10px 0 25px; border-bottom: 1px solid #f1f1f1; overflow: hidden;}
+.pet_zlnr_user_list_l { position: relative; float: left;}
+.pet_zlnr_user_list_l img { display: inline-block; float: left; width: 25px; height: 25px;border-radius: 50%; margin-right: 10px;}
+.pet_zlnr_user_list_l_num { float: left; height: 25px; width: 50px; border-radius: 15px; background: #ff5656; line-height: 25px; text-align: center; color: #fff;}
+.pet_zlnr_user_list_l_num_font { line-height: 25px; margin-left: 10px; font-size: 14px; height: 25px; color: #222; float: left;}
+.pet_zlnr_user_list_r { float: right; font-size: 14px; height: 25px; line-height: 25px; color: #222;  }
+.pet_zlnr_pl { width: 100%;}
+.pet_zlnr_pl_block { width: 100%; padding: 15px 0; border-bottom: 1px solid #f1f1f1; }
+.pet_zlnr_pl_block_l { float: left; position: relative; width: 40px; height: 40px;border-radius: 50%;overflow: hidden; }
+.pet_zlnr_pl_block_l img {width: 40px; height: 40px;}
+.pet_zlnr_pl_block_r { position: relative; margin-left: 50px; font-size: 16px; color: #222;}
+.pet_zlnr_pl_block_r span { display: block; font-size: 14px; padding-top: 5px; color: #a1a1a1;}
+
+.pet_sixin { width: 100%; background: #fff; }
+.pet_sixin_nr {width: 100%; padding: 40px 20px 0; overflow: hidden;}
+.pet_sixin_shijian { width: 100%; line-height: 40px;text-align: center; height: 40px; font-size: 12px; color: #a1a1a1;}
+
+.pet_sixin_to { width: 100%; padding: 15px 0;}
+.pet_sixin_to:before { content: " ";display: table;}
+.pet_sixin_to:after {content: " ";display: table;clear: both;}
+.pet_sixin_to_l { width: 40px; height: 40px; position: relative; float: left;border-radius: 50%; overflow: hidden;}
+.pet_sixin_to_l img { width: 100%;}
+.pet_sixin_to_r { position: relative; }
+.pet_sixin_to_r_nr { position: relative; margin-left: 58px;  color: #818181; background: #f0f0f0;   font-size: 14px;border-radius: 10px; padding: 15px}
+.pet_sixin_to_r_nr img { width: 100%; border-radius: 10px;}
+.pet_sixin_to_r_nr_sj { position: absolute; background: #f0f0f0; width: 17px; height: 17px;-webkit-transform:rotate(45deg);transform:rotate(45deg);top:14px; left:-8px; border-radius: 2px;}
+
+.pet_sixin_form { width: 100%; padding: 15px 0;}
+.pet_sixin_form:before { content: " ";display: table;}
+.pet_sixin_form:after {content: " ";display: table;clear: both;}
+.pet_sixin_form_l { width: 40px; height: 40px; position: relative;border-radius: 50%; overflow: hidden;float: right;}
+.pet_sixin_form_l img { width:100%;overflow: hidden;}
+.pet_sixin_form_r { position: relative; padding-right: 58px;}
+.pet_sixin_form_r_nr { position: relative; color: #818181; background: #f0f0f0;  font-size: 14px;border-radius: 10px; padding: 15px}
+.pet_sixin_form_r_nr img { width: 100%; border-radius: 10px;}
+.pet_sixin_form_r_nr_sj { position: absolute; background: #f0f0f0; width: 17px; height: 17px;-webkit-transform:rotate(45deg);transform:rotate(45deg);top:14px; right:-8px; border-radius: 2px;}
+
+.pet_grzx { width: 100%; background: #fff; padding-top: 20px;}
+.pet_grzx_nr {width: 100%; padding: 40px 20px 0; overflow: hidden;}
+.pet_grzx_ico { margin: 0 auto; width: 200px; height: 200px; border-radius: 50%; overflow: hidden;}
+.pet_grzx_ico img { width: 100%;}
+.pet_grzx_name { width: 100%; font-size: 20px;  padding: 15px 0 0; text-align: center; color: #222;}
+.pet_grzx_map { font-size: 14px;width: 100%;  text-align: center; color: #a1a1a1;}
+.pet_grzx_num_font { padding-top: 20px; width: 90%;color: #a1a1a1; margin: 0 auto; font-size: 14px; text-align: center;}
+.pet_grzx_num {  padding-bottom: 25px; overflow: hidden; width: 100%; padding-top: 25px;}
+.pet_grzx_num i { font-size: 12px; font-style: normal; color: #a1a1a1; display: block;}
+.pet_grzx_num span { text-align: center; width: 33.3333%; display: block; float: left; color: #222;}
+
+.pet_grzx_list { width: 100%; border-top: 1px solid #f0f0f0; padding: 20px 10px; overflow: hidden;}
+.pet_grzx_list_block { width: 100%;}
+.pet_grzx_list_block_l { width: 140px; float: left; position: relative;}
+.pet_grzx_list_block_l img { width: 100%;}
+.pet_grzx_list_block_r { position: relative; margin-left: 160px; }
+.pet_grzx_list_block_title { font-size: 16px;  line-height: 25px; color: #222;}
+.pet_grzx_list_block_info { font-size: 12px;color: #a1a1a1;}
+
+.pet_kjdt { width: 100%; background: #fff; padding-top: 15px;}
+.pet_kjdt_nr {width: 100%; padding: 30px 20px 0; overflow: hidden;}
+.pet_kjdt_block { width: 100%; overflow: hidden; border-bottom: 1px solid #f0f0f0; margin-bottom: 25px;}
+.pet_kjdt_user { width: 100%; height: 50px;}
+.pet_kjdt_user_l { position: relative; float: left; width: 40px; height: 40px;border-radius: 50%; overflow: hidden;}
+.pet_kjdt_user_l img { width: 100%;}
+.pet_kjdt_user_r { position: relative; margin-left: 60px;}
+.pet_kjdt_user_time { position: absolute; right: 0; top: 0; text-align: right;  font-size: 14px; color: #a1a1a1;}
+.pet_kjdt_user_time .iconfont { font-size: 13px;}
+.pet_kjdt_user_r_title { font-size: 18px; color: #ff5656; line-height: 20px;}
+.pet_kjdt_user_r_info { font-size: 14px; color: #a1a1a1;}
+.pet_kjdt_user_r_font { width: 100%; font-size: 14px;}
+.pet_kjdt_user_r_like { width: 100%; color: #a1a1a1; font-size: 14px;}
+.pet_kjdt_user_pl { width: 100%; padding-top: 20px;}
+.pet_kjdt_user_pl_block { width: 100%; padding-bottom: 15px; margin-bottom: 10px;}
+.pet_kjdt_user_pl_block_l { width: 30px; height: 30px; position: relative; float: left;border-radius: 50%; overflow: hidden;}
+.pet_kjdt_user_pl_block_l img { width: 100%;}
+.pet_kjdt_user_pl_block_name { font-size: 15px;}
+.pet_kjdt_user_pl_block_info { font-size: 12px; color: #a1a1a1;}
+.pet_kjdt_user_pl_block_r { position: relative; margin-left: 40px;}
+.pet_kjdt_user_r_like .am-icon-heart { color: #ff5656;}
+.pet_kjdt_user_r_font_img { width: 100%;}
+.pet_kjdt_user_r_font_img .am-figure-default { margin:0px;}
+.pet_kjdt_user_r_font_img .am-figure-default img { border: none;}
+/* IP5 */
+@media only screen and (max-width: 340px) {
+.pet_content_main .am-list-news-default .pet_list_one_text { -webkit-line-clamp: 1;}
+.pet_wiki_head_info_title { font-size: 23px;line-height: 25px; padding-top: 10px; }
+.pet_wiki_head_info_title  span { font-size: 10px; line-height: 15px;}
+.pet_wiki_text_line_r { display: none;}
+}

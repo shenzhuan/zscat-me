@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="${ctxPath!}/static/pc/css/amazeui.min.css">
+    <link rel="stylesheet" href="${ctxPath!}/static/pc/css/petshow.css?6">
+    <link rel="stylesheet" href="${ctxPath!}/static/pc/css/animate.min.css">
+    <script src="${ctxPath!}/static/pc/js/jquery.min.js"></script>
+    <script src="${ctxPath!}/static/pc/js/amazeui.min.js"></script>
+    <script src="${ctxPath!}/static/pc/js/amazeui.lazyload.min.js"></script>
+
+
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse">
+		<div class="amz-container">
+			<h1 class="am-topbar-brand">
+				<a href="${ctxPath!}/web/cms/index" class="am-topbar-logo"> <img src="${ctxPath!}/static/pc/img/logo.png?1"
+					alt="">
+				</a>
+			</h1>
+			<button
+				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+				data-am-collapse="{target: '#doc-topbar-collapse-5'}">
+				<span class="am-sr-only"> 导航切换 </span> <span class="am-icon-bars">
+				</span>
+			</button>
+			<div class="am-collapse am-topbar-collapse"
+				id="doc-topbar-collapse-5">
+				<ul class="am-nav am-nav-pills am-topbar-nav">
+					<li class="am-active"><a href="${ctxPath!}/web/cms/index"> 首页 </a></li>
+					@var cateList=auth.getCateGory("houseNav");
+					@for(nav in cateList){
+					<li><a href="${ctxPath!}/web/cms/house/${nav.id}"> ${nav.name!}</a></li>
+					@}
+					<li class="am-dropdown" data-am-dropdown=""><a
+						class="am-dropdown-toggle" data-am-dropdown-toggle=""
+						href="javascript:;"> 网站切换 <span class="am-icon-caret-down">
+						</span>
+					</a>
+						<ul class="am-dropdown-content">
+							<li><a href="${ctxPath!}/web/cms/index"> 房产网站</a></li>
+							<li><a href="${ctxPath!}/web/cms/indexT"> 旅游网站 </a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+<div class="am-g bdfw_nr">
+<ol class="am-breadcrumb bdfw_link">
+  <li><a href="${article.categoryname!}" class="am-icon-home">首页</a></li>
+  <li><a href="javascript:history.go(-1);">${article.categoryname!}</a></li>
+  <li class="am-active">${article.title!}</li>
+</ol>
+  <div class="am-u-sm-12">
+    <div class="bdfw_nr_block">
+    <div class="bdfw_nr_block_l">
+  <div class="bdfw_nr_title">${article.title!}</div>
+  <div class="bdfw_nr_brief_info">
+<span class="bdfw_nr_brief_star"><img src="${ctxPath!}/static/pc/img/xx.png" alt=""></span>
+<span class="bdfw_nr_brief_moreinfo">分类：${article.categoryname!}</span>
+  </div>
+  <div class="bdfw_nr_brief_address">地址：${strutil.subStringLen(article.description!'',20)}</div>
+    <div class="bdfw_nr_brief_address">时间：${article.createdate!}</div>
+    <div class="bdfw_nr_smalltitle">更多信息</div>
+    <div class="bdfw_nr_brief_info_nr">
+        <div class="bdfw_nr_brief_info_nr">
+            <span>${article.content!}</span>
+        </div>
+         
+    </div>
+  </div>
+
+
+<div class="bdfw_nr_block_r">
+<a href="###"><img src="${imgServer!}/${article.image!}" alt=""></a>
+<div class="bdfw_nr_block_r_info">
+<span><i class="am-icon-camera"></i> 店铺照片（12）</span>
+</div>
+</div>
+
+
+<a href="tel:18309826655" class="am-btn am-btn-default am-round am-btn-success bdfw_tel">拨打电话</a>
+
+
+    </div>
+  </div>
+
+</div>
+<footer class="am_footer">
+		<div class="am_footer_con">
+			<div class="am_footer_link">
+				<span>关于宠物秀</span>
+				<ul>
+					<li><a href="${ctxPath!}/web/cms/aboutus">关于我们</a></li>
+					<li><a href="${ctxPath!}/web/cms/history">发展历程</a></li>
+					<li><a href="${ctxPath!}/web/cms/link">友情链接</a></li>
+				</ul>
+			</div>
+
+
+			<div class="am_footer_don">
+				<span>房产秀</span>
+				<dl>
+					<dt>
+						<img src="${ctxPath!}/static/pc/img/footdon.png?1" alt="">
+					</dt>
+					<dd>
+						一起Show我们的房产吧！宠物秀是图片配文字、涂鸦、COSPLAY的移动手机社区，这里有猫狗鱼龟兔子仓鼠龙猫等各种萌图。 <a
+							href="###" class="footdon_pg ">
+							<div class="foot_d_pg am-icon-apple ">App store</div>
+						</a><a href="###" class="footdon_az animated">
+							<div class="foot_d_az am-icon-android ">Android</div>
+						</a>
+					</dd>
+
+				</dl>
+			</div>
+
+			<div class="am_footer_erweima">
+				<div class="am_footer_weixin">
+					<img src="${ctxPath!}/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_gzwx am-icon-weixin">关注微信</div>
+				</div>
+				<div class="am_footer_ddon">
+					<img src="${ctxPath!}/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_dxz am-icon-cloud-download">扫码下载</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="am_info_line">
+			Copyright(c)2015 <span>zscat</span> All Rights Reserved
+		</div>
+	</footer>
+<script>
+ $(function(){
+  auto_window_height();
+$(window).resize(function() {
+  auto_window_height();
+});
+  function auto_window_height(){
+  $('.bdfw_nr').css('min-height',$(window).height() - 52 - 220);
+  }
+});
+
+</script>
+</body>
+</html>

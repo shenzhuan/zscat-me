@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" monitorInterval="60">
+    <properties>
+        <property name="log.dir">/data/logs/blogWeb</property>
+        <Property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} - %1p - %X{logId} - ${sys:hostIp} - blogWeb [zscat] - %C{1}:%M:%L - %m%n</Property>
+    </properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${PATTERN}" />
+        </Console>
+
+        <RollingRandomAccessFile name="Debugger" fileName="${log.dir}/blogWeb.debug.log"
+                                 filePattern="${log.dir}/blogWeb.debug.log.%d{yyyy-MM-dd}">
+            <PatternLayout pattern="${PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+
+
+
+
+
+    </Appenders>
+
+    <Loggers>
+        <Logger name="com.zscat" level="info" additivity="false">
+            <AppenderRef ref="Debugger" />
+
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

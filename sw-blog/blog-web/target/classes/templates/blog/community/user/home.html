@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>用户主页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="zsCat,layui,前端社区">
+  <meta name="description" content="zsCat社区是模块化前端UI框架Layui的官网社区，致力于为web开发提供强劲动力">
+  <link rel="stylesheet" href="${ctxPath!}/static/blog/shequ/layui/css/layui.css">
+  <link rel="stylesheet" href="${ctxPath!}/static/blog/shequ/css/global.css">
+</head>
+<body style="margin-top: 65px;">
+
+@layout("/blog/community/layout/SheQuHeader.html"){}
+
+<div class="zsCat-home" style="background-image: url();">
+  <img src="http://tp4.sinaimg.cn/1345566427/180/5730976522/0" alt="{{info.username}}">
+  <h1>贤心
+  <i class="iconfont icon-nan"></i> 
+  <!-- <i class="iconfont icon-nv"></i> -->
+  
+  <!-- <span style="color:#c00;">（超级码农）</span>
+  <span style="color:#5FB878;">（活雷锋）</span>
+  <span>（该号已被封）</span> -->
+  </h1>
+  <div class="layui-main">
+    <p style="display: inline-block; max-width: 800px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #999; margin-top: 10px;">
+      这个人懒得留下签名
+    </p>
+  </div>
+  <!--<div class="zsCat-sns">
+    <span lay-event="">添加好友</span>
+  </div>-->
+</div>
+
+<div class="main layui-clear">
+  <div class="zsCat-main layui-clear">
+  
+    <div class="home-nav">
+      <a href="">主页</a>
+      <!--<a href="">求解</a>-->
+    </div>
+    <div class="home-left">
+      <h2>最近发表的求解</h2>
+      <ul class="jie-row">
+      @if(page.list.~size==0 ){
+        <li class="zsCat-none" style="min-height: 50px; padding:30px 0; height:auto;"><i style="font-size:14px;">没有发表任何求解</i></li> 
+      @}else{
+	       @for(item in page.list!){
+	        <li>
+	          <span class="zsCat-jing">精</span>
+	          <span class="jie-status jie-status-ok">已解决</span>
+	          <!-- <span class="jie-status">求解中</span> -->
+	          <a href="${ctxPath}/front/blog/shequDetail/${item.id!}">${item.title!}</a>
+	          <i>刚刚</i>
+	          <em>1690阅/12答</em>
+	        </li>
+	       @} 
+      @}
+   
+      </ul>
+      
+      <h2 style="margin-top:30px;">最近的回答</h2>
+      <ul class="home-jieda">
+       @if(commList.list.~size==0 ){
+       <li class="zsCat-none" style="min-height: 50px; padding:30px 0; height:auto;"><span>没有回答任何问题</span></li>
+      @}else{
+	       @for(comment in commList.list!){
+	         <li>
+		          <p>
+		          <span>${comment.commentdate!}</span>
+		          在<a href="${ctxPath}/front/blog/shequDetail/${comment.blogid!}" target="_blank">${comment.title!}</a>中回答：
+		          </p>
+		          <div class="home-dacontent">
+		            ${comment.content!}
+		          </div>
+        </li>
+	       @} 
+      @}
+       
+        
+       
+      </ul>
+    </div>
+    <div class="home-right">
+      <ul class="home-info">
+        <li><i class="iconfont icon-zuichun"></i>拥有飞吻：<span style="color: #FF7200;">5200</span></li>
+        <li><i class="iconfont icon-shijian"></i>加入时间：<span>2016-10-26</span></li>
+        <li><i class="iconfont icon-chengshi"></i>城市：<span>杭州</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p><a href="http://zsCat.layui.com/">zsCat社区</a> 2016 &copy; <a href="http://www.layui.com/">layui.com</a></p>
+  <p>
+    <a href="http://zsCat.layui.com/auth/get" target="_blank">产品授权</a>
+    <a href="http://zsCat.layui.com/jie/3147.html" target="_blank">VIP说明</a>
+    <a href="http://www.layui.com/" target="_blank">商务合作</a>
+    <a href="http://weibo.com/SentsinXu" target="_blank" rel="nofollow">微博</a>
+    <a href="http://zsCat.layui.com/jie/2461.html" target="_blank">微信公众号</a>
+  </p>
+</div>
+<script src="${ctxPath!}/static/blog/shequ/layui/layui.js"></script>
+<script>
+layui.cache.page = 'user';
+layui.cache.user = {
+  username: '游客'
+  ,uid: -1
+  ,avatar: '${ctxPath!}/static/blog/shequ/images/avatar/00.jpg'
+  ,experience: 83
+  ,sex: '男'
+};
+layui.config({
+  version: "1.0.0"
+  ,base: '${ctxPath!}/static/blog/shequ/mods/'
+}).extend({
+  zsCat: 'index'
+}).use('zsCat');
+</script>
+
+</body>
+</html>
