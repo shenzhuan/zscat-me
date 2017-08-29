@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cms-web:war">
+    <output-path>$PROJECT_DIR$/sw-cms/cms-web/target</output-path>
+    <root id="archive" name="cms-web.war">
+      <element id="artifact" artifact-name="cms-web:war exploded" />
+    </root>
+  </artifact>
+</component>

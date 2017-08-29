@@ -1,0 +1,18 @@
+jdbc.url=${jdbc.url}
+jdbc.username=${jdbc.username}
+jdbc.password=${jdbc.password}
+
+
+redis.host = ${redis.host}
+
+#dubbo
+dubbo.application.name = ${dubbo.application.name}
+dubbo.port = ${dubbo.port}
+dubbo.registry.address = ${dubbo.registry.address}
+
+# ============线上开启
+# 警告：true-线上（执行邮件发送以及短信通知等线上业务） false 非线上
+is_online = ${is_online}
+
+# 失效时间：ms ——服务停止后，超过这个时间还未启动就报警：3分钟 1000*60*3 =180000
+out_time = ${out_time}

@@ -1,0 +1,62 @@
+
+/*model*/
+
+.modal {
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    padding: 0;
+    width: 500px;
+    margin-left: -250px;
+}
+
+.model-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    padding: 0;
+    border-radius: 16px !important;
+    z-index: 1200;
+}
+
+.model-close > i {
+    margin-top: 4px;
+    font-size: 20px;
+}
+
+.modal-section {
+    margin: 16px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+}
+
+
+.blockElement{
+    top: 0 !important;
+}
+
+.form-control:focus
+{
+    webkit-transition: border linear .2s,-webkit-box-shadow linear .5s !important;
+    outline: none;
+    border-color: rgb(216, 5, 5) !important;
+    box-shadow: 0 0 8px rgb(252, 40, 40) !important;
+    -moz-box-shadow: 0 0 8px rgb(252, 40, 40) !important;
+    -webkit-box-shadow: 0 0 8px rgb(252, 40, 40) !important;
+}
+
+.blockElement{
+    opacity:1.0 !important;
+}
+
+span{
+    font-family: "Open Sans", sans-serif;
+    cursor: pointer;
+}

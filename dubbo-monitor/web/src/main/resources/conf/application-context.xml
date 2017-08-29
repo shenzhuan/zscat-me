@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+
+    <!--读取配置文件-->
+    <import resource="properties.xml"/>
+
+
+    <!-- 扫描文件（ -->
+    <context:component-scan base-package="com.ants.monitor"/>
+
+    <!--数据数据源配置+mybatis-->
+    <import resource="application-mybatis.xml"/>
+
+    <!--mybatis  事务配置-->
+    <!--<import resource="application-transaction.xml"/>-->
+
+    <!--dubbo-->
+    <import resource="application-dubbo.xml"/>
+
+    <!--工具配置-->
+    <import resource="application-tool.xml"/>
+
+    <!--redis-->
+   <import resource="application-redis.xml"/>
+
+</beans>

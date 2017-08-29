@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config description="">
+    <group name="default">
+
+        <!-- 数据库 -->
+        <property name="jdbc.url"
+                  defaultValue="jdbc:mysql://127.0.0.1:3306/sy?characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull"
+                  description="JDBC URL"/>
+        <property name="jdbc.username" defaultValue="root"
+                  description="JDBC username"/>
+        <property name="jdbc.password" defaultValue="123456"
+                  description="JDBC password"/>
+
+
+        <property name="redis.host" defaultValue="redis://ants-monitor:123456@127.0.0.1:6379/2" description="redis配置：密码@ip:host/db号"/>
+
+        <property name="dubbo.application.name" defaultValue="ants-monitor" description="监控中心项目名"/>
+        <property name="dubbo.port" defaultValue="19300" description="#此处为port地址，该监控中心应用的端口号"/>
+        <property name="dubbo.registry.address" defaultValue="127.0.0.1:2181" description="# 此处为zk地址，若多个，则用逗号隔开。例如（zookeeper.address = 127.0.0.1:2181,127.0.0.2:2181,127.0.0.3:2181）"/>
+
+        <property name="is_online" defaultValue="false" description="警告：true-线上（执行邮件发送以及短信通知等线上业务） false 非线上"/>
+        <property name="out_time" defaultValue="180000" description="失效时间：ms ——服务停止后，超过这个时间还未启动就报警：3分钟 1000*60*3 =180000"/>
+
+    </group>
+    <script>
+        <generate template="application.properties.vm"
+                  destfile="WEB-INF/classes/application.properties"
+                  charset="UTF-8"/>
+    </script>
+</config>
