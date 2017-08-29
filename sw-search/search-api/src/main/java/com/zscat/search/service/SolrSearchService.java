@@ -35,14 +35,14 @@ public interface SolrSearchService {
      * @throws IOException
      * @throws
      */
-    public Integer upadteIndex(IndexObject goods) throws  Exception;
+    public Integer upadteIndex(IndexObject goods,String serverUrl) throws  Exception;
 
-
+    void deleteAll(String serverUrl)throws Exception;
     /**
      * 删除索引
      * @throws Exception
      */
-    public Integer deleteIndex(IndexObject goods)throws Exception;
+    public Integer deleteIndex(IndexObject goods,String serverUrl)throws Exception;
 
-    public List<IndexObject> search(String keyword)throws Exception;
+    public List<IndexObject> search(String keyword,String serverUrl)throws Exception;
 }

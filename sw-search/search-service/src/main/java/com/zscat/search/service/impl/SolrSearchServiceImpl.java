@@ -25,6 +25,9 @@ import java.util.Map;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.zscat.search.model.IndexObject;
 import com.zscat.search.service.SolrSearchService;
+import org.apache.lucene.document.Field;
+import org.apache.lucene.document.StoredField;
+import org.apache.lucene.document.TextField;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;
@@ -39,7 +42,7 @@ import org.apache.solr.common.SolrInputDocument;
 @Service(version = "1.0.0",retries = 0,timeout = 60000)
 public class SolrSearchServiceImpl implements SolrSearchService {
 
-    private String serverUrl = "http://127.0.0.1:8080/solr/core3";
+
 
     /**
      * 增加与修改<br>
@@ -47,16 +50,15 @@ public class SolrSearchServiceImpl implements SolrSearchService {
      * @throws IOException
      * @throws SolrServerException
      */
-    public Integer upadteIndex(IndexObject goods) throws Exception{
+    public Integer upadteIndex(IndexObject goods,String serverUrl) throws Exception{
         HttpSolrClient client = new  HttpSolrClient(serverUrl);
         SolrInputDocument doc = new SolrInputDocument();
-
-        doc.addField("id", "123");
-        doc.addField("title", "javaWEB技术");
-        doc.addField("releaseDate", new Date());
-        doc.addField("summary", "书籍");
-        doc.addField("clickHit", "11");
-
+        doc.addField("id", goods.getId());
+        doc.addField("title", goods.getTitle());
+        doc.addField("summary", goods.getKeywords());
+        doc.addField("descripton", goods.getDescripton());
+        doc.addField("postDate", "goods.getPostDate()");
+        doc.addField("url", goods.getUrl());
         client.add(doc);
         //一定要记得提交，否则不起作用
         client.commit();
@@ -65,16 +67,22 @@ public class SolrSearchServiceImpl implements SolrSearchService {
         return 1;
     }
 
+    public void deleteAll(String serverUrl)throws Exception{
+        HttpSolrClient client = new  HttpSolrClient(serverUrl);
+        client.deleteByQuery("*:*");
+        client.commit();
+        client.close();
+    }
 
     /**
      * 删除索引
      * @throws Exception
      */
-    public Integer deleteIndex(IndexObject goods)throws Exception{
+    public Integer deleteIndex(IndexObject goods,String serverUrl)throws Exception{
         HttpSolrClient client = new  HttpSolrClient(serverUrl);
 
         //1.删除一个
-        client.deleteById("123");
+        client.deleteById(goods.getId().toString());
 
         //2.删除多个
         List<String> ids = new ArrayList<>();
@@ -85,8 +93,7 @@ public class SolrSearchServiceImpl implements SolrSearchService {
         //3.根据查询条件删除数据,这里的条件只能有一个，不能以逗号相隔
         client.deleteByQuery("id:zxj1");
 
-        //4.删除全部，删除不可恢复
-        //client.deleteByQuery("*:*");
+
 
         //一定要记得提交，否则不起作用
         client.commit();
@@ -94,7 +101,7 @@ public class SolrSearchServiceImpl implements SolrSearchService {
         return 1;
     }
 
-    public List<IndexObject> search(String keyword)throws Exception{
+    public List<IndexObject> search(String keyword,String serverUrl)throws Exception{
         List<IndexObject> goodsL = new ArrayList<>();
         HttpSolrClient client = new  HttpSolrClient(serverUrl);
 
@@ -136,15 +143,15 @@ public class SolrSearchServiceImpl implements SolrSearchService {
         //遍历搜索记录
         //获取高亮信息
         Map<String, Map<String, List<String>>> highlighting = queryResponse.getHighlighting();
-        for (SolrDocument solrDocument : results) {
-            IndexObject goods = new IndexObject();
-            goods.setId((Long) solrDocument.get("id"));
-//            goods.setClickhit((Integer) solrDocument.get("title"));
-//            goods.setCreateDate((Date) solrDocument.get("title"));
-//            goods.setImg((String) solrDocument.get("title"));
-//            goods.setPrices((String) solrDocument.get("title"));
-            goods.setTitle((String) solrDocument.get("title"));
-            goodsL.add(goods);
+        for (SolrDocument doc : results) {
+            IndexObject indexObject = new IndexObject();
+            indexObject.setId(Long.parseLong(doc.get("id").toString()));
+            indexObject.setTitle(doc.get("title").toString());
+            indexObject.setKeywords(doc.get("summary").toString());
+            indexObject.setDescripton(doc.get("descripton").toString());
+            indexObject.setPostDate(doc.get("postDate").toString());
+            indexObject.setUrl(doc.get("url").toString());
+            goodsL.add(indexObject);
             //输出高亮信息
 //            Map<String, List<String>> map = highlighting.get(solrDocument.get("id"));
 //            List<String> list = map.get("title");

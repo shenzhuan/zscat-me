@@ -2,200 +2,235 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50a1741c-2800-4118-acd9-eec4b08d927c" name="Default" comment="123">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_service_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_service_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_web_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_web_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/cms_web_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/cms_web_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/search_web_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/search_web_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/shop_h5_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/shop_h5_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/shop_service_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/shop_service_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/shop_web_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/shop_web_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_101tec_zkclient_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_28.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_dubbo_2_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_29.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_31.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_2_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatisplus_spring_boot_starter_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_joda_2_8_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_8_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_penggle_kaptcha_2_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_sgroschupf_zkclient_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_zxing_core_3_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_xmemcached_xmemcached_1_3_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibeetl_beetl_2_7_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibeetl_beetl_2_7_15.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_janeluo_ikanalyzer_2012_u6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jhlabs_filters_2_0_235_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_7_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_persistence_api_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_32.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_40.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_2_8_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_6_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_abego_treelayout_org_abego_treelayout_core_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_annotations_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_3_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_6_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_6_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_highlighter_6_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_join_6_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_memory_6_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queries_6_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_6_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_sandbox_6_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_solr_solr_solrj_5_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ehcache_ehcache_3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_21_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_netty_netty_3_2_5_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_9_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_0_0_CR1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_noggit_noggit_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_6_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_6_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_log4j_over_slf4j_1_6_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_dubbo_1_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_0_23_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_10_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_6_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_3_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_autoconfigure_1_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__tk_mybatis_mapper_spring_boot_starter_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app-monitor" afterPath="$PROJECT_DIR$/app-monitor" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_admin" afterPath="$PROJECT_DIR$/sw_admin" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/1290740006.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/bd_logo1_31bdc765.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/copy_rignt_24.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/loading_72b1da62.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/logo_top_ca79a146.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=1114831545,1486900620&amp;fm=173&amp;s=8037C73410234719C8AC78E90300A020&amp;w=218&amp;h=146&amp;img.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=1120325148,1492578561&amp;fm=173&amp;s=ECE09747443394330D8814AA03001012&amp;w=218&amp;h=146&amp;img.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=1131312435,1508457774&amp;fm=173&amp;s=938049A06E310B981A1C8DB30300F012&amp;w=218&amp;h=146&amp;img.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=1627732295,3845488461&amp;fm=173&amp;s=BF8A5023C152EE6D0E55B5CB010050B2&amp;w=218&amp;h=146&amp;img.JPEG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=2414901755,2028757809&amp;fm=173&amp;s=E53A30D40C532AC69CA6198C03007088&amp;w=218&amp;h=146&amp;img.JPEG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=2762133191,2137590777&amp;fm=173&amp;s=3384BC4C56F7AA6E10AB34880300F08A&amp;w=218&amp;h=146&amp;img.JPEG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=3045908794,2515516683&amp;fm=173&amp;s=A5125795461879C615AA89D90300C0BB&amp;w=218&amp;h=146&amp;img.JPEG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=3676348664,1347477344&amp;fm=173&amp;s=D12401F3C2700796DBA0603D03008040&amp;w=218&amp;h=146&amp;img.JPEG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/u=681892989,3814779436&amp;fm=173&amp;s=D69A5229C3E3F7474C3500DE0100D0B2&amp;w=218&amp;h=146&amp;img.JPEG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/upload_22619202_1490164695645.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/upload_22619202_1490164705421.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/upload_22619202_1490164712642.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/upload_22619202_1490164715905.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-common/src/main/java/com/zsCat/common/utils/DateUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/ServletInitializer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexSolrController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/5d4e9b24-dcc5-483a-b6da-be1e9e621891.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/activity_start_52498d2c.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/all_async_search_4679168.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/config_982f6a08.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/init_6151c8b8.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery-1.10.2_d88366fd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/message_041c3208.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/min_super_af0391fe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/min_tips_e4616384.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/sbase_f1d73ac3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/soutu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/swfobject_0178953.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/tu_329aca4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/404.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/error.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index1.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_3_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-blog/blog-service/src/main/resources/spring-rpc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery-1.11.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery-2.1.1.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery.mobile.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/jquery/jquery1x.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/extend/layer.ext.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/layer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/layer.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/icon_ext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/textbg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_ico0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_loading0.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_loading1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_loading2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_loading3.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/default/xubox_title0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/layer.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/layer/skin/layer.ext.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/css/amazeui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/css/petshow.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/.gitkeep" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/fonts/tt0156m-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/a1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/a2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/a3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/azd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/banner_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/bannner_smallbg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/font_line.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/font_yjy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/font_zty.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/footdon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/grey.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/kj.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/l_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/loading1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/pgd.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/r_bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/tm.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/transparent.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/tx.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/what_do.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/white.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/wx.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/xx.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/img/y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/amazeui.lazyload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/amazeui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/countUp.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/pc/js/petshow.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/Validform_v5.3.2_min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/css/validform.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/arrow1.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/arrow2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/error.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/header-bg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/navbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/onLoad.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/right.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/validate/images/totop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/css/amazeui.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/css/animate.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/css/wap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/fontawesome-webfont.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/iconfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/iconfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/iconfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/fonts/iconfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/a6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/aa1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/aa2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/aa3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/c8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/fl01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/fl02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/fl03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/flshadow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/footdon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/gg1g.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/ggg - 副本.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/ggg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/goTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/n1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/q5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qq9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/qqq1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/s1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/w6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/wikibg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/img/z1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/js/amazeui.lazyload.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/js/amazeui.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/wap/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/druid/DruidAutoConfiguration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/druid/DruidProperties.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sw_portl/src/main/resources/META-INF/spring.factories" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/blog_service_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_service_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/blog_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/blog_web_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/search_web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/search_web_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-common/pom.xml" afterPath="$PROJECT_DIR$/sw-common/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/SolrSearchService.java" afterPath="$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/SolrSearchService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/pom.xml" afterPath="$PROJECT_DIR$/sw-search/search-service/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneDao.java" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/LuceneServiceImpl.java" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/LuceneServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-service/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/sw-search/search-service/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-web/pom.xml" afterPath="$PROJECT_DIR$/sw-search/search-web/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexController.java" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/pom.xml" afterPath="$PROJECT_DIR$/sw_portl/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/sw_portl/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/src/test/java/AuthControllerTest.java" afterPath="$PROJECT_DIR$/sw_portl/src/test/java/AuthControllerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/src/test/java/MockMvcBase.java" afterPath="$PROJECT_DIR$/sw_portl/src/test/java/MockMvcBase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sw_portl/src/test/java/MyBatis331Test.java" afterPath="$PROJECT_DIR$/sw_portl/src/test/java/MyBatis331Test.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index.htm" afterPath="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/cms/controller/ErrorHandler404.java" afterPath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/portl/controller/ErrorHandler404.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/cms/controller/ErrorHandler500.java" afterPath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/portl/controller/ErrorHandler500.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/cms/controller/IndexCmsController.java" afterPath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/portl/controller/IndexCmsController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/cms/controller/IndexWapCmsController.java" afterPath="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/portl/controller/IndexWapCmsController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/sw-cms/cms-web/target/" />
     <ignored path="$PROJECT_DIR$/sw-shop/target/" />
@@ -218,6 +253,8 @@
     <ignored path="$PROJECT_DIR$/sw-blog/target/" />
     <ignored path="$PROJECT_DIR$/dubbo-cache-starter/target/" />
     <ignored path="$PROJECT_DIR$/sw-shop/shop-service/target/" />
+    <ignored path="$PROJECT_DIR$/sw_manager/target/" />
+    <ignored path="$PROJECT_DIR$/sw_portl/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -227,108 +264,152 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-shop/shop-web/src/main/resources/application.properties">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="IndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="500">
+              <caret line="117" column="13" lean-forward="false" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexSolrController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexSolrController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sw-search/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="204">
+                <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="32" column="93" lean-forward="false" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/application.properties">
+      <file leaf-file-name="QueryUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/QueryUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="317">
+              <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sw_portl/src/main/resources/application.properties">
+      <file leaf-file-name="IKAnalyzer5x.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/IKAnalyzer5x.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="-357">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw_admin/pom.xml">
+      <file leaf-file-name="PathUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/PathUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="149">
+              <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GunsApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw_admin/src/main/java/com/stylefeng/guns/GunsApplication.java">
+      <file leaf-file-name="SolrSearchServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="126">
+              <caret line="149" column="52" lean-forward="false" selection-start-line="149" selection-start-column="52" selection-end-line="149" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PortlWebApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/PortlWebApplication.java">
+      <file leaf-file-name="SolrSearchService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/SolrSearchService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="81" lean-forward="false" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+            <state relative-caret-position="211">
+              <caret line="39" column="19" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-shop/shop-h5/src/main/resources/application.properties">
+      <file leaf-file-name="LuceneDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Wap1IndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-shop/shop-h5/src/main/java/com/zscat/shop/wap/Wap1IndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontIndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-shop/shop-web/src/main/java/com/zscat/shop/front/FrontIndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YouhongIndexController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw-shop/shop-web/src/main/java/com/zscat/shop/youhong/YouhongIndexController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="35" column="6" lean-forward="false" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+            <state relative-caret-position="145">
+              <caret line="157" column="38" lean-forward="false" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>H</find>
+      <find>Ht</find>
+      <find>Htt</find>
+      <find>Http</find>
+      <find>HttpS</find>
+      <find>HttpSe</find>
+      <find>HttpSer</find>
+      <find>index</find>
+      <find>dubbo.registry.address</find>
+      <find>setIndexDer</find>
+      <find>BlogServiceImpl</find>
+      <find>@</find>
+      <find>su</find>
+      <find>#su</find>
+      <find>、</find>
+      <find>/s</find>
+      <find>f</find>
+      <find>fm</find>
+      <find>/</find>
+      <find>/i</find>
+      <find>/in</find>
+      <find>/ind</find>
+      <find>/inde</find>
+      <find>/index</find>
+      <find>/index/</find>
+      <find>/index/s</find>
+      <find>search</find>
+      <find>objList</find>
+      <find>obj</find>
+      <find>keyword</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>${ctxPath!}/static</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -341,11 +422,40 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sw-blog/blog-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/sw_portl/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/PortlWebApplication.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/ErrorHandler500.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/ErrorHandler404.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index.htm" />
+        <option value="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/SearchServiceApplication.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/model/IndexObject.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/sw-common/pom.xml" />
+        <option value="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/ServletInitializer.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/LuceneServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sw_portl/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/sw_portl/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/sw-search/search-service/pom.xml" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/sw-common/src/main/java/com/zsCat/common/utils/DateUtils.java" />
+        <option value="$MAVEN_REPOSITORY$/com/zscat/sw/blog-api/0.0.1-SNAPSHOT/blog-api-0.0.1-SNAPSHOT.jar!/com/zscat/blog/api/service/BlogService.class" />
+        <option value="$MAVEN_REPOSITORY$/com/zscat/sw/blog-api/0.0.1-SNAPSHOT/blog-api-0.0.1-SNAPSHOT.jar!/com/zscat/blog/api/model/Blog.class" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneDao.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index1.html" />
+        <option value="$PROJECT_DIR$/sw_portl/src/test/java/MockMvcBase.java" />
+        <option value="$PROJECT_DIR$/sw_portl/src/test/java/MyBatis331Test.java" />
+        <option value="$PROJECT_DIR$/sw_portl/src/test/java/AuthControllerTest.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/SolrSearchService.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexSolrController.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java" />
+        <option value="$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sw-search/README.md" />
       </list>
     </option>
   </component>
@@ -357,16 +467,6 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="sw_admin" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
       <PATH>
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
@@ -393,6 +493,9 @@
       </PATH>
     </treeState>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -414,6 +517,86 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zscat_sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zscat_sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw_portl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zscat_sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw-search" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zscat_sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw-cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zscat_sw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sw-blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -428,28 +611,29 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zscat_sw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sw_portl/pom.xml" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zscat.search.controller" />
+      <recent name="com.zsCat.common.utils" />
+      <recent name="com.zscat" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\zscat_sw\sw-search" />
+      <recent name="D:\zscat_sw\sw-search\search-web\src\main\resources\templates" />
+      <recent name="D:\zscat_sw\sw-search\search-web\src\main\resources\static" />
+      <recent name="D:\zscat_sw\sw-search\search-service\src\main\resources" />
+      <recent name="D:\zscat_sw\sw-search\search-service\src\main\java\com\zscat" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -463,7 +647,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GunsApplication">
+  <component name="RunManager" selected="Spring Boot.SearchServiceApplication">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -701,6 +885,7 @@
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
+      <setting name="depsClasspath" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -851,6 +1036,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -894,13 +1085,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="CmsWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zscat.CmsWebApplication" />
-      <module name="search-web" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="false" name="ShopServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.zscat.ShopServiceApplication" />
@@ -908,13 +1092,29 @@
       <envs />
       <method />
     </configuration>
-    <list size="6">
+    <configuration default="false" name="SearchServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zscat.SearchServiceApplication" />
+      <module name="search-service" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SearchWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zscat.SearchWebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="search-web" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.GunsApplication" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.CmsServiceApplication" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.BlogWebApplication" />
       <item index="3" class="java.lang.String" itemvalue="Spring Boot.BlogServiceApplication" />
-      <item index="4" class="java.lang.String" itemvalue="Spring Boot.CmsWebApplication" />
-      <item index="5" class="java.lang.String" itemvalue="Spring Boot.ShopServiceApplication" />
+      <item index="4" class="java.lang.String" itemvalue="Spring Boot.ShopServiceApplication" />
+      <item index="5" class="java.lang.String" itemvalue="Spring Boot.SearchServiceApplication" />
+      <item index="6" class="java.lang.String" itemvalue="Spring Boot.SearchWebApplication" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -928,7 +1128,8 @@
       <option name="presentableId" value="Default" />
       <updated>1503979181083</updated>
       <workItem from="1503979185838" duration="98000" />
-      <workItem from="1503979476085" duration="2206000" />
+      <workItem from="1503979476085" duration="9951000" />
+      <workItem from="1503994690481" duration="13790000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1503981558030</created>
@@ -937,20 +1138,26 @@
       <option name="project" value="LOCAL" />
       <updated>1503981558030</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="123">
+      <created>1503999228229</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1503999228229</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2304000" />
+    <option name="totallyTimeSpent" value="23839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24786781" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12473348" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -958,19 +1165,21 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31026787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15513393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14732143" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4888393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1641791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15884861" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -978,7 +1187,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -992,135 +1200,433 @@
     <option name="LAST_COMMIT_MESSAGE" value="123" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="20" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/ServletInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="false" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/java/com/zscat/BlogServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-blog/blog-web/src/main/java/com/zscat/BlogWebApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="31" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-cms/cms-web/src/main/java/com/zscat/cms/controller/IndexCmsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-cms/cms-web/src/main/java/com/zscat/cms/controller/IndexWapCmsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="13" lean-forward="false" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-shop/shop-h5/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-shop/shop-web/src/main/java/com/zscat/shop/front/FrontIndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-shop/shop-web/src/main/java/com/zscat/shop/youhong/YouhongIndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="35" column="6" lean-forward="false" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-shop/shop-h5/src/main/java/com/zscat/shop/wap/Wap1IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="44" column="13" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-shop/shop-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw_admin/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw_admin/src/main/java/com/stylefeng/guns/GunsApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sw_portl/src/main/java/com/zscat/PortlWebApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="81" lean-forward="false" selection-start-line="31" selection-start-column="81" selection-end-line="31" selection-end-column="81" />
+        <state relative-caret-position="289">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sw_portl/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="357">
+          <caret line="21" column="32" lean-forward="false" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw_portl/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-578">
+          <caret line="17" column="44" lean-forward="false" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/ErrorHandler500.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/error/404.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-cms/cms-web/src/main/java/com/zscat/cms/controller/IndexCmsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="68" column="13" lean-forward="false" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-488">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/beetl.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/conf/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-309">
+          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="82" column="17" lean-forward="false" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-common/src/main/java/com/zsCat/common/utils/DateUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/resources/spring-rpc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="19" column="52" lean-forward="false" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/zscat/sw/blog-api/0.0.1-SNAPSHOT/blog-api-0.0.1-SNAPSHOT.jar!/com/zscat/blog/api/service/BlogService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/zscat/sw/blog-api/0.0.1-SNAPSHOT/blog-api-0.0.1-SNAPSHOT.jar!/com/zscat/blog/api/model/Blog.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/java/com/zscat/blog/service/impl/BlogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/java/com/zscat/conf/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/java/com/zscat/druid/DruidAutoConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="25" lean-forward="false" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-blog/blog-service/src/main/java/com/zscat/BlogServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/static/soutu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar!/com/alibaba/dubbo/rpc/proxy/InvokerInvocationHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-cms/cms-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-cms/cms-service/src/main/java/com/zscat/CmsServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/SearchServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/SearchWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6889">
+          <caret line="9022" column="172" lean-forward="false" selection-start-line="9022" selection-start-column="172" selection-end-line="9022" selection-end-column="172" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/LuceneService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw_portl/src/test/java/MockMvcBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw_portl/src/test/java/MyBatis331Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw_portl/src/test/java/AuthControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/resources/templates/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7060">
+          <caret line="9018" column="35" lean-forward="false" selection-start-line="9018" selection-start-column="35" selection-end-line="9018" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/model/IndexObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/LuceneServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="27" column="21" lean-forward="true" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding>
+            <element signature="e#627#628#0" expanded="false" />
+            <element signature="e#672#673#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-api/src/main/java/com/zscat/search/service/SolrSearchService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="39" column="19" lean-forward="false" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="117" column="13" lean-forward="false" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/QueryUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="26" column="35" lean-forward="false" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/IKAnalyzer5x.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/PathUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/LuceneDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="157" column="38" lean-forward="false" selection-start-line="157" selection-start-column="31" selection-end-line="157" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/lucene/util/DocumentUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="93" lean-forward="false" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-service/src/main/java/com/zscat/search/service/impl/SolrSearchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="149" column="52" lean-forward="false" selection-start-line="149" selection-start-column="52" selection-end-line="149" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/search-web/src/main/java/com/zscat/search/controller/IndexSolrController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sw-search/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="204">
+            <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

@@ -19,7 +19,7 @@ public class DocumentUtil {
         Document doc = new Document();
         doc.add(new StoredField("id", indexObject.getId()));
         doc.add(new TextField("title",indexObject.getTitle(), Field.Store.YES));
-        doc.add(new TextField("keywords",indexObject.getKeywords(), Field.Store.YES));
+        doc.add(new TextField("summary",indexObject.getKeywords(), Field.Store.YES));
         doc.add(new TextField("descripton",indexObject.getDescripton(), Field.Store.YES));
         doc.add(new StoredField("postDate", indexObject.getPostDate()));
         doc.add(new StoredField("url", indexObject.getUrl()));
@@ -30,7 +30,7 @@ public class DocumentUtil {
         IndexObject indexObject = new IndexObject();
         indexObject.setId(Long.parseLong(doc.get("id")));
         indexObject.setTitle(stringFormatHighlighterOut(analyzer, highlighter,doc,"title"));
-        indexObject.setKeywords(stringFormatHighlighterOut(analyzer, highlighter,doc,"keywords"));
+        indexObject.setKeywords(stringFormatHighlighterOut(analyzer, highlighter,doc,"summary"));
         indexObject.setDescripton(stringFormatHighlighterOut(analyzer, highlighter,doc,"descripton"));
         indexObject.setPostDate(doc.get("postDate"));
         indexObject.setUrl(doc.get("url"));

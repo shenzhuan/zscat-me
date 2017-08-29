@@ -21,6 +21,7 @@
     <file url="file://$PROJECT_DIR$/sw-shop/shop-h5" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw-shop/shop-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw-shop/shop-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/sw_admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sw_manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sw_portl" charset="UTF-8" />
   </component>
 </project>
