@@ -57,4 +57,4 @@ zscat
 ### 6.启动sw_manager下面的 GunsApplication主类，访问 http://localhost
 ### 7.启动sw_portl下面的 PortlWebApplication主类，访问 http://localhost:2009/index
 
-
+[搜索模块具体介绍](http://git.oschina.net/catshen/zscat_sw/blob/master/sw-search/README.md)
