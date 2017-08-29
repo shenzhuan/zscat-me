@@ -1,0 +1,33 @@
+
+<div class="data_list">
+		<div class="data_list_title">
+		<img src="${ctxPath!}/static/blog/images/list_icon.png"/>
+		最新博客</div>
+		<div class="datas">
+			<ul>
+			  @for(blog in blogList){
+			  	  <li style="margin-bottom: 30px">
+				  	<span class="date"><a href="${ctxPath!}/blog/articles/${blog.id!}.html">${blog.releasedate!,dateFormat="yyyy-MM-dd HH:mm:ss"}</a></span>
+				  	<span class="title"><a href="${ctxPath!}/blog/articles/${blog.id!}.html">${blog.title! }</a></span>
+				  	<span class="summary">摘要: ${blog.summary! }...</span>
+				  	<span class="img">
+				  		@for(image in blog.imagesList!){
+					  		<a href="${ctxPath!}/blog/articles/${blog.id!}.html">${image!}</a>
+					  		&nbsp;&nbsp;
+				  		@}
+				  	</span>
+				  	<span class="info">发表于 ${blog.releasedate!,dateFormat="yyyy-MM-dd HH:mm:ss"} 阅读(${blog.clickhit!}) 评论(${blog.replyhit!}) </span>
+				  </li>
+				  <hr style="height:5px;border:none;border-top:1px dashed gray;padding-bottom:  10px;" />
+			  @}
+			</ul>
+		</div>
+   </div>
+
+<div>
+	<nav>
+	  <ul class="pagination pagination-sm">
+	    ${pageCode }
+	  </ul>
+	</nav>
+ </div>

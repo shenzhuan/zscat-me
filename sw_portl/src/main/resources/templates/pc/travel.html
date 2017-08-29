@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="${ctxPath!}/static/pc/css/amazeui.min.css">
+<link rel="stylesheet" href="${ctxPath!}/static/pc/css/petshow.css?6">
+<link rel="stylesheet" href="${ctxPath!}/static/pc/css/animate.min.css">
+<script src="${ctxPath!}/static/pc/js/jquery.min.js"></script>
+<script src="${ctxPath!}/static/pc/js/amazeui.min.js"></script>
+<script src="${ctxPath!}/static/pc/js/amazeui.lazyload.min.js"></script>
+
+
+</head>
+<body>
+	<header class="am-topbar am-topbar-inverse">
+		<div class="amz-container">
+			<h1 class="am-topbar-brand">
+				<a href="${ctxPath!}/web/cms/indexT" class="am-topbar-logo"> <img src="${ctxPath!}/static/pc/img/logo.png?1"
+					alt="">
+				</a>
+			</h1>
+			<button
+				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+				data-am-collapse="{target: '#doc-topbar-collapse-5'}">
+				<span class="am-sr-only"> 导航切换 </span> <span class="am-icon-bars">
+				</span>
+			</button>
+			<div class="am-collapse am-topbar-collapse"
+				id="doc-topbar-collapse-5">
+				<ul class="am-nav am-nav-pills am-topbar-nav">
+					<li class="am-active"><a href="${ctxPath!}/web/cms/indexT"> 首页 </a></li>
+					@var cateList1=auth.getCateGory("travelNav");
+					@for(nav in cateList1!){
+					<li><a href="${ctxPath!}/web/cms/travel/${nav.id}"> ${nav.name!}</a></li>
+					@}
+					<li class="am-dropdown" data-am-dropdown=""><a
+						class="am-dropdown-toggle" data-am-dropdown-toggle=""
+						href="javascript:;"> 网站切换 <span class="am-icon-caret-down">
+						</span>
+					</a>
+						<ul class="am-dropdown-content">
+							<li><a href="${ctxPath!}/web/cms/index"> 房产网站</a></li>
+							<li><a href="${ctxPath!}/web/cms/indexT"> 旅游网站 </a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+
+	<div data-am-widget="tabs" class="am-tabs am-tabs-d2 am_news_tab">
+		<ul class="am-tabs-nav am-cf am_cf">
+			@for(item in cateList!){
+			 		@if(cateList.~size==0 ){
+			 		@var itemFirst=item.id!;
+					 <li class="am-active"><a class="activess" href="javascript:void(0)" onclick="bna('${item.id!}',this)">${item.name!}</a></li>
+					@}
+					
+					@if(cateList.~size!=0 ){
+					   <li><a href="javascript:void(0)" onclick="bna('${item.id!}',this)">${item.name!}</a></li>
+					  @} 
+			@}
+			
+
+		</ul>
+		<div class="am-tabs-bd" >
+			<div data-tab-panel-0 class="am-tab-panel am-active">
+		<div class="am-list-news-bd am_news_list_all">
+			<ul class="am-list" id="ban">
+			
+			
+			</ul>
+			<div class="am_news_load">
+				<span><i class="am-icon-spinner am-icon-spin"></i> 更多萌宠照片</span>
+			</div>
+		</div>
+	</div>
+		</div>
+
+	</div>
+
+	<footer class="am_footer">
+		<div class="am_footer_con">
+			<div class="am_footer_link">
+				<span>关于宠物秀</span>
+				<ul>
+					<li><a href="${ctxPath!}/web/cms/aboutus">关于我们</a></li>
+					<li><a href="${ctxPath!}/web/cms/history">发展历程</a></li>
+					<li><a href="${ctxPath!}/web/cms/link">友情链接</a></li>
+				</ul>
+			</div>
+
+
+			<div class="am_footer_don">
+				<span>房产秀</span>
+				<dl>
+					<dt>
+						<img src="${ctxPath!}/static/pc/img/footdon.png?1" alt="">
+					</dt>
+					<dd>
+						一起Show我们的房产吧！宠物秀是图片配文字、涂鸦、COSPLAY的移动手机社区，这里有猫狗鱼龟兔子仓鼠龙猫等各种萌图。 <a
+							href="###" class="footdon_pg ">
+							<div class="foot_d_pg am-icon-apple ">App store</div>
+						</a><a href="###" class="footdon_az animated">
+							<div class="foot_d_az am-icon-android ">Android</div>
+						</a>
+					</dd>
+
+				</dl>
+			</div>
+
+			<div class="am_footer_erweima">
+				<div class="am_footer_weixin">
+					<img src="${ctxPath!}/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_gzwx am-icon-weixin">关注微信</div>
+				</div>
+				<div class="am_footer_ddon">
+					<img src="${ctxPath!}/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_dxz am-icon-cloud-download">扫码下载</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="am_info_line">
+			Copyright(c)2015 <span>zscat</span> All Rights Reserved
+		</div>
+	</footer>
+	<script>
+
+	bna('${cateFirstId}');
+	
+	//精品、最新、全部课程
+	function bna(type,obj) {
+		var lodingHtml = '<div class="tac"><img width="100" height="108" alt="" src="${ctxPath!}/static/loading.gif"></div>' , _timer = null;;
+		$(obj).parent().addClass('am-active').siblings().removeClass('am-active');
+		$.ajax({
+			url :"${ctxPath!}/web/cms/travel/ajax/bna",
+			data : {
+				"order" : type
+			},
+			type : 'post',
+			dataType : 'text',
+			beforeSend:function(){
+				$("#bna").html(lodingHtml);
+				clearTimeout(_timer);
+				
+			},
+			success : function(result) { 
+				_timer = setTimeout(function(){
+					$("#ban").html(result);
+					scrollLoad(); // 调用 滚动记载图片方法
+				}, 300);
+			}
+		});
+	}
+ $(function(){
+  $('.am_news_tab').css('min-height',$(window).height() - 52 - 220);
+  if ($(window).width() < 600 ) {
+ $('.am_list_item_text').each(
+  function(){
+     if($(this).text().length >= 26){
+        $(this).html($(this).text().substr(0,26)+'...');
+     }});}
+
+});
+
+</script>
+</body>
+</html>

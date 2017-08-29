@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="${ctxPath!}/static/pc/css/amazeui.min.css">
+<link rel="stylesheet" href="${ctxPath!}/static/pc/css/petshow.css?6">
+<link rel="stylesheet" href="${ctxPath!}/static/pc/css/animate.min.css">
+<script src="${ctxPath!}/static/pc/js/jquery.min.js"></script>
+<script src="${ctxPath!}/static/pc/js/amazeui.min.js"></script>
+<script src="${ctxPath!}/static/pc/js/amazeui.lazyload.min.js"></script>
+
+
+</head>
+<body>
+	<header class="am-topbar am-topbar-inverse">
+		<div class="amz-container">
+			<h1 class="am-topbar-brand">
+				<a href="${ctxPath!}/web/cms/index" class="am-topbar-logo"> <img
+					src="${ctxPath!}/static/pc/img/logo.png?1" alt="">
+				</a>
+			</h1>
+			<button
+				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+				data-am-collapse="{target: '#doc-topbar-collapse-5'}">
+				<span class="am-sr-only"> 导航切换 </span> <span class="am-icon-bars">
+				</span>
+			</button>
+			<div class="am-collapse am-topbar-collapse"
+				id="doc-topbar-collapse-5">
+				<ul class="am-nav am-nav-pills am-topbar-nav">
+					<li class="am-active"><a href="${ctxPath!}/web/cms/index">
+							首页 </a></li> 
+							@var cateList=auth.getCateGory("houseNav"); 
+							@for(nav in cateList){
+					<li><a href="${ctxPath!}/web/cms/house/${nav.id}">
+							${nav.name!}</a></li> 
+							@}
+					<li class="am-dropdown" data-am-dropdown=""><a
+						class="am-dropdown-toggle" data-am-dropdown-toggle=""
+						href="javascript:;"> 网站切换 <span class="am-icon-caret-down">
+						</span>
+					</a>
+						<ul class="am-dropdown-content">
+							<li><a href="${ctxPath!}/web/cms/index"> 房产网站</a></li>
+							<li><a href="${ctxPath!}/web/cms/indexT"> 旅游网站 </a></li>
+							<li><a href="${ctxPath!}/web/cms/blog"> 旅游网站 </a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+
+	<article data-am-widget="paragraph"
+		class="am-paragraph am-paragraph-default article_nr"
+		data-am-paragraph="{ tableScrollable: true, pureview: true }">
+		<h1 class="article_nr_title">${blog.title!}</h1>
+		<div class="am_list_author">
+			<a href="javascript:void(0)"><span class="am_list_author_ico"
+				style="background-image: url(${ctxPath!}/${blog.img});"></span><span class="name">zscat</span></a><span
+				class="am_news_time">&nbsp;•&nbsp;<time class="timeago"
+					title="2015-08-13 08:02:40 +0800"
+					datetime="2015-08-13 08:02:40 +0800">${blog.releasedate!}</time></span>
+		</div>
+		<div class="article_nr_content">
+
+			<p class=paragraph-default-p>
+				${blog.content!}</p>
+		</div>
+		<div class="article_nr_more">
+			<div class="article_nr_l">
+				<a href=""><i class="am-icon-btn am-icon-thumbs-o-up"></i></a> <span>16</span>
+			</div>
+			<div class="article_nr_more_r">
+				<span>分享 </span> <span class="article_nr_more_ico "> <a
+					href="###" class="am-icon-btn am-secondary am-icon-qq"></a> <a
+					href="###" class="am-icon-btn am-success am-icon-weixin"></a> <a
+					href="###" class="am-icon-btn am-danger am-icon-weibo"></a>
+				</span>
+			</div>
+		</div>
+	</article>
+
+	<div class="am_tjgd">
+		<div class="am-list-news-bd am_news_list_all">
+			<ul class="am-list">
+				<!--缩略图在标题左边-->
+				<li
+					class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left am_list_li">
+					<div class="am-u-sm-3 am-list-thumb am_list_thumb">
+						<a href="${ctxPath!}/web/cms/blogDetail/${blog.id!}" class="">
+							<img src="${ctxPath!}/static/pc/img/c.png"
+							class="am_news_list_img" alt="我很囧，你保重....晒晒旅行中的那些囧！" />
+						</a>
+					</div>
+					<div class=" am-u-sm-9 am-list-main am_list_main">
+						<h3 class="am-list-item-hd am_list_title">
+							<a href="${ctxPath!}/web/cms/blogDetail/${blog.id!}" class="">${blog.title!}</a>
+						</h3>
+						<div class="am_list_author">
+							<a href="javascript:void(0)"><span class="am_list_author_ico"
+								style="background-image: url(${imgServer!}/${blog.img});"></span><span
+								class="name">zscat</span></a><span class="am_news_time">&nbsp;•&nbsp;<time
+									class="timeago" title="2015-08-13 08:02:40 +0800"
+									datetime="2015-08-13 08:02:40 +0800">
+									${blog.releasedate!}</time></span>
+						</div>
+						<div class="am-list-item-text am_list_item_text ">${blog.summary!}</div>
+					</div>
+				</li>
+
+			</ul>
+			<div class="am_news_load">
+				<span><i class="am-icon-spinner am-icon-spin"></i> 更多相关文章</span>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="am_footer">
+		<div class="am_footer_con">
+			<div class="am_footer_link">
+				<span>关于宠物秀</span>
+				<ul>
+					<li><a href="${ctxPath!}/web/cms/aboutus">关于我们</a></li>
+					<li><a href="${ctxPath!}/web/cms/history">发展历程</a></li>
+					<li><a href="${ctxPath!}/web/cms/link">友情链接</a></li>
+				</ul>
+			</div>
+
+
+			<div class="am_footer_don">
+				<span>房产秀</span>
+				<dl>
+					<dt>
+						<img src="${ctxPath!}/static/pc/img/footdon.png?1" alt="">
+					</dt>
+					<dd>
+						一起Show我们的房产吧！宠物秀是图片配文字、涂鸦、COSPLAY的移动手机社区，这里有猫狗鱼龟兔子仓鼠龙猫等各种萌图。 <a
+							href="###" class="footdon_pg ">
+							<div class="foot_d_pg am-icon-apple ">App store</div>
+						</a><a href="###" class="footdon_az animated">
+							<div class="foot_d_az am-icon-android ">Android</div>
+						</a>
+					</dd>
+
+				</dl>
+			</div>
+
+			<div class="am_footer_erweima">
+				<div class="am_footer_weixin">
+					<img src="${ctxPath!}/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_gzwx am-icon-weixin">关注微信</div>
+				</div>
+				<div class="am_footer_ddon">
+					<img src="${ctxPath!}/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_dxz am-icon-cloud-download">扫码下载</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="am_info_line">
+			Copyright(c)2015 <span>zscat</span> All Rights Reserved
+		</div>
+	</footer>
+	<script>
+ $(function(){
+  $('.am_news_tab').css('min-height',$(window).height() - 52 - 220);
+  if ($(window).width() < 600 ) {
+ $('.am_list_item_text').each(
+  function(){
+     if($(this).text().length >= 26){
+        $(this).html($(this).text().substr(0,26)+'...');
+     }});}
+
+});
+
+</script>
+</body>
+</html>

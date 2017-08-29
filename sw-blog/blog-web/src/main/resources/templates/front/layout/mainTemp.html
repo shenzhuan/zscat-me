@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>${pageTitle }-Powered by java1234</title>
+
+<link rel="stylesheet" href="${ctxPath!}/static/blog/bootstrap3/css/bootstrap.min.css">
+<link rel="stylesheet" href="${ctxPath!}/static/blog/bootstrap3/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="${ctxPath!}/static/blog/css/blog.css">
+<link href="http://blog.java1234.com/favicon.ico" rel="SHORTCUT ICON">
+<script src="${ctxPath!}/static/blog/bootstrap3/js/jquery-1.11.2.min.js"></script>
+<script src="${ctxPath!}/static/blog/bootstrap3/js/bootstrap.min.js"></script>
+
+<script>
+	/* var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?aa5c701f4f646931bf78b6f40b234ef5";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})(); */
+</script>
+
+<style type="text/css">
+	  body {
+        padding-top: 10px;
+        padding-bottom: 40px;
+      }
+</style>
+</head>
+<body>
+<div class="container">
+	
+	@layout("head.html"){}
+	@layout("menu.html"){}
+	
+	<div class="row">
+		<div class="col-md-9">
+			
+			@layout("/blog/"+mainPage+".html"){}
+			
+		</div>
+		
+		<div class="col-md-3">
+			<div class="data_list">
+				<div class="data_list_title">
+					<img src="${ctxPath!}/static/blog/images/user_icon.png"/>
+					博主信息
+				</div>
+				<div class="user_image">
+					<img src="${ctxPath!}/static/blog/userImages/${blogger.imageName!}"/>
+				</div>
+				<div class="nickName">sz</div>
+				<div class="userSign">sz</div>
+			</div>
+			
+			<div class="data_list">
+				<div class="data_list_title">
+					<img src="${ctxPath!}/static/blog/images/byType_icon.png"/>
+					按日志类别
+				</div>
+				<div class="datas">
+					<ul>
+					@for(blogTypeCount in blogTypeCountList!){
+							<li><span><a href="${ctxPath!}/index.html?typeId=${blogTypeCount.id! }">${blogTypeCount.typename! }(${blogTypeCount.blogcount! })</a></span></li>
+						
+					 @}
+					</ul>
+				</div>
+			</div>
+			
+			<div class="data_list">
+				<div class="data_list_title">
+					<img src="${ctxPath!}/static/blog/images/byDate_icon.png"/>
+					按日志日期
+				</div>
+				<div class="datas">
+					<ul>
+					@for(blogCount in blogCountList!){
+							<li><span><a href="${ctxPath!}/index.html?releaseDateStr=${blogCount.releasedatestr! }">${blogCount.releasedatestr! }(${blogCount.blogcount! })</a></span></li>
+					 @}	
+					</ul>
+				</div>
+			</div>
+			
+			<div class="data_list">
+				<div class="data_list_title">
+					<img src="${ctxPath!}/static/blog/images/link_icon.png"/>
+					友情链接
+				</div>
+				<div class="datas">
+					<ul>
+					@for(link in linkList!){
+							<li><span><a href="${link.linkUrl }" target="_blank">${link.linkname }</a></span></li>
+					 @}	
+						
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+	</div>
+	@layout("foot.html"){}
+</div>
+</body>
+</html>

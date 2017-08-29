@@ -1,0 +1,25 @@
+<div class="data_list">
+		<div class="data_list_title">
+		<img src="${ctxPath!}/static/blog/images/search_icon.png"/>
+		搜索&nbsp;<font color="red">${q!}</font>&nbsp;的结果 &nbsp;(总共搜索到&nbsp;${resultTotal!}&nbsp;条记录) </div>
+		<div class="datas search">
+			<ul>
+				
+					@if(blogList.~size==0 ){
+					<div align="center" style="padding-top: 20px">未查询到结果，请换个关键字试试看！</div>
+					@}
+					
+					@if(blogList.~size!=0 ){
+					 @for(blog in blogList){
+						
+					  	  <li style="margin-bottom: 20px">
+						  	<span class="title"><a href="${ctxPath!}/blog/articles/${blog.id!}.html" target="_blank">${blog.title! }</a></span>
+						  	<span class="summary">摘要: ${blog.content!}...</span>
+						  	<span class="link"><a href="${ctxPath!}/blog/articles/${blog.id!}.html">${blog.title!}</a>&nbsp;&nbsp;&nbsp;&nbsp;发布日期：${blog.releasedatestr! }</span>
+						  </li>
+						@}
+					@}
+			</ul>
+		</div>
+		${pageCode }
+   </div>

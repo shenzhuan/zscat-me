@@ -1,0 +1,33 @@
+<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+		<script src="${ctxPath!}/static/jquery/jquery-2.1.1.min.js"></script>
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+		<script src="${ctxPath!}/static/jquery/jquery-1.11.1.min.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			if('ontouchstart' in document.documentElement) document.write("<script src='${ctxPath!}/static/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="${ctxPath!}/static/bootstrap/bootstrap.min.js"></script>
+
+		<!-- ace scripts -->
+		<script src="${ctxPath!}/static/ace/js/ace-elements.min.js"></script>
+		<script src="${ctxPath!}/static/ace/js/ace.min.js"></script>
+		
+		<script type="text/javascript">
+		 	var ctxPath = "${ctxPath!}";
+			window.onload=function(){
+				/* $("#ace-settings-navbar").trigger("click");//固定头部导航栏
+				$("#ace-settings-sidebar").trigger("click");//固定左侧菜单
+				$("#ace-settings-highlight").trigger("click"); */
+			};
+		</script>
+		
+		<!-- 引入其他js -->
+		${layoutContent!}
+		
+	</body>
+</html>

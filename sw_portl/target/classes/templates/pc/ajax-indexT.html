@@ -1,0 +1,20 @@
+ @for(article in artList){
+	<li>
+		<div class="am-gallery-item am_list_block">
+			<a href="###" class="am_img_bg"> <img class="am_img animated"
+				src="${imgServer!}/${article.image!}"
+				data-original="${imgServer!}/${article.image}"
+				alt="远方 有一个地方 那里种有我们的梦想" />
+			</a>
+	
+			<div class="am_listimg_info">
+				<span class="am-icon-heart"> 132</span><span class="am-icon-comments">
+					${article.hits!}</span><span class="am_imglist_time">${article.createdate!}</span>
+			</div>
+	
+		</div> <a class="am_imglist_user"><span class="am_imglist_user_ico"><img
+				src="${ctxPath!}/${article.image}" alt=""></span><span
+			class="am_imglist_user_font">${article.title!}</span></a>
+	</li>
+@}
+

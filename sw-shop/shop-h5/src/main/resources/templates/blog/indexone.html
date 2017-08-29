@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>个人博客</title>
+<meta name="keywords" content="个人博客" />
+<meta name="description" content="" />
+<link rel="stylesheet"
+	href="${ctxPath}/static/blog/web-blog/css/index.css" />
+<link rel="stylesheet"
+	href="${ctxPath}/static/blog/web-blog/css/style.css" />
+<script type="text/javascript"
+	src="${ctxPath}/static/blog/web-blog/js/jquery1.42.min.js"></script>
+<script type="text/javascript"
+	src="${ctxPath}/static/blog/web-blog/js/jquery.SuperSlide.2.1.1.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	<!--header start-->
+	<div id="header">
+		<h1>个人博客</h1>
+		<p>青春是打开了,就合不上的书。人生是踏上了，就回不了头的路，爱情是扔出了，就收不回的赌注。</p>
+	</div>
+	<!--header end-->
+	<!--nav-->
+	<div id="nav">
+		<ul>
+			<li><a href="${ctxPath!}/front/blog/indexone">首页</a></li>
+			<li><a href="${ctxPath!}/front/blog/about">关于我</a></li>
+			<li><a href="${ctxPath!}/front/blog/shuo">碎言碎语</a></li>
+			<li><a href="${ctxPath!}/front/blog/daily">个人日记</a></li>
+			<li><a href="${ctxPath!}/front/blog/xc">相册展示</a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<!--nav end-->
+	<!--content start-->
+	<div id="content">
+		<!--left-->
+		<div class="left" id="c_left">
+			<div class="s_tuijian">
+				<h2>
+					文章<span>推荐</span>
+				</h2>
+			</div>
+			<div class="content_text">
+				@for(item in blogList){
+				<!--wz-->
+				<div class="wz">
+					<h3>
+						<a href="${ctxPath}/front/blog/news/${item.id!}" title="${item.title!}">${item.title!}</a>
+					</h3>
+					<dl>
+						<dt><img src="${item.img!}" width="200"  height="123" alt=""></dt>
+						<dd>
+							<p class="dd_text_1">${item.summary!}.....</p>
+							<p class="dd_text_2">
+								<span class="left author">zsCat</span><span class="left sj">时间:${item.releasedate!}</span>
+								<span class="left fl">分类:<a href="#" title="${item.blogType.typename!}">${item.blogType.typename!}</a></span><span
+									class="left yd"><a href="${ctxPath}/front/blog/news/${item.id!}" title="阅读全文">阅读全文</a> </span>
+							<div class="clear"></div>
+							</p>
+						</dd>
+						<div class="clear"></div>
+					</dl>
+				</div>
+				<!--wz end-->
+				@}
+				
+			</div>
+		</div>
+		<!--left end-->
+		<!--right-->
+		<div class="right" id="c_right">
+			<div class="s_about">
+				<h2>关于博主</h2>
+				<img src="images/my.jpg" width="230" height="230" alt="博主" />
+				<p>博主：ZSCAT</p>
+				<p>职业：JAVA软件工程师</p>
+				<p>简介：</p>
+				<p>
+					<a href="#" title="联系博主"><span class="left b_1"></span></a><a
+						href="#" title="加入QQ群，一起学习！"><span class="left b_2"></span></a>
+				<div class="clear"></div>
+				</p>
+			</div>
+			<!--栏目分类-->
+			<div class="lanmubox">
+				<div class="hd">
+					<ul>
+						<li>精心推荐</li>
+						<li>最新文章</li>
+						<li class="hd_3">随机文章</li>
+					</ul>
+				</div>
+				<div class="bd">
+					<ul>
+					@for(hot1 in blogHotList.list){
+						<li><a href="#" title="${hot1.title!}">${hot1.title!}</a></li>
+					@}
+					</ul>
+					<ul>
+					@for(top1 in blogTopList.list){
+						<li><a href="#" title="${top1.title!}">${top1.title!}</a></li>
+					@}
+					</ul>
+					<ul>
+					@for(ram1 in blogRamList.list){
+						<li><a href="#" title="${ram1.title!}">${ram1.title!}</a></li>
+					@}
+					</ul>
+
+
+				</div>
+			</div>
+			<!--end-->
+			<div class="link">
+				<h2>友情链接</h2>
+				<p>
+					<a href="http://www.zscat.top/gw/index">zsCat个人博客</a>
+				</p>
+			</div>
+		</div>
+		<!--right end-->
+		<div class="clear"></div>
+	</div>
+	<!--content end-->
+	<!--footer start-->
+	<div id="footer">
+		<p>
+			Design by:<a href="http://www.duanliang920.com" target="_blank">少年</a>
+			2014-8-9
+		</p>
+	</div>
+	<!--footer end-->
+	<script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
+	<script type="text/javascript"
+		src="${ctxPath}/static/blog/web-blog/js/nav.js"></script>
+
+</body>
+</html>
