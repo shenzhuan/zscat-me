@@ -64,3 +64,7 @@ zscat
 - [blog管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_blog/README.md)
 - [cms管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_cms/README.md)
 - [商城管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_shop/README.md)
+
+请作者喝杯咖啡
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0829/203502_de0b91f0_134431.jpeg "weixin.jpg")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0829/203517_b9c327ff_134431.jpeg "alipay.jpg")
