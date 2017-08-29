@@ -27,7 +27,7 @@ zscat
 - |    ├── shop-web -- shop消费者 前端展示
 - |    ├── shop-h5-- h5消费者 前端展示
 
-1.项目部署，根据doc目录下的 zscat.sql，创建数据库，相关数据库配置 参考application.properties
+1.项目部署，根据doc目录下的 zsboot.sql，创建数据库，相关数据库配置 参考application.properties
 
 ### 2.blog模块为例  
 
