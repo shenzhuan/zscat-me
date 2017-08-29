@@ -27,7 +27,7 @@ zscat
 - |    ├── shop-web -- shop消费者 前端展示
 - |    ├── shop-h5-- h5消费者 前端展示
 
-1.项目部署，根据doc目录下的 zsboot.sql，创建数据库，相关数据库配置 参考application.properties
+1.项目部署，根据doc目录下的 zsboot.sql，weixin.sql，分别创建数据库，相关数据库配置 参考application.properties
 
 ### 2.blog模块为例  
 
@@ -54,7 +54,7 @@ zscat
 
 - a.启动search-services下面的SearchServiceApplication主类，启动blog的dubbo服务
 - b.启动search-web下面的SearchWebApplication主类，访问 http://localhost:2008
-### 6.启动sw_manager下面的 GunsApplication主类，访问 http://localhost
+### 6.启动sw_manager下面的 GunsApplication主类，访问 http://localhost  admin  111111
 ### 7.启动sw_portl下面的 PortlWebApplication主类，访问 http://localhost:2009/index
 
 
