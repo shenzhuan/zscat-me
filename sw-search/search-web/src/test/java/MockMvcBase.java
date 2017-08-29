@@ -1,5 +1,5 @@
 
-import com.zscat.CmsWebApplication;
+import com.zscat.SearchWebApplication;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = CmsWebApplication.class)
+@SpringBootTest(classes = SearchWebApplication.class)
 public class MockMvcBase {
     @Autowired
     private WebApplicationContext webApplicationContext;

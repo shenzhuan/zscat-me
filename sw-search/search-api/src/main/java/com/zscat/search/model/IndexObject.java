@@ -1,13 +1,15 @@
 package com.zscat.search.model;
 
 
+import java.io.Serializable;
+
 /**
  * Description:索引对象
  *
  * @author Jin
  * @create 2017-05-19
  **/
-public class IndexObject implements Comparable<IndexObject>{
+public class IndexObject implements Comparable<IndexObject>,Serializable{
 	
 	private Long id;
 

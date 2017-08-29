@@ -1,5 +1,6 @@
 package com.zscat.search.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.PageInfo;
 
 import com.zscat.search.lucene.LuceneDao;
@@ -7,7 +8,7 @@ import com.zscat.search.model.IndexObject;
 import com.zscat.search.service.LuceneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Service;
+
 
 /**
  * Description:luncene
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Service;
  * @author Jin
  * @create 2017-06-06
  **/
-@Service
+@Service(version = "1.0.0",retries = 0,timeout = 60000)
 public class LuceneServiceImpl implements LuceneService {
 
     @Autowired

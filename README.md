@@ -7,7 +7,7 @@ zscat
 - ├── sw-common -- SSM框架公共模块
 - ├── dubbo-cache-starter -- dubbo缓存插件
 - ├── app-monitor --dubbo服务监控和统计
-- ├── sw-admin -- 后台管理模板
+- ├── sw_manager -- 后台管理模板
 - ├── sw-portl -- 官网门户展示
 - ├── sw-search-- search管理系统（实现了luence，solr两种搜索）
 - |    ├── search-api -- search相关的service
@@ -54,7 +54,7 @@ zscat
 
 - a.启动search-services下面的SearchServiceApplication主类，启动blog的dubbo服务
 - b.启动search-web下面的SearchWebApplication主类，访问 http://localhost:2008
-### 6.启动sw_admin下面的 GunsApplication主类，访问 http://localhost
+### 6.启动sw_manager下面的 GunsApplication主类，访问 http://localhost
 ### 7.启动sw_portl下面的 PortlWebApplication主类，访问 http://localhost:2009/index
 
 

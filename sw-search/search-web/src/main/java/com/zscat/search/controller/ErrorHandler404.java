@@ -1,4 +1,4 @@
-package com.zscat.cms.controller;
+package com.zscat.search.controller;
 
 import org.springframework.boot.autoconfigure.web.ErrorController;
 import org.springframework.stereotype.Controller;

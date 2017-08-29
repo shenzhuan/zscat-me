@@ -1,4 +1,4 @@
-package com.zscat.cms.controller;
+package com.zscat.search.controller;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerExceptionResolver;

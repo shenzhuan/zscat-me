@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.zscat.search.model.IndexObject;
 import com.zscat.search.service.SolrSearchService;
 import org.apache.solr.client.solrj.SolrQuery;
@@ -35,6 +36,7 @@ import org.apache.solr.common.SolrInputDocument;
 /**
  * @author lishen
  */
+@Service(version = "1.0.0",retries = 0,timeout = 60000)
 public class SolrSearchServiceImpl implements SolrSearchService {
 
     private String serverUrl = "http://127.0.0.1:8080/solr/core3";
