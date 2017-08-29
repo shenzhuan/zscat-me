@@ -12,18 +12,7 @@
 	  <module>sw-search</module>
 	  <module>sw-shop</module>
 	  <module>sw_admin</module>
-     <!--
-
-	  <module>sw-shop</module>
-	 ->
-	  <module>sw_admin</module>
-	  <!-<module>sw-admin</module>
-	  <module>sw-cms</module>
-
-		<module>sw-demo</module>
-		<module>sw-sso</module>
-
-		<module>sw-portle</module>-->
+     
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

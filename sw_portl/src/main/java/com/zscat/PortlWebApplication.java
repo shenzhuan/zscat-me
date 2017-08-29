@@ -25,11 +25,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @ServletComponentScan
 @SpringBootApplication
 @ImportResource({"classpath*:spring-rpc.xml"})
-public class CmsWebApplication  extends WebMvcConfigurerAdapter{
-    private static final Logger LOG = LoggerFactory.getLogger(CmsWebApplication.class.getName());
+public class PortlWebApplication  extends WebMvcConfigurerAdapter{
+    private static final Logger LOG = LoggerFactory.getLogger(PortlWebApplication.class.getName());
 
     public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(CmsWebApplication.class);
+        SpringApplication application = new SpringApplication(PortlWebApplication.class);
         application.run(args);
     }
 }
