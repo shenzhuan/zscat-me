@@ -67,6 +67,5 @@ zscat
 
 请作者喝杯咖啡
 
-
-- ![输入图片说明](https://git.oschina.net/uploads/images/2017/0829/203502_de0b91f0_134431.jpeg "weixin.jpg")
-- ![输入图片说明](https://git.oschina.net/uploads/images/2017/0829/203517_b9c327ff_134431.jpeg "alipay.jpg")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0829/203712_6694b4c1_134431.jpeg "weixin.jpg")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0829/203723_5567bd56_134431.jpeg "alipay.jpg")
