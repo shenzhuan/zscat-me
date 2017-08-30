@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--
+	<properties>
+		<property name="dialect" value="mysql"/>
+	</properties>
+	<settings>
+		< !- - 使用列标签代替别名。不同的驱动器表现不同 - - >
+		<setting name="useColumnLabel" value="true" />
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	-->
+</configuration>

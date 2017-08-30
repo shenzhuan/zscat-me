@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <!--业务库-->
+    <bean id="redisLink" class="com.sankuai.xm.tools.redis.RedisLink">
+        <constructor-arg name="address" value="${redis.ip}"/>
+        <constructor-arg name="port" value="${redis.port}"/>
+        <constructor-arg name="pwd" value="${redis.pwd}"/>
+    </bean>
+
+    <!--用户关系库-->
+    <bean id="relationRedisLink" class="com.sankuai.xm.tools.redis.RedisLink">
+        <constructor-arg name="address" value="${relation_redis_ip}"/>
+        <constructor-arg name="port" value="${relation_redis_port}"/>
+        <constructor-arg name="pwd" value="${relation_redis_pwd}"/>
+    </bean>
+
+    <!--文件库-->
+    <bean id="fileredisLink" class="com.sankuai.xm.tools.redis.RedisLink">
+        <constructor-arg name="address" value="${file_redis_ip}"/>
+        <constructor-arg name="port" value="${file_redis_port}"/>
+        <constructor-arg name="pwd" value="${file_redis_pwd}"/>
+    </bean>
+
+    <!--红包库-->
+    <bean id="redpacketredisLink" class="com.sankuai.xm.tools.redis.RedisLink">
+        <constructor-arg name="address" value="${red_redis_ip}"/>
+        <constructor-arg name="port" value="${red_redis_port}"/>
+        <constructor-arg name="pwd" value="${red_redis_pwd}"/>
+    </bean>
+
+
+    <!--活跃度计算库-->
+    <bean id="vitalityredisLink" class="com.sankuai.xm.tools.redis.RedisLink">
+        <constructor-arg name="address" value="${liveness_redis_ip}"/>
+        <constructor-arg name="port" value="${liveness_redis_port}"/>
+        <constructor-arg name="pwd" value="${liveness_redis_pwd}"/>
+    </bean>
+
+    <!--任务redis库-->
+    <bean id="taskredisLink" class="com.sankuai.xm.tools.redis.RedisLink">
+        <constructor-arg name="address" value="${task_redis_ip}"/>
+        <constructor-arg name="port" value="${task_redis_port}"/>
+        <constructor-arg name="pwd" value="${task_redis_pwd}"/>
+    </bean>
+
+    <!--朋友圈库-->
+    <bean id="fcredisLink" class="com.sankuai.xm.tools.redis.RedisLink">
+        <constructor-arg name="address" value="${fc_redis.ip}"/>
+        <constructor-arg name="port" value="${fc_redis.port}"/>
+        <constructor-arg name="pwd" value="${fc_redis.pwd}"/>
+    </bean>
+
+    <bean id="sessionRedisLink" class="com.sankuai.xm.tools.redis.RedisLink">
+        <constructor-arg name="address" value="${redis.auth.host}"/>
+        <constructor-arg name="port" value="${redis.auth.port}"/>
+        <constructor-arg name="pwd" value="${redis.auth.passwd}"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" monitorInterval="30">
+    <properties>
+        <property name="log.dir">/data/logs/hulu.slow</property>
+        <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %1p [%X{logId}] [%C{1}:%L] - %m%n</property>
+    </properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${PATTERN}" />
+        </Console>
+
+        <RollingRandomAccessFile name="slowLog" fileName="${log.dir}/slow.log"
+                                 filePattern="${log.dir}/slow.log.%d{yyyy-MM-dd}">
+            <PatternLayout pattern="${PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="metricsLog" fileName="${log.dir}/slow.metrics.log"
+                                 filePattern="${log.dir}/slow.metrics.log.%d{yyyy-MM-dd}">
+            <PatternLayout pattern="${PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingRandomAccessFile>
+    </Appenders>
+
+
+    <Loggers>
+        <Logger name="com.hulu.slow" level="info" additivity="false">
+            <AppenderRef ref="slowLog"/>
+        </Logger>
+        <Logger name="com.hulu.api" level="info" additivity="false">
+            <AppenderRef ref="slowLog"/>
+        </Logger>
+        <Logger name="com.hulu.im.metrics" level="warn" additivity="false">
+            <AppenderRef ref="metricsLog"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

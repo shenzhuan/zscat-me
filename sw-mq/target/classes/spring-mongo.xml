@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/data/mongo
+        http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 读写分离级别配置  -->
+    <!-- 首选主节点，大多情况下读操作在主节点，如果主节点不可用，如故障转移，读操作在从节点。 -->
+    <bean id="primaryPreferredReadPreference" class="com.mongodb.TaggableReadPreference.PrimaryPreferredReadPreference" />
+    <!-- 最邻近节点，读操作在最邻近的成员，可能是主节点或者从节点。  -->
+    <bean id="nearestReadPreference" class="com.mongodb.TaggableReadPreference.NearestReadPreference" />
+    <!-- 从节点，读操作只在从节点， 如果从节点不可用，报错或者抛出异常。存在的问题是secondary节点的数据会比primary节点数据旧。  -->
+    <bean id="secondaryReadPreference" class="com.mongodb.TaggableReadPreference.SecondaryReadPreference" />
+    <!-- 优先从secondary节点进行读取操作，secondary节点不可用时从主节点读取数据  -->
+    <bean id="secondaryPreferredReadPreference" class="com.mongodb.TaggableReadPreference.SecondaryPreferredReadPreference" />
+
+    <mongo:mongo-client id="mongo-client-prod-comet-trans" replica-set="${mongo_host}" credentials="${mongo_username}:${mongo_passwd}@${src_db_name}">
+        <mongo:client-options connections-per-host="100"
+                              threads-allowed-to-block-for-connection-multiplier="50"
+                              connect-timeout="3000"
+                              socket-timeout="3000"
+                              max-wait-time="5000"
+                              socket-keep-alive="true" />
+    </mongo:mongo-client>
+
+
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg index="0" ref="mongo-client-prod-comet-trans" />
+        <constructor-arg index="1" value="${mongo_db_name}" />
+        <property name="readPreference" ref="nearestReadPreference"></property>
+    </bean>
+
+
+
+    <mongo:mongo-client id="fc_mongo-client-prod-comet-trans" replica-set="${fc_mongo_host}" credentials="${fc_mongo_username}:${fc_mongo_passwd}@${fc_src_db_name}">
+         <mongo:client-options connections-per-host="100"
+                              threads-allowed-to-block-for-connection-multiplier="50"
+                              connect-timeout="3000"
+                              socket-timeout="3000"
+                               max-wait-time="5000"
+                               socket-keep-alive="true"
+
+         />
+    </mongo:mongo-client>
+
+
+    <bean id="fcmongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg index="0" ref="fc_mongo-client-prod-comet-trans" />
+        <constructor-arg index="1" value="${fc_mongo_db_name}" />
+
+        <property name="readPreference" ref="nearestReadPreference"></property>
+    </bean>
+
+
+
+
+</beans>

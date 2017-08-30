@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" monitorInterval="30">
+    <properties>
+        <property name="log.dir">/data/logs/hulu.slow</property>
+        <property name="PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %1p [%X{logId}] [%C{1}:%L] - %m%n</property>
+    </properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${PATTERN}" />
+        </Console>
+
+        <RollingRandomAccessFile name="slowLog" fileName="${log.dir}/slow.log"
+                                 filePattern="${log.dir}/slow.log.%d{yyyy-MM-dd}">
+            <PatternLayout pattern="${PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <RollingRandomAccessFile name="metricsLog" fileName="${log.dir}/slow.metrics.log"
+                                 filePattern="${log.dir}/slow.metrics.log.%d{yyyy-MM-dd}">
+            <PatternLayout pattern="${PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+            </Policies>
+        </RollingRandomAccessFile>
+
+        <SMTP name="Mail" subject="huluSlowErrorLog-test"
+              smtpHost="smtp.ym.163.com" from="mail@huluuu.com" to="1171602588@qq.com"
+              cc="530526399@qq.com,506210867@qq.com,949454756@qq.com,358916030@qq.com,1966564@qq.com,1253036536@qq.com,1439226817@qq.com"
+              smtpUsername="mail@huluuu.com" smtpPassword="mail123" smtpPort="25" bufferSize="50" smtpDebug="true">
+            <PatternLayout pattern="${PATTERN}" />
+        </SMTP>
+
+        <Socket name="logTologstash" host="192.168.1.165" port="4560" protocol="TCP">
+            <PatternLayout pattern="${PATTERN}" />
+        </Socket>
+
+    </Appenders>
+
+
+    <Loggers>
+        <Logger name="com.hulu.slow" level="info" additivity="false">
+            <AppenderRef ref="slowLog"/>
+            <AppenderRef ref="Mail" level="error" />
+        </Logger>
+        <Logger name="com.hulu.api" level="info" additivity="false">
+            <AppenderRef ref="slowLog"/>
+        </Logger>
+        <Logger name="com.hulu.im.metrics" level="warn" additivity="false">
+            <AppenderRef ref="metricsLog"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

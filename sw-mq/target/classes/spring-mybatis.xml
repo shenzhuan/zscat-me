@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+
+	<!--用户库-->
+	<bean id="businessDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${jdbc.driver}"/>
+		<property name="jdbcUrl" value="${jdbc.url}"/>
+		<property name="user" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+		<property name="acquireIncrement" value="10"/>
+		<property name="idleConnectionTestPeriod" value="60"/>
+		<property name="maxPoolSize" value="500"/>
+		<property name="maxStatements" value="300"/>
+		<property name="minPoolSize" value="100"/>
+	</bean>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="businessDataSource" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+		<property name="basePackage" value="com.hulu.slow.dao.user" />
+	</bean>
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="businessDataSource" />
+		<qualifier value="user" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="businessDataSource" />
+	</bean>
+
+
+
+	<!--用户关系-->
+	<bean id="relation_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${relation_jdbc.driver}"/>
+		<property name="jdbcUrl" value="${relation_jdbc.url}"/>
+		<property name="user" value="${relation_jdbc.username}"/>
+		<property name="password" value="${relation_jdbc.password}"/>
+		<property name="acquireIncrement" value="10"/>
+		<property name="idleConnectionTestPeriod" value="60"/>
+		<property name="maxPoolSize" value="100"/>
+		<property name="maxStatements" value="50"/>
+		<property name="minPoolSize" value="10"/>
+	</bean>
+	<bean id="relationSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="relation_dataSource" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="relationSqlSessionFactory"/>
+		<property name="basePackage" value="com.hulu.slow.dao.relation" />
+	</bean>
+	<bean id="relationTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="relation_dataSource" />
+		<qualifier value="relation" />
+	</bean>
+	<tx:annotation-driven transaction-manager="relationTransactionManager" />
+	<bean id="relationJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="relation_dataSource" />
+	</bean>
+
+
+
+	<!--任务-->
+	<bean id="task_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${task_jdbc.driver}"/>
+		<property name="jdbcUrl" value="${task_jdbc.url}"/>
+		<property name="user" value="${task_jdbc.username}"/>
+		<property name="password" value="${task_jdbc.password}"/>
+		<property name="acquireIncrement" value="10"/>
+		<property name="idleConnectionTestPeriod" value="60"/>
+		<property name="maxPoolSize" value="100"/>
+		<property name="maxStatements" value="50"/>
+		<property name="minPoolSize" value="10"/>
+	</bean>
+	<bean id="taskSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="task_dataSource" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="taskSqlSessionFactory"/>
+		<property name="basePackage" value="com.hulu.slow.dao.task" />
+	</bean>
+	<bean id="taskTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="task_dataSource" />
+		<qualifier value="task" />
+	</bean>
+	<tx:annotation-driven transaction-manager="taskTransactionManager" />
+	<bean id="taskJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="task_dataSource" />
+	</bean>
+
+
+
+
+	<bean id="ms_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${ms_jdbc.driver}"/>
+		<property name="jdbcUrl" value="${ms_jdbc.url}"/>
+		<property name="user" value="${ms_jdbc.username}"/>
+		<property name="password" value="${ms_jdbc.password}"/>
+		<property name="acquireIncrement" value="10"/>
+		<property name="idleConnectionTestPeriod" value="60"/>
+		<property name="maxPoolSize" value="100"/>
+		<property name="maxStatements" value="50"/>
+		<property name="minPoolSize" value="10"/>
+	</bean>
+	<bean id="msjdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ms_dataSource" />
+	</bean>
+
+	<bean id="msSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="ms_dataSource" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="msSqlSessionFactory"/>
+		<property name="basePackage" value="com.hulu.slow.dao.ms" />
+	</bean>
+	<bean id="msTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="ms_dataSource" />
+		<qualifier value="task" />
+	</bean>
+	<tx:annotation-driven transaction-manager="msTransactionManager" />
+	<bean id="msJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="ms_dataSource" />
+	</bean>
+
+
+	<bean id="file_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${file_jdbc.driver}"/>
+		<property name="jdbcUrl" value="${file_jdbc.url}"/>
+		<property name="user" value="${file_jdbc.username}"/>
+		<property name="password" value="${file_jdbc.password}"/>
+		<property name="acquireIncrement" value="10"/>
+		<property name="idleConnectionTestPeriod" value="60"/>
+		<property name="maxPoolSize" value="100"/>
+		<property name="maxStatements" value="50"/>
+		<property name="minPoolSize" value="10"/>
+	</bean>
+	<bean id="filejdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="file_dataSource" />
+	</bean>
+
+	<bean id="errlog_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${errlog_jdbc.driver}"/>
+		<property name="jdbcUrl" value="${errlog_jdbc.url}"/>
+		<property name="user" value="${errlog_jdbc.username}"/>
+		<property name="password" value="${errlog_jdbc.password}"/>
+		<property name="acquireIncrement" value="10"/>
+		<property name="idleConnectionTestPeriod" value="60"/>
+		<property name="maxPoolSize" value="100"/>
+		<property name="maxStatements" value="50"/>
+		<property name="minPoolSize" value="10"/>
+	</bean>
+	<bean id="errlogSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="errlog_dataSource" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="errlogSqlSessionFactory"/>
+		<property name="basePackage" value="com.hulu.slow.dao.clientlog" />
+	</bean>
+	<bean id="errlogTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="errlog_dataSource" />
+		<qualifier value="task" />
+	</bean>
+	<tx:annotation-driven transaction-manager="errlogTransactionManager" />
+	<bean id="errlogJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="errlog_dataSource" />
+	</bean>
+
+
+	<!--随机视频-->
+	<bean id="randomchat_dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="${randomchat_jdbc.driver}"/>
+		<property name="jdbcUrl" value="${randomchat_jdbc.url}"/>
+		<property name="user" value="${randomchat_jdbc.username}"/>
+		<property name="password" value="${randomchat_jdbc.password}"/>
+		<property name="acquireIncrement" value="10"/>
+		<property name="idleConnectionTestPeriod" value="60"/>
+		<property name="maxPoolSize" value="100"/>
+		<property name="maxStatements" value="50"/>
+		<property name="minPoolSize" value="10"/>
+	</bean>
+	<bean id="randomchatSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="randomchat_dataSource" />
+	</bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="randomchatSqlSessionFactory"/>
+		<property name="basePackage" value="com.hulu.slow.dao.randomchat" />
+	</bean>
+	<bean id="randomchatTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="randomchat_dataSource" />
+		<qualifier value="randomchat" />
+	</bean>
+	<tx:annotation-driven transaction-manager="randomchatTransactionManager" />
+	<bean id="randomchatJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="randomchat_dataSource" />
+	</bean>
+
+</beans>
