@@ -1,0 +1,66 @@
+<!--交易成功-->
+											<div class="order-status5">
+											@for(order in orderList!){
+												<div class="order-title">
+													<div class="dd-num">订单编号：<a href="javascript:;">${order.ordersn!}</a></div>
+													<span>成交时间：${order.createdate!}</span>
+													<!--    <em>店铺：小桔灯</em>-->
+												</div>
+												<div class="order-content">
+													<div class="order-left">
+														
+														<ul class="item-list">
+															<li class="td td-item">
+																<div class="item-pic">
+																	<a href="#" class="J_MakePoint">
+																		<img src="${ctxPath}/static/mall/images/kouhong.jpg_80x80.jpg" class="itempic J_ItemImg">
+																	</a>
+																</div>
+																<div class="item-info">
+																	<div class="item-basic-info">
+																		<a href="#">
+																			<p>${order.ordersn!}</p>
+																			<p class="info-little">
+																		</a>
+																	</div>
+																</div>
+															</li>
+															<li class="td td-price">
+																<div class="item-price">
+																	${order.username!}
+																</div>
+															</li>
+															<li class="td td-number">
+																<div class="item-number">
+																	${order.totalprice!}
+																</div>
+															</li>
+															<li class="td td-operation">
+																<div class="item-operation">
+																	
+																</div>
+															</li>
+														</ul>
+
+													</div>
+													<div class="order-right">
+														
+														<div class="move-right">
+															<li class="td td-status">
+																<div class="item-status">
+																	
+																	<p class="order-info"><a href="${ctxPath}/person/orderDetail/${order.id!}">订单详情</a></p>
+																	<p class="order-info"><a href="${ctxPath}/person/logistics/${order.id!}">查看物流</a></p>
+																</div>
+															</li>
+															<li class="td td-change">
+															@if(order.status == 1){
+																<div class="am-btn am-btn-danger anniu" onclick="deleteC('${order.id!}')">
+																	删除订单</div>
+															@}		
+															</li>
+														</div>
+													</div>
+												</div>
+												@}
+											</div>

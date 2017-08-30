@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>付款成功页面</title>
+<link rel="stylesheet"  type="text/css" href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/amazeui.css"/>
+<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+<link href="${ctxPath}/static/mall/basic/css/demo.css" rel="stylesheet" type="text/css" />
+
+<link href="${ctxPath}/static/mall/css/sustyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${ctxPath}/static/mall/basic/js/jquery-1.7.min.js"></script>
+<style>
+.wx_content {
+    position: absolute;
+    top: 20%;
+    left: 36%;
+    margin-top: -60px;
+    width: 454px;
+    background-color: none;
+    z-index: 10000000000;
+    overflow: auto;
+}
+.wx_box {
+    width: 98%;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    text-align: center;
+    border: 2px solid #CCC;
+    overflow: hidden;
+}
+.white_close {
+    background: url(../static/pay/close.jpg) no-repeat center right;
+    width: 14px;
+    height: 14px;
+    float: right;
+    right: 15px;
+    top: 10px;
+    display: block;
+    position: absolute;
+    z-index: 1000000;
+}
+</style>
+</head>
+
+<body>
+
+
+	@layout("/mall/layout/mallTop.html"){}
+
+<div class="clear"></div>
+
+
+
+<div class="take-delivery">
+ <div class="status">
+   <h2>请付款</h2>
+   <div class="successInfo">
+     <ul>
+       <li>付款金额<em>¥${order.price!}</em></li>
+       <div class="user-info">
+         <p>收货人：${order.buyerName!}</p>
+         <p>联系电话：${order.buyerEmail!}</p>
+         <p>收货地址：湖北省 武汉市 武昌区 东湖路75号众环大厦</p>
+       </div>
+             请认真核对您的收货信息，如有错误请联系客服
+                               
+     </ul>
+     
+    </div>
+  </div>
+   <form action="${ctxPath}/order_pay" method="post" target="_blank"
+                  id="theForm">
+  <div class="logistics">
+				<h3>选择支付方式</h3>
+			<div class="bankone">
+			<input type="hidden" name="order_id" value="${order.id}"/>
+			
+				<span class="banksp"> <input name="payType" type="radio"
+					value="alipay" checked="checked" />
+				</span> <span class="bankimg"><img
+					src="${ctxPath}/static/pay/alipay.jpg"
+					width="125" height="47" /></span> <span class="bank_txt">支付宝</span>
+			</div>
+
+			<div class="bankone">
+				<span class="banksp"> <input name="payType" type="radio"
+					value="wxcodepay" />
+				</span> <span class="bankimg"><img
+					src="${ctxPath}/static/pay/weixin.png"
+					width="125" height="47" /></span> <span class="bank_txt">微信</span>
+			</div>
+		</div>
+		<div class="banknextbtn">
+                            <input name="" type="button" value="确认支付" onclick="order_pay();"
+                                   style="cursor: pointer;"/> 
+                        </div>
+		      <div class="clear"></div>
+		      </form>
+</div>
+
+
+<div class="footer" >
+ <div class="footer-hd">
+ <p>
+ <a href="#">zsCat科技</a>
+ <b>|</b>
+ <a href="#">商城首页</a>
+ <b>|</b>
+ <a href="#">支付宝</a>
+ <b>|</b>
+ <a href="#">物流</a>
+ </p>
+ </div>
+ <div class="footer-bd">
+ <p>
+ <a href="#">关于zsCat</a>
+ <a href="#">合作伙伴</a>
+ <a href="#">联系我们</a>
+ <a href="#">网站地图</a>
+ <em>© 2015-2025 zsCat.com 版权所有</em>
+ </p>
+ </div>
+</div>
+ <script>
+        //返回当前页面高度
+        function order_pay() {
+            var h = document.body.clientHeight;
+            var top = document.documentElement.scrollTop;
+            top = top + (h - top) / 2;
+            jQuery('.black_overlay').css("height", h);
+            jQuery(".white_content").css("top", top);
+
+            var payType = $(
+                    'input[name="payType"]:checked ').val();
+            var orderId = ${order.id};
+            if (payType == "wxcodepay") {
+   
+                var html = '';
+                jQuery.get("${ctxPath}/wechat/wxcodepay", {
+                    "order_id": orderId,"payType":payType
+                }, function (data) {
+                	console.log(data);
+                    html += data;
+                    jQuery(html).appendTo("#wxPayCode");
+                    jQuery("#wxcodepay_overlay").show();
+                }, "text");
+                /* jQuery.ajax({type:'POST',url:"$!webPath/wechat/wxcodepay.htm",async:false,data:{"order_id":orderId},success:function(html){
+                 jQuery("#wxPayCode").html(html);
+                 jQuery("#wxcodepay_overlay").show();
+                 }}); */
+            } else {
+            
+                jQuery('#pay_overlay').show();
+                jQuery('#theForm').submit();
+            }
+
+        }
+        window.onscroll = function () {
+            var h = document.body.clientHeight;
+            var top = document.documentElement.scrollTop;
+            top = top - 50 + (h - top) / 2;
+            jQuery(".white_content").css("top", top);
+        }
+    </script>
+    <div style="display: none;" id="pay_overlay">
+    <div class="white_content">
+        <a href="javascript:void(0);"
+           onclick="javascript:jQuery('#pay_overlay').hide();"
+           class="white_close"><img
+                src="${ctxPath}/static/pay/close.jpg"
+                width="14" height="14"/></a>
+        <div class="white_box">
+            <h1>支付提醒</h1>
+            <dl class="white_dl">
+                <dt></dt>
+                <dd>
+                    <div class="payf">
+                        <a href="${ctxPath}/order_finish?order_id=${order.id!}">已经完成支付！</a>
+                    </div>
+                    <div class="payf">
+                        <a href="javascript:void(0);"
+                           onclick="javascript:jQuery('#pay_overlay').hide();">支付出现问题！</a>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="black_overlay"></div>
+</div>
+
+<div style="display: none;" id="wxcodepay_overlay">
+    <div class="wx_content">
+        <a href="javascript:void(0);"
+           onclick="javascript:jQuery('#wxcodepay_overlay').hide();"
+           class="white_close"><img
+                src="${ctxPath}/static/pay/close.jpg"
+                width="14" height="14"/></a>
+        <div class="wx_box">
+            <h1>微信二维码扫码支付</h1>
+            <dl class="wx_dl">
+                <dt id="wxPayCode"></dt>
+                <dd>
+                    <div class="payf">
+                        <a href="${ctxPath}/order_finish?order_id=${order.id!}">完成支付！</a>
+                    </div>
+                    <div class="payf">
+                        <a href="javascript:void(0);"
+                           onclick="javascript:jQuery('#wxcodepay_overlay').hide();">支付出现问题！</a>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="black_overlay"></div>
+</div>
+</body>
+</html>

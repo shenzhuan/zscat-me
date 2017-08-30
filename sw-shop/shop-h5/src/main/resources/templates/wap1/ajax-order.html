@@ -1,0 +1,25 @@
+
+											@for(order in orderList!){
+												 <li>
+  <dl>
+   <dt>
+    <span>订单：${order.ordersn!}</span>
+    <span>${order.username!}</span>
+   </dt>
+   <!--订单产品循环dd-->
+  
+   <dd>
+    <span>商品数量：<b>${order.totalcount!}</b></span>
+    <span>实付：<b>${order.totalprice!}</b></span>
+   </dd>
+   <dd>
+   @if(order.status == 1){
+    <a class="order_delBtn" onclick="deleteC('${order.id!}')">删除订单</a>
+    <a class="order_payBtn">付款</a>
+   @} 
+   </dd>
+  </dl>
+ </li>
+
+	@}
+								

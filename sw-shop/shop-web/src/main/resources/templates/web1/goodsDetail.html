@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="${ctxPath}/static/web1/css/common.css" rel="stylesheet"
+	type="text/css" />
+<link href="${ctxPath}/static/web1/fonts/iconfont.css" rel="stylesheet"
+	type="text/css" />
+<link href="${ctxPath}/static/web1/css/style.css" rel="stylesheet"
+	type="text/css" />
+<link href="${ctxPath}/static/web1/css/Orders.css" rel="stylesheet"
+	type="text/css" />
+<link href="${ctxPath}/static/web1/css/show.css" rel="stylesheet"
+	type="text/css" />
+<link href="${ctxPath}/static/web1/css/purebox-metro.css"
+	rel="stylesheet" id="skin">
+	<script src="${ctxPath}/static/web1/js/jquery.min.1.8.2.js"
+		type="text/javascript"></script>
+	<script src="${ctxPath}/static/web1/js/jquery.reveal.js"
+		type="text/javascript"></script>
+	<script src="${ctxPath}/static/web1/js/jquery.SuperSlide.2.1.1.js"
+		type="text/javascript"></script>
+	<script src="${ctxPath}/static/web1/js/common_js.js"
+		type="text/javascript"></script>
+	<script src="${ctxPath}/static/web1/js/footer.js"
+		type="text/javascript"></script>
+	<!--图片放大效果-->
+	<script src="${ctxPath}/static/web1/js/jqzoom.js"
+		type="text/javascript"></script>
+		<script type="text/javascript" src="${ctxPath!}/static/layer/layer.min.js"></script>
+	<title>产品详细页</title>
+</head>
+<body>
+@layout("/web1/layout/mallHeader.html"){}
+	<!--产品详细页样式-->
+	<div class="clearfix Inside_pages">
+		<div class="Location_link">
+			<em></em><a href="#">进口食品、进口牛</a> &lt; <a href="#">进口饼干/糕点</a> &lt; <a
+				href="#">销售产品名称</a>
+		</div>
+		<!--产品详细介绍样式-->
+		<div class="clearfix" id="goodsInfo">
+			<!--产品图片放大-->
+			<div class="mod_picfold clearfix">
+				<div class="clearfix" id="detail_main_img">
+					<div class="layout_wrap preview">
+						<div id="vertical" class="bigImg">
+							<img src="${ctxPath!}/static/upload/project/${goods.img}" width="" height="" alt="" id="midimg" />
+							<div id="winSelector"></div>
+						</div>
+						<input type="hidden" id="goodsid" value="${goods.id!}" />
+						<div class="smallImg">
+							<div class="scrollbutton smallImgUp disabled">&lt;</div>
+							<div id="imageMenu">
+								<ul>
+								@for(img in imgs!){
+								<li><img src="${img!}" width="68" height="68"
+										alt="洋妞" /></li>
+								@}
+									
+								</ul>
+							</div>
+							<div class="scrollbutton smallImgDown">&gt;</div>
+						</div>
+						<!--smallImg end-->
+						<div id="bigView" style="display: none;">
+							<div>
+								<img width="800" height="800" alt="" src="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="Sharing">
+					<div class="bdsharebuttonbox bdshare-button-style0-16"
+						data-bd-bind="1441079683326">
+						<a href="#" class="bds_more" data-cmd="more">分享到：</a><a href="#"
+							class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a
+							href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a
+							href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a
+							href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a
+							href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+					</div>
+					<script>
+						window._bd_share_config = {
+							"common" : {
+								"bdSnsKey" : {},
+								"bdText" : "",
+								"bdMini" : "2",
+								"bdMiniList" : false,
+								"bdPic" : "",
+								"bdStyle" : "0",
+								"bdSize" : "16"
+							},
+							"share" : {
+								"bdSize" : 16
+							},
+							"image" : {
+								"viewList" : [ "qzone", "tsina", "tqq",
+										"renren", "weixin" ],
+								"viewText" : "分享到：",
+								"viewSize" : "16"
+							},
+							"selectShare" : {
+								"bdContainerClass" : null,
+								"bdSelectMiniList" : [ "qzone", "tsina", "tqq",
+										"renren", "weixin" ]
+							}
+						};
+						with (document)
+							0[(getElementsByTagName('head')[0] || body)
+									.appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
+									+ ~(-new Date() / 36e5)];
+					</script>
+					<!--收藏-->
+					<div class="Collect">
+						<a href="javascript:collect(92)"><em class="ico1"></em>收藏商品(
+							2345 )</a>
+					</div>
+				</div>
+			</div>
+			<!--产品信息-->
+			<div class="property">
+				<form action="javascript:addToCart(97)" name="ECS_FORMBUY"
+					id="ECS_FORMBUY">
+					<h2>${goods.title!}</h2>
+					<div class="goods_info">◆买即送大麦茶◆满2件减10元再赠2罐大麦茶◆礼品袋茶包免费赠◆</div>
+					<div class="ProductD clearfix">
+						<div class="productDL">
+							<dl>
+								<dt>售&nbsp;&nbsp;&nbsp;&nbsp;价：</dt>
+								<dd>
+									<span id="ECS_SHOPPRICE"><i>￥</i>${goods.prices!}</span>
+									<del>市场价：￥${goods.prices!}</del>
+								</dd>
+							</dl>
+							<dl>
+								<dt>总 重 量：</dt>
+								<dd>140克</dd>
+							</dl>
+							<dl>
+								<dt>规&nbsp;&nbsp;&nbsp;&nbsp;格：</dt>
+								<dd>
+									<div class="item  selected">
+										<b></b><a href="#none" title="小礼盒">小礼盒</a>
+									</div>
+									<div class="item">
+										<b></b><a href="#none" title="普通包装">普通包装</a>
+									</div>
+									<div class="item">
+										<b></b><a href="#none" title="大礼盒">大礼盒</a>
+									</div>
+									<div class="item">
+										<b></b><a href="#none" title="铁盒装">铁盒装</a>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>上架时间：</dt>
+								<dd>${goods.createDate!}</dd>
+							</dl>
+							<div class="Appraisal">
+								<p>销售量</p>
+								<a>${goods.sellhit!}</a>
+							</div>
+						</div>
+					</div>
+					<div class="buyinfo" id="detail_buyinfo">
+						<dl>
+							<dt>数量</dt>
+							<dd>
+								<div class="choose-amount left">
+									<a class="btn-reduce" href="javascript:;"
+										onclick="setAmount.reduce('#buy-num')">-</a> <a
+										class="btn-add" href="javascript:;"
+										onclick="setAmount.add('#buy-num')">+</a> <input class="text"
+										id="buy-num" value="1" onkeyup="setAmount.modify('#buy-num');">
+								</div>
+								<div class="P_Quantity">剩余：50000件</div>
+							</dd>
+							<dd>
+								<div class="wrap_btn">
+									<a href="#" class="wrap_btn1"  onclick="addCart(1)"
+										title="加入购物车"></a> <a href="#"
+										class="wrap_btn2" title="立即购买"  onclick="addCart(2)"></a>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="Guarantee clearfix">
+						<dl>
+							<dt>支付方式</dt>
+							<dd>
+								<em></em>货到付款（部分地区）
+							</dd>
+							<dd>
+								<em></em>在线支付
+							</dd>
+							<dd>
+								<div class="payment" id="payment">
+									<a href="javascript:void(0);" class="paybtn">支付方式<span
+										class="iconDetail"></span></a>
+									<ul>
+										<li>货到付款</li>
+										<li>礼品卡支付</li>
+										<li>网上支付</li>
+										<li>银行转账</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</form>
+			</div>
+			<!--推荐-->
+			<div class="p_right_info">
+				<div class="Brands">
+					<a href="#"><img src="${ctxPath}/static/web1/products/logo/logo.jpg" width="120"
+						height="60" /></a>
+					<h5>红尊</h5>
+				</div>
+				<div class="Recommend">
+					<div class="title_name">同类产品推荐</div>
+					<div class="Recommend_list">
+						<ul>
+						 @var sameTypeList = goods.getTypeGoods(7,goods.typeid);
+				      @for(same in sameTypeList.list!){
+						<li class="clearfix">
+								<div class="pic_img">
+									<a href="${ctxPath!}/web1/goods/goodsDetail/${same.id!}"><img src="${ctxPath!}/static/upload/project/${same.img!}"
+										data-bd-imgshare-binded="1"></a>
+								</div>
+								<div class="r_content">
+									<div class="title">
+										<a href="${ctxPath!}/web1/goods/goodsDetail/${same.id!}">${same.title!}</a>
+									</div>
+									<div class="p_Price">￥${same.prices!}</div>
+								</div>
+							</li>
+				        @}
+							
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--样式-->
+		<div class="clearfix">
+			<div class="left_style">
+				<div class="user_Records">
+					<div class="title_name">热销产品</div>
+					<ul>
+					 @var hitList = goods.getHitGoods(4);
+				      @for(hit in hitList.list!){
+						<li><a href="${ctxPath!}/web1/goods/goodsDetail/${hit.id!}">
+								<p>
+									<img src="${ctxPath!}/static/upload/project/${hit.img!}" data-bd-imgshare-binded="1">
+								</p>
+								<p class="p_name">${hit.title!}</p>
+						</a>
+							<p>
+								<span class="p_Price"><i>￥</i>${hit.prices!}</span><b>${hit.prices!}</b>
+							</p></li>
+				        @}
+				        
+						
+						
+					</ul>
+				</div>
+			</div>
+			<!--介绍信息样式-->
+			<div class="right_style">
+				<div class="inDetail_boxOut ">
+					<div class="inDetail_box">
+						<div class="fixed_out ">
+							<ul class="inLeft_btn fixed_bar">
+								<li class="active"><a id="property-id" href="#shangpsx"
+									class="current">规格与包装</a></li>
+								<li><a id="detail-id" href="#shangpjs">商品属性</a></li>
+								<li><a id="shot-id" href="#miqsp">售后服务</a></li>
+								<li><a id="coms1-id" href="#status2">买家评论(12)</a></li>
+							</ul>
+							<div class="subbuy">
+								<span class="extra currentPrice"> ¥129.90</span> <a href="#"
+									class="extra  notice J_BuyButtonSub">立即购买</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="shangpjs" class="info_style" style="text-align: center">
+					<img src="products/cp.jpg" />
+				</div>
+				<div class="productContent" id="status2">
+					<div class="iComment clearfix">
+						<div class="rate">
+							<strong id="goodRate">100<span>%</span></strong><br> <span>好评度</span>
+						</div>
+						<div class="percent" id="percentRate">
+							<dl>
+								<dt>
+									好评<span>(100%)</span>
+								</dt>
+								<dd>
+									<div style="width: 100px;"></div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									中评<span>(0%)</span>
+								</dt>
+								<dd class="d1">
+									<div style="width: 0;"></div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									差评<span>(0%)</span>
+								</dt>
+								<dd class="d1">
+									<div style="width: 0;"></div>
+								</dd>
+							</dl>
+						</div>
+						<div class="actor">
+							<dl>
+								<dt>
+									发表评价即可获得10积分，精华评论更有 <font color="red">额外奖励</font> 积分；<br>
+										还有7个多倍积分名额哦，赶紧抢占吧！<br> 只有购买过该商品的用户才能进行评价。
+								</dt>
+								<dd>
+									<input type="submit" class="Publication_btn" title=""
+										onclick="send_cooment()" value="发表评论">
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="commentBox" style="display: none;">
+						<form action="javascript:;" onsubmit="submitComment(this)"
+							method="post" name="commentForm" id="commentForm">
+							<h3>商品评分</h3>
+							<div id="star">
+								<ul>
+									<li><span onclick="dorank(1)"></span>
+										<p>1分</p>
+										<p>非常不满意</p></li>
+									<li><span onclick="dorank(2)"></span>
+										<p>2分</p>
+										<p>不满意</p></li>
+									<li><span onclick="dorank(3)"></span>
+										<p>3分</p>
+										<p>一般</p></li>
+									<li><span onclick="dorank(4)"></span>
+										<p>4分</p>
+										<p>满意</p></li>
+									<li><span onclick="dorank(5)"></span>
+										<p>5分</p>
+										<p>非常满意</p></li>
+								</ul>
+								<input type="hidden" name="rank" id="rank" value="1"> <input
+									type="hidden" name="cmt_type" value=""> <input
+										type="hidden" name="id" value="78"> <input
+											type="hidden" name="email" id="email" value="null\@mial.com">
+							</div>
+							<h4>评论内容</h4>
+							<div class="bd">
+								<textarea name="content" id="content" class="textarea_long"
+									onkeyup="checkLength(this);"></textarea>
+								<p class="g">
+									<label>&nbsp; </label> <input type="submit" value="发表"
+										class="btn_common"> <span t="word_calc" class="word"><b
+											id="sy">0</b>/1000</span>
+								</p>
+							</div>
+						</form>
+					</div>
+					<div id="ECS_COMMENT">
+						<div class="Comment">
+							<div class="CommentTab">
+								<ul>
+									<li class="active" onclick="javascript:gotoPage(1,78,0,0);">全部评论(0)</li>
+									<li onclick="javascript:gotoPage(1,78,0,3);">好评(0)</li>
+									<li onclick="javascript:gotoPage(1,78,0,2);">中评(0)</li>
+									<li onclick="javascript:gotoPage(1,78,0,1);">差评(0)</li>
+								</ul>
+							</div>
+							<div class="CommentText" id="goodsdetail_comments_list"
+								style="display: block">
+								<ul class="clearfix">
+								</ul>
+								<div class="comment_page clearfix">
+									<div class="comment_Number">
+										<span class="f_l f6" style="margin-right: 10px;">共 <b>0</b>
+											条评论
+										</span>
+										<div id="comment_Pager_Number" class="comment_Pager_Number">
+											<a href="javascript:gotoPage(1,78,0,0)">首页</a> <a
+												class="prev" href="javascript:;">上一页</a> <a class="next"
+												href="javascript:;">下一页</a> <a class="last"
+												href="javascript:;">尾页</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<script type="text/javascript">
+							//<![CDATA[
+							var cmt_empty_username = "请输入您的用户名称";
+							var cmt_empty_email = "请输入您的电子邮件地址";
+							var cmt_error_email = "电子邮件地址格式不正确";
+							var cmt_empty_content = "您没有输入评论的内容";
+							var captcha_not_null = "验证码不能为空!";
+							var cmt_invalid_comments = "无效的评论内容!";
+
+							/**
+							 * 提交评论信息
+							 */
+							function submitComment(frm) {
+								var cmt = new Object;
+								cmt.email = frm.elements['email'].value;
+								cmt.content = frm.elements['content'].value;
+								cmt.type = frm.elements['cmt_type'].value;
+								cmt.id = frm.elements['id'].value;
+								cmt.enabled_captcha = frm.elements['enabled_captcha'] ? frm.elements['enabled_captcha'].value
+										: '0';
+								cmt.captcha = frm.elements['captcha'] ? frm.elements['captcha'].value
+										: '';
+								cmt.rank = frm.elements['rank'].value;
+								if (cmt.email.length > 0) {
+									if (!(Utils.isEmail(cmt.email))) {
+										alert(cmt_error_email);
+										return false;
+									}
+								} else {
+									alert(cmt_empty_email);
+									return false;
+								}
+
+								if (cmt.content.length == 0) {
+									alert(cmt_empty_content);
+									return false;
+								}
+
+								if (cmt.enabled_captcha > 0
+										&& cmt.captcha.length == 0) {
+									alert(captcha_not_null);
+									return false;
+								}
+
+								Ajax.call('comment.php', 'cmt='
+										+ cmt.toJSONString(), commentResponse,
+										'POST', 'JSON');
+								frm.elements['content'].value = '';
+								return false;
+							}
+
+							/**
+							 * 处理提交评论的反馈信息
+							 */
+							function commentResponse(result) {
+								if (result.message) {
+									alert(result.message);
+								}
+
+								if (result.error == 0) {
+									var layer = document
+											.getElementById('ECS_COMMENT');
+
+									if (layer) {
+										layer.innerHTML = result.content;
+									}
+								}
+							}
+
+							//]]>
+						</script>
+					</div>
+					<script type="text/javascript">
+						$('.CommentTab ul').find('li').click(
+								function() {
+									$('.CommentTab ul').find('li').removeClass(
+											'active');
+									$('.CommentText').css({
+										display : 'none'
+									});
+									$(this).addClass('active');
+									$('.CommentText').eq($(this).index()).css({
+										display : 'block'
+									});
+								});
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	 @layout("/web1/layout/mallFooter.html"){}
+
+<script type="text/javascript">
+function addCart(type){
+	var goodsid=$("#goodsid").val();
+	$.ajax({
+		type: "post",
+ 		url: '${ctxPath}/web1/person/addCart',
+		data: {goodsid:goodsid},
+		dataType: "json",
+		success:function(data) {
+			if(data.success){
+				if(type==1){
+					layer.msg("加入购车成功!",2, 8);
+				}else{
+					var goodsid1=$("#goodsid").val();
+					window.location.href = "${ctxPath!}/web1/person/LikBuy/"+goodsid1;
+				}
+				
+				
+			}else{
+				layer.msg("加入购车成功!",2, 8);
+			}
+		}
+	});
+}
+function addRePly(){
+	var content=$("#say_some").val();
+	var goodsid=$("#goodsid").val();
+	$.ajax({
+		type: "post",
+ 		url: '${ctxPath}/web1/person/addRePly',
+		data: {content:content,goodsid:goodsid},
+		dataType: "json",
+		success:function(data) {
+			if(data.success){
+				layer.msg("评论成功!",{icon:2});
+				
+			}else{
+				layer.msg("评论失败!",{icon:2});
+			}
+		}
+	});
+}
+</script>
+<script language="javascript">
+function updatenum(type){
+	var qty = parseInt(document.forms['ECS_FORMBUY'].elements['number'].value);
+	if(type == 'del'){
+		if(qty > 1){
+			document.forms['ECS_FORMBUY'].elements['number'].value = (qty - 1);
+		}
+	}else{
+		document.forms['ECS_FORMBUY'].elements['number'].value = (qty + 1);
+	}
+	//changePrice();
+}
+function dorank(rank_id){
+    var rank_id;
+	$("#rank").val(rank_id);
+}
+function send_cooment(){
+    $(".commentBox").toggle();
+}
+function checkLength(which) {
+	var maxChars = 1000; //
+	if(which.value.length > maxChars){
+		alert("您出入的字数超多限制!");
+		which.value = which.value.substring(0,maxChars);
+		return false;
+	}else{
+		var curr = maxChars - which.value.length; //250 减去 当前输入的
+		document.getElementById("sy").innerHTML = curr.toString();
+		return true;
+	}
+}
+</script>
+</body>
+</html>

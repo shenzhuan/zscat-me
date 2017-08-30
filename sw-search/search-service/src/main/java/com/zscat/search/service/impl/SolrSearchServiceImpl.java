@@ -22,6 +22,7 @@ import java.util.Map;
 
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.zscat.search.model.IndexObject;
 import com.zscat.search.service.SolrSearchService;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
@@ -45,7 +46,7 @@ public class SolrSearchServiceImpl implements SolrSearchService {
      * @throws IOException
      * @throws SolrServerException
      */
-    public Integer upadteIndex(IndexObject goods,String serverUrl) throws Exception{
+    public Integer upadteIndex(IndexObject goods, String serverUrl) throws Exception{
         HttpSolrClient client = new  HttpSolrClient(serverUrl);
         SolrInputDocument doc = new SolrInputDocument();
         doc.addField("id", goods.getId());

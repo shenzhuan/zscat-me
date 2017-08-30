@@ -13,7 +13,7 @@ public class ZscatServletInitializer extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(BlogWebApplication.class);
+        return builder.sources(ShopWebApplication.class);
     }
 
 }

@@ -1,0 +1,125 @@
+.breadcrumbs .tab{
+	background-color: transparent;
+	display: inline-block;
+	line-height: 20px;
+	margin: 0px 22px 0px 12px;
+	padding: 0px;
+	font-size: 110%;
+	color: rgb(51, 51, 51);
+	border-radius: 0px;
+}
+.breadcrumbs .tab li{
+	margin: 0px 5px;
+	position: relative;
+	bottom: -5px;
+	padding: 6px 18px;
+	display: inline-block;
+	cursor: pointer;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+.breadcrumbs .tab li:hover{
+	color: rgb(172, 89, 120);
+}
+.breadcrumbs .tab li.active{
+	color: rgb(172, 89, 120);
+	border:1px solid rgb(204, 204, 204);
+	border-bottom-width:0px;
+	background-color: rgb(255, 255, 255);
+}
+.breadcrumbs .tab li i{
+	position: absolute;
+	top: -1px;
+	right: 1px;
+}
+
+ .phide{
+ position: absolute;top:0px;width: 100%;cursor: pointer;
+ filter:alpha(opacity=0);  /* ie 有效*/
+	-moz-opacity:0; /* Firefox  有效*/
+	opacity: 0; /* 通用，其他浏览器  有效*/
+ }
+ 
+.h-30{height: 30px;}
+.lh-32{line-height: 32px;}
+.margin-t15{margin-top: 15px}
+.padding-5{padding: 5px;}
+.padding-10{padding: 10px;}
+.padding-15{padding: 15px;}
+
+.padding-tb-10{padding:10px 0px ;}
+.padding-trb-10{padding:10px 10px 0px 10px ;}
+
+.width-33{width:33%!important;}
+.width-39{width:39%!important;}
+.width-79{width:79%!important;}
+
+.wordbreak{word-wrap:break-word;word-break:break-all;}
+
+.xubox_layer .xubox_title{
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	background: linear-gradient(rgb(255, 255, 255) 0px, rgb(238, 238, 238) 100%) repeat-x rgb(247, 247, 247);
+	color: rgb(102, 159, 199);
+	border-bottom: 1px solid rgb(221, 221, 221);
+	box-sizing: content-box;
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffeeeeee', GradientType=0);
+}
+
+.chosen-container, [class*="chosen-container"] {
+vertical-align: middle;
+line-height: 32px;
+text-align: left;
+}
+.profile-user-info{margin: 0px;width: 100%;}
+
+.chosen-container > .chosen-single, [class*="chosen-container"] > .chosen-single{height: 34px;line-height: 32px;}
+ul.ztree li span.button.cusicon{
+	height: auto;
+	font-family:FontAwesome;
+}
+.form-group > label[class*="col-"]{padding-top: 5px;margin-bottom: 5px;}
+.navbar-default .navbar-header .navbar-nav>.active>a{background-color: rgba(0,0,0,.1)!important;color: white;}
+.radio label{max-width: none;}
+.no-close .ui-dialog-titlebar-close {
+  display: none;
+}
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{float: none;text-align: center;}
+.ui-dialog .ui-dialog-buttonpane{padding: 0px;margin: 0px;}
+.ui-dialog .ui-dialog-buttonpane button{margin: 5px 15px;}
+
+.layer{padding: 10px 10px;}
+
+.EditTable {
+background-color: rgb(255, 255, 255);
+padding: 0px;
+border-top: none;
+}
+.EditTable .FormData {
+border-bottom: 1px dotted #E8E8E8;
+}
+.EditTable .FormData > td {
+padding-top: 6px;
+padding-bottom: 6px;
+padding-right: 8px;
+}
+.EditTable .CaptionTD {
+font-size: 14px;
+text-align: right;
+color: #666;
+vertical-align: middle;
+border: 0 none;
+padding: 2px;
+white-space: nowrap;
+}
+.EditTable .DataTD {
+padding: 2px;
+border: 0 none;
+vertical-align: top;
+}
+.EditTable .DataTD input{width:100%;}

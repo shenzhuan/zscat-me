@@ -1,0 +1,18 @@
+@charset "utf-8";
+html,body,ul,li,p{margin:0px;padding:0px;}
+li{list-style:none;}
+
+/* tsShopContainer Download by http://www.codefans.net*/
+#tsShopContainer li,#tsShopContainer img{vertical-align:top;}
+#tsShopContainer{width:392px; height:495px; float:left; position:relative; }
+#tsShopContainer #tsImgS{text-align:center;width:100%;position:relative; border:1px solid #eaeaea; }
+#tsShopContainer #tsImgS a{display:block;text-align:center;margin:0px auto;}
+#tsShopContainer #tsImgS img{border:0px; width:390px; height:390px;}
+#tsShopContainer #tsPicContainer{width:100%;height:90px;position:relative;background:url(../images/scrollPicbg.gif) repeat-x 0px 0px; margin-top:10px; }
+#tsShopContainer #tsPicContainer #tsImgSArrL{width:15px;height:100%; background:url(../images/r_left.png) no-repeat left center; position:absolute;top:0px;left:0px;cursor:pointer;}
+#tsShopContainer #tsPicContainer #tsImgSArrR{width:15px;height:100%; background:url(../images/r_right.png) no-repeat right center; position:absolute;top:0px;right:0px;cursor:pointer;}
+#tsShopContainer #tsPicContainer #tsImgSCon{position:absolute;top:0px;left:18px;width:1px;height:90px;overflow:hidden; }
+#tsShopContainer #tsPicContainer #tsImgSCon ul{width:100%;overflow:hidden;}
+#tsShopContainer #tsPicContainer #tsImgSCon li{width:90px; float:left;cursor:pointer;}
+#tsShopContainer #tsPicContainer #tsImgSCon li img{padding:2px;margin:1px;border:1px solid  #eaeaea; display:block;width:79px;height:79px;}
+#tsShopContainer #tsPicContainer #tsImgSCon li.tsSelectImg img{border:3px solid #ff4e00; padding:1px; margin:0px;}

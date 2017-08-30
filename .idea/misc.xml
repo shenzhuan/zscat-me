@@ -17,6 +17,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sw_mq/pom.xml" />
+        <option value="$PROJECT_DIR$/sw-storm/pom.xml" />
+        <option value="$PROJECT_DIR$/sw-search/search-es/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,0 +1,124 @@
+/**************评论样式属性******************/
+.productContent{ margin:20px 10px;}
+.attributes-list{width:968px;border:1px solid #e6e6e6;margin:0 auto;background:#f6f6f6;}
+.attributes-list .attr-list-hd{height:32px;line-height:32px;padding-left:20px;font-weight:bold;border-bottom:1px solid #ffffff;}
+.attributes-list ul{padding:0 20px 18px}
+.attributes-list ul li{display:inline;float:left;width:220px;height:18px;overflow:hidden;margin:10px 15px 0 0;line-height:18px;color:#666;}
+.description{width:968px;margin:0 auto;padding:10px 0;}
+.description p{line-height:28px;}
+.description img{max-width:750px;}
+.productContent .buyinfo{width:748px;margin:0 auto;}
+.productContent.Service{padding-top:0;}
+.productContent.Service h4{height:32px;line-height:32px;border-bottom:1px solid #cccccc;background:#f5f5f5;padding-left:12px;font-size:14px;margin-bottom:10px;}
+.productContent.Service p{border-bottom:1px solid #EBEBEB;padding:0 15px 10px 15px;}
+.productContent.Service h3{font-size:14px;font-weight:bold;color:#c00;padding:0 15px;line-height:35px;height:30px;overflow:hidden;}
+.productContent.Service h3 span{font-size:12px;color:#999999;font-weight:normal;padding-left:8px;}
+.iComment{ border-top:1px solid #ddd;}
+.iComment .rate{float:left;width:120px;padding:20px 0 0;text-align:center;}
+.iComment .rate strong{font:normal 46px/30px arial;color: #F30;}
+.iComment .rate span{color:#999;font-family:arial;}
+.iComment .rate strong span{font-size:24px;color:#F30;}
+.iComment .percent{float:left;width:186px;height:74px;padding:8px 0;}
+.iComment .percent span{color:#9C9A9C;}
+.iComment .percent dl{padding:4px 0;overflow:hidden;zoom:1;}
+.iComment .percent dt{float:left;width:72px;}
+.iComment .percent dd{float:left;width:100px;height:10px;margin-top:6px;overflow:hidden;background:#efefef;}
+.iComment .percent dd div{overflow:hidden;height:10px;width:0;background:#F30}
+
+.iComment .actor{padding:8px 0;float:left;}
+.iComment .actor dl{}
+.iComment .actor dl dt{float:left;color:#999999;line-height:27px;}
+.iComment .actor dl dd{float:left;padding:20px 0 0 50px;}
+.iComment .actor dl dd .Publication_btn{ 
+	width:120px;
+	border:1px solid #F30;
+	height:40px; 
+	line-height:35px; 
+	background-color:#F30; 
+	color:#FFF; 
+	text-align:center; 
+	font-size:18px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+		cursor:pointer;
+}
+/*评论*/
+.commentBox{}
+.commentBox h3{background:#f5f5f5;height:35px;line-height:35px;font-size:14px;padding-left:16px; background:#ededed}
+.commentBox #star{padding:0 40px;}
+.commentBox #star ul{height:110px;}
+.commentBox #star ul li{float:left;width:80px;padding-right:10px;text-align:center;cursor:pointer;}
+.commentBox #star ul li span{display:block;width:21px;height:21px;margin:15px auto;background:url(../images/bg_star1.png) no-repeat;}
+.commentBox #star ul li p{color:#444444;}
+.commentBox #star ul li.on span{background:url(../images/bg_star.png) no-repeat;}
+.commentBox #star ul li.on p{color:#d80000;}
+.commentBox .bd{ margin-bottom:30px;}
+.commentBox .bd .textarea_long{width:910px;height:150px;border:1px solid #cccccc;padding:5px;margin:0 0 0 16px;line-height:22px;font-size:12px;}
+.commentBox h4{height:28px;line-height:28px;padding-left:16px;}
+.commentBox .bd p.g{height:30px;width:940px;padding:10px 0px;}
+.commentBox .bd p.g label{float:left;}
+.commentBox .bd p.g label input.c{margin:4px 5px 0 0;float:left}
+.commentBox .bd p.g label a{color:#085C9B;padding:0 5px;}
+.commentBox .bd p.g label a:hover{color:#c00;}
+.commentBox .bd p.g .btn_common{
+	float:right;
+	width:80px;
+	height:30px;
+	font-size:14px;
+	border:1px solid #cdcdcd;
+	line-height:25px;
+	cursor:pointer;
+	color:#545454;
+	background:#f0f0f0;
+	background-image: -moz-linear-gradient(top, #ffffff, #ececec);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #ececec));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ececec', GradientType='0');
+}
+.commentBox .bd p.g .btn_common:hover{
+	background:#f0f0f0;
+	background-image: -moz-linear-gradient(top, #ffffff, #fafafa);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #fafafa));
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#fafafa', GradientType='0');
+}
+.commentBox .bd p.g .word{float:right;padding-right:10px; margin-top:6px; font-family:"新宋体"}
+/*分页样式属性*/
+.comment_page{}
+.comment_page .comment_Number{ float:left; line-height:40px; font-size:14px}
+.comment_page .comment_Pager_Number{ float:left;}
+.comment_page .comment_Pager_Number a{ border:1px solid #ddd; padding:5px 10px; margin:0px 5px;}
+.comment_page .comment_Pager_Number a:hover{ border:1px solid #F30; color:#F30}
+.CommentTab{background:#f5f5f5;height:40px;}
+.CommentTab ul{padding-left:16px; border-bottom:1px solid #ddd; height:40px; line-height:40px; position:relative}
+.CommentTab ul li{float:left; width:200px; text-align:center; border:1px solid #ddd;line-height:39px;height:39px;color:#333333;margin-right:-1px;cursor:pointer;padding:0 5px; font-size:14px}
+.CommentTab ul li.active{border-bottom:3px solid #fff;color: #F60;font-weight:bold;}
+.CommentText{padding:0 24px;display:none}
+.CommentText ul{}
+.CommentText ul li{padding:20px 0;line-height:18px;border-bottom:1px dashed #d7d7d7;float:left;color:#666666;}
+.CommentText ul li .username{width:98px;float:left;overflow:hidden;}
+.CommentText ul li .commentC{width:515px;float:left;}
+.CommentText ul li .commentC strong{color:#000000;}
+.CommentText ul li .commentdate{width:110px;float:right;}
+.techanPdcontent{height:34px;background:url(../images/techanPdcontent.png) repeat-x;width:968px;margin:10px auto 0 auto}
+.techanPdcontent strong{float:left;height:34px;line-height:32px;background:#4eb128;padding:0 25px;color:#ffffff;font-size:20px;text-shadow:1px 1px 0px #000000;display:block;}
+.techanPdcontent span{
+	color:#ffffff;
+	height:29px;
+	line-height:29px;
+	padding-top:5px;
+	display:block;
+	float:left;
+	background:url(../images/techanPdcontent1.png) no-repeat left 5px;
+	padding-left:14px;
+	font-size:14px;
+	font-weight:normal
+}
+.techanProducts{width:750px;margin:0 auto}
+.techanProductsL{width:370px;float:left;padding:24px 0 0 25px;}
+.techanProductsT{line-height:25px;font-size:20px;font-weight:bold;border-bottom:2px solid #e5e5e5;overflow:hidden;margin-bottom:8px;padding:10px 0;}
+.techanProductsL dl{border-bottom:1px dashed #cccccc;line-height:20px;padding:6px 0;}
+.techanProductsL dl dt{width:82px;color:#1e7414;float:left;}
+.techanProductsL dl dd{float:left;color:#666666;width:282px;}
+.techanProductsR{width:330px;float:left;padding:15px 0 0 10px;}
+.techanProductsR img{width:330px;}
+

@@ -17,16 +17,17 @@
         <module name="demo-web" />
         <module name="dubbo-cache-starter" />
         <module name="search-api" />
+        <module name="search-es" />
         <module name="search-service" />
         <module name="search-web" />
         <module name="shop-api" />
         <module name="shop-h5" />
         <module name="shop-service" />
         <module name="shop-web" />
+        <module name="storm-recommend" />
         <module name="sw-common" />
         <module name="sw-portl" />
         <module name="sw_manager" />
-        <module name="sw_mq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -41,12 +42,14 @@
       <module name="demo-web" target="1.7" />
       <module name="dubbo-cache-starter" target="1.7" />
       <module name="search-api" target="1.7" />
+      <module name="search-es" target="1.7" />
       <module name="search-service" target="1.7" />
       <module name="search-web" target="1.7" />
       <module name="shop-api" target="1.7" />
       <module name="shop-h5" target="1.7" />
       <module name="shop-service" target="1.7" />
       <module name="shop-web" target="1.7" />
+      <module name="storm-recommend" target="1.7" />
       <module name="sw" target="1.7" />
       <module name="sw-blog" target="1.7" />
       <module name="sw-cms" target="1.7" />
@@ -56,6 +59,7 @@
       <module name="sw-portl" target="1.7" />
       <module name="sw-search" target="1.7" />
       <module name="sw-shop" target="1.7" />
+      <module name="sw-storm" target="1.7" />
       <module name="sw_admin" target="1.8" />
       <module name="sw_manager" target="1.8" />
       <module name="sw_mq" target="1.7" />

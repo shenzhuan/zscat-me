@@ -1,10 +1,10 @@
 package com.zscat.beetl.function;
 
+import com.zscat.shop.util.SysUserUtils;
 import org.springframework.stereotype.Service;
 
 import com.zscat.conf.JbaseFunctionPackage;
 import com.zscat.shop.model.Member;
-import com.zscat.util.SysUserUtils;
 
 @Service("auth")
 public class AuthUserFunctions implements JbaseFunctionPackage{

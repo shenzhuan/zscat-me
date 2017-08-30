@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+		<title>个人资料</title>
+
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+		<link href="${ctxPath}/static/mall/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/css/infstyle.css" rel="stylesheet" type="text/css">
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/amazeui.js"></script>	
+		<script src="${ctxPath}/static/js/area.js"></script>		
+	</head>
+
+	<body>
+		@layout("/mall/layout/mallHeader.html"){}
+			<b class="line"></b>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="user-info">
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">个人资料</strong> / <small>Personal&nbsp;information</small></div>
+						</div>
+						<hr/>
+
+						<!--头像 -->
+						<div class="user-infoPic">
+
+							<div class="filePic">
+								<input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*">
+								<img class="am-circle am-img-thumbnail" src="${ctxPath}/static/mall/images/getAvatar.do.jpg" alt="" />
+							</div>
+
+							<p class="am-form-help">头像</p>
+
+							<div class="info-m">
+								<div><b>用户名：<i>${member.name}</i></b></div>
+								<div class="vip">
+                                      <span></span><a href="#">会员专享</a>
+								</div>
+							</div>
+						</div>
+
+						<!--个人信息 -->
+						<div class="info-main">
+							<form class="am-form am-form-horizontal">
+
+								<div class="am-form-group">
+									<label for="user-name2" class="am-form-label">昵称</label>
+									<div class="am-form-content">
+										<input type="text" id="user-name2" value="${member.name}" placeholder="nickname">
+                                          <small>昵称长度不能超过40个汉字</small>
+									</div>
+								</div>
+
+								<div class="am-form-group">
+									<label for="user-name" class="am-form-label">姓名</label>
+									<div class="am-form-content">
+										<input type="text" id="user-name2" value="${member.username!}" placeholder="name">
+                                         
+									</div>
+								</div>
+
+								
+
+								
+								<div class="am-form-group">
+									<label for="user-phone" class="am-form-label">电话</label>
+									<div class="am-form-content">
+										<input id="user-phone" value="${member.phone!}"  type="tel">
+
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-phone" class="am-form-label">qq</label>
+									<div class="am-form-content">
+										<input id="user-phone" value="${member.mobile!}"  type="tel">
+
+									</div>
+								</div>
+								<div class="am-form-group">
+									<label for="user-email" class="am-form-label">电子邮件</label>
+									<div class="am-form-content">
+										<input id="user-email" value="${member.email!}"  type="email">
+
+									</div>
+								</div>
+								<div class="am-form-group address">
+									<label for="user-address" class="am-form-label">收货地址</label>
+									<div class="am-form-content address">
+											<input id="city_id" type="hidden" name="cityId" value="">
+									<input id="area_id" class="area_ids" type="hidden" name="areaId" value="">
+									<input id="area_info" class="area_names" type="hidden" name="areaInfo" value="">
+												<select name="area" class="select" id="area">
+												<option value="o" >请选择。。。</option>
+												
+												</select>
+												 <span id="spancity"></span>
+								    		<span id="spanqu"></span>
+                                			<span class="areaMsg" style="color: red"></span>
+												<!-- <select data-am-selected>
+													<option value="a">温州市</option>
+													<option value="b" selected>武汉市</option>
+												</select>
+												<select data-am-selected>
+													<option value="a">瑞安区</option>
+													<option value="b" selected>洪山区</option>
+												</select> -->
+											</div>
+								</div>
+								<div class="am-form-group safety">
+									<label for="user-safety" class="am-form-label">账号安全</label>
+									<div class="am-form-content safety">
+										<a href="safety.html">
+
+											<span class="am-icon-angle-right"></span>
+
+										</a>
+
+									</div>
+								</div>
+								<div class="info-btn">
+									<div class="am-btn am-btn-danger">保存修改</div>
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+
+				</div>
+				<!--底部-->
+				@layout("/mall/layout/mallFooter.html"){}
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+		<title>评价管理</title>
+
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+
+		<link href="${ctxPath}/static/mall/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/css/cmstyle.css" rel="stylesheet" type="text/css">
+
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+
+	</head>
+
+	<body>
+		<!--头 -->
+		@layout("/mall/layout/mallHeader.html"){}
+		<b class="line"></b>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="user-comment">
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">评价管理</strong> / <small>Manage&nbsp;Comment</small></div>
+						</div>
+						<hr/>
+
+						<div class="am-tabs am-tabs-d2 am-margin" data-am-tabs>
+
+							<ul class="am-avg-sm-2 am-tabs-nav am-nav am-nav-tabs">
+								<li class="am-active"><a href="#tab1">所有评价</a></li>
+								<li><a href="#tab2">有图评价</a></li>
+
+							</ul>
+
+							<div class="am-tabs-bd">
+								<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+
+									<div class="comment-main">
+										<div class="comment-list">
+											<ul class="item-list">
+
+												<div class="comment-top">
+													<div class="th th-price">
+														<td class="td-inner">评价</td>
+													</div>
+													<div class="th th-item">
+														<td class="td-inner">商品</td>
+													</div>													
+												</div>
+												@for(comment in page.list!){
+												<li class="td td-item">
+													<div class="item-pic">
+														<a href="#" class="J_MakePoint">
+															<img src="${ctxPath}/static/mall/images/kouhong.jpg_80x80.jpg" class="itempic">
+														</a>
+													</div>
+												</li>
+
+												<li class="td td-comment">
+													<div class="item-title">
+														<div class="item-opinion">好评</div>
+														<div class="item-name">
+															<a href="${ctxPath!}/front/goods/goodsDetail/${comment.goodsId!}">
+																<p class="item-basic-info">${comment.cgoodsName!}</p>
+															</a>
+														</div>
+													</div>
+													<div class="item-comment">
+														${comment.consultContent!}
+													</div>
+
+													<div class="item-info">
+														<div>
+															<p class="info-little"><span>颜色：12#玛瑙</span> <span>包装：裸装</span> </p>
+															<p class="info-time">${comment.consultAddtime!}</p>
+
+														</div>
+													</div>
+												</li>
+											@}
+											</ul>
+
+										</div>
+									</div>
+
+								</div>
+								
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<!--底部-->
+				@layout("/mall/layout/mallFooter.html"){}
+		</div>
+
+	</body>
+
+</html>

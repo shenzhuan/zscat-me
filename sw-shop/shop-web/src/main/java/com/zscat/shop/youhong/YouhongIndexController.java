@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.zscat.shop.util.SysUserUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,9 +32,8 @@ import com.zscat.shop.service.ProductClassService;
 import com.zscat.shop.service.ProductService;
 import com.zscat.shop.service.ProductTypeService;
 import com.zscat.util.PasswordEncoder;
-import com.zscat.util.SysUserUtils;
 
-	/**
+/**
 	 * 
 	 * @author zsCat 2016-10-31 14:01:30
 	 * @Email: 951449465@qq.com

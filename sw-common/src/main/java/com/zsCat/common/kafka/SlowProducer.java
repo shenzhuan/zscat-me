@@ -2,9 +2,10 @@ package com.zsCat.common.kafka;
 
 import com.alibaba.fastjson.JSONObject;
 
-import com.sankuai.xm.kafka.client.IProducerProcessor;
-import com.sankuai.xm.kafka.client.factory.KafkaProducerBuildFactory;
-import com.sankuai.xm.kafka.client.utils.FutureCallback;
+
+import com.zsCat.common.kafka.client.IProducerProcessor;
+import com.zsCat.common.kafka.client.factory.KafkaProducerBuildFactory;
+import com.zsCat.common.kafka.client.utils.FutureCallback;
 import com.zsCat.common.utils.JSONSerializerUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

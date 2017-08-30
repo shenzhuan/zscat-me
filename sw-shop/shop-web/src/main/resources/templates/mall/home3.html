@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>首页</title>
+
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+
+		<link href="${ctxPath}/static/mall/basic/css/demo.css" rel="stylesheet" type="text/css" />
+
+		<link href="${ctxPath}/static/mall/css/hmstyle.css" rel="stylesheet" type="text/css" />
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+
+	</head>
+
+	<body>
+		<div class="hmtop">
+			@layout("/mall/layout/mallTop.html"){}
+
+				<div class="clear"></div>
+			</div>
+			
+			
+			<div class="banner">
+                      <!--轮播 -->
+						<div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
+							<ul class="am-slides">
+								<li class="banner1"><a href="${ctxPath!}/front/blog/index"><img
+								src="${ctxPath}/static/mall/images/shop.png" /></a></li>
+						<li class="banner2"><a><img src="${ctxPath}/static/mall/images/cms.png" /></a></li>
+						<li class="banner3"><a><img src="${ctxPath}/static/mall/images/blog.png" /></a></li>
+						<li class="banner4"><a><img src="${ctxPath}/static/mall/images/menu.png" /></a></li>
+							</ul>
+						</div>
+						<div class="clear"></div>	
+			</div>						
+			
+			<div class="shopNav">
+				<div class="slideall">
+			        
+					   <div class="long-title"><span class="all-goods">全部分类</span></div>
+					   <div class="nav-cont">
+							<ul>
+								<li class="index"><a href="${ctxPath}/front">首页</a></li>
+			<li class="qc"><a target="_blank" href="${ctxPath!}/front/memberList">会员</a></li>
+			<li class="qc"><a target="_blank" href="${ctxPath!}/front/blog/index">博客</a></li>
+			<li class="qc"><a target="_blank" href="${ctxPath}/front/type">分类</a></li>
+			<li class="qc last"><a target="_blank" href="${ctxPath}/front/index">第二首页</a></li>
+			<li class="qc last"><a target="_blank" href="http://git.oschina.net/catshen/zsShop">git地址</a></li>
+							</ul>
+						    <div class="nav-extra">
+						    	<i class="am-icon-user-secret am-icon-md nav-user"></i><b></b>我的福利
+						    	<i class="am-icon-angle-right" style="padding-left: 10px;"></i>
+						    </div>
+						</div>
+		        				
+						<!--侧边导航 -->
+			<div id="nav" class="navfull" style="position: static;">
+				<div class="area clearfix">
+					<div class="category-content" id="guide_2">
+
+						<div class="category" style="box-shadow: none; margin-top: 2px;">
+							<ul class="category-list navTwo" id="js_climit_li">
+							@for(gc in gcList!){
+								<li>
+									<div class="category-info">
+										<h3 class="category-name b-category-name">
+											<i><img src="${ctxPath}/static/mall/images/cake.png" /></i><a target="_blank" class="ml-22"
+												href="${ctxPath}/front/goods/goodsListBygcId/${gc.id!}" title="${gc.name!}">${gc.name!}</a>
+										</h3>
+										<em>&gt;</em>
+									</div>
+									<div class="menu-item menu-in top">
+										<div class="area-in">
+											<div class="area-bg">
+												<div class="menu-srot">
+													<div class="sort-side">
+														@var gcList1 = productClass.getProductClassListByPid(gc.id);
+														@for(gc1 in gcList1!){
+														<dl class="dl-sort">
+															<dt>
+																<a title="${gc1.name!}" target="_blank" href="${ctxPath}/front/goods/goodsListBygcId/${gc1.id!}"><span>${gc1.name!}</span></a>
+															</dt>
+															@var gcList2 = productClass.getProductClassListByPid(gc1.id);
+																@for(gc2 in gcList2!){
+																<dd>
+																	<a title="${gc2.name!}" target="_blank" href="${ctxPath}/front/goods/goodsListBygcId/${gc2.id!}"><span>${gc2.name!}</span></a>
+																</dd>
+																@}
+														</dl>
+														@}
+													</div>
+													<div class="brand-side">
+														<dl class="dl-sort">
+															<dt>
+																<span>实力商家</span>
+															</dt>
+															@for(use in useList!){
+															<dd>
+																<a rel="nofollow" title="${use.name}" target="_blank"
+																	href="${ctxPath!}/front/search/${use.id!}" rel="nofollow"><span class="red">${use.name}</span></a>
+															</dd>
+															@}
+														</dl>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div> <b class="arrow"></b>
+								</li>
+								<b class="arrow"></b>
+						@}		
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+						<!--轮播 -->
+						<script type="text/javascript">
+							(function() {
+								$('.am-slider').flexslider();
+							});
+							$(document).ready(function() {
+								$("li").hover(function() {
+									$(".category-content .category-list li.first .menu-in").css("display", "none");
+									$(".category-content .category-list li.first").removeClass("hover");
+									$(this).addClass("hover");
+									$(this).children("div.menu-in").css("display", "block")
+								}, function() {
+									$(this).removeClass("hover")
+									$(this).children("div.menu-in").css("display", "none")
+								});
+							})
+						</script>
+
+
+					<!--小导航 -->
+					<!--小导航 -->
+			<div class="am-g am-g-fixed smallnav">
+				<div class="am-u-sm-3">
+					<a href="${ctxPath!}/front/type"><img src="${ctxPath}/static/mall/images/navsmall.jpg" />
+						<div class="title">商品分类</div> </a>
+				</div>
+				<div class="am-u-sm-3">
+					<a href="${ctxPath!}/front/blog/index"><img src="${ctxPath}/static/mall/images/huismall.jpg" />
+						<div class="title">博客</div> </a>
+				</div>
+				<div class="am-u-sm-3">
+					<a href="#"><img src="${ctxPath!}/person" />
+						<div class="title">个人中心</div> </a>
+				</div>
+				<div class="am-u-sm-3">
+					<a href="#"><img src="${ctxPath}/static/mall/images/moneysmall.jpg" />
+						<div class="title">投资理财</div> </a>
+				</div>
+			</div>
+
+					<!--走马灯 -->
+
+					<div class="marqueen">
+						<span class="marqueen-title">商城头条</span>
+						<div class="demo">
+
+							<ul>
+							@for(art in artList!){
+								<li class="title-first"><a target="_blank" href="#"> <img
+										src="${ctxPath}/static/mall/images/TJ2.jpg"></img> <span>[${art.type!}]</span>${art.title!}
+								</a></li>	
+							@}
+								
+							    
+						<div class="mod-vip">
+							<div class="m-baseinfo">
+								<a href="${ctxPath}/static/mall/person/index.html">
+									<img src="${ctxPath}/static/mall/images/getAvatar.do.jpg">
+								</a>
+								<em>
+									Hi,<span class="s-name">小叮当</span>
+									<a href="#"><p>点击更多优惠活动</p></a>									
+								</em>
+							</div>
+							<div class="member-logout">
+								<a class="am-btn-warning btn" href="${ctxPath}/front/login">登录</a>
+								<a class="am-btn-warning btn" href="${ctxPath}/front/reg">注册</a>
+							</div>
+							<div class="member-login">
+								<a href="#"><strong>0</strong>待收货</a>
+								<a href="#"><strong>0</strong>待发货</a>
+								<a href="#"><strong>0</strong>待付款</a>
+								<a href="#"><strong>0</strong>待评价</a>
+							</div>
+							<div class="clear"></div>	
+						</div>																	    
+							    
+								<li><a target="_blank" href="#"><span>[特惠]</span>洋河年末大促，低至两件五折</a></li>
+								<li><a target="_blank" href="#"><span>[公告]</span>华北、华中部分地区配送延迟</a></li>
+								<li><a target="_blank" href="#"><span>[特惠]</span>家电狂欢千亿礼券 买1送1！</a></li>
+								
+							</ul>
+                        <div class="advTip"><img src="${ctxPath}/static/mall/images/advTip.jpg"/></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<script type="text/javascript">
+					if ($(window).width() < 640) {
+						function autoScroll(obj) {
+							$(obj).find("ul").animate({
+								marginTop: "-39px"
+							}, 500, function() {
+								$(this).css({
+									marginTop: "0px"
+								}).find("li:first").appendTo(this);
+							})
+						}
+						$(function() {
+							setInterval('autoScroll(".demo")', 3000);
+						})
+					}
+				</script>
+			</div>
+			<div class="shopMainbg">
+				<div class="shopMain" id="shopmain">
+
+					<!--今日推荐 -->
+
+					<div class="am-g am-g-fixed recommendation">
+						<div class="clock am-u-sm-3" ">
+							<img src="${ctxPath}/static/mall/images/2016.png "></img>
+							<p>今日<br>推荐</p>
+						</div>
+						<div class="am-u-sm-4 am-u-lg-3 ">
+							<div class="info ">
+								<h3>真的有鱼</h3>
+								<h4>开年福利篇</h4>
+							</div>
+							<div class="recommendationMain ">
+								<img src="${ctxPath}/static/mall/images/tj.png "></img>
+							</div>
+						</div>						
+						<div class="am-u-sm-4 am-u-lg-3 ">
+							<div class="info ">
+								<h3>囤货过冬</h3>
+								<h4>让爱早回家</h4>
+							</div>
+							<div class="recommendationMain ">
+								<img src="${ctxPath}/static/mall/images/tj1.png "></img>
+							</div>
+						</div>
+						<div class="am-u-sm-4 am-u-lg-3 ">
+							<div class="info ">
+								<h3>浪漫情人节</h3>
+								<h4>甜甜蜜蜜</h4>
+							</div>
+							<div class="recommendationMain ">
+								<img src="${ctxPath}/static/mall/images/tj2.png "></img>
+							</div>
+						</div>
+
+					</div>
+					<div class="clear "></div>
+					<!--热门活动 -->
+
+					<div class="am-container activity ">
+						<div class="shopTitle ">
+							<h4>活动</h4>
+							<h3>每期活动 优惠享不停 </h3>
+							<span class="more ">
+                              <a class="more-link " href="# ">全部活动</a>
+                            </span>
+						</div>
+					
+					  <div class="am-g am-g-fixed ">
+						<div class="am-u-sm-3 ">
+							<div class="icon-sale one "></div>	
+								<h4>秒杀</h4>							
+							<div class="activityMain ">
+								<img src="${ctxPath}/static/mall/images/activity1.jpg "></img>
+							</div>
+							<div class="info ">
+								<h3>春节送礼优选</h3>
+							</div>														
+						</div>
+						
+						<div class="am-u-sm-3 ">
+						  <div class="icon-sale two "></div>	
+							<h4>特惠</h4>
+							<div class="activityMain ">
+								<img src="${ctxPath}/static/mall/images/activity2.jpg "></img>
+							</div>
+							<div class="info ">
+								<h3>春节送礼优选</h3>								
+							</div>							
+						</div>						
+						
+						<div class="am-u-sm-3 ">
+							<div class="icon-sale three "></div>
+							<h4>团购</h4>
+							<div class="activityMain ">
+								<img src="${ctxPath}/static/mall/images/activity3.jpg "></img>
+							</div>
+							<div class="info ">
+								<h3>春节送礼优选</h3>
+							</div>							
+						</div>						
+
+						<div class="am-u-sm-3 last ">
+							<div class="icon-sale "></div>
+							<h4>超值</h4>
+							<div class="activityMain ">
+								<img src="${ctxPath}/static/mall/images/activity.jpg "></img>
+							</div>
+							<div class="info ">
+								<h3>春节送礼优选</h3>
+							</div>													
+						</div>
+
+					  </div>
+                   </div>
+					<div class="clear "></div>
+					<div class="am-container ">
+						<div class="shopTitle ">
+							<h4>新品上市</h4>
+							<h3>你是我的优乐美么？不，我是你小鱼干</h3>
+							<div class="today-brands ">
+								<a href="# ">小鱼干</a>
+								<a href="# ">海苔</a>
+								<a href="# ">鱿鱼丝</a>
+								<a href="# ">海带丝</a>
+							</div>
+							<span class="more ">
+                    <a class="more-link " href="# ">更多美味</a>
+                        </span>
+						</div>
+					</div>
+					<div class="am-g am-g-fixed flood method3 ">
+						<ul class="am-thumbnails ">
+						
+						@for(xp in xinpin.list!){
+							<li>
+							
+								<div class="list ">
+									<a href="${ctxPath!}/front/goods/goodsDetail/${xp.id}" target="_blank">
+										<img src="${ctxPath!}/static/upload/project/${xp.img}" />
+										<div class="pro-title ">${xp.title}</div>
+										<span class="e-price ">￥${xp.prices!}</span>
+									</a>
+								</div>
+							</li>
+						@}	
+						</ul>
+
+					</div>
+					<!--甜点-->
+					@for(sp in spList!){
+					<div class="am-container ">
+						<div class="shopTitle ">
+							<h4>${sp.name!}</h4>
+							<h3>${sp.title!}</h3>
+							<div class="today-brands ">
+							@for(ty in typeList!){
+							<a  target="_blank" href="${ctxPath}/front/goods/goodsListBygcTypeId/${ty.id!}">${ty.name!}</a> 
+							@}	
+								
+							</div>
+							<span class="more ">
+                        <a class="more-link " href="# ">更多</a>
+                        </span>
+						</div>
+					</div>
+					
+					<div class="am-g am-g-fixed floodOne ">
+						<div class="am-u-sm-5 am-u-md-3 am-u-lg-4 text-one ">
+							<a href="${sp.advurl!}">
+								<div class="outer-con ">
+									<div class="title ">
+										大礼包开抢啦
+									</div>					
+									<div class="sub-title ">
+										当小鱼儿恋上软豆腐
+									</div>
+								</div>
+                                  <img src="${ctxPath!}/static/upload/floorAdv/${sp.advimg!}" />								
+							</a>
+						</div>
+						@var goodsList = productClass.getProductByFloorid(sp.id);
+						<div class="am-u-sm-7 am-u-md-5 am-u-lg-4">
+							<div class="text-two">
+								<div class="outer-con ">
+									<div class="title ">
+										${goodsList[0].title!}
+									</div>									
+									<div class="sub-title ">
+										仅售：¥${goodsList[0].prices!}
+									</div>
+									
+								</div>
+								<a href="${ctxPath!}/front/goods/goodsDetail/${goodsList[0].id!}" target="_blank"><img src="${ctxPath!}/static/upload/project/${goodsList[0].img!}" /></a>
+							</div>
+							<div class="text-two last">
+								<div class="outer-con ">
+									<div class="title ">
+										${goodsList[1].title!}
+									</div>									
+									<div class="sub-title ">
+										仅售：¥${goodsList[1].prices!}
+									</div>
+									
+								</div>
+								<a href="${ctxPath!}/front/goods/goodsDetail/${goodsList[1].id!}" target="_blank"><img src="${ctxPath!}/static/upload/project/${goodsList[1].img!}" /></a>
+						    </div>
+						</div>
+		             <div class="am-u-sm-12 am-u-md-4 ">
+						<div class="am-u-sm-3 am-u-md-6 text-three">
+							<div class="outer-con ">
+								    <div class="title ">
+										${goodsList[2].title!}
+									</div>									
+									<div class="sub-title ">
+										尝鲜价：¥${goodsList[2].prices!}
+									</div>
+							</div>
+							<a href="${ctxPath!}/front/goods/goodsDetail/${goodsList[2].id!}" target="_blank"><img src="${ctxPath!}/static/upload/project/${goodsList[2].img!}" /></a>
+						</div>
+
+						<div class="am-u-sm-3 am-u-md-6 text-three">
+							<div class="outer-con ">
+								 <div class="title ">
+										${goodsList[3].title!}
+									</div>									
+									<div class="sub-title ">
+										尝鲜价：¥${goodsList[3].prices!}
+									</div>
+							</div>
+							<a href="${ctxPath!}/front/goods/goodsDetail/${goodsList[3].id!}" target="_blank"><img src="${ctxPath!}/static/upload/project/${goodsList[3].img!}" /></a>
+						</div>
+
+						<div class="am-u-sm-3 am-u-md-6 text-three">
+							<div class="outer-con ">
+								 <div class="title ">
+										${goodsList[4].title!}
+									</div>									
+									<div class="sub-title ">
+										尝鲜价：¥${goodsList[4].prices!}
+									</div>
+							</div>
+							<a href="${ctxPath!}/front/goods/goodsDetail/${goodsList[4].id!}" target="_blank"><img src="${ctxPath!}/static/upload/project/${goodsList[4].img!}" /></a>
+						</div>
+
+						<div class="am-u-sm-3 am-u-md-6 text-three last ">
+							<div class="outer-con ">
+								 <div class="title ">
+										${goodsList[5].title!}
+									</div>									
+									<div class="sub-title ">
+										尝鲜价：¥${goodsList[5].prices!}
+									</div>
+							</div>
+							<a href="${ctxPath!}/front/goods/goodsDetail/${goodsList[5].id!}" target="_blank"><img src="${ctxPath!}/static/upload/project/${goodsList[5].img!}" /></a>
+						</div>
+					</div>
+
+					</div>
+                 <div class="clear "></div>
+				@}	
+					
+
+					<div class="footer ">
+						<div class="footer-hd ">
+							<p>
+								<a href="# ">zsCat科技</a>
+								<b>|</b>
+								<a href="# ">商城首页</a>
+								<b>|</b>
+								<a href="# ">支付宝</a>
+								<b>|</b>
+								<a href="# ">物流</a>
+							</p>
+						</div>
+						<div class="footer-bd ">
+							<p>
+								<a href="# ">关于zsCat</a>
+								<a href="# ">合作伙伴</a>
+								<a href="# ">联系我们</a>
+								<a href="# ">网站地图</a>
+								<em>© 2015-2025 zsCat.com 版权所有</em>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--引导 -->
+
+		<div class="navCir">
+			<li class="active"><a href="${ctxPath}/front"><i
+				class="am-icon-home "></i>首页</a></li>
+		<li><a href="${ctxPath}/front/type"><i class="am-icon-list"></i>分类</a></li>
+		<li><a href="${ctxPath}/person/order"><i
+				class="am-icon-shopping-basket"></i>购物车</a></li>
+		<li><a href="${ctxPath}/person"><i class="am-icon-user"></i>我的</a></li>				
+		</div>
+		<!--菜单 -->
+		<div class=tip>
+			<div id="sidebar">
+				<div id="wrap">
+					<div id="prof" class="item ">
+						<a href="# ">
+							<span class="setting "></span>
+						</a>
+						<div class="ibar_login_box status_login ">
+							<div class="avatar_box ">
+								<p class="avatar_imgbox "><img src="${ctxPath}/static/mall/images/no-img_mid_.jpg " /></p>
+								<ul class="user_info ">
+									<li>用户名：sl1903</li>
+									<li>级&nbsp;别：普通会员</li>
+								</ul>
+							</div>
+							<div class="login_btnbox ">
+								<a href="# " class="login_order ">我的订单</a>
+								<a href="# " class="login_favorite ">我的收藏</a>
+							</div>
+							<i class="icon_arrow_white "></i>
+						</div>
+
+					</div>
+					<div id="shopCart " class="item ">
+						<a href="# ">
+							<span class="message "></span>
+						</a>
+						<p>
+							购物车
+						</p>
+						<p class="cart_num ">${productClass.selectOwnCartCount()}</p>
+					</div>
+					<div id="asset " class="item ">
+						<a href="# ">
+							<span class="view "></span>
+						</a>
+						<div class="mp_tooltip ">
+							我的资产
+							<i class="icon_arrow_right_black "></i>
+						</div>
+					</div>
+
+					<div id="foot " class="item ">
+						<a href="# ">
+							<span class="zuji "></span>
+						</a>
+						<div class="mp_tooltip ">
+							我的足迹
+							<i class="icon_arrow_right_black "></i>
+						</div>
+					</div>
+
+					<div id="brand " class="item ">
+						<a href="#">
+							<span class="wdsc "><img src="${ctxPath}/static/mall/images/wdsc.png " /></span>
+						</a>
+						<div class="mp_tooltip ">
+							我的收藏
+							<i class="icon_arrow_right_black "></i>
+						</div>
+					</div>
+
+					<div id="broadcast " class="item ">
+						<a href="# ">
+							<span class="chongzhi "><img src="${ctxPath}/static/mall/images/chongzhi.png " /></span>
+						</a>
+						<div class="mp_tooltip ">
+							我要充值
+							<i class="icon_arrow_right_black "></i>
+						</div>
+					</div>
+
+					<div class="quick_toggle ">
+						<li class="qtitem ">
+							<a href="# "><span class="kfzx "></span></a>
+							<div class="mp_tooltip ">客服中心<i class="icon_arrow_right_black "></i></div>
+						</li>
+						<!--二维码 -->
+						<li class="qtitem ">
+							<a href="#none "><span class="mpbtn_qrcode "></span></a>
+							<div class="mp_qrcode " style="display:none; "><img src="${ctxPath}/static/mall/images/zscat_weixin.jpg" /><i class="icon_arrow_white "></i></div>
+						</li>
+						<li class="qtitem ">
+							<a href="#top " class="return_top "><span class="top "></span></a>
+						</li>
+					</div>
+
+					<!--回到顶部 -->
+					<div id="quick_links_pop " class="quick_links_pop hide "></div>
+
+				</div>
+
+			</div>
+			<div id="prof-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					我
+				</div>
+			</div>
+			<div id="shopCart-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					购物车
+				</div>
+			</div>
+			<div id="asset-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					资产
+				</div>
+
+				<div class="ia-head-list ">
+					<a href="# " target="_blank " class="pl ">
+						<div class="num ">0</div>
+						<div class="text ">优惠券</div>
+					</a>
+					<a href="# " target="_blank " class="pl ">
+						<div class="num ">0</div>
+						<div class="text ">红包</div>
+					</a>
+					<a href="# " target="_blank " class="pl money ">
+						<div class="num ">￥0</div>
+						<div class="text ">余额</div>
+					</a>
+				</div>
+
+			</div>
+			<div id="foot-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					足迹
+				</div>
+			</div>
+			<div id="brand-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					收藏
+				</div>
+			</div>
+			<div id="broadcast-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					充值
+				</div>
+			</div>
+		</div>
+		<script>
+			window.jQuery || document.write('<script src="${ctxPath}/static/mall/basic/js/jquery.min.js "><\/script>');
+		</script>
+		<script type="text/javascript " src="${ctxPath}/static/mall/basic/js/quick_links.js "></script>
+	</body>
+
+</html>

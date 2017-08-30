@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+<meta charset="UTF-8">
+<title>登录</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<link rel="stylesheet"
+	href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/amazeui.css" />
+<link href="${ctxPath}/static/mall/css/dlstyle.css" rel="stylesheet"
+	type="text/css">
+</head>
+
+<body>
+
+	<div class="login-boxtitle">
+		<a href="${ctxPath}/front"><img alt="logo"
+			src="${ctxPath}/static/mall/images/logobig.png" /></a>
+	</div>
+
+	<div class="login-banner">
+		<div class="login-main">
+			<div class="login-banner-bg">
+				<span></span><img src="${ctxPath}/static/mall/images/big.jpg" />
+			</div>
+			<div class="login-box">
+				<h3 class="title">登录商城</h3>
+				<div class="clear"></div>
+        <form id="login1-form" action="${ctxPath}/front/login" method="post">
+				<div class="login-form">
+					
+						<div class="user-name">
+							<label for="user"><i class="am-icon-user"></i></label> <input
+								type="text" name="username" id="username" placeholder="邮箱/手机/用户名" data-error="用户名或密码错误">
+						</div>
+						<div class="user-pass">
+							<label for="password"><i class="am-icon-lock"></i></label> <input
+								type="password" name="password" id="password" placeholder="请输入密码">
+						</div>
+					
+				</div>
+
+				<div class="login-links">
+					<!-- <label for="remember-me"><input id="remember-me"
+						type="checkbox">记住密码</label>  --><a href="#" class="am-fr">忘记密码</a> <a
+						href="${ctxPath}/front/reg" class="zcnext am-fr am-btn-default">注册</a> <br />
+				</div>
+				<div class="am-cf">
+					<input type="submit" name="login1" id="login1" value="登 录"
+						class="am-btn am-btn-primary am-btn-sm">
+				</div>
+				<div class="partner">
+					<h3>合作账号</h3>
+					<div class="am-btn-group">
+						<li><a href="#"><i class="am-icon-qq am-icon-sm"></i><span>QQ登录</span></a></li>
+						<li><a href="#"><i class="am-icon-weibo am-icon-sm"></i><span>微博登录</span>
+						</a></li>
+						<li><a href="#"><i class="am-icon-weixin am-icon-sm"></i><span>微信登录</span>
+						</a></li>
+					</div>
+				</div>
+		</form>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer ">
+		<div class="footer-hd ">
+			<p>
+				<a href="# ">zsCat科技</a> <b>|</b> <a href="# ">商城首页</a> <b>|</b> <a
+					href="# ">支付宝</a> <b>|</b> <a href="# ">物流</a>
+			</p>
+		</div>
+		<div class="footer-bd ">
+			<p>
+				<a href="# ">关于zsCat</a> <a href="# ">合作伙伴</a> <a href="# ">联系我们</a>
+				<a href="# ">网站地图</a> <em>© 2015-2025 zsCat.com 版权所有</em>
+			</p>
+		</div>
+	</div>
+		<!--[if !IE]> -->
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='${ctxPath!}/static/jquery/jquery.min.js'>"+"<"+"/script>");
+		</script>
+		<!-- <![endif]-->
+		<script type="text/javascript" src="${ctxPath!}/static/layer/layer.min.js"></script>
+		<script type="text/javascript" src="${ctxPath}/static/validate/Validform_v5.3.2_min.js"></script>
+		<script type="text/javascript">
+			
+
+			jQuery(function($) {
+				$("#login1-form").Validform({
+					btnSubmit:"#login1",
+					ajaxPost:true,
+					beforeSubmit:function(curform){
+						$("#login1").attr("disabled","disabled").find("span").text("登录中…");
+					},
+					callback:function(data){
+						if(undefined != data.error){
+							$("#login1").removeAttr("disabled").find("span").text("登 录");
+							var obj = $("#login1-form input[data-error='"+data.error+"']");
+							layer.tips(data.error,obj, {
+								guide:0,
+								time: 4,
+								style : ['background-color:#F26C4F; color:#fff','#F26C4F' ],
+							});
+						}else{
+							window.location.href = "${ctxPath!}/front";
+						}
+					},
+					tiptype : function(msg, o, cssctl) {
+						if (!o.obj.is("form")) {
+							if (o.type != 2) {
+								layer.tips(msg, o.obj, {
+									guide:3,
+									time: 4,
+									style : ['background-color:#F26C4F; color:#fff','#F26C4F' ],
+								});
+							}
+						}
+					},
+					tipSweep : true
+				});
+				
+				$("#login1-form").keydown(function(e){
+					 var e = e || event,
+					 keycode = e.which || e.keyCode;
+					 if (keycode==13) {
+					  $("#login1").trigger("click");
+					 }
+				});
+				
+			});
+		</script>
+</body>
+
+</html>

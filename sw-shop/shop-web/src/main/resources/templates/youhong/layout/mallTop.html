@@ -1,0 +1,146 @@
+<div id="header_top">
+  <div id="top">
+    <div class="Inside_pages">
+      <div class="Collection">下午好，欢迎光临锦宏颜！<em></em><a href="#">收藏我们</a></div>
+	<div class="hd_top_manu clearfix">
+	  <ul class="clearfix">
+	   <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！
+	   						@if(auth.isLogin()){ 
+							您好，<a href="${ctxPath}/web1/person"
+								target="_blank"><i class="am-icon-user am-icon-fw"></i>${auth.getLoginUser().name}</a>
+							 <a href="${ctxPath}/web1/logout" target="_top">退出</a>
+							@}else{ 
+							
+							 <a href="${ctxPath}/web1/login" class="red">[请登录]</a> 新用户<a href="${ctxPath}/web1/reg" class="red">[免费注册]</a></li>
+							 @}
+	  
+	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"><a href="${ctxPath}/web1/person/order">我的订单</a></li> 
+	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"> <a href="${ctxPath}/web1/person/cartList">购物车【${productClass.selectOwnCartCount()}】</a> </li>
+	   <li class="hd_menu_tit" data-addclass="hd_menu_hover"><a href="#">联系我们</a></li>
+	   <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="#" class="hd_menu">客户服务</a>
+	    <div class="hd_menu_list">
+		   <ul>
+		    <li><a href="#">常见问题</a></li>
+			<li><a href="#">在线退换货</a></li>
+		    <li><a href="#">在线投诉</a></li>
+			<li><a href="#">配送范围</a></li>
+		   </ul>
+		</div>	   
+	   </li>
+       <li class="hd_menu_tit phone_c" data-addclass="hd_menu_hover"><a href="#" class="hd_menu "><em class="iconfont icon-shouji"></em>手机版</a>
+	    <div class="hd_menu_list erweima">
+		   <ul>
+            <img src="${ctxPath}/static/wx.jpg"  width="100px" height="100"/>
+		   </ul>
+		</div>	   
+	   </li>
+	  </ul>
+	</div>
+    </div>
+  </div>
+  <!--顶部样式1-->
+  <div id="header"  class="header page_style">
+  <div class="logo"><a href="${ctxPath!}/web1"><img src="${ctxPath}/static/web1/images/logo.png" /></a></div>
+  <!--结束图层-->
+  <div class="Search">
+    <p><input name="" type="text"  class="text"/><input name="" type="submit" value="搜 索"  class="Search_btn"/></p>
+	<p class="Words"><a href="#">苹果</a><a href="#">香蕉</a><a href="#">菠萝</a><a href="#">西红柿</a><a href="#">橙子</a><a href="#">苹果</a></p>
+</div>
+ <!--购物车样式-->
+ <div class="hd_Shopping_list" id="Shopping_list">
+   <div class="s_cart"><em class="iconfont icon-cart2"></em><a href="${ctxPath}/web1/person/cartList">我的购物车</a> <i class="ci-right">&gt;</i><i class="ci-count" id="shopping-amount">【${productClass.selectOwnCartCount()}】</i></div>
+   <div class="dorpdown-layer">
+    <div class="spacer"></div>
+	 <!--<div class="prompt"></div><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div>-->
+	 <ul class="p_s_list">	   
+		
+		 @var cartList = goods.getCartList();
+				      @for(cart in cartList!){
+					  <li>
+					    <div class="img"><img src="${ctxPath!}/static/upload/project/${cart.img}"></div>
+					    <div class="content"><p><a href="${ctxPath!}/front/goods/goodsDetail/${cart.id!}">${cart.goodsname!}</a></p><p>颜色分类:紫花8255尺码:XL</p></div>
+						<div class="Operations">
+						<p class="Price">￥${cart.price!}</p>
+						<p><a href="#" onclick="deleteC('${cart.id!}')">删除</a></p></div>
+					  </li>
+					  @}
+		  
+		</ul>		
+	 <div class="Shopping_style">
+	 <div class="p-total">共<b>1</b>件商品　共计<strong>￥ 515.00</strong></div>
+	  <a href="${ctxPath}/web1/person/cartList" title="去购物车结算" id="btn-payforgoods" class="Shopping">去购物车结算</a>
+	 </div>	 
+   </div>
+ </div>
+</div>
+<!--菜单导航样式-->
+		<div id="Menu" class="clearfix">
+			<div class="index_style clearfix">
+				<div id="allSortOuterbox">
+					<div class="t_menu_img"></div>
+					<div class="Category">
+						<a href="#"><em></em>所有产品分类</a>
+					</div>
+					<div class="hd_allsort_out_box_new">
+						<!--左侧栏目开始-->
+						@var gcList =goods.getProductClass(13,1);
+						@for(gc in gcList.list!){
+						<ul class="Menu_list">
+							<li class="name">
+								<div class="Menu_name">
+									<a href="${ctxPath}/web1/goods/goodsListBygcId/${gc.id!}">${gc.name!}</a> <span>&lt;</span>
+								</div>
+								<div class="link_name">
+									<p>
+									@var gcList1 = productClass.getProductClassListByPid(gc.id);
+														@for(gc1 in gcList1!){
+														 <a title="${gc1.name!}" target="_blank" href="${ctxPath}/front/goods/goodsListBygcId/${gc1.id!}">${gc1.name!}</a>
+														@}
+									</p>
+								</div>
+								<div class="menv_Detail">
+									<div class="cat_pannel clearfix">
+										<div class="hd_sort_list">
+										@for(gc3 in gcList1!){
+											<dl class="clearfix" data-tpc="1">
+												<dt>
+													<a target="_blank" href="${ctxPath}/web1/goods/goodsListBygcId/${gc3.id!}">${gc3.name!}<i>></i></a>
+												</dt>
+												<dd>
+												@var gcList2 = productClass.getProductClassListByPid(gc3.id);
+																@for(gc2 in gcList2!){
+																<a title="${gc2.name!}" target="_blank" href="${ctxPath}/web1/goods/goodsListBygcId/${gc2.id!}"><span>${gc2.name!}</span></a>
+																@}
+												</dd>
+											</dl>
+										 @}	
+										</div>
+										
+									</div>
+									<!--品牌-->
+								</div>
+							</li>
+							
+						</ul>
+					@}	
+					</div>
+				</div>
+				<script>$("#allSortOuterbox").slide({ titCell:".Menu_list li",mainCell:".menv_Detail",	});</script>
+				<!--菜单栏-->
+				<div class="Navigation" id="Navigation">
+					<ul class="Navigation_name">
+						<li><a href="Home.html">首页</a></li>
+						<li><a href="product_list.html">产品列表</a></li>
+						<li><a href="Limit_buy.html">限时特卖</a><em class="hot_icon"></em></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">鲜盟人才</a></li>
+						<li><a href="#">鲜盟金融</a></li>
+						<li><a href="#">鲜盟投资</a></li>
+						<li><a href="Brands.html">销售品牌</a></li>
+					</ul>
+				</div>
+				<script>$("#Navigation").slide({titCell:".Navigation_name li"});</script>
+				<!-- <a href="#" class="link_bg"><img src="images/link_bg_03.png" /></a>-->
+			</div>
+		</div>
+	</div>

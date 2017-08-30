@@ -9,11 +9,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.zscat.shop.util.SysUserUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -43,8 +43,8 @@ import com.zscat.shop.service.ProductClassService;
 import com.zscat.shop.service.ProductService;
 import com.zscat.shop.service.ReplyService;
 import com.zscat.util.IPUtils;
-import com.zscat.util.SysUserUtils;
-	/**
+
+/**
 	 * 
 	 * @author zsCat 2016-10-31 14:01:30
 	 * @Email: 951449465@qq.com
@@ -81,12 +81,12 @@ public class FrontPersonController {
 	  public ModelAndView index() {
 	        try {
 	            ModelAndView model = new ModelAndView("/mall/person/index");
-	            Member member=SysUserUtils.getSessionLoginUser();
+	            Member member= (Member) SysUserUtils.getSessionLoginUser();
 	            model.addObject("member", member);
 	            
 	            Order o=new Order();
 				o.setStatus(SysUserUtils.ORDER_TWO);
-				o.setUserid(SysUserUtils.getSessionLoginUser().getId());
+				o.setUserid(member.getId());
 				List<Order> orderList=OrderService.select(o);
 				model.addObject("orderList", orderList);
 				
@@ -140,7 +140,7 @@ public class FrontPersonController {
 	 @RequestMapping("/information")
 	  public ModelAndView information() {
 		 ModelAndView model = new ModelAndView("/mall/person/information");
-         Member member=SysUserUtils.getSessionLoginUser();
+         Member member= (Member) SysUserUtils.getSessionLoginUser();
          model.addObject("member", member);
 		 
       
@@ -198,7 +198,8 @@ public class FrontPersonController {
 	@RequestMapping(value = "/saveAddress", method = RequestMethod.POST)
 	public String saveAddress(@ModelAttribute Address address) throws Exception {
 		address.setIsDefault("0");
-		address.setMemberId(SysUserUtils.getSessionLoginUser().getId());
+		Member m = (Member) SysUserUtils.getSessionLoginUser();
+		address.setMemberId(m.getId());
 		AddressService.insertSelective(address);
 		return "redirect:/person/address";
 		
@@ -218,7 +219,8 @@ public class FrontPersonController {
 	public @ResponseBody
 	Map<String, String> saveAddress1(@ModelAttribute Address address) throws Exception {
 		address.setIsDefault("0");
-		address.setMemberId(SysUserUtils.getSessionLoginUser().getId());
+		Member m = (Member) SysUserUtils.getSessionLoginUser();
+		address.setMemberId(m.getId());
 		AddressService.insertSelective(address);
 		Map<String, String> map =  new HashMap<>();
 		map.put("sucess", "true");
@@ -241,7 +243,8 @@ public class FrontPersonController {
 		Map<String, String> updateDef(@RequestParam(value = "addressId") String addressId) throws Exception {
 
 			Map<String, String> map = new HashMap<>();
-			int result = AddressService.updateDef(addressId, SysUserUtils.getSessionLoginUser().getId().toString());
+		 Member m = (Member) SysUserUtils.getSessionLoginUser();
+			int result = AddressService.updateDef(addressId, m.getId().toString());
 			if(result == 1){
 				map.put("success", "true");
 			}else{
@@ -292,9 +295,10 @@ public class FrontPersonController {
 				try {
 					String id = request.getParameter("order");
 					if (id != null && !id.equals("")) {
+						Member m = (Member) SysUserUtils.getSessionLoginUser();
 						Order o=new Order();
 						o.setStatus(Integer.parseInt(id));
-						o.setUserid(SysUserUtils.getSessionLoginUser().getId());
+						o.setUserid(m.getId());
 						List<Order> orderList=OrderService.select(o);
 					//	request.setAttribute("imgServer", "http://image.zscat.com");
 						request.setAttribute("orderList", orderList);
@@ -462,7 +466,7 @@ public class FrontPersonController {
 	 }
 	 /**
 	  * 立即购买
-	  * @param id
+	  * @param
 	  * @return
 	  * @throws Exception
 	  */

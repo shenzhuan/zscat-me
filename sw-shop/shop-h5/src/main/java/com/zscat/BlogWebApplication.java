@@ -19,10 +19,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  */
 @Controller
 @EnableWebMvc
+@ServletComponentScan
 @SpringBootApplication
-@ComponentScan(value = {"com.zscat.blog","com.zsCat.common"})
-@ServletComponentScan(value = {"com.zsCat.common.filter"})
-@ImportResource({"classpath:spring-rpc.xml"})
 public class BlogWebApplication extends WebMvcConfigurerAdapter {
     private static final Logger LOG = LoggerFactory.getLogger(BlogWebApplication.class.getName());
 

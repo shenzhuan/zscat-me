@@ -1,0 +1,120 @@
+@charset "utf-8";
+a:hover {
+  text-decoration: none;
+}
+.pb {
+	/*base*/
+	position: fixed;
+	text-align:left;
+	font-family: "微软雅黑","Microsoft Yahei",Arial,Helvetica,sans-serif,"宋体";
+    font-size: 13px;
+	color: #515151;
+	background-color:#FFF;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0 0 4px 2px #848484;
+	z-index: 2209;
+	left: 50px; 
+	top: 40px;
+	width: 500px;
+}
+/*head*/
+.pb .pb-hd {
+	font-size: 18px;
+	color: #999;
+	cursor: move;
+	height: 40px;
+	line-height:40px;
+	padding-left:5px;
+	position:relative;
+	border-bottom:1px solid #ddd;
+	background-image: -moz-linear-gradient(top, #ffffff, #ededed); /* Firefox */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #ededed)); /* Saf4+, Chrome */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType='0'); /* IE*/
+}
+.pb .pb-x {
+	font-weight:bold;
+	color: #999;
+	height:15px;
+	width:15px;
+	background: #ffffff;
+	border:1px solid #ddd;
+	line-height:16px;
+	font-size:16px;
+	float:right;
+	border-radius: 4px 4px 4px 4px;
+	padding:5px;
+	position:absolute;
+	right:10px;
+	top:8px;
+	font-family:"新宋体"
+}
+.pb .pb-x:hover {
+	color:#ffffff;
+	background: #F30;
+	border:1px solid #F30;
+	cursor:pointer;
+}
+/*body*/
+.pb .pb-bd {
+	width:100%;
+	height:100%;
+}
+/*content*/
+.pb .pb-ct {
+	height: 80px;
+	/*text-indent:2em;*/
+	overflow-y: auto;
+	background-color: #F6F6F6;
+}
+/*foot*/
+.pb .pb-ft {
+	background-color: #F6F6F6;
+	border-top: 1px solid #DADEE5;
+	height:60px;
+	line-height:25px;
+	text-align:center
+}
+
+/*
+.pb .pb-cont {
+	height: 150px;
+	overflow-y: auto;
+	background-color: #F6F6F6;
+}
+.pb .pb-ft {
+	background-color: #F6F6F6;
+	border-top: 1px solid #DADEE5;
+	height: 31px;
+	line-height:25px;
+}
+*/
+
+.pb a.pb-btn {
+    cursor: pointer;
+	display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 30px;
+	margin: 14px 5px;
+}
+.pb a.pb-ok {
+    background-color: #6CBDEC;
+    border: 1px solid #5EAFDE;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+}
+.pb a.pb-ok:hover {
+    background-color: #5CB0DF;
+    border: 1px solid #50A2D1;
+    color: #FFFFFF;
+}
+.pb a.pb-cl {
+    background-color: #F6F6F6;
+    border: 1px solid #E4E5E7;
+    border-radius: 2px 2px 2px 2px;
+    color: #000000;
+    cursor: pointer;
+}
+.pb a.pb-cl:hover {
+    color: #515151;
+}

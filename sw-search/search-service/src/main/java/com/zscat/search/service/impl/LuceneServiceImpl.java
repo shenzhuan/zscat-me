@@ -4,6 +4,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.PageInfo;
 
 import com.zscat.search.lucene.LuceneDao;
+import com.zscat.search.model.IndexObject;
 import com.zscat.search.service.LuceneService;
 import org.springframework.beans.factory.annotation.Autowired;
 

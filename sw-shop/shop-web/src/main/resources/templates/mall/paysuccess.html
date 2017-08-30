@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+<title>title</title>
+
+</head>
+<body>
+
+<div class="main">
+  
+  	<div class="user_bar">
+		<a class="back" href="$!webPath/buyer/order.htm">
+			<img src="/resources/style/system/front/wap/images/back_black.png" width="25" height="25">
+		</a>
+		<span class="fl">支付结果反馈</span>
+		<a class="edit fr" href="$!webPath/wap/index.htm">
+			<img src="/resources/style/system/front/wap/images/home.png" width="25" height="25">
+		</a>
+	</div>
+	
+	
+	<div class="info_form">
+	  <div style="height:49px;" class="mt50"></div>
+	  <ul>
+	        
+        <li style="text-align:center; color:#F00;">${obj.status!}</li>
+
+        <li>订单编号：<b class="orange">${obj.order_id}</b></li>
+	    <li>支付金额：<b class="orange">¥${obj.totalPrice}</b></li>
+	    
+	  </ul>
+	</div>
+	
+	<div style="display:none" id="note" class="note"></div>
+	<div style="display:none" class="brand_class_opcity"></div>
+  	
+  
+   
+</div>
+
+</body>
+</html>

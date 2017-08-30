@@ -70,7 +70,7 @@ public class Wap1IndexController {
 	            model.addObject("gcList", gcList);
 //	            List<Article> artList=articleService.select(new Article());
 //	            model.addObject("artList", artList);
-	            List<Member> useList=MemberService.select(new Member(), "no desc");
+	            List<Member> useList=MemberService.select(new Member());
 		        model.addObject("useList", useList);
 		        
 		        List<ProductType> typeList=ProductTypeService.select(new ProductType());

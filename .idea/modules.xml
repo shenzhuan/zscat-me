@@ -13,23 +13,25 @@
       <module fileurl="file://$PROJECT_DIR$/sw-demo/demo-web/demo-web.iml" filepath="$PROJECT_DIR$/sw-demo/demo-web/demo-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo-cache-starter/dubbo-cache-starter.iml" filepath="$PROJECT_DIR$/dubbo-cache-starter/dubbo-cache-starter.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-search/search-api/search-api.iml" filepath="$PROJECT_DIR$/sw-search/search-api/search-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sw-search/search-es/search-es.iml" filepath="$PROJECT_DIR$/sw-search/search-es/search-es.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-search/search-service/search-service.iml" filepath="$PROJECT_DIR$/sw-search/search-service/search-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-search/search-web/search-web.iml" filepath="$PROJECT_DIR$/sw-search/search-web/search-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-shop/shop-api/shop-api.iml" filepath="$PROJECT_DIR$/sw-shop/shop-api/shop-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-shop/shop-h5/shop-h5.iml" filepath="$PROJECT_DIR$/sw-shop/shop-h5/shop-h5.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-shop/shop-service/shop-service.iml" filepath="$PROJECT_DIR$/sw-shop/shop-service/shop-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-shop/shop-web/shop-web.iml" filepath="$PROJECT_DIR$/sw-shop/shop-web/shop-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sw-storm/storm-recommend/storm-recommend.iml" filepath="$PROJECT_DIR$/sw-storm/storm-recommend/storm-recommend.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw.iml" filepath="$PROJECT_DIR$/sw.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-blog/sw-blog.iml" filepath="$PROJECT_DIR$/sw-blog/sw-blog.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-cms/sw-cms.iml" filepath="$PROJECT_DIR$/sw-cms/sw-cms.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sw-demo/sw-cms (1).iml" filepath="$PROJECT_DIR$/sw-demo/sw-cms (1).iml" />
+      <module fileurl="file://D:\zscat_sw\sw-demo\sw-cms (1).iml" filepath="D:\zscat_sw\sw-demo\sw-cms (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-common/sw-common.iml" filepath="$PROJECT_DIR$/sw-common/sw-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-demo/sw-demo.iml" filepath="$PROJECT_DIR$/sw-demo/sw-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw_portl/sw-portl.iml" filepath="$PROJECT_DIR$/sw_portl/sw-portl.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-search/sw-search.iml" filepath="$PROJECT_DIR$/sw-search/sw-search.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw-shop/sw-shop.iml" filepath="$PROJECT_DIR$/sw-shop/sw-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sw-storm/sw-storm.iml" filepath="$PROJECT_DIR$/sw-storm/sw-storm.iml" />
       <module fileurl="file://$PROJECT_DIR$/sw_manager/sw_manager.iml" filepath="$PROJECT_DIR$/sw_manager/sw_manager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sw_mq/sw_mq.iml" filepath="$PROJECT_DIR$/sw_mq/sw_mq.iml" />
     </modules>
   </component>
 </project>

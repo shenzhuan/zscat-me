@@ -1,0 +1,93 @@
+@charset "utf-8";
+a:hover {
+  text-decoration: none;
+}
+.pb {
+	position: fixed;
+	text-align:left;
+	background-color: #ffffff;
+    background-clip: padding-box;
+    border: 10px solid rgba(0,0,0,0.4);
+    border-radius: 6px; 
+	z-index: 2209;
+	left: 50px; 
+	top: 40px; 
+	width: 300px;
+	font-family: "微软雅黑","Microsoft Yahei",Arial,Helvetica,sans-serif,"宋体";
+    font-size: 13px;
+	color: #515151;
+}
+.pb .pb-hd {
+	font-size: 14px;
+	background-color: #6C83B3;
+	color: #FFFFFF;
+	cursor: move;
+	height: 25px;
+	line-height:24px;
+	font-weight:bold;
+	padding-left:5px;
+}
+.pb .pb-x {
+	font-weight:bold;
+	height:15px;
+	width:15px;
+	line-height:24px;
+	float:right;
+	color: #FFFFFF;
+}
+.pb .pb-x:hover {
+	color:red;
+	cursor:pointer;
+}
+/*body*/
+.pb .pb-bd {
+	width:100%;
+	height:100%;
+}
+/*content*/
+.pb .pb-ct {
+	height: 80px;
+	/*text-indent:2em;*/
+	overflow-y: auto;
+	background-color: #F6F6F6;
+	border-top: none;
+	border-bottom: none;
+}
+/*foot*/
+.pb .pb-ft {
+	background-color: #F6F6F6;
+	border-top: 1px solid #DADEE5;
+	height: 31px;
+	line-height:25px;
+}
+.pb a.pb-btn {
+    cursor: pointer;
+	display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 10px;
+    padding: 0 20px;
+	float:right;
+	margin: 2px 3px;
+}
+.pb a.pb-ok {
+    background-color: #6C83B3;
+    border: 1px solid #29447E;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+}
+.pb a.pb-ok:hover {
+    background-color: #5C75A9;
+    border: 1px solid #29447E;
+    color: #FFFFFF;
+}
+.pb a.pb-cl {
+    background-color: #F6F6F6;
+    border: 1px solid #E4E5E7;
+    border-radius: 2px 2px 2px 2px;
+    color: #000000;
+    cursor: pointer;
+}
+.pb a.pb-cl:hover {
+    color: #515151;
+}

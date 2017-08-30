@@ -24,7 +24,7 @@
 
 
 import com.zsCat.common.base.RedisLink;
-import com.zscat.BlogWebApplication;
+import com.zscat.ShopWebApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -44,7 +44,7 @@ import javax.annotation.Resource;
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @Transactional
-@SpringBootTest(classes = BlogWebApplication.class)
+@SpringBootTest(classes = ShopWebApplication.class)
 public class MyBatis331Test {
     private Logger logger = LoggerFactory.getLogger(getClass());
     @Resource(name = "redisLink")

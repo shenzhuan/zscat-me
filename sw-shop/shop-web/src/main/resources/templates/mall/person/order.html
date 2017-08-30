@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+		<title>订单管理</title>
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+<link href="${ctxPath}/static/mall/basic/css/demo.css" rel="stylesheet" type="text/css" />
+		<link href="${ctxPath}/static/mall/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/css/orstyle.css" rel="stylesheet" type="text/css">
+
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		
+
+	</head>
+
+	<body>
+		<!--头 -->
+		@layout("/mall/layout/mallHeader.html"){}
+			<b class="line"></b>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+
+					<div class="user-order">
+
+						<!--标题 -->
+						<div class="am-cf am-padding">
+							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">订单管理</strong> / <small>Order</small></div>
+						</div>
+						<hr/>
+
+						<div class="am-tabs am-tabs-d2 am-margin" data-am-tabs>
+
+							<ul class="am-avg-sm-5 am-tabs-nav am-nav am-nav-tabs">
+								
+								<li><a href="javascript:void(0)" onclick="bna('1',this)">待付款</a></li>
+								<li><a href="javascript:void(0)" onclick="bna('2',this)">已付款</a></li>
+								<li><a href="javascript:void(0)" onclick="bna('3',this)">待发货</a></li>
+								<li><a href="javascript:void(0)" onclick="bna('4',this)">待收货</a></li>
+								
+								
+							</ul>
+
+							<div class="am-tabs-bd">
+								<div class="am-tab-panel am-fade am-in am-active" id="tab1">
+									<div class="order-top">
+										<div class="th th-item">
+											<td class="td-inner">商品</td>
+										</div>
+										<div class="th th-price">
+											<td class="td-inner"></td>
+										</div>
+										<div class="th th-number">
+											<td class="td-inner">卖家</td>
+										</div>
+										<div class="th th-operation">
+											<td class="td-inner">合计</td>
+										</div>
+										<div class="th th-amount">
+											<td class="td-inner"></td>
+										</div>
+										<div class="th th-status">
+											<td class="td-inner"></td>
+										</div>
+										<div class="th th-change">
+											<td class="td-inner">交易操作</td>
+										</div>
+									</div>
+
+									<div class="order-main">
+										<div id="bna" class="order-list">
+											
+											
+										
+
+								        </div>
+								</div>
+							</div>	
+								
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!--底部-->
+				@layout("/mall/layout/mallFooter.html"){}
+		</div>
+<script>
+	bna(1);
+	function bna(type,obj) {
+		var lodingHtml = '<div class="tac"><img width="100" height="108" alt="" src="${ctxPath}/static/loading.gif"></div>' , _timer = null;;
+		$.ajax({
+			url :"${ctxPath}/person/ajax/order",
+			data : {
+				"order" : type
+			},
+			type : 'post',
+			dataType : 'text',
+			beforeSend:function(){
+				$("#bna").html(lodingHtml);
+				clearTimeout(_timer);
+				
+			},
+			success : function(result) { 
+				_timer = setTimeout(function(){
+					$("#bna").html(result);
+				}, 300);
+			}
+		});
+	}
+	
+	function deleteC(id){
+		$.ajax({
+			type: "post",
+	 		url: '${ctxPath}/person/deleteOrder',
+			data: {id:id},
+			dataType: "json",
+			success:function(data) {
+				if(data.success){
+						layer.msg("删除订单成功!",2,8);
+						  window.location.reload();
+				}else{
+					layer.msg("删除购物车失败!",2,8);
+				}
+			}
+		});
+	}
+	</script>
+	</body>
+
+</html>

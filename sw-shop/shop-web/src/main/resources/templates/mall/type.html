@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">			
+		<title>全部分类</title>
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="${ctxPath}/static/mall/basic/css/demo.css" rel="stylesheet" type="text/css" />		
+		<link href="${ctxPath}/static/mall/css/sortstyle.css" rel="stylesheet" type="text/css" />
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+	</head>
+
+	<body>
+		
+			<!--顶部导航条 -->
+		@layout("/mall/layout/mallTop.html"){}
+				<div class="clear"></div>
+		<!--主体-->
+		
+		<div id="nav" class="navfull">
+			<div class="area clearfix">
+				<div class="category-content" id="guide_2">
+					<div class="long-title"><span class="all-goods">全部分类</span><span id="meauBack"><a href="${ctxPath}/front">返回</a></span></div>
+					<div class="category">
+										<ul class="category-list" id="js_climit_li">
+										@for(gc in gcList!){
+											<li class="appliance js_toggle relative first selected">
+												<div class="category-info">
+													<h3 class="category-name b-category-name"><i><img src="${ctxPath}/static/mall/images/cake.png"></i><a class="ml-22" title="点心">${gc.name!}</a></h3>
+													<em>&gt;</em></div>
+												<div class="menu-item menu-in top">
+													<div class="area-in">
+														<div class="area-bg">
+															<div class="menu-srot">
+																
+																<div class="brand-side">
+													              <dl class="dl-sort"><dt><span>为您推荐</span></dt>
+													                <img src="${ctxPath}/static/mall/images/TJ.jpg">
+													              </dl>
+												                </div>																
+																
+																<div class="sort-side">
+																@var gcList1 = productClass.getProductClassListByPid(gc.id);
+														@for(gc1 in gcList1!){
+																	<dl class="dl-sort">
+																		<dt><a title="${gc1.name!}" target="_blank" href="${ctxPath}/front/goods/goodsListBygcId/${gc1.id!}"><span>${gc1.name!}</span></a></dt>
+																		@var gcList2 = productClass.getProductClassListByPid(gc1.id);
+																@for(gc2 in gcList2!){
+																		<dd><a title="${gc2.name!}" target="_blank" href="${ctxPath}/front/goods/goodsListBygcId/${gc2.id!}"><span>${gc2.name!}</span></a></dd>
+																@}
+																	</dl>
+														@}		
+																</div>
+
+															</div>
+														</div>
+													</div>
+												</div>
+											<b class="arrow"></b>	
+											</li>
+											@}
+											
+										</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+		$("li").click(function() {		
+		     	$(this).addClass("selected").siblings().removeClass("selected");
+	       })
+		})
+		</script>
+		<div class="clear"></div>
+		<!--引导 -->
+		<div class="navCir">
+			<li class="active"><a href="${ctxPath}/front"><i
+				class="am-icon-home "></i>首页</a></li>
+		<li><a href="${ctxPath}/front/type"><i class="am-icon-list"></i>分类</a></li>
+		<li><a href="${ctxPath}/person/order"><i
+				class="am-icon-shopping-basket"></i>购物车</a></li>
+		<li><a href="${ctxPath}/person"><i class="am-icon-user"></i>我的</a></li>				
+		</div>
+	</body>
+
+</html>

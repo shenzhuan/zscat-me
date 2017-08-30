@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sw_mq:war">
+    <output-path>$PROJECT_DIR$/sw_mq/target</output-path>
+    <root id="archive" name="sw_mq-release-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="sw_mq:war exploded" />
+    </root>
+  </artifact>
+</component>

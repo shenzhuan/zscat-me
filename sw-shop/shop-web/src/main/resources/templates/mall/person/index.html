@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+
+		<title>个人中心</title>
+
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${ctxPath}/static/mall/css/vipstyle.css" rel="stylesheet" type="text/css">
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="${ctxPath}/static/mall/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+	</head>
+
+	<body>
+		<!--头 -->
+		@layout("/mall/layout/mallHeader.html"){}
+		<b class="line"></b>
+		<div class="center">
+			<div class="col-main">
+				<div class="main-wrap">
+					<div class="wrap-left">
+						<div class="wrap-list">
+							<div class="m-user">
+								<!--个人信息 -->
+
+								<div class="m-userinfo">
+									<a href="news.html">
+										<div class="tipsBox"><i class="am-icon-envelope"></i></div>
+									</a>
+									<div class="m-baseinfo">
+										<a class="m-pic" href="${ctxPath}/person/information">
+											<img src="${ctxPath}/static/mall/images/getAvatar.do.jpg">
+										</a>
+										<div class="m-info">
+											<em class="s-name">${member.memberName!}</em>
+											<div class="vip1"><a href="#"><span></span><em>会员专享</em></a></div>
+											<div class="safeText"><a href="${ctxPath}/person/safety">账户安全:<em style="margin-left:20px ;">60</em>分</a>
+												<div class="progressBar"><span style="left: -95px;" class="progress"></span></div>
+											</div>
+											<div class="m-address">
+												<a href="${ctxPath}/person/address" class="i-trigger">收货地址<i class="am-icon-angle-right" style="padding-left:5px ;"></i></a>
+											</div>
+										</div>
+									</div>
+									<div class="m-right">
+										<div class="m-new">
+											<a href="${ctxPath}/person/news"><i class="am-icon-dropbox  am-icon-md" style="padding-right:5px ;"></i>消息盒子</a>
+										</div>
+
+									</div>
+								</div>
+
+								<!--个人资产-->
+								<div class="m-userproperty">
+									<div class="s-bar">
+										<i class="s-icon"></i>个人资产
+									</div>
+									<p class="m-coupon">
+										<a href="coupon.html">
+											<em class="m-num">${conponCount!}</em>
+											<span class="m-title">优惠券</span>
+										</a>
+									</p>
+									<p class="m-wallet">
+										<a href="wallet.html">
+											<em class="m-num">${member.yue!}</em>
+											<span class="m-title">账户余额</span>
+										</a>
+									</p>
+									<p class="m-bill">
+										<a href="pointnew.html">
+											<em class="m-num">${member.jifen!}</em>
+											<span class="m-title">总积分</span>
+										</a>
+									</p>
+								</div>
+
+								<!--我的钱包-->
+								<div class="wallet">
+									<div class="s-bar">
+										<i class="s-icon"></i>商城钱包
+									</div>
+									<p class="m-big squareS">
+										<a href="${ctxPath}/front/cartList">
+											<i><img src="${ctxPath}/static/mall/images/shopping.png"/></i>
+											<span class="m-title">能购物</span>
+										</a>
+									</p>
+									<p class="m-big squareA">
+										<a href="#">
+											<i><img src="${ctxPath}/static/mall/images/safe.png"/></i>
+											<span class="m-title">够安全</span>
+										</a>
+									</p>
+									<p class="m-big squareL">
+										<a href="#">
+											<i><img src="${ctxPath}/static/mall/images/profit.png"/></i>
+											<span class="m-title">很灵活</span>
+										</a>
+									</p>
+								</div>
+
+							</div>
+							<div class="box-container-bottom"></div>
+
+							<!--订单 -->
+							<div class="m-order">
+								<div class="s-bar">
+									<i class="s-icon"></i>我的订单
+									<a class="i-load-more-item-shadow" href="${ctxPath}/person/order">全部订单</a>
+								</div>
+								<ul>
+									<li><a href="${ctxPath}/person/order"><i><img src="${ctxPath}/static/mall/images/pay.png"/></i><span>待付款</span></a></li>
+									<li><a href="${ctxPath}/person/order"><i><img src="${ctxPath}/static/mall/images/send.png"/></i><span>待发货<em class="m-num">1</em></span></a></li>
+									<li><a href="${ctxPath}/person/order"><i><img src="${ctxPath}/static/mall/images/receive.png"/></i><span>待收货</span></a></li>
+									<li><a href="${ctxPath}/person/order"><i><img src="${ctxPath}/static/mall/images/comment.png"/></i><span>待评价<em class="m-num">3</em></span></a></li>
+									<li><a href="${ctxPath}/person/order"><i><img src="${ctxPath}/static/mall/images/receive.png"/></i><span>已取消</span></a></li>
+									<li><a href="${ctxPath}/person/change.html"><i><img src="${ctxPath}/static/mall/images/refund.png"/></i><span>退换货</span></a></li>
+								</ul>
+								@for(order in orderList!){
+								<div class="orderContentBox">
+									<div class="orderContent">
+										<div class="orderContentpic">
+											<div>
+												<a href="${ctxPath}/person/orderDetail/${order.id!}">${order.ordersn!}</a>
+											</div>
+										</div>
+										<div class="detailContent">
+											<a href="${ctxPath}/person/orderDetail/${order.id!}" class="delivery">签收</a>
+											<div class="orderID">
+												<span class="time">${order.createdate!}</span>
+												
+											</div>
+											<div class="orderID">
+												<span class="num">共${order.totalcount!}件商品</span>
+											</div>
+										</div>
+										
+										<div class="price"><span class="sym">¥</span>${order.totalprice!}</div>
+
+									</div>
+									<a href="${ctxPath}/front" class="btnPay">再次购买</a>
+								</div>
+							@}
+								
+							</div>
+							<!--九宫格-->
+							<div class="user-squaredIcon">
+								<div class="s-bar">
+									<i class="s-icon"></i>我的常用
+								</div>
+								<ul>
+									<a href="${ctxPath}/person/order">
+										<li class="am-u-sm-4"><i class="am-icon-truck am-icon-md"></i>
+											<p>物流查询</p>
+										</li>
+									</a>
+									<a href="${ctxPath}/person/collection">
+										<li class="am-u-sm-4"><i class="am-icon-heart am-icon-md"></i>
+											<p>我的收藏</p>
+										</li>
+									</a>
+									<a href="${ctxPath}/person/foot">
+										<li class="am-u-sm-4"><i class="am-icon-paw am-icon-md"></i>
+											<p>我的足迹</p>
+										</li>
+									</a>
+									<a href="${ctxPath}/front">
+										<li class="am-u-sm-4"><i class="am-icon-gift am-icon-md"></i>
+											<p>为你推荐</p>
+										</li>
+									</a>
+									<a href="${ctxPath}/front/blog/index">
+										<li class="am-u-sm-4"><i class="am-icon-share-alt am-icon-md"></i>
+											<p>我的分享</p>
+										</li>
+									</a>
+									<a href="${ctxPath}/front">
+										<li class="am-u-sm-4"><i class="am-icon-clock-o am-icon-md"></i>
+											<p>限时活动</p>
+										</li>
+									</a>
+
+								</ul>
+							</div>
+
+							<div class="user-suggestion">
+								<div class="s-bar">
+									<i class="s-icon"></i>会员中心
+								</div>
+								<div class="s-bar">
+									<a href="${ctxPath}/person/suggest"><i class="s-icon"></i>意见反馈</a>
+								</div>
+							</div>
+
+							<!--优惠券积分-->
+							<div class="twoTab">
+								<div class="twoTabModel Coupon">
+									<h5 class="squareTitle"><a href="${ctxPath}/person/coupon"><span class="splitBorder"></span>优惠券<i class="am-icon-angle-right"></i></a></h5>
+									<div class="Box">
+										<div class="CouponList">
+											<span class="price">¥<strong class="num">50</strong></span>
+	                                        <p class="brandName"><a href="#">ABC品牌499减50</a></p>
+	                                        <p class="discount">满<span>499</span>元抵扣</p>
+                                            <a  href="#" class="btnReceive">立即领取</a>
+										</div>
+									</div>
+								</div>
+								<div class="twoTabModel credit">
+									<h5 class="squareTitle"><a href="#"><span class="splitBorder"></span>积分商城<i class="am-icon-angle-right"></i></a></h5>
+									<div class="Box">
+										<p class="countDown">
+											<span class="hour">12</span>：<span class="minute">09</span>：<span class="second">02</span><em class="txtStart">即将开始</em>
+										</p>
+										<div class="am-slider am-slider-default am-slider-carousel" data-am-flexslider="{itemWidth:108, itemMargin:3, slideshow: false}">
+											<ul class="am-slides">
+											@for(goods in goodsList!){
+												<li><a href="${ctxPath!}/front/goods/goodsDetail/${goods.id!}" target="_blank"><img src="${ctxPath!}/static/upload/project/${goods.img!}" /></a></li>
+											@}
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="wrap-right">
+
+						<!-- 日历-->
+						<div class="day-list">
+							<div class="s-title">
+								每日新鲜事
+							</div>
+							<div class="s-box">
+								<ul>
+								@for(art in artList!){
+									<li><a href="${ctxPath}/front/blog/index" target="_blank"><p>${art.title!}</p></a></li>
+								@}								
+								</ul>
+							</div>
+						</div>
+						<!--新品 -->
+						<div class="new-goods">
+							<div class="s-bar">
+								<i class="s-icon"></i>今日新品
+								<a class="i-load-more-item-shadow">${goodscount!}款推荐</a>
+							</div>
+							<div class="new-goods-info">
+								<a class="shop-info" href="${ctxPath!}/front/goods/goodsDetail/${goodsList1[0].id!}">
+									<div class="face-img-panel">
+										<img src="${ctxPath!}/static/upload/project/${goodsList1[0].img!}" alt="">
+									</div>
+									<span class="new-goods-num ">${goodsList1[0].clickhit!}</span>
+									<span class="shop-title">${goodsList1[0].title!}</span>
+								</a>
+								<a class="follow">收藏</a>
+							</div>
+						</div>						
+
+						<!--热卖推荐 -->
+						<div class="new-goods">
+							<div class="s-bar">
+								<i class="s-icon"></i>热卖推荐
+							</div>
+							<div class="new-goods-info">
+								<a class="shop-info" href="${ctxPath!}/front/goods/goodsDetail/${goodsList2[0].id!}" target="_blank">
+									<div>
+										<img src="${ctxPath!}/static/upload/project/${goodsList2[0].img!}" alt="">
+									</div>
+                                    <span class="one-hot-goods">￥${goodsList2[0].prices!}</span>
+								</a>
+							</div>
+						</div>						
+     				</div>
+     				<div class="clear"></div>
+     				
+     				<!--收藏和足迹-->
+     				 <div data-am-widget="tabs" class="am-tabs collection">
+                         <ul class="am-tabs-nav am-cf">
+                         	<li class="am-active"><a href="[data-tab-panel-0]"><i class="am-icon-heart"></i>商品收藏</a></li>
+                            <li class=""><a href="[data-tab-panel-1]"><i class="am-icon-paw"></i>购物足迹</a></li>
+                        </ul>
+                        <div class="am-tabs-bd">
+
+                            <div data-tab-panel-0 class="am-tab-panel am-active">
+                        		<div class="am-slider am-slider-default am-slider-carousel" data-am-flexslider="{itemWidth:155,slideshow: false}">
+									<ul class="am-slides">
+                                       @for(goods1 in goodsList1!){
+												<li><a href="${ctxPath!}/front/goods/goodsDetail/${goods1.id!}" target="_blank">
+												  <img class="am-thumbnail" src="${ctxPath!}/static/upload/project/${goods1.img!}" /></a>
+												  <strong class="price">¥${goods1.prices!}</strong>
+												</li>
+									@}
+
+									</ul>
+								</div>
+                            </div>
+                            <div data-tab-panel-1 class="am-tab-panel "> 
+                        		<div class="am-slider am-slider-default am-slider-carousel" data-am-flexslider="{itemWidth:155, slideshow: false}">
+									<ul class="am-slides">
+									@for(goods2 in goodsList!){
+												<li><a href="${ctxPath!}/front/goods/goodsDetail/${goods2.id!}" target="_blank">
+												  <img class="am-thumbnail" src="${ctxPath!}/static/upload/project/${goods2.img!}" /></a>
+												  <strong class="price">¥${goods2.prices!}</strong>
+												</li>
+									@}
+                                       
+									</ul>
+								</div>                            	
+                            </div>
+                        </div>
+                     </div>
+
+
+				</div>
+				<!--底部-->
+				@layout("/mall/layout/mallFooter.html"){}
+				
+		</div>
+		<!--引导 -->
+	<div class="navCir">
+		<li class="active"><a href="${ctxPath}/front"><i
+				class="am-icon-home "></i>首页</a></li>
+		<li><a href="${ctxPath}/front/type"><i class="am-icon-list"></i>分类</a></li>
+		<li><a href="${ctxPath}/person/order"><i
+				class="am-icon-shopping-basket"></i>购物车</a></li>
+		<li><a href="${ctxPath}/person"><i class="am-icon-user"></i>我的</a></li>
+	</div>
+	</body>
+
+</html>

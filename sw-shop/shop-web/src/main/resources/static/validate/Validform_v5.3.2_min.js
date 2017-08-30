@@ -596,7 +596,7 @@
 					|| d(this).data("dataIgnore") === "dataIgnore") {
 				return true
 			}
-			if (o.dragonzsCat && !d(this).data("cked")
+			if (o.dragonfly && !d(this).data("cked")
 					&& a.util.isEmpty.call(d(this), k)
 					&& d(this).attr("ignore") != "ignore") {
 				return false

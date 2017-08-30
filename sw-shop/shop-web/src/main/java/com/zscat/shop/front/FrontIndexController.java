@@ -6,11 +6,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.zscat.shop.util.SysUserUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,12 +32,9 @@ import com.zscat.shop.service.ProductService;
 import com.zscat.shop.service.ProductTypeService;
 import com.zscat.util.PasswordEncoder;
 import com.zscat.util.StringUtil;
-import com.zscat.util.SysUserUtils;
 
 
-
-
-	/**
+/**
 	 * 
 	 * @author zsCat 2016-10-31 14:01:30
 	 * @Email: 951449465@qq.com
