@@ -12,6 +12,9 @@
         <module name="cms-api" />
         <module name="cms-service" />
         <module name="cms-web" />
+        <module name="demo-api" />
+        <module name="demo-service" />
+        <module name="demo-web" />
         <module name="dubbo-cache-starter" />
         <module name="search-api" />
         <module name="search-service" />
@@ -23,6 +26,7 @@
         <module name="sw-common" />
         <module name="sw-portl" />
         <module name="sw_manager" />
+        <module name="sw_mq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +36,9 @@
       <module name="cms-api" target="1.7" />
       <module name="cms-service" target="1.7" />
       <module name="cms-web" target="1.7" />
+      <module name="demo-api" target="1.7" />
+      <module name="demo-service" target="1.7" />
+      <module name="demo-web" target="1.7" />
       <module name="dubbo-cache-starter" target="1.7" />
       <module name="search-api" target="1.7" />
       <module name="search-service" target="1.7" />
@@ -43,12 +50,15 @@
       <module name="sw" target="1.7" />
       <module name="sw-blog" target="1.7" />
       <module name="sw-cms" target="1.7" />
+      <module name="sw-cms (1)" target="1.7" />
       <module name="sw-common" target="1.7" />
+      <module name="sw-demo" target="1.7" />
       <module name="sw-portl" target="1.7" />
       <module name="sw-search" target="1.7" />
       <module name="sw-shop" target="1.7" />
       <module name="sw_admin" target="1.8" />
       <module name="sw_manager" target="1.8" />
+      <module name="sw_mq" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

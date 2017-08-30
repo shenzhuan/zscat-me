@@ -65,7 +65,7 @@ zscat
 - a.启动search-services下面的SearchServiceApplication主类，启动blog的dubbo服务
 - b.启动search-web下面的SearchWebApplication主类，访问 http://localhost:2008
 ### 6.启动sw_manager下面的 GunsApplication主类，访问 http://localhost  admin  111111
-### 7.启动sw_portl下面的 PortlWebApplication主类，访问 http://localhost:2009/index
+### 7.启动sw_portl下面的 PortlWebApplication主类，访问 http://localhost:2009/gw/index
 
 
 

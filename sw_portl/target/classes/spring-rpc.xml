@@ -13,7 +13,7 @@
 
     <!-- service implemention bean -->
     <context:annotation-config/>
-    <context:component-scan base-package="com.zscat.cms"/>
+    <context:component-scan base-package="com.zscat"/>
     <context:property-placeholder location="classpath:application.properties" />
 
     <import resource="spring-redis.xml" />

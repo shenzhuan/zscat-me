@@ -13,7 +13,7 @@
 
 	  <module>sw-shop</module>
 	  <module>sw_manager</module>-->
-	  <module>sw-portl</module>
+	  <module>sw-demo</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

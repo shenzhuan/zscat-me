@@ -96,7 +96,7 @@ logging:
   level.root: info
   level.com.stylefeng: debug
   path: logs/
-  file: guns.log
+  file: sw_manager.log
 
 ---
 

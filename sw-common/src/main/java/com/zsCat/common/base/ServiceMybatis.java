@@ -46,10 +46,11 @@ public  class ServiceMybatis<T extends BaseEntity> implements BaseService<T> {
 		Example example = new Example(record.getClass(),false);
 		Criteria criteria = example.createCriteria();
 
-//		for(Map.Entry<Object, Object> entry : record.entrySet()){
-//			if("".equals(entry.getValue())) continue;
-//			criteria.andEqualTo(entry.getKey().toString(), entry.getValue());
-//		}
+		Map<String, Object> map=transBean2Map(record);
+		for(Map.Entry<String, Object> entry : map.entrySet()){
+			if("".equals(entry.getValue())) continue;
+			criteria.andEqualTo(entry.getKey().toString(), entry.getValue());
+		}
 		example.setOrderByClause(orderSqlStr);
 		return mapper.selectByExample(example);
 	}

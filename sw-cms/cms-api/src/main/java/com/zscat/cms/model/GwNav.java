@@ -7,9 +7,6 @@ import javax.persistence.*;
 
 @Table(name = "gw_nav")
 public class GwNav extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
     @Column(name = "addTime")
     private Date addtime;
@@ -32,19 +29,6 @@ public class GwNav extends BaseEntity {
     @Column(name = "original_url")
     private String originalUrl;
 
-    /**
-     * @return id
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * @return addTime

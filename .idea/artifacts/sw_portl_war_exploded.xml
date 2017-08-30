@@ -7,19 +7,6 @@
           <element id="module-output" name="sw-portl" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-dubbo:1.3.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator:1.5.6.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.6.RELEASE" />
-          <element id="library" level="project" name="Maven: com.alibaba:dubbo:2.5.3" />
-          <element id="library" level="project" name="Maven: org.javassist:javassist:3.21.0-GA" />
-          <element id="library" level="project" name="Maven: com.101tec:zkclient:0.7" />
-          <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" />
-          <element id="library" level="project" name="Maven: jline:jline:0.9.94" />
-          <element id="library" level="project" name="Maven: junit:junit:4.12" />
-          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
-          <element id="library" level="project" name="Maven: io.netty:netty:3.7.0.Final" />
-          <element id="library" level="project" name="Maven: com.zsCat.sw:cms-api:0.0.1-SNAPSHOT" />
-          <element id="library" level="project" name="Maven: javax.persistence:persistence-api:1.0" />
           <element id="archive" name="sw-common-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="sw-common" />
           </element>
@@ -31,6 +18,16 @@
           <element id="library" level="project" name="Maven: io.reactivex:rxjava:1.1.1" />
           <element id="library" level="project" name="Maven: org.hdrhistogram:HdrHistogram:2.1.7" />
           <element id="library" level="project" name="Maven: com.netflix.hystrix:hystrix-metrics-event-stream:1.5.2" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-dubbo:1.3.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator:1.5.6.RELEASE" />
+          <element id="library" level="project" name="Maven: com.alibaba:dubbo:2.5.3" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.21.0-GA" />
+          <element id="library" level="project" name="Maven: com.101tec:zkclient:0.7" />
+          <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" />
+          <element id="library" level="project" name="Maven: jline:jline:0.9.94" />
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: io.netty:netty:3.7.0.Final" />
           <element id="archive" name="dubbo-cache-starter-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="dubbo-cache-starter" />
           </element>
@@ -60,8 +57,13 @@
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3.1" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3.2" />
           <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.9.2" />
+          <element id="archive" name="cms-api-0.0.1-SNAPSHOT.jar">
+            <element id="module-output" name="cms-api" />
+          </element>
+          <element id="library" level="project" name="Maven: javax.persistence:persistence-api:1.0" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:1.5.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:1.5.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.5.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-logging:1.5.6.RELEASE" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.1.11" />

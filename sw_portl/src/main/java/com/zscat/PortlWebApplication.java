@@ -24,7 +24,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @ServletComponentScan
 @SpringBootApplication
-@ImportResource({"classpath*:spring-rpc.xml"})
 public class PortlWebApplication  extends WebMvcConfigurerAdapter{
     private static final Logger LOG = LoggerFactory.getLogger(PortlWebApplication.class.getName());
 

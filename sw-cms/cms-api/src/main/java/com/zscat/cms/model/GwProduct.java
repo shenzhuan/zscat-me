@@ -9,9 +9,7 @@ import javax.persistence.*;
 
 @Table(name = "gw_product")
 public class GwProduct extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
 
     private String title;
 
@@ -48,19 +46,7 @@ public class GwProduct extends BaseEntity {
         this.imagesList = imagesList;
     }
 
-    /**
-     * @return id
-     */
-    public Long getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * @return title

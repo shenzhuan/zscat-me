@@ -4,17 +4,19 @@
     <file type="web" url="file://$PROJECT_DIR$/sw-blog/blog-service" />
     <file type="web" url="file://$PROJECT_DIR$/sw-blog/blog-web" />
     <file type="web" url="file://$PROJECT_DIR$/sw-cms/cms-web" />
+    <file type="web" url="file://$PROJECT_DIR$/sw-demo/demo-web" />
     <file type="web" url="file://$PROJECT_DIR$/sw-search/search-web" />
     <file type="web" url="file://$PROJECT_DIR$/sw-shop/shop-h5" />
     <file type="web" url="file://$PROJECT_DIR$/sw-shop/shop-service" />
     <file type="web" url="file://$PROJECT_DIR$/sw-shop/shop-web" />
+    <file type="web" url="file://$PROJECT_DIR$/sw_mq" />
     <file type="web" url="file://$PROJECT_DIR$/sw_portl" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/sw_portl/pom.xml" />
+        <option value="$PROJECT_DIR$/sw_mq/pom.xml" />
       </list>
     </option>
   </component>

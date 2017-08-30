@@ -12,6 +12,10 @@
     <file url="file://$PROJECT_DIR$/sw-cms/cms-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw-cms/cms-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sw-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sw-demo/demo-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sw-demo/demo-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sw-demo/demo-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw-search/search-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw-search/search-service" charset="UTF-8" />
@@ -22,6 +26,7 @@
     <file url="file://$PROJECT_DIR$/sw-shop/shop-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw-shop/shop-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw_manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sw_mq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sw_portl" charset="UTF-8" />
   </component>
 </project>

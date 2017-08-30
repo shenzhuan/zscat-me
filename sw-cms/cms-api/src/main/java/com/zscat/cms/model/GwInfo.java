@@ -7,9 +7,7 @@ import javax.persistence.*;
 
 @Table(name = "gw_info")
 public class GwInfo extends BaseEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
 
     private String name;
 
@@ -20,19 +18,7 @@ public class GwInfo extends BaseEntity {
     @Column(name = "addTime")
     private Date addtime;
 
-    /**
-     * @return id
-     */
-    public Long getId() {
-        return id;
-    }
 
-    /**
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * @return name

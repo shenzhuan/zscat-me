@@ -59,7 +59,7 @@ public class IndexGwController {
 		GwNav nav=new GwNav();
 		nav.setDisplay(true);
 		nav.setType("0");
-		mav.addObject("navList", gwNavService.select(nav, "sequence asc"));
+		mav.addObject("navList", gwNavService.select(nav));
 		//项目
 		PageInfo<GwProduct> page = gwProductService.selectPage(1, 9, null);
 		for(GwProduct blog:page.getList()){
