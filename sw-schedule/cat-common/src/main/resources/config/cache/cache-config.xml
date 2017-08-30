@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<caches>
+	<cache id="dictDataCacher" name="静态数据缓存" implclass="com.cat.css.web.sys.cache.DictDataCacheImpl" expr="0 0/1 *  * * ? *"/>
+</caches>

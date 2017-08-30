@@ -1,0 +1,98 @@
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+	<id>${mavenDir}</id>
+	<formats>
+	 <format>war</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<!--<fileSets> -->
+	<!--<fileSet> -->
+	<!--<directory>${project.basedir}/src/main/resources</directory> -->
+	<!--<includes> -->
+	<!--<include>**/*.xml</include> -->
+	<!--<include>app-${mavenDir}.properties</include> -->
+	<!--</includes> -->
+	<!--<excludes> -->
+	<!--<exclude>/assemble/**</exclude> -->
+	<!--</excludes> -->
+	<!--<outputDirectory>config</outputDirectory> -->
+	<!--</fileSet> -->
+	<!--<fileSet> -->
+	<!--<directory>${project.basedir}/src/main/log</directory> -->
+	<!--<outputDirectory>log</outputDirectory> -->
+	<!--</fileSet> -->
+	<!--<fileSet> -->
+	<!--<directory>${project.basedir}/src/main/resources/script</directory> -->
+	<!--<includes> -->
+	<!--<include>startup.sh</include> -->
+	<!--</includes> -->
+	<!--<outputDirectory>/</outputDirectory> -->
+	<!--<lineEnding>unix</lineEnding> -->
+	<!--</fileSet> -->
+	<!--</fileSets> -->
+
+	<fileSets>
+		<fileSet>
+			<directory>${project.basedir}/src/main/resources</directory>
+			<includes>
+				<include>**/*.xml</include>
+				<!--<include>app-${mavenDir}.properties</include> -->
+			</includes>
+			<excludes>
+				<exclude>/assemble/**</exclude>
+				<exclude>/script/**</exclude>
+				<exclude>/config/properties/**</exclude>
+			</excludes>
+			<outputDirectory>WEB-INF/classes</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/src/main/resources/config/properties/${mavenDir}</directory>
+			<includes>
+				<include>app.properties</include>
+			</includes>
+			<outputDirectory>WEB-INF/classes/config/properties/</outputDirectory>
+		</fileSet>
+		<!--<fileSet>-->
+			<!--<directory>${project.basedir}/src/main/resources/script</directory>-->
+			<!--<includes>-->
+				<!--<include>startup.sh</include>-->
+			<!--</includes>-->
+			<!--<outputDirectory>/</outputDirectory>-->
+			<!--<lineEnding>unix</lineEnding>-->
+			<!--<fileMode>755</fileMode>-->
+		<!--</fileSet>-->
+	</fileSets>
+	<!--<files>-->
+		<!--<file>-->
+			<!--<source>${project.basedir}/src/main/resources/script/conf/setenv-${mavenDir}.conf</source>-->
+			<!--<outputDirectory>config</outputDirectory>-->
+			<!--<destName>setenv.conf</destName>-->
+			<!--<lineEnding>unix</lineEnding>-->
+		<!--</file>-->
+	<!--</files>-->
+	<!--<files> -->
+	<!--<file> -->
+	<!--<source>${project.basedir}/src/main/resources/script/conf/setenv-${mavenDir}.conf</source> -->
+	<!--<outputDirectory>config</outputDirectory> -->
+	<!--<destName>setenv.conf</destName> -->
+	<!--<lineEnding>unix</lineEnding> -->
+	<!--</file> -->
+	<!--</files> -->
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>WEB-INF/lib</outputDirectory>
+			<excludes>
+				<exclude>org.apache.maven:*</exclude>
+				<exclude>org.codehaus.plexus:*</exclude>
+				<exclude>org.apache.maven.wagon:*</exclude>
+				<exclude>org.apache.maven.surefire:*</exclude>
+				<exclude>org.apache.maven.plugins:*</exclude>
+				<exclude>junit:*</exclude>
+				<exclude>org.slf4j:slf4j-log4j*</exclude>
+				<exclude>log4j:log4j*</exclude>
+			</excludes>
+		</dependencySet>
+	</dependencySets>
+</assembly>

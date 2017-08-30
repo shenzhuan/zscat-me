@@ -1,4 +1,3 @@
-# zscat_sw
 springboot dubbo redis solr mq kafka 商城 blog cms
  
 
@@ -7,11 +6,13 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=a00f8452d401d9302d7f1fe04e77a5d2760824a9ed6bb77662d93fedfecb26d8"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="springboot-dubbo分布式框" title="springboot-dubbo分布式框"></a>
  
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0830/111141_ed72ed26_134431.png "1504062698384.png")
-zscat
+
+# zscat
 
 
-- ├── sw-common -- SSM框架公共模块
-- ├── dubbo-cache-starter -- dubbo缓存插件
+- ├── sw-common -- SSM框架公共模块（kafka提供者）
+- ├── sw-mq -- 消息系统（已集成kafka）
+- ├── dubbo-cache-starter --dubbo自定义缓存（redis,ehcache,mixcache）
 - ├── app-monitor --dubbo服务监控和统计
 - ├── sw_manager -- 后台管理模板
 - ├── sw-portl -- 官网门户展示
@@ -74,6 +75,8 @@ zscat
 - [blog管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_blog/README.md)
 - [cms管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_cms/README.md)
 - [商城管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_shop/README.md)
+- [mq管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_mq/README.md)
+- [dubbo缓存具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/dubbo-cache-starter/README.md)
 
 请作者喝杯咖啡
 

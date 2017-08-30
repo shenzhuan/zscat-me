@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <property resource="config/properties/app.properties"/>
+    <!--<property name="logLevel" value="INFO"/>
+    <property name="logRoot" value="./log"/>
+    <property name="logDefaultFile" value="info"/>
+    <property name="logErrorDefaultFile" value="error"/>-->
+    <property name="logAdditivity" value="${logAdditivity}"/>
+
+    <!-- ================= 按输出级别分类 =================== -->
+    <appender name="in" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>${logLevel}</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <file>${logRoot}/zs_commom_in.log</file>
+        <encoder>
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+            <pattern>%date %level [%thread] %logger{10} [%file] %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${logRoot}/zs_commom_in_%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>500MB</maxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="out" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>${logLevel}</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <file>${logRoot}/zs_commom_out.log</file>
+        <encoder>
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+            <pattern>%date %level [%thread] %logger{10} [%file] %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${logRoot}/zs_commom_out_%d{yyyyMMdd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>500MB</maxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+
+    <appender name="info" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>${logLevel}</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <file>${logRoot}/zs_commom_info.log</file>
+        <encoder>
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+            <pattern>%date %level [%thread] %logger{10} [%file] %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${logRoot}/zs_commom_info_%d{yyyyMMdd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>500MB</maxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>WARN</level>
+        </filter>
+        <file>${logRoot}/zs_commom_error.log</file>
+        <encoder>
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+            <pattern>%date %level [%thread] %logger{10} [%file] %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>${logRoot}/zs_commom_error_%d{yyyyMMdd}.%i.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>500MB</maxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <!-- ==================== 控制台输出 ===================== -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+            <pattern>%date %level [%thread] %logger{10} [%file] %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+
+    <!--myibatis log configure-->
+    <!--<logger name="java.sql.Connection" level="DEBUG"/>
+    <logger name="java.sql.Statement" level="DEBUG"/>
+    <logger name="java.sql.PreparedStatement" level="DEBUG"/>-->
+    <!--<logger name="org.apache.zookeeper" level="ERROR" additivity="false">
+        <appender-ref ref="error"/>
+    </logger>-->
+    <logger name="org.apache.zookeeper" level="WARN"/>
+    <logger name="com.alibaba.dubbo" level="WARN"/>
+
+    <logger name="org.springframework" level="WARN" additivity="false">
+        <appender-ref ref="${logDefaultFile}"/>
+        <appender-ref ref="error"/>
+    </logger>
+    <logger name="com.ibatis" level="INFO" additivity="false">
+        <appender-ref ref="${logDefaultFile}"/>
+        <appender-ref ref="error"/>
+    </logger>
+    <logger name="com.cat.zs.commons" level="${logLevel}" additivity="false">
+        <appender-ref ref="in"/>
+        <appender-ref ref="error"/>
+    </logger>
+    <logger name="com.cat.oss.support.aop.OssAspect" level="${logLevel}" additivity="false">
+        <appender-ref ref="in"/>
+        <appender-ref ref="error"/>
+    </logger>
+    <logger name="com.cat.oss.support.dubbo.RemoteServiceFilter" level="${logLevel}" additivity="false">
+        <appender-ref ref="out"/>
+        <appender-ref ref="error"/>
+    </logger>
+
+    <root>
+        <level value="${logLevel}" />
+        <appender-ref ref="${logDefaultFile}" />
+        <appender-ref ref="${logErrorDefaultFile}" />
+        <appender-ref ref="STDOUT" />
+    </root>
+
+</configuration>

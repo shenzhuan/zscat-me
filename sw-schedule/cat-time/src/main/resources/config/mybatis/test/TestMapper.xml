@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="TestMapper">
+	
+	
+	<!-- 新增-->
+	<insert id="save" parameterType="pd">
+		insert into TB_TEST(
+			USERNAME,	
+			PASSWORD,	
+			AGE,	
+			CREATETIME,	
+			TEST_ID
+		) values (
+			#{USERNAME},	
+			#{PASSWORD},	
+			#{AGE},	
+			#{CREATETIME},	
+			#{TEST_ID}
+		)
+	</insert>
+	
+	
+	<!-- 删除-->
+	<delete id="delete" parameterType="pd">
+		delete from TB_TEST
+		where 
+			TEST_ID = #{TEST_ID}
+	</delete>
+	
+	
+	<!-- 修改 -->
+	<update id="edit" parameterType="pd">
+		update  TB_TEST
+			set 
+				USERNAME = #{USERNAME},
+				PASSWORD = #{PASSWORD},
+				AGE = #{AGE},
+				CREATETIME = #{CREATETIME},
+			TEST_ID = TEST_ID
+			where 
+				TEST_ID = #{TEST_ID}
+	</update>
+	
+	
+	<!-- 通过ID获取数据 -->
+	<select id="findById" parameterType="pd" resultType="pd">
+		select 
+			USERNAME,	
+			PASSWORD,	
+			AGE,	
+			CREATETIME,	
+			TEST_ID
+		from 
+			TB_TEST
+		where 
+			TEST_ID = #{TEST_ID}
+	</select>
+	
+	
+	<!-- 列表 -->
+	<select id="datalistPage" parameterType="page" resultType="pd">
+		select
+				a.USERNAME,	
+				a.PASSWORD,	
+				a.AGE,	
+				a.CREATETIME,	
+				a.TEST_ID
+		from 
+				TB_TEST a
+	</select>
+	
+	<!-- 列表(全部) -->
+	<select id="listAll" parameterType="pd" resultType="pd">
+		select
+				a.USERNAME,	
+				a.PASSWORD,	
+				a.AGE,	
+				a.CREATETIME,	
+				a.TEST_ID
+		from 
+				TB_TEST a
+	</select>
+	
+	<!-- 批量删除 -->
+	<delete id="deleteAll" parameterType="String">
+		delete from TB_TEST
+		where 
+			TEST_ID in
+		<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
+                 #{item}
+		</foreach>
+	</delete>
+	
+</mapper>

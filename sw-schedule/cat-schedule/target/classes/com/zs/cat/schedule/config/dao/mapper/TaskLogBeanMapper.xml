@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zs.cat.schedule.config.dao.TaskLogBeanMapper">
+
+	<resultMap id="TaskLogBeanMap"
+		type="com.zs.cat.schedule.config.bean.TaskLogBean">
+		<id column="LOG_ID" property="logId" jdbcType="DECIMAL" />
+		<result column="CONFIG_ID" property="configId" jdbcType="DECIMAL" />
+		<result column="STATE" property="state" jdbcType="DECIMAL" />
+		<result column="RESULTS" property="results" jdbcType="VARCHAR" />
+		<result column="SUCESS_NUM" property="sucessNum" jdbcType="DECIMAL" />
+		<result column="FAIL_NUM" property="failNum" jdbcType="DECIMAL" />
+		<result column="BEGIN_DATE" property="beginDate" jdbcType="TIMESTAMP" />
+		<result column="END_DATE" property="endDate" jdbcType="TIMESTAMP" />
+		<result column="REMARKS" property="remarks" jdbcType="VARCHAR" />
+		<result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		LOG_ID, CONFIG_ID, STATE, RESULTS, SUCESS_NUM, FAIL_NUM,
+		BEGIN_DATE,
+		END_DATE, REMARKS
+	</sql>
+	
+	<select id="queryTaskLogPage" resultMap="TaskLogBeanMap" parameterType="com.zs.cat.schedule.config.bean.TaskLogBean">
+        SELECT
+        <include refid="Base_Column_List"/>,
+        (SELECT C.TASK_NAME FROM T_CSM_TASK_CONFIG C WHERE C.CONFIG_ID=A.CONFIG_ID AND ROWNUM=1) TASK_NAME,ROWNUM AS ROW_ID
+        FROM T_CSM_TASK_LOG A
+        <where>
+            <if test="configId != null and configId != ''">
+                AND CONFIG_ID = #{configId,jdbcType=DECIMAL}
+            </if>
+        </where>
+        ORDER BY LOG_ID DESC
+    </select>
+    
+	<select id="getTaskLogByKey" resultMap="TaskLogBeanMap"
+		parameterType="Integer">
+		select
+		<include refid="Base_Column_List" />
+		from T_CSM_TASK_LOG
+		where LOG_ID = #{logId,jdbcType=DECIMAL}
+	</select>
+
+	<insert id="insertTaskLog" parameterType="com.zs.cat.schedule.config.bean.TaskLogBean" useGeneratedKeys="true" keyProperty="logId">
+		
+		insert into
+		T_CSM_TASK_LOG (LOG_ID, CONFIG_ID, STATE,
+		RESULTS, SUCESS_NUM,
+		FAIL_NUM,
+		BEGIN_DATE, END_DATE, REMARKS
+		)
+		values
+		(#{logId}, #{configId,jdbcType=DECIMAL},
+		#{state,jdbcType=DECIMAL},
+		#{results,jdbcType=VARCHAR},
+		#{sucessNum,jdbcType=DECIMAL}, #{failNum,jdbcType=DECIMAL},
+		#{beginDate,jdbcType=TIMESTAMP}, #{endDate,jdbcType=TIMESTAMP},
+		#{remarks,jdbcType=VARCHAR}
+		)
+	</insert>
+
+	<update id="updateTaskLog" parameterType="com.zs.cat.schedule.config.bean.TaskLogBean">
+		update T_CSM_TASK_LOG
+		set CONFIG_ID = #{configId,jdbcType=DECIMAL},
+		STATE =
+		#{state,jdbcType=DECIMAL},
+		RESULTS = #{results,jdbcType=VARCHAR},
+		SUCESS_NUM = #{sucessNum,jdbcType=DECIMAL},
+		FAIL_NUM =
+		#{failNum,jdbcType=DECIMAL},
+		BEGIN_DATE =
+		#{beginDate,jdbcType=TIMESTAMP},
+		END_DATE =
+		#{endDate,jdbcType=TIMESTAMP},
+		REMARKS = #{remarks,jdbcType=VARCHAR}
+		where LOG_ID = #{logId,jdbcType=DECIMAL}
+	</update>
+
+	<delete id="deleteTaskLog" parameterType="java.lang.Integer">
+		delete from T_CSM_TASK_LOG
+		where LOG_ID = #{logId,jdbcType=DECIMAL}
+	</delete>
+</mapper>

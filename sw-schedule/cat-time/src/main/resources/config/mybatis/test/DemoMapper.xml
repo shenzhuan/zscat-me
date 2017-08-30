@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DemoMapper">
+	
+	
+	<!-- 新增-->
+	<insert id="save" parameterType="pd">
+		insert into TB_DEMO(
+			AGE,	
+			USERNAME,	
+			DEMO_ID
+		) values (
+			#{AGE},	
+			#{USERNAME},	
+			#{DEMO_ID}
+		)
+	</insert>
+	
+	
+	<!-- 删除-->
+	<delete id="delete" parameterType="pd">
+		delete from TB_DEMO
+		where 
+			DEMO_ID = #{DEMO_ID}
+	</delete>
+	
+	
+	<!-- 修改 -->
+	<update id="edit" parameterType="pd">
+		update  TB_DEMO
+			set 
+				AGE = #{AGE},
+				USERNAME = #{USERNAME},
+			DEMO_ID = DEMO_ID
+			where 
+				DEMO_ID = #{DEMO_ID}
+	</update>
+	
+	
+	<!-- 通过ID获取数据 -->
+	<select id="findById" parameterType="pd" resultType="pd">
+		select 
+			AGE,	
+			USERNAME,	
+			DEMO_ID
+		from 
+			TB_DEMO
+		where 
+			DEMO_ID = #{DEMO_ID}
+	</select>
+	
+	
+	<!-- 列表 -->
+	<select id="datalistPage" parameterType="page" resultType="pd">
+		select
+				a.AGE,	
+				a.USERNAME,	
+				a.DEMO_ID
+		from 
+				TB_DEMO a
+	</select>
+	
+	<!-- 列表(全部) -->
+	<select id="listAll" parameterType="pd" resultType="pd">
+		select
+				a.AGE,	
+				a.USERNAME,	
+				a.DEMO_ID
+		from 
+				TB_DEMO a
+	</select>
+	
+	<!-- 批量删除 -->
+	<delete id="deleteAll" parameterType="String">
+		delete from TB_DEMO
+		where 
+			DEMO_ID in
+		<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
+                 #{item}
+		</foreach>
+	</delete>
+	
+</mapper>

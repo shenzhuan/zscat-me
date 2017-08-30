@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zs.cat.schedule.config.dao.TaskParamBeanMapper" >
+  <resultMap id="BaseResultMap" type="com.zs.cat.schedule.config.bean.TaskParamBean" >
+    <id column="PARAM_ID" property="paramId" jdbcType="DECIMAL" />
+    <result column="CONFIG_ID" property="configId" jdbcType="DECIMAL" />
+    <result column="PARAM_NAME" property="paramName" jdbcType="VARCHAR" />
+    <result column="PARAM_VALUE" property="paramValue" jdbcType="VARCHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    PARAM_ID, CONFIG_ID, PARAM_NAME, PARAM_VALUE, REMARK
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_CSM_TASK_PARAM
+    where PARAM_ID = #{paramId,jdbcType=DECIMAL}
+  </select>
+   <select id="selectByTaskId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_CSM_TASK_PARAM
+    where CONFIG_ID = #{taskId,jdbcType=DECIMAL}
+  </select>
+  <select id="queryTaskParamBeanPage" resultMap="BaseResultMap" parameterType="com.zs.cat.schedule.config.bean.TaskParamBean" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_CSM_TASK_PARAM
+    <where>
+      	1=1
+        <if test="configId != null and configId != ''">
+            AND CONFIG_ID = #{configId,jdbcType=DECIMAL}
+        </if>
+        <if test="paramName != null and paramName != ''">
+            AND PARAM_NAME = #{paramName,jdbcType=VARCHAR}
+        </if>
+       	<if test="paramValue != null and paramValue != ''">
+            AND PARAM_VALUE = #{paramValue,jdbcType=VARCHAR}
+        </if>
+        ORDER BY PARAM_ID desc
+     </where>
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from T_CSM_TASK_PARAM
+    where PARAM_ID = #{paramId,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.zs.cat.schedule.config.bean.TaskParamBean" >
+   
+    insert into T_CSM_TASK_PARAM (PARAM_ID, CONFIG_ID, PARAM_NAME, 
+      PARAM_VALUE, REMARK)
+    values (#{paramId,jdbcType=DECIMAL}, #{configId,jdbcType=DECIMAL}, #{paramName,jdbcType=VARCHAR}, 
+      #{paramValue,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zs.cat.schedule.config.bean.TaskParamBean" >
+    
+    insert into T_CSM_TASK_PARAM
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="paramId != null" >
+        PARAM_ID,
+      </if>
+      <if test="configId != null" >
+        CONFIG_ID,
+      </if>
+      <if test="paramName != null" >
+        PARAM_NAME,
+      </if>
+      <if test="paramValue != null" >
+        PARAM_VALUE,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="paramId != null" >
+        #{paramId,jdbcType=DECIMAL},
+      </if>
+      <if test="configId != null" >
+        #{configId,jdbcType=DECIMAL},
+      </if>
+      <if test="paramName != null" >
+        #{paramName,jdbcType=VARCHAR},
+      </if>
+      <if test="paramValue != null" >
+        #{paramValue,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zs.cat.schedule.config.bean.TaskParamBean" >
+    update T_CSM_TASK_PARAM
+    <set >
+      <if test="configId != null" >
+        CONFIG_ID = #{configId,jdbcType=DECIMAL},
+      </if>
+      <if test="paramName != null" >
+        PARAM_NAME = #{paramName,jdbcType=VARCHAR},
+      </if>
+      <if test="paramValue != null" >
+        PARAM_VALUE = #{paramValue,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where PARAM_ID = #{paramId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zs.cat.schedule.config.bean.TaskParamBean" >
+    update T_CSM_TASK_PARAM
+    set CONFIG_ID = #{configId,jdbcType=DECIMAL},
+      PARAM_NAME = #{paramName,jdbcType=VARCHAR},
+      PARAM_VALUE = #{paramValue,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR}
+    where PARAM_ID = #{paramId,jdbcType=DECIMAL}
+  </update>
+  <!--批量删除-->
+  <delete id="deleteTaskParamBeanBatch" parameterType="java.lang.String">
+    DELETE FROM T_CSM_TASK_PARAM T WHERE T.PARAM_ID IN
+    <foreach item="idItem" collection="array" open="(" separator="," close=")">
+      #{idItem}
+    </foreach>
+  </delete>
+</mapper>

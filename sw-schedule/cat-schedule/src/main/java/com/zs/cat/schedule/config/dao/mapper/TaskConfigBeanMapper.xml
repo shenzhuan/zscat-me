@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zs.cat.schedule.config.dao.TaskConfigBeanMapper">
+
+	<resultMap id="TaskConfigBeanMap"
+		type="com.zs.cat.schedule.config.bean.TaskConfigBean">
+		<id column="CONFIG_ID" property="configId" jdbcType="DECIMAL" />
+		<result column="TASK_NAME" property="taskName" jdbcType="VARCHAR" />
+		<result column="TASK_TYPE" property="taskType" jdbcType="DECIMAL" />
+		<result column="TASK_CLASS" property="taskClass" jdbcType="VARCHAR" />
+		<result column="TASK_CRON" property="taskCron" jdbcType="VARCHAR" />
+		<result column="RUN_STATE" property="runState" jdbcType="DECIMAL" />
+		<result column="TASK_STATE" property="taskState" jdbcType="DECIMAL" />
+		<result column="TASK_DATE" property="taskDate" jdbcType="VARCHAR" />
+		<result column="TASK_TIME" property="taskTime" jdbcType="VARCHAR" />
+		<result column="TASK_GROUP_FLAG" property="taskGroupFlag" jdbcType="VARCHAR" />
+		<result column="LAST_RUN_DATE" property="lastRunDate" jdbcType="TIMESTAMP" />
+		<result column="RUN_NUM" property="runNum" jdbcType="DECIMAL" />
+		<result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP" />
+		<result column="CREATER_ID" property="createrId" jdbcType="VARCHAR" />
+		<result column="CREATER_NAME" property="createrName" jdbcType="VARCHAR" />
+		<result column="UPDATE_DATE" property="updateDate" jdbcType="TIMESTAMP" />
+		<result column="UPDATER_ID" property="updaterId" jdbcType="VARCHAR" />
+		<result column="UPDATER_NAME" property="updaterName" jdbcType="VARCHAR" />
+		<result column="REMARK" property="remark" jdbcType="VARCHAR" />
+		<result column="MODULE_ID" property="moduleId" jdbcType="VARCHAR" />
+		<result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		CONFIG_ID, TASK_NAME, TASK_TYPE, TASK_CLASS, TASK_CRON, RUN_STATE, TASK_STATE,
+		TASK_DATE,
+		TASK_TIME, TASK_GROUP_FLAG, LAST_RUN_DATE, RUN_NUM, CREATE_DATE, CREATER_ID,
+		CREATER_NAME,
+		UPDATE_DATE, UPDATER_ID, UPDATER_NAME, REMARK, MODULE_ID, PRIORITY
+	</sql>
+	
+	<select id="queryTaskConigPage" resultMap="TaskConfigBeanMap" parameterType="com.zs.cat.schedule.config.bean.TaskConfigBean">
+        SELECT
+        <include refid="Base_Column_List"/>,ROWNUM AS ROW_ID
+        FROM T_CSM_TASK_CONFIG
+        <where>
+        	1=1
+            <if test="taskName != null and taskName != ''">
+                AND TASK_NAME = #{taskName,jdbcType=VARCHAR}
+            </if>
+            <if test="taskGroupFlag != null and taskGroupFlag != ''">
+                AND TASK_GROUP_FLAG = #{taskGroupFlag,jdbcType=VARCHAR}
+            </if>
+           	<if test="moduleId != null and moduleId != ''">
+                AND MODULE_ID = #{moduleId,jdbcType=VARCHAR}
+            </if>
+            <if test="taskType != null and taskType != ''">
+                AND TASK_TYPE = #{taskType,jdbcType=DECIMAL} 
+            </if>
+            ORDER BY CONFIG_ID desc
+        </where>
+    </select>
+    
+	<select id="getTaskByKey" resultMap="TaskConfigBeanMap"
+		parameterType="java.lang.Integer">
+		select
+		<include refid="Base_Column_List" />
+		from T_CSM_TASK_CONFIG where CONFIG_ID = #{configId,jdbcType=DECIMAL}
+	</select>
+
+	<select id="getTaskConfigByType" resultMap="TaskConfigBeanMap">
+		select * from t_csm_task_config a
+		where a.task_group_flag = #{0}
+		and a.module_id = #{1}
+		and a.task_state = 1
+		order by
+		a.config_id desc
+	</select>
+
+	<insert id="insertTaskConfig" parameterType="com.zs.cat.schedule.config.bean.TaskConfigBean">
+		
+		 
+  
+		insert into T_CSM_TASK_CONFIG (CONFIG_ID, TASK_NAME, TASK_TYPE,
+		TASK_CLASS, TASK_CRON, RUN_STATE,
+		TASK_STATE, TASK_DATE, TASK_TIME,
+		TASK_GROUP_FLAG, LAST_RUN_DATE, RUN_NUM,
+		CREATE_DATE, CREATER_ID, CREATER_NAME,
+		UPDATE_DATE, UPDATER_ID, UPDATER_NAME,
+		REMARK, MODULE_ID, PRIORITY)
+		values (#{configId}, #{taskName,jdbcType=VARCHAR},
+		#{taskType,jdbcType=INTEGER},
+		#{taskClass,jdbcType=VARCHAR}, #{taskCron,jdbcType=VARCHAR}, #{runState,jdbcType=DECIMAL},
+		#{taskState,jdbcType=DECIMAL}, #{taskDate,jdbcType=VARCHAR},
+		#{taskTime,jdbcType=VARCHAR},
+		#{taskGroupFlag,jdbcType=VARCHAR}, #{lastRunDate,jdbcType=TIMESTAMP}, #{runNum,jdbcType=DECIMAL},
+		#{createDate,jdbcType=TIMESTAMP}, #{createrId,jdbcType=VARCHAR},
+		#{createrName,jdbcType=VARCHAR},
+		#{updateDate,jdbcType=TIMESTAMP}, #{updaterId,jdbcType=VARCHAR}, #{updaterName,jdbcType=VARCHAR},
+		#{remark,jdbcType=VARCHAR}, #{moduleId,jdbcType=VARCHAR}, #{priority,jdbcType=DECIMAL})
+	</insert>
+	
+	<insert id="insertSelective" parameterType="com.zs.cat.schedule.config.bean.TaskConfigBean">
+		
+		insert into T_CSM_TASK_CONFIG
+		<trim prefix="(" suffix=")" suffixOverrides="," >
+			<if test="configId != null" >
+	        	CONFIG_ID,
+	      	</if>
+	      	<if test="taskName != null" >
+	      		TASK_NAME, 
+	      	</if>
+	      	<if test="taskType !=null">
+	      		TASK_TYPE,
+	      	</if>
+	      	<if test="taskClass !=null">
+	      		TASK_CLASS,
+	      	</if>
+			<if test="taskCron != null">
+				TASK_CRON,
+			</if>
+			<if test="runState != null">
+				RUN_STATE,
+			</if>
+			<if test="taskState != null">
+				TASK_STATE,
+			</if>
+			<if test="taskDate != null">
+				TASK_DATE,
+			</if>
+			<if test="taskTime != null">
+				TASK_TIME,
+			</if>
+			<if test="taskGroupFlag != null">
+				TASK_GROUP_FLAG,
+			</if>
+			<if test="lastRunDate !=null">
+				LAST_RUN_DATE,
+			</if>
+			<if test="runNum != null">
+				RUN_NUM,
+			</if>
+			<if test="createDate != null">
+				CREATE_DATE,
+			</if>
+			<if test="createrId != null">
+				CREATER_ID, 
+			</if>
+			<if test="createrName != null">
+				CREATER_NAME,
+			</if>
+			<if test="updateDate != null">
+				UPDATE_DATE, 
+			</if>
+			<if test="updaterId != null">
+				UPDATER_ID, 
+			</if>
+			<if test="updaterName != null">
+				UPDATER_NAME,
+			</if>
+			<if test="remark != null">
+				REMARK,
+			</if>
+			<if test="moduleId != null">
+				MODULE_ID, 
+			</if>
+			<if test="priority != null">
+				PRIORITY,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides="," >
+			<if test="configId != null" >
+				#{configId},
+	      	</if>
+	      	<if test="taskName != null" >
+	      		#{taskName,jdbcType=VARCHAR},
+	      	</if>
+	      	<if test="taskType !=null">
+	      		#{taskType,jdbcType=INTEGER},
+	      	</if>
+	      	<if test="taskClass !=null">
+	      		#{taskClass,jdbcType=VARCHAR}, 
+	      	</if>
+			<if test="taskCron != null">
+				#{taskCron,jdbcType=VARCHAR}, 
+			</if>
+			<if test="runState != null">
+				#{runState,jdbcType=DECIMAL},
+			</if>
+			<if test="taskState != null">
+				#{taskState,jdbcType=DECIMAL}, 
+			</if>
+			<if test="taskDate != null">
+				#{taskDate,jdbcType=VARCHAR},
+			</if>
+			<if test="taskTime != null">
+				#{taskTime,jdbcType=VARCHAR},
+			</if>
+			<if test="taskGroupFlag != null">
+				#{taskGroupFlag,jdbcType=VARCHAR}, 
+			</if>
+			<if test="lastRunDate !=null">
+				#{lastRunDate,jdbcType=TIMESTAMP}, 
+			</if>
+			<if test="runNum != null">
+				#{runNum,jdbcType=DECIMAL},
+			</if>
+			<if test="createDate != null">
+				#{createDate,jdbcType=TIMESTAMP}, 
+			</if>
+			<if test="createrId != null">
+				#{createrId,jdbcType=VARCHAR},
+			</if>
+			<if test="createrName != null">
+				#{createrName,jdbcType=VARCHAR},
+			</if>
+			<if test="updateDate != null">
+				#{updateDate,jdbcType=TIMESTAMP}, 
+			</if>
+			<if test="updaterId != null">
+				#{updaterId,jdbcType=VARCHAR}, 
+			</if>
+			<if test="updaterName != null">
+				#{updaterName,jdbcType=VARCHAR},
+			</if>
+			<if test="remark != null">
+				#{remark,jdbcType=VARCHAR}, 
+			</if>
+			<if test="moduleId != null">
+				#{moduleId,jdbcType=VARCHAR}, 
+			</if>
+			<if test="priority != null">
+				#{priority,jdbcType=DECIMAL}
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateTaskConfig" parameterType="com.zs.cat.schedule.config.bean.TaskConfigBean">
+		update T_CSM_TASK_CONFIG
+		set TASK_NAME = #{taskName,jdbcType=VARCHAR},
+		TASK_TYPE = #{taskType,jdbcType=DECIMAL},
+		TASK_CLASS = #{taskClass,jdbcType=VARCHAR},
+		TASK_CRON = #{taskCron,jdbcType=VARCHAR},
+		RUN_STATE = #{runState,jdbcType=DECIMAL},
+		TASK_STATE = #{taskState,jdbcType=DECIMAL},
+		TASK_DATE = #{taskDate,jdbcType=VARCHAR},
+		TASK_TIME = #{taskTime,jdbcType=VARCHAR},
+		TASK_GROUP_FLAG = #{taskGroupFlag,jdbcType=VARCHAR},
+		LAST_RUN_DATE = #{lastRunDate,jdbcType=TIMESTAMP},
+		RUN_NUM = #{runNum,jdbcType=DECIMAL},
+		CREATE_DATE = #{createDate,jdbcType=TIMESTAMP},
+		CREATER_ID = #{createrId,jdbcType=VARCHAR},
+		CREATER_NAME = #{createrName,jdbcType=VARCHAR},
+		UPDATE_DATE = #{updateDate,jdbcType=TIMESTAMP},
+		UPDATER_ID = #{updaterId,jdbcType=VARCHAR},
+		UPDATER_NAME = #{updaterName,jdbcType=VARCHAR},
+		REMARK = #{remark,jdbcType=VARCHAR},
+		MODULE_ID = #{moduleId,jdbcType=VARCHAR},
+		PRIORITY = #{priority,jdbcType=DECIMAL}
+		where CONFIG_ID = #{configId,jdbcType=DECIMAL}
+	</update>
+	
+	<update id="updateByPrimaryKeySelective" parameterType="com.zs.cat.schedule.config.bean.TaskConfigBean">
+		update T_CSM_TASK_CONFIG
+		<set>
+			<if test="taskName != null" >
+	      		TASK_NAME = #{taskName,jdbcType=VARCHAR},
+	      	</if>
+	      	<if test="taskType !=null">
+	      		TASK_TYPE = #{taskType,jdbcType=DECIMAL},
+	      	</if>
+	      	<if test="taskClass !=null">
+	      		TASK_CLASS = #{taskClass,jdbcType=VARCHAR},
+	      	</if>
+			<if test="taskCron != null">
+				TASK_CRON = #{taskCron,jdbcType=VARCHAR},
+			</if>
+			<if test="runState != null">
+				RUN_STATE = #{runState,jdbcType=DECIMAL},
+			</if>
+			<if test="taskState != null">
+				TASK_STATE = #{taskState,jdbcType=DECIMAL},
+			</if>
+			<if test="taskDate != null">
+				TASK_DATE = #{taskDate,jdbcType=VARCHAR},
+			</if>
+			<if test="taskTime != null">
+				TASK_TIME = #{taskTime,jdbcType=VARCHAR},
+			</if>
+			<if test="taskGroupFlag != null">
+				TASK_GROUP_FLAG = #{taskGroupFlag,jdbcType=VARCHAR},
+			</if>
+			<if test="lastRunDate !=null">
+				LAST_RUN_DATE = #{lastRunDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="runNum != null">
+				RUN_NUM = #{runNum,jdbcType=DECIMAL},
+			</if>
+			<if test="createDate != null">
+				CREATE_DATE = #{createDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createrId != null">
+				CREATER_ID = #{createrId,jdbcType=VARCHAR},
+			</if>
+			<if test="createrName != null">
+				CREATER_NAME = #{createrName,jdbcType=VARCHAR},
+			</if>
+			<if test="updateDate != null">
+				UPDATE_DATE = #{updateDate,jdbcType=TIMESTAMP},
+			</if>
+			<if test="updaterId != null">
+				UPDATER_ID = #{updaterId,jdbcType=VARCHAR},
+			</if>
+			<if test="updaterName != null">
+				UPDATER_NAME = #{updaterName,jdbcType=VARCHAR},
+			</if>
+			<if test="remark != null">
+				REMARK = #{remark,jdbcType=VARCHAR},
+			</if>
+			<if test="moduleId != null ">
+				MODULE_ID = #{moduleId,jdbcType=VARCHAR},
+			</if>
+			<if test="priority != null">
+				PRIORITY = #{priority,jdbcType=DECIMAL},
+			</if>
+		</set>
+		where CONFIG_ID = #{configId,jdbcType=DECIMAL}
+	</update>
+	
+	<delete id="deleteTaskByKey" parameterType="java.lang.Integer">
+		delete from T_CSM_TASK_CONFIG
+		where CONFIG_ID = #{configId,jdbcType=DECIMAL}
+	</delete>
+	
+	<!--批量删除 -->
+  <delete id="deleteTaskConfigBatch" parameterType="java.lang.String">
+    delete from T_CSM_TASK_CONFIG where CONFIG_ID in
+    <foreach item="idItem" collection="array" open="(" separator="," close=")">
+      #{idItem}
+    </foreach>
+  </delete>
+
+</mapper>

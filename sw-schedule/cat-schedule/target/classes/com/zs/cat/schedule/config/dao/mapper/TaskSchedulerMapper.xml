@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zs.cat.schedule.config.dao.TaskSchedulerMapper" >
+  <resultMap id="BaseResultMap" type="com.zs.cat.schedule.config.bean.TaskScheduler" >
+    <id column="SCHEDULER_ID" property="schedulerId" jdbcType="DECIMAL" />
+    <result column="MODULE_ID" property="moduleId" jdbcType="VARCHAR" />
+    <result column="TASK_GROUP_FLAG" property="taskGroupFlag" jdbcType="VARCHAR" />
+    <result column="HOST_IP" property="hostIp" jdbcType="VARCHAR" />
+    <result column="MODIFY_TIME" property="modifyTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    SCHEDULER_ID, MODULE_ID, TASK_GROUP_FLAG, HOST_IP, MODIFY_TIME
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_CSM_TASK_SCHEDULER
+    where SCHEDULER_ID = #{schedulerId,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from T_CSM_TASK_SCHEDULER
+    where SCHEDULER_ID = #{schedulerId,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.zs.cat.schedule.config.bean.TaskScheduler" >
+    insert into T_CSM_TASK_SCHEDULER (SCHEDULER_ID, MODULE_ID, TASK_GROUP_FLAG, 
+      HOST_IP, MODIFY_TIME)
+    values (#{schedulerId,jdbcType=DECIMAL}, #{moduleId,jdbcType=VARCHAR}, #{taskGroupFlag,jdbcType=VARCHAR}, 
+      #{hostIp,jdbcType=VARCHAR}, #{modifyTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.zs.cat.schedule.config.bean.TaskScheduler" >
+    insert into T_CSM_TASK_SCHEDULER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="schedulerId != null" >
+        SCHEDULER_ID,
+      </if>
+      <if test="moduleId != null" >
+        MODULE_ID,
+      </if>
+      <if test="taskGroupFlag != null" >
+        TASK_GROUP_FLAG,
+      </if>
+      <if test="hostIp != null" >
+        HOST_IP,
+      </if>
+      <if test="modifyTime != null" >
+        MODIFY_TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="schedulerId != null" >
+        #{schedulerId,jdbcType=DECIMAL},
+      </if>
+      <if test="moduleId != null" >
+        #{moduleId,jdbcType=VARCHAR},
+      </if>
+      <if test="taskGroupFlag != null" >
+        #{taskGroupFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="hostIp != null" >
+        #{hostIp,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null" >
+        #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zs.cat.schedule.config.bean.TaskScheduler" >
+    update T_CSM_TASK_SCHEDULER
+    <set >
+      <if test="moduleId != null" >
+        MODULE_ID = #{moduleId,jdbcType=VARCHAR},
+      </if>
+      <if test="taskGroupFlag != null" >
+        TASK_GROUP_FLAG = #{taskGroupFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="hostIp != null" >
+        HOST_IP = #{hostIp,jdbcType=VARCHAR},
+      </if>
+      <if test="modifyTime != null" >
+        MODIFY_TIME = #{modifyTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where SCHEDULER_ID = #{schedulerId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zs.cat.schedule.config.bean.TaskScheduler" >
+    update T_CSM_TASK_SCHEDULER
+    set MODULE_ID = #{moduleId,jdbcType=VARCHAR},
+      TASK_GROUP_FLAG = #{taskGroupFlag,jdbcType=VARCHAR},
+      HOST_IP = #{hostIp,jdbcType=VARCHAR},
+      MODIFY_TIME = #{modifyTime,jdbcType=TIMESTAMP}
+    where SCHEDULER_ID = #{schedulerId,jdbcType=DECIMAL}
+  </update>
+  
+  
+  <select id="getTaskGroupFlag" resultMap="BaseResultMap" parameterType="map" >
+  <![CDATA[
+	SELECT * FROM (
+		SELECT  t.*
+ 		FROM T_CSM_TASK_SCHEDULER t
+		WHERE t.MODULE_ID=#{moduleId,jdbcType=VARCHAR}
+
+		AND (
+		(
+			t.MODIFY_TIME IS NULL OR T.MODIFY_TIME<#{modifyTime,jdbcType=TIMESTAMP}
+		) OR t.IS_SHARE='Y'
+		)
+
+	) tt
+	
+	]]>
+  </select>
+  
+</mapper>
+
+
+
+
+
