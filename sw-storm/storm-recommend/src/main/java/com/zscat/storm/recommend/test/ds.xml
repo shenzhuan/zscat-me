@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">  
+<properties> 
+   <!-- 连接url -->
+   <entry key="connectionUrl">jdbc:mysql:///blog</entry>  
+   <!-- 用户名 -->
+   <entry key="connectionName">root</entry>  
+   <!-- 密码 -->
+   <entry key="connectionPassword">root</entry>  
+   <!-- 最小连接数（首次以此值为创建连接数标准及空闲连接大于该数时则会清除） -->
+   <entry key="connectionMinLink">5</entry> 
+   <!-- 最大连接数 -->
+   <entry key="conectionMaxLink">89000</entry>
+    <!-- 驱动 -->
+   <entry key="conectionDriver">com.mysql.jdbc.Driver</entry> 
+   <!--  当连接不够用时的增长率-->
+   <entry key="connectionIncreaseLink">10</entry>
+   <!--  设定自动清除空闲连接时间（毫秒）-->
+   <entry key="connectionTimer">5000</entry>
+</properties>

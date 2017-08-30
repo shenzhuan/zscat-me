@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zsCat.sw</groupId>
+    <artifactId>sw-storm</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>storm-recommend</module>
+    </modules>
+
+
+
+    <properties>
+        <java-version>1.6</java-version>
+        <java7-version>1.7</java7-version>
+        <spring-version>3.2.1.RELEASE</spring-version>
+        <org.springframework-version>3.2.1.RELEASE</org.springframework-version>
+        <slf4j-version>1.7.7</slf4j-version>
+        <log4j-version>1.2.17</log4j-version>
+        <log4j2.version>2.4.1</log4j2.version>
+        <mms-boot-version>1.0.3</mms-boot-version>
+        <mms-spring-version>1.0.1</mms-spring-version>
+        <mms-tools-version>1.0</mms-tools-version>
+        <commons-codec-version>1.6</commons-codec-version>
+        <commons-lang-version>2.6</commons-lang-version>
+        <netty-version>4.0.19.FINAL</netty-version>
+        <junit-version>4.11</junit-version>
+        <jmockit-version>1.4</jmockit-version>
+        <inject-version>1</inject-version>
+        <xm-protosrv-version>1.0-SNAPSHOT</xm-protosrv-version>
+        <xm-proto-version>1.0-SNAPSHOT</xm-proto-version>
+        <xm-node-version>3.0.3-SNAPSHOT</xm-node-version>
+        <curator-version>2.7.1</curator-version>
+        <mysql-version>5.1.20</mysql-version>
+        <c3p0-version>0.9.1.2</c3p0-version>
+        <mybatis-version>3.2.0</mybatis-version>
+        <mybatis-spring-version>1.2.0</mybatis-spring-version>
+
+        <xm-registry-version>1.0-SNAPSHOT</xm-registry-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <scribe-log4j-version>1.0.1</scribe-log4j-version>
+        <xm-metric-version>1.0-SNAPSHOT</xm-metric-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.5</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.3.2</version>
+                    <configuration>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>
