@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<title><?php echo $diy->name; ?> - powered by dedecms</title>
+<link href="img/nspage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="main mceneter">
+	<div class="toplogo">
+		<div class="logo">
+				<a href="/"><img src="<?php echo $cfg_templeturl; ?>/default/images/logo.gif" /></a>
+		</div>
+		<div class="title">
+			<?php echo $diy->name; ?>
+			&nbsp; [<a href='diy.php?action=post&diyid=<?php echo $diy->diyid; ?>'>发布信息</a>]
+		</div>
+	</div>
+	<div class="cmain">
+		<div class="ctitle">
+			<h1><?php echo $diy->name; ?>内容列表</h1>
+			<span></span>
+		</div>
+		<div class="cbox mceneter">
+			<div class="maplist">
+			<br />
+{dede:datalist}
+<table class='listtable' cellspacing="1">
+<?php
+if(!empty($fields))
+{
+		echo '<tbody>';
+		echo '<tr><td bgcolor="#eeeeee" width="20%">id</td>';
+		echo '<td bgcolor="#eeeeee"><div class="left">'.$fields['id'].'</div><div class="right"><a href="diy.php?action=view&diyid='.$diy->diyid.'&id='.$fields['id'].'" target="_blank">详细...</a> &nbsp;</div></td></tr>';
+		foreach($fieldlist as $field=>$fielddata)
+		{
+			if($fields[$field]=='') continue;
+			if($fielddata[1]=='img')
+			{
+				$fields[$field] = "<a href='{$fields[$field]}' target='_blank'><img src='img/addon.gif' border='0' /> 图片附件</a>\r\n";
+			}
+			else if($fielddata[1]=='addon')
+			{
+				$fields[$field] = "<a href='{$fields[$field]}' target='_blank'><img src='img/addon.gif' border='0' /> 其它附件</a>";
+			}
+			else
+			{
+				if($fielddata[1]=='htmltext') $fields[$field] = html2text($fields[$field]);
+				else $fields[$field] = htmlspecialchars($fields[$field]);
+				if( strlen($fields[$field]) > 250 )
+				{
+					$fields[$field] = cn_substr( $fields[$field], 250).'...';
+				}
+			}
+			echo "<tr><td bgcolor='#ffffff'>{$fielddata[0]}</td><td bgcolor='#ffffff'>{$fields[$field]}</td></tr>\r\n";
+		}
+		echo '</tbody>';
+}else{
+	echo "<tr><td bgcolor='#ffffff'>暂无记录</td></tr>";
+}
+?>
+</table>
+{/dede:datalist}
+<table class='listtable' cellspacing="2">
+<tr><td bgcolor="#ffffff">{dede:pagelist listsize=5 /}</td></tr>
+</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="copyright mceneter">
+Powered by <a href="http://www.dedecms.com" target="_blank">DedeCMS</a> &copy; 2004-2009  <a href="http://www.desdev.cn" target="_blank">DesDev</a> Inc.
+</div>
+
+</body>
+</html>

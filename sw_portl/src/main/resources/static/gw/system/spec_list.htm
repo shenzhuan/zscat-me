@@ -1,0 +1,19 @@
+<table border='0' width='100%'>
+<tr height='24'> 
+<td width='23%' rowspan="2"><table width="100" height="75" border='0' cellpadding='1' cellspacing='1' bgcolor="#E6EAE3">
+<tr> 
+<td bgcolor="#FFFFFF">[field:imglink/]</td>
+</tr>
+</table> </td>
+<td width='53%'><b>[field:typelink /] [field:textlink /]</b></td>
+<td width="24%">点击:[field:click /]</td>
+</tr>
+<tr> 
+<td height="56" colspan='2'>
+[field:description /]<font color='#8F8C89'>([field:stime /])</font>
+</td>
+</tr>
+<tr> 
+<td height='2' colspan='3' background='[field:global name='cfg_templeturl'/]/img/writerbg.gif'></td>
+</tr>
+</table>

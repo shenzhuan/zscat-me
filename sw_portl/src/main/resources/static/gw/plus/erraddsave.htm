@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<title><?php echo $cfg_webname;?>_挑错</title>
+<link href="<?php echo $cfg_templets_skin; ?>/style/dedecms.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body class="flinkpage">
+
+<div class="header">
+	<div class="top w960 center">
+		<div class="title">
+            <h1><a href="<?php echo $cfg_basehost;?>"><img src="<?php echo $cfg_templets_skin; ?>/images/logo.gif" height="40" width="233" alt="{dede:global.cfg_webname/}"/></a> </h1>
+		</div><!-- /title -->
+	</div><!-- /top -->
+</div><!-- /header -->
+
+<div class="w960 clear center mt1 cmt-box">
+	<div class="sp-title">
+		<h2>挑错</h2>
+		<span class="more">
+			<a href="<?php echo $cfg_basehost;?>">返回首页</a>
+		</span>
+	</div>
+  <div class="formbox">
+<form action="erraddsave.php"  method="post" name="feedback">
+     <input type='hidden' name='dopost' value='saveedit'>
+     <input type="hidden" name="title" value="<?php echo $title?>" />
+     <input type="hidden" name="aid" value="<?php echo $aid?>" />
+<table width="100%" align="center" cellpadding="0" cellspacing="0" bgcolor="#cccccc">
+	<tr>
+		<td width="100" height="30" align="right" bgcolor="#FFFFFF">标题：</td>
+        <td bgcolor="#FFFFFF"><?php echo $title;?></td>
+	</tr>
+    <tr>
+    	<td height="30" align="right" bgcolor="#FFFFFF">错误类型：</td>
+        <td bgcolor="#FFFFFF">
+        	<select name="type">
+            	<option value="1">错别字(除的、地、得)</option>
+                <option value="2">成语运用不当</option>
+				<option value="3">专业术语写法不规则</option>
+				<option value="4">产品与图片不符</option>
+				<option value="5">事实年代以及内容错误</option>
+				<option value="6">技术参数错误</option>
+				<option value="7">其他</option>
+   	    </select>        </td>
+    </tr>
+    <tr>
+    	<td align="right" bgcolor="#FFFFFF">
+        	错误内容：        </td>
+        <td bgcolor="#FFFFFF"><textarea name="err" cols="40" rows="4" class="ipt-txt"></textarea></td>
+    </tr>
+    <tr>
+    	<td align="right" bgcolor="#FFFFFF">
+        	修正建议：       </td>
+        <td bgcolor="#FFFFFF">
+        	<textarea name="erradd" cols="40" rows="4" class="ipt-txt"></textarea>        </td>
+    </tr>
+    <tr>
+    	<td height="35" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+    	<td bgcolor="#FFFFFF"><input name="提交" type="submit" value="提交" class="btn-2"/>
+          <input name="重置" type="reset" value="重置" class="btn-2"/></td>
+      </tr>
+</table>
+</form>
+<br />
+    </div>
+
+</div>
+
+
+
+<!-- //底部模板 -->
+<div class="footer w960 center mt1 clear">
+	<!-- 
+		为了支持织梦团队的发展,请您保留织梦内容管理系统的链接信息.
+		我们对支持织梦团队发展的朋友表示真心的感谢!织梦因您更精彩!
+	-->
+    <div class="footer_left"></div>
+    <div class="footer_body">
+    <span class="gotop"><a href="javascript:scroll(0,0)"><img src="<?php echo $cfg_templets_skin; ?>/images/top.gif" height="11" width="61" alt="返回顶部"/></a></span>
+	<p class="powered">    
+		Powered by <a href="http://www.dedecms.com" title="织梦内容管理系统(DedeCms)--国内最专业的PHP网站管理系统，轻松建站的首选利器。" target="_blank"><strong>DedeCMS<?php echo $cfg_version; ?></strong></a> &copy; 2004-2011 <a href="http://www.desdev.cn/" target="_blank">DesDev</a> Inc.<br /><div class="copyright"><?php echo $cfg_powerby; ?>&nbsp;&nbsp;<?php echo $cfg_beian; ?></div></p>        
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+
+</body>
+</html>

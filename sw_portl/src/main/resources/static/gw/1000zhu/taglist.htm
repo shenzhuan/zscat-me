@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field name='keywords'/}" />
+    <meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+    <meta name="copyright" content="Copyright dedecms51.com 版权所有" />
+
+    <link href="{dede:global.cfg_templeturl/}/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="{dede:global.cfg_templeturl/}/Content/inner.min.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+    <script src="{dede:global.cfg_templeturl/}/Scripts/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="{dede:global.cfg_templeturl/}/Scripts/jquery.min.js"></script>
+    <script src="{dede:global.cfg_templeturl/}/Scripts/inner.min.js"></script>
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+    
+    <section class="toolbar">
+    	<a href="/" title="返回首页" class="homelink"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    	<span class="switch glyphicon glyphicon-th-list"></span>
+        <h1>标签<span class="glyphicon glyphicon-tag"></span>{dede:field.title/}</h1>
+    </section>
+    
+    <section class="taglist content">
+        <ul class="items">
+            {dede:list pagesize='10'}
+        	<li>
+              <a href="[field:arcurl/]" target="_blank" class="thumb"><img src="[field:litpic/]" title="[field:title/]" class="img-responsive article" /></a>
+              <p>
+                <span class="title"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></span>
+                <span class="rel">[field:pubdate function="MyDate('Y-m-d',@me)"/]<u>•</u>[field:typelink/]</span>
+                <span class="tags">
+                	标签：
+                	[field:id runphp='yes']
+                          global $cfg_cmspath;
+                          $tags = GetTags(@me);
+                          $revalue = '';
+                          $tags = explode(',', $tags);
+                          foreach($tags as $key => $value){
+                          if($value){
+                              $revalue .= '<a href="'.$cfg_cmspath.'/tags.php?/'.$value.'/">'.$value.'</a>&nbsp;';
+                              }
+                          }
+                          @me = $revalue;
+                     [/field:id]    
+                </span>
+              </p>
+            </li>
+            {/dede:list}
+        </ul>
+        <div id="Paging" class="paging">
+             <div class="qzPagination">
+                  {dede:pagelist listitem="pre,next,pageno" listsize="5"/}
+             </div>
+        </div>
+    </section>
+    
+{dede:include filename="dock.htm"/}
+</body>
+</html>

@@ -29,12 +29,12 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 - |    ├── cms-service -- cms相关的service实现  dubbo服务
 - |    ├── cms-web -- cms消费者 前端展示
 - ├── sw-shop-- shop管理系统
-- |    ├── shop-goods-api -- shop相关的service
-- |    ├── shop-goods-service -- shop相关的service实现  dubbo服务
-- |    ├── shop-member-api -- shop相关的service
-- |    ├── shop-member-service -- shop相关的service实现  dubbo服务
-- |    ├── shop-order-api -- shop相关的service
-- |    ├── shop-order-service -- shop相关的service实现  dubbo服务
+- |    ├── shop-goods-api -- shop商品相关的service
+- |    ├── shop-goods-service -- shop商品相关的service实现  dubbo服务
+- |    ├── shop-member-api -- shop会员相关的service
+- |    ├── shop-member-service -- shop会员相关的service实现  dubbo服务
+- |    ├── shop-order-api -- shop订单相关的service
+- |    ├── shop-order-service -- shop订单相关的service实现  dubbo服务
 - |    ├── shop-web -- shop消费者 前端展示
 - |    ├── shop-h5-- h5消费者 前端展示
 
@@ -75,7 +75,7 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 - [blog管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_blog/README.md)
 - [cms管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_cms/README.md)
 - [商城管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_shop/README.md)
-- [mq管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_mq/README.md)
+- [mq管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw-mq/README.md)
 - [dubbo缓存具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/dubbo-cache-starter/README.md)
 
 请作者喝杯咖啡

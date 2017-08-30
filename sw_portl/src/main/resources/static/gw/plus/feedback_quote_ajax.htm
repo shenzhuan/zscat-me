@@ -1,0 +1,60 @@
+<div class="clear center mt1 cmt-box">
+  <div class="mt1">
+    <dl class="tbox">
+      <dt><strong>引用评论</strong></dt>
+      <dd>
+        <div class="dede_comment_post">
+          <form action="feedback.php" method="post" name="ajaxfeedback_<?php echo $row['id']; ?>" id="ajaxfeedback_<?php echo $row['id']; ?>">
+            <input type="hidden" name="action" value="send" />
+            <input type="hidden" name="comtype" value="reply" />
+            <input type="hidden" name="fid" value="<?php echo $row['id']; ?>" />
+            <input type="hidden" name="isconfirm" value="yes" />
+            <input type="hidden" name="typeid" value="<?php echo $row['typeid'];?>" />
+            <div class="dcmp-title"> <small>请自觉遵守互联网相关的政策法规，严禁发布色情、暴力、反动的言论。</small> </div>
+            <!-- /dcmp-title -->
+            <div class="dcmp-stand"> <strong>评价:</strong>
+              <input type="radio" name="feedbacktype" checked="1" value="feedback" id="dcmp-stand-neu" />
+              <label for="dcmp-stand-neu"><img src="{dede:global.cfg_templets_skin/}/images/cmt-neu.gif" />中立</label>
+              <input type="radio" name="feedbacktype" value="good" id="dcmp-stand-good" />
+              <label for="dcmp-stand-good"><img src="{dede:global.cfg_templets_skin/}/images/cmt-good.gif" />好评</label>
+              <input type="radio" name="feedbacktype" value="bad" id="dcmp-stand-bad" />
+              <label for="dcmp-stand-bad"><img src="{dede:global.cfg_templets_skin/}/images/cmt-bad.gif" />差评</label>
+            </div>
+            <!-- /dcmp-stand -->
+            <div class="clr"></div>
+            <!-- /dcmp-mood -->
+            <div class="dcmp-content1">
+              <input type="hidden" name="quotemsg" value="{quote}<?php echo '{content}'.$row['msg'].'{/content}'.'{title}'.$row['username'].' 的原帖：{/title}';?>{/quote}" />
+              <textarea cols="60" name="msg" rows="5" class="ipt-txt" style="width:98%" id="msg_<?php echo $row['id']; ?>"></textarea> 
+              </div>
+            <!-- /dcmp-content -->
+            <div class="dcmp-post">
+              <!--未登陆-->
+              <div class="dcmp-userinfo"> 用户名：
+                <?php if($cfg_ml->M_ID <= 0) { ?>
+                <input name="username" type="text" id="username" size="10" class="nb" />
+                （<a href="{dede:global.cfg_cmsurl/}/member/index_do.php?fmdo=user&dopost=regnew" target="_blank"><u>注册</u></a>）
+                密码：
+                <input name="pwd" type="password" id="pwd" size="10"class="nb" />
+                <?php
+                    }else{  echo $cfg_ml->M_LoginID."&nbsp;"; }
+                   ?>
+                <input name="notuser" type="checkbox" id="notuser" value="1" />
+                匿名评论
+                <?php if(preg_match("/4/",$safe_gdopen)){ ?>
+                验证码：
+                <input name="validate" type="text" id="validate" size="10" style="height:18px;width:36px;margin-right:6px;text-transform: uppercase;" class="nb" />
+                <img src='{dede:global.cfg_cmsurl/}/include/vdimgck.php' width='60' height='24' style="cursor:pointer" onclick="this.src=this.src+'?'" title="点击我更换图片" alt="点击我更换图片" id="vdimg_<?php echo $row['id']; ?>"/>
+                <?php } ?>
+                <button type="button" class="btn-2" onClick='javascript:if(CKEDITOR.instances.msg_<?php echo $row['id']; ?>.getData()!="") ajaxQuotePost(<?php echo $row['id']; ?>); else alert("评论内容不能为空！");'>发表评论</button>
+              </div>
+              <!-- /dcmp-submit -->
+            </div>
+            <!-- /dcmp-post -->
+          </form>
+        </div>
+        <!-- /dede_comment_post -->
+      </dd>
+    </dl>
+  </div>
+</div>

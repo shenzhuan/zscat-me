@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<title><?php echo $cfg_webname;?>_所有链接</title>
+<link href="<?php echo $cfg_templets_skin; ?>/style/dedecms.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body class="flinkpage">
+
+<div class="header">
+	<div class="top w960 center">
+		<div class="title">
+			<h1><a href="<?php echo $cfg_basehost;?>" title="<?php echo $cfg_webname;?>"><img src="<?php echo $cfg_templets_skin; ?>/images/logo.gif" height="54" width="216" alt=""/></a> </h1>
+		</div><!-- /title -->
+
+	</div><!-- /top -->
+</div><!-- /header -->
+
+<div class="w960 clear center mt1 cmt-box">
+	<div class="sp-title">
+		<h2>友情链接</h2>
+		<span class="more">
+			<a href='flink_add.php'>申请链接</a> 
+		</span>
+	</div>
+	<div class="flinkbox">
+		<ul class="f5">
+		  <?php
+		  $row = 180;
+		  $titlelen = 50;
+		  $dsql->SetQuery("Select * from `#@__flink` where ischeck>0 order by sortrank asc");
+		  $dsql->Execute();
+		$revalue = "";
+		for($i=1;$i<=$row;$i++)
+		{
+
+				if($dbrow=$dsql->GetObject())
+				{
+					$wtitle = cn_substr($dbrow->webname,$titlelen);
+					if($dbrow->logo=="")
+						$revalue.= "<li><a href='".$dbrow->url."' target='_blank'>$wtitle</a></li>";
+					else
+						$revalue.= "<li><a href='".$dbrow->url."' target='_blank'><img src='".$dbrow->logo."' width='88' height='31' border='0' alt='$wtitle'></a></li>";
+				}
+			if(!$dbrow) break;
+		}
+		echo  $revalue;
+		  ?>
+		</ul>
+	</div>
+
+
+</div>
+
+<!-- //底部模板 -->
+<div class="footer w960 center mt1 clear">
+	<!-- 
+		为了支持织梦团队的发展,请您保留织梦内容管理系统的链接信息.
+		我们对支持织梦团队发展的朋友表示真心的感谢!织梦因您更精彩!
+	-->
+    <div class="footer_left"></div>
+    <div class="footer_body">
+	<p class="powered">    
+		Powered by <a href="http://www.dedecms.com" title="织梦内容管理系统(DedeCms)--国内最专业的PHP网站管理系统，轻松建站的首选利器。" target="_blank"><strong>DedeCMS<?php echo $cfg_version; ?></strong></a> &copy; 2004-2011 <a href="http://www.desdev.cn/" target="_blank">DesDev</a> Inc.<br /><div class="copyright"><?php echo $cfg_powerby; ?>&nbsp;&nbsp;<?php echo $cfg_beian; ?></div></p>        
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+
+</body>
+</html>

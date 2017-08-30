@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>" />
+<title><?php echo $cfg_webname;?>_高级搜索</title>
+<link href="<?php echo $cfg_templets_skin; ?>/style/dedecms.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body class="flinkpage">
+
+<div class="header">
+	<div class="top w960 center">
+		<div class="title">
+			<h1><a href="<?php echo $cfg_basehost;?>"><img src="<?php echo $cfg_templets_skin; ?>/images/logo.gif" alt="{dede:global.cfg_webname/}"/></a> </h1>
+		</div><!-- /title -->
+
+	</div><!-- /top -->
+</div><!-- /header -->
+
+<div class="w960 clear center mt1 cmt-box">
+	<div class="sp-title">
+		<h2>高级搜索</h2>
+		<span class="more">
+			<a href="<?php echo $cfg_basehost;?>">返回首页</a>
+		</span>
+	</div>
+  <div class="formbox">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#cccccc">
+                <form name="form1" action="search.php" method="get">
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30" align="center" width="20%">网站栏目：</td>
+                    <td height="30"> 
+                      <?php
+              $tl = new TypeLink(0);
+              $typeOptions = $tl->GetOptionArray(0,0,0);
+              echo "<select name='typeid' style='width:200'>\r\n";
+              echo "<option value='0' selected>--不限栏目--</option>\r\n";
+              echo $typeOptions;
+              echo "</select>";
+            ?>
+                    </td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30" align="center">关 键 字：</td>
+                    <td width="490" height="30"><input name="q" type="text" id="q" class="ipt-txt"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30" align="center">发布时间：</td>
+                  <td height="30"><select name="starttime" id="starttime" >
+                        <option value="-1" selected>--不限--</option>
+                        <option value="7">一周以内</option>
+                        <option value="30">一个月内</option>
+                        <option value="90">三个月内</option>
+                        <option value="180">半年以内</option>
+                      </select></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30" align="center">内容类型：</td>
+                  <td height="30"> <select name="channeltype" id="channeltype" >
+                        <option value="0" selected>--不限--</option>
+                        <?php
+					 
+					 $dsql->SetQuery("Select id,typename From #@__channeltype order by id desc");
+					 $dsql->Execute();
+					 while($row = $dsql->GetObject())
+					 {
+					   echo "<option value='".$row->id."'>".$row->typename."</option>\r\n";
+					 }
+					 ?>
+                      </select> </td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30" align="center">排序方式：</td>
+                  <td height="30"> <select name="orderby" id="orderby" >
+                        <option value="sortrank" selected>--默认--</option>
+                        <option value="senddate">收录时间</option>
+                        <option value="pubdate">发布时间</option>
+                        <option value="id">文档ID</option>
+                      </select> </td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30" align="center">显示条数：</td>
+                    <td height="30"><input name="pagesize" type="text" id="pagesize" value="10" size="4" class="ipt-txt"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td height="30" align="center">关键字模式：</td>
+                    <td height="30"><input name="kwtype" type="radio" value="1" checked>
+                      或 
+                      <input type="radio" name="kwtype" value="0">
+                      与</td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF"> 
+                    <td height="30" align="center">搜索内容：</td>
+                    <td height="30">
+					<select name="searchtype" id="searchtype" class="op1">
+                     <option value="titlekeyword" selected>默认搜索</option>
+                     <option value="title">仅搜索标题</option>
+					 </select>
+					 </td>
+                  </tr>
+                  <tr bgcolor="#F4FCE4"> 
+                    <td height="30" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                    <td height="30" bgcolor="#FFFFFF"><input name="搜索" type="submit" class="btn-2" value="搜索" border="0" />                      <input name="重置" type="reset" class="btn-2" value="重置" border="0" id="充值" /></td>
+                  </tr>
+                </form>
+              </table>
+<br />
+  </div>
+
+</div>
+
+
+<!-- //底部模板 -->
+<div class="footer w960 center mt1 clear">
+	<!-- 
+		为了支持织梦团队的发展,请您保留织梦内容管理系统的链接信息.
+		我们对支持织梦团队发展的朋友表示真心的感谢!织梦因您更精彩!
+	-->
+    <div class="footer_left"></div>
+    <div class="footer_body">
+    <span class="gotop"><a href="javascript:scroll(0,0)"><img src="<?php echo $cfg_templets_skin; ?>/images/top.gif" height="11" width="61" alt="返回顶部"/></a></span>
+	<p class="powered">    
+		Powered by <a href="http://www.dedecms.com" title="织梦内容管理系统(DedeCms)--国内最专业的PHP网站管理系统，轻松建站的首选利器。" target="_blank"><strong>DedeCMS<?php echo $cfg_version; ?></strong></a> &copy; 2004-2011 <a href="http://www.desdev.cn/" target="_blank">DesDev</a> Inc.<br /><div class="copyright"><?php echo $cfg_powerby; ?>&nbsp;&nbsp;<?php echo $cfg_beian; ?></div></p>        
+<!-- /powered -->
+   </div>
+   <div class="footer_right"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=<?php echo $cfg_soft_lang; ?>'>
+<title>~appname~</title>
+<link href='{dede:global.cfg_cmsurl/}/images/lurd/base.css' rel='stylesheet' type='text/css'>
+<script language='javascript'>
+	function Addnew()
+	{
+		location = "{dede:server name='PHP_SELF' /}?ct={dede:global.ct /}&action=add";
+	}
+	function EditOld()
+	{
+		document.lurdform.action.value = 'edit';
+		document.lurdform.submit();
+	}
+	function DelOld()
+	{
+		if(window.confirm("你确实要删除选定的记录么？"))
+		{
+			document.lurdform.action.value = 'del';
+			document.lurdform.submit();
+		}
+	}
+	function AllSel(ntype)
+	{
+		var f = document.lurdform;
+		for(var i=0; i < f.elements.length; i++)
+		{
+			if(f.elements[i].type=='checkbox') {
+				if(ntype==1) f.elements[i].checked = true;
+				else if(ntype==0) f.elements[i].checked = false;
+				else f.elements[i].checked = !f.elements[i].checked;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+<table width="98%" border="0" align="center" cellpadding="1" cellspacing="1">
+<tr> 
+<td align='right'>
+	<input type="image" name="imageField2" class="np" title="增加数据" alt="增加数据" src="{dede:global.cfg_cmsurl/}/images/lurd/ico-sadd.png" onClick="Addnew();" /> &nbsp;
+	<input type="image" name="imageField" class="np" title="修改数据" alt="修改数据" src="{dede:global.cfg_cmsurl/}/images/lurd/ico-edit.png" onClick="EditOld();" /> &nbsp;
+	<input type="image" name="imageField2" class="np" title="删除数据" alt="删除数据" src="{dede:global.cfg_cmsurl/}/images/lurd/ico-del.png" onClick="DelOld();" />
+</td>
+</tr>
+</table>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#DADADA">
+<tr> 
+	<td height="28" colspan="~totalitem~" background="{dede:global.cfg_cmsurl/}/images/lurd/tr-bg.gif">
+		<table width='96%' cellpadding='0' cellspacing='0'>
+		<tr>
+			<td width='30%'><strong>~appname~</strong></td>
+			<td align='right'></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr align="center" bgcolor="#F9FCEF" height="28">
+~titleitem~</tr>
+<form name="lurdform" action="{dede:server name='PHP_SELF' /}" method="post">
+<input type='hidden' name='ct' value='{dede:global.ct /}' />
+<input type='hidden' name='action' value='' />
+<input type='hidden' name='pageno' value='{dede:global.pageno /}' />
+{dede:datalist}
+<tr align="center" bgcolor="#FFFFFF" height="28" onMouseMove="javascript:this.bgColor='#FCFDEE';" onMouseOut="javascript:this.bgColor='#FFFFFF';">
+~fielditem~</tr>
+{/dede:datalist}
+</form>
+<tr> 
+	<td colspan="~totalitem~" align="left" bgcolor="#FFFFFF" height="36">
+	<input type="button" class='np coolbg' name="b7" value="全选" style="width:40px" onClick="AllSel(1);" class='inputbut' />&nbsp;
+  <input type="button" class='np coolbg' name="b8" value="取消" style="width:40px"  onClick="AllSel(0);" class='inputbut' />&nbsp;
+  <input type="button" class='np coolbg' name="b9" value="反选" style="width:40px"  onClick="AllSel(2);" class='inputbut' />&nbsp;
+	</td>
+</tr>
+<tr> 
+	<td colspan="~totalitem~" align="center" bgcolor="#F9FCEF" height="36">
+	{dede:pagelist listsize='5' listitem='info,index,end,pre,next,pageno,form' /}
+	</td>
+</tr>
+</table>
+</body>
+</html>

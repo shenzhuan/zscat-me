@@ -54,7 +54,7 @@ public class IndexCmsController {
 				recJsonObj.put("data", data);
 				slowProducer.sendMessageAsync(recJsonObj, 1);
 			} catch (Exception e) {
-
+				e.printStackTrace();
 			}
 			CmsCategory CmsCategory=new CmsCategory();
 			CmsCategory.setIsshow(1);

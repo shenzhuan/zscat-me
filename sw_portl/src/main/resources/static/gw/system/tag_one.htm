@@ -1,0 +1,1 @@
+<a href='[field:link /]' target="_blank">[field:tag /]([field:total /])</a>
