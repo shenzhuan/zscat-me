@@ -12,6 +12,8 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 
 - ├── sw-common -- SSM框架公共模块（kafka提供者）
 - ├── sw-mq -- 消息系统（已集成kafka）
+- ├── sw-storm -- storm系统（可以kafka，redis，hbase，mysql，mongodb数据）
+- ├── sw-schedule -- 分布式定时任务
 - ├── dubbo-cache-starter --dubbo自定义缓存（redis,ehcache,mixcache）
 - ├── app-monitor --dubbo服务监控和统计
 - ├── sw_manager -- 后台管理模板
@@ -77,6 +79,7 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 - [商城管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw_shop/README.md)
 - [mq管理具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/sw-mq/README.md)
 - [dubbo缓存具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/dubbo-cache-starter/README.md)
+- [dubbo监控和统计具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/dubbo-monitor/README.md)
 
 请作者喝杯咖啡
 
