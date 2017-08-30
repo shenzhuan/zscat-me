@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="${ctxPath!}/static/pc/css/amazeui.min.css">
+<link rel="stylesheet" href="${ctxPath!}/static/pc/css/petshow.css?6">
+<link rel="stylesheet" href="css/animate.min.css">
+<script src="${ctxPath!}/static/pc/js/jquery.min.js"></script>
+<script src="${ctxPath!}/static/pc/js/amazeui.min.js"></script>
+<script src="${ctxPath!}/static/pc/js/amazeui.lazyload.min.js"></script>
+
+
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse">
+		<div class="amz-container">
+			<h1 class="am-topbar-brand">
+				<a href="${ctxPath!}/web/cms/index" class="am-topbar-logo"> <img
+					src="${ctxPath!}/static/pc/img/logo.png?1" alt="">
+				</a>
+			</h1>
+			<button
+				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+				data-am-collapse="{target: '#doc-topbar-collapse-5'}">
+				<span class="am-sr-only"> 导航切换 </span> <span class="am-icon-bars">
+				</span>
+			</button>
+			<div class="am-collapse am-topbar-collapse"
+				id="doc-topbar-collapse-5">
+				<ul class="am-nav am-nav-pills am-topbar-nav">
+					<li class="am-active"><a href="${ctxPath!}/web/cms/index">
+							首页 </a></li> 
+							@var cateList=auth.getCateGory("houseNav"); 
+							@for(nav in cateList){
+					<li><a href="${ctxPath!}/web/cms/house/${nav.id}">
+							${nav.name!}</a></li> 
+							@}
+					<li class="am-dropdown" data-am-dropdown=""><a
+						class="am-dropdown-toggle" data-am-dropdown-toggle=""
+						href="javascript:;"> 网站切换 <span class="am-icon-caret-down">
+						</span>
+					</a>
+						<ul class="am-dropdown-content">
+							<li><a href="${ctxPath!}/web/cms/index"> 房产网站</a></li>
+							<li><a href="${ctxPath!}/web/cms/indexT"> 旅游网站 </a></li>
+							<li><a href="${ctxPath!}/web/cms/blog"> 旅游网站 </a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div data-am-widget="tabs" class="am-tabs am-tabs-d2 am_news_tab">
+		<ul class="am-tabs-nav am-cf am_cf">
+			<li class="am-active"><a href="[data-tab-panel-0]">全部</a></li>
+			<li class=""><a href="[data-tab-panel-1]">新鲜事</a></li>
+			<li class=""><a href="[data-tab-panel-2]">涨知识</a></li>
+
+		</ul>
+		<div class="am-tabs-bd">
+			<div data-tab-panel-0 class="am-tab-panel am-active">
+				<div class="am-list-news-bd am_news_list_all">
+					<ul class="am-list">
+						<!--缩略图在标题左边-->
+						 @for(blog in page.list!){
+						<li
+							class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left am_list_li">
+							<div class="am-u-sm-3 am-list-thumb am_list_thumb">
+								<a href="${ctxPath!}/web/cms/blogDetail/${blog.id!}" class=""> <img src="${ctxPath!}/static/pc/img/c.png"
+									class="am_news_list_img" alt="我很囧，你保重....晒晒旅行中的那些囧！" />
+								</a>
+							</div>
+							<div class=" am-u-sm-9 am-list-main am_list_main">
+								<h3 class="am-list-item-hd am_list_title">
+									<a href="${ctxPath!}/web/cms/blogDetail/${blog.id!}" class="">${blog.title!}</a>
+								</h3>
+								<div class="am_list_author">
+									<a href="javascript:void(0)"><span
+										class="am_list_author_ico"
+										style="background-image: url(${imgServer!}/${blog.img});"></span><span
+										class="name">zscat</span></a><span class="am_news_time">&nbsp;•&nbsp;<time
+											class="timeago" title="2015-08-13 08:02:40 +0800"
+											datetime="2015-08-13 08:02:40 +0800"> ${blog.releasedate!}</time></span>
+								</div>
+								<div class="am-list-item-text am_list_item_text ">${blog.summary!}</div>
+							</div>
+						</li>
+						@}
+					</ul>
+					<div class="am_news_load">
+						<span><i class="am-icon-spinner am-icon-spin"></i> 更多萌宠照片</span>
+					</div>
+				</div>
+			</div>
+			<div data-tab-panel-1 class="am-tab-panel ">
+
+
+
+				<div class="am-list-news-bd am_news_list_all">
+					<ul class="am-list">
+						<!--缩略图在标题左边-->
+						
+					</ul>
+					<div class="am_news_load">
+						<span><i class="am-icon-spinner am-icon-spin"></i> 更多萌宠照片</span>
+					</div>
+				</div>
+
+
+
+			</div>
+			<div data-tab-panel-2 class="am-tab-panel ">
+
+
+
+				<div class="am-list-news-bd am_news_list_all">
+					<ul class="am-list">
+						<!--缩略图在标题左边-->
+						<li
+							class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left am_list_li">
+							<div class="am-u-sm-3 am-list-thumb am_list_thumb">
+								<a href="###" class=""> <img src="img/c.png"
+									class="am_news_list_img" alt="我很囧，你保重....晒晒旅行中的那些囧！" />
+								</a>
+							</div>
+							<div class=" am-u-sm-9 am-list-main am_list_main">
+								<h3 class="am-list-item-hd am_list_title">
+									<a href="###" class="">那些动物的犀利眼神，仿佛看穿了我的内心</a>
+								</h3>
+								<div class="am_list_author">
+									<a href="javascript:void(0)"><span
+										class="am_list_author_ico"
+										style="background-image: url(img/tx.jpg);"></span><span
+										class="name">Okaeri</span></a><span class="am_news_time">&nbsp;•&nbsp;<time
+											class="timeago" title="2015-08-13 08:02:40 +0800"
+											datetime="2015-08-13 08:02:40 +0800"> 2 小时前</time></span>
+								</div>
+								<div class="am-list-item-text am_list_item_text ">秋田犬是非常受欢迎的犬种之一，但是在饲养过程中可能会遇到一些难题。也许其他方面自己的爱犬都能配合，就是喂食的时候它表现出狗护食的欲望，让你无法接近。</div>
+							</div>
+						</li>
+						<li class="am-g am-list-item-desced am_list_li">
+							<div class=" am-list-main">
+								<h3 class="am-list-item-hd am_list_title am_list_title_s">
+									<a href="###" class="">“你的旅行，是什么颜色？” 晒照片，换北欧梦幻极光之旅！</a>
+								</h3>
+								<div class="am_list_author">
+									<a href="javascript:void(0)"><span
+										class="am_list_author_ico"
+										style="background-image: url(img/tx.jpg);"></span><span
+										class="name">Okaeri</span></a><span class="am_news_time">&nbsp;•&nbsp;<time
+											class="timeago" title="2015-08-13 08:02:40 +0800"
+											datetime="2015-08-13 08:02:40 +0800"> 2 小时前</time></span>
+								</div>
+
+								<div class="am-list-item-text am_list_item_text">还在苦恼圣诞礼物再也玩儿不出新意？快来抢2013最炫彩的跨国圣诞礼物！【参与方式】1.关注“UniqueWay无二之旅”豆瓣品牌小站http://brand.douban.com/uniqueway/2.上传一张**本人**在旅行中色彩最浓郁、最丰富的照片（色彩包含取景地、周边事物、服装饰品、女生彩妆等等，发挥你们无穷的创意想象力哦！^^）一定要有本人出现喔！3.
+									在照片下方，附上一句旅行宣言作为照片说明。 成功参与活动！* 听他们刚才说，上传照片的次</div>
+							</div>
+						</li>
+						<li
+							class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left am_list_li">
+							<div class="am-u-sm-3 am-list-thumb am_list_thumb">
+								<a href="###" class=""> <img src="img/y.png"
+									class="am_news_list_img" alt="我很囧，你保重....晒晒旅行中的那些囧！" />
+								</a>
+							</div>
+							<div class=" am-u-sm-9 am-list-main am_list_main">
+								<h3 class="am-list-item-hd am_list_title">
+									<a href="###" class="">众包解决方案物流平台“我快到”：最后3公里的外卖配送应该外包出去</a>
+								</h3>
+								<div class="am_list_author">
+									<a href="javascript:void(0)"><span
+										class="am_list_author_ico"
+										style="background-image: url(img/tx.jpg);"></span><span
+										class="name">Okaeri</span></a><span class="am_news_time">&nbsp;•&nbsp;<time
+											class="timeago" title="2015-08-13 08:02:40 +0800"
+											datetime="2015-08-13 08:02:40 +0800"> 2 小时前</time></span>
+								</div>
+								<div class="am-list-item-text am_list_item_text ">秋田犬是非常受欢迎的犬种之一，但是在饲养过程中可能会遇到一些难题。也许其他方面自己的爱犬都能配合，就是喂食的时候它表现出狗护食的欲望，让你无法接近。</div>
+							</div>
+						</li>
+						<li
+							class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left am_list_li">
+							<div class="am-u-sm-3 am-list-thumb am_list_thumb">
+								<a href="###" class=""> <img src="img/d.png"
+									class="am_news_list_img" alt="我很囧，你保重....晒晒旅行中的那些囧！" />
+								</a>
+							</div>
+							<div class=" am-u-sm-9 am-list-main am_list_main">
+								<h3 class="am-list-item-hd am_list_title">
+									<a href="###" class="">哈佛大学公开课:公正-该如何做是好?</a>
+								</h3>
+								<div class="am_list_author">
+									<a href="javascript:void(0)"><span
+										class="am_list_author_ico"
+										style="background-image: url(img/tx.jpg);"></span><span
+										class="name">Okaeri</span></a><span class="am_news_time">&nbsp;•&nbsp;<time
+											class="timeago" title="2015-08-13 08:02:40 +0800"
+											datetime="2015-08-13 08:02:40 +0800"> 2 小时前</time></span>
+								</div>
+								<div class="am-list-item-text am_list_item_text ">秋田犬是非常受欢迎的犬种之一，但是在饲养过程中可能会遇到一些难题。也许其他方面自己的爱犬都能配合，就是喂食的时候它表现出狗护食的欲望，让你无法接近。</div>
+							</div>
+						</li>
+					</ul>
+					<div class="am_news_load">
+						<span><i class="am-icon-spinner am-icon-spin"></i> 更多萌宠照片</span>
+					</div>
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<footer class="am_footer">
+		<div class="am_footer_con">
+			<div class="am_footer_link">
+				<span>关于宠物秀</span>
+				<ul>
+					<li><a href="${ctxPath!}/web/cms/aboutus">关于我们</a></li>
+					<li><a href="${ctxPath!}/web/cms/history">发展历程</a></li>
+					<li><a href="${ctxPath!}/web/cms/link">友情链接</a></li>
+				</ul>
+			</div>
+
+
+			<div class="am_footer_don">
+				<span>房产秀</span>
+				<dl>
+					<dt>
+						<img src="${ctxPath!}/static/pc/img/footdon.png?1" alt="">
+					</dt>
+					<dd>
+						一起Show我们的房产吧！宠物秀是图片配文字、涂鸦、COSPLAY的移动手机社区，这里有猫狗鱼龟兔子仓鼠龙猫等各种萌图。 <a
+							href="###" class="footdon_pg ">
+							<div class="foot_d_pg am-icon-apple ">App store</div>
+						</a><a href="###" class="footdon_az animated">
+							<div class="foot_d_az am-icon-android ">Android</div>
+						</a>
+					</dd>
+
+				</dl>
+			</div>
+
+			<div class="am_footer_erweima">
+				<div class="am_footer_weixin">
+					<img src="${ctxPath!}/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_gzwx am-icon-weixin">关注微信</div>
+				</div>
+				<div class="am_footer_ddon">
+					<img src="${ctxPath!}/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_dxz am-icon-cloud-download">扫码下载</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="am_info_line">
+			Copyright(c)2015 <span>zscat</span> All Rights Reserved
+		</div>
+	</footer>
+	<script>
+		$(function() {
+			$('.am_news_tab').css('min-height', $(window).height() - 52 - 220);
+			if ($(window).width() < 600) {
+				$('.am_list_item_text').each(function() {
+					if ($(this).text().length >= 26) {
+						$(this).html($(this).text().substr(0, 26) + '...');
+					}
+				});
+			}
+
+		});
+	</script>
+</body>
+</html>

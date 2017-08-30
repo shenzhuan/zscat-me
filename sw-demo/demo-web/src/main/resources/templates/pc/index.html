@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="/static/pc/css/amazeui.min.css">
+<link rel="stylesheet" href="/static/pc/css/petshow.css?6">
+<link rel="stylesheet" href="/static/pc/css/animate.min.css">
+<script src="/static/pc/js/jquery.min.js"></script>
+<script src="/static/pc/js/amazeui.min.js"></script>
+<script src="/static/pc/js/countUp.min.js"></script>
+<script src="/static/pc/js/amazeui.lazyload.min.js"></script>
+
+
+</head>
+<body>
+	<header class="am-topbar am-topbar-inverse">
+		<div class="amz-container">
+			<h1 class="am-topbar-brand">
+				<a href="/web/cms/index" class="am-topbar-logo"> <img
+					src="/static/pc/img/logo.png?1" alt="">
+				</a>
+			</h1>
+			<button
+				class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+				data-am-collapse="{target: '#doc-topbar-collapse-5'}">
+				<span class="am-sr-only"> 导航切换 </span> <span class="am-icon-bars">
+				</span>
+			</button>
+			<div class="am-collapse am-topbar-collapse"
+				id="doc-topbar-collapse-5">
+				<ul class="am-nav am-nav-pills am-topbar-nav">
+					<li class="am-active"><a href="/web/cms/index">
+							首页 </a></li> 
+						
+							<#if cateList?? >
+					<#list cateList as nav>
+					<li><a href="/web/cms/house/${nav.id}">
+							${nav.name!''}</a></li> 
+							</#list>
+					</#if>
+					<li class="am-dropdown" data-am-dropdown=""><a
+						class="am-dropdown-toggle" data-am-dropdown-toggle=""
+						href="javascript:;"> 网站切换 <span class="am-icon-caret-down">
+						</span>
+					</a>
+						<ul class="am-dropdown-content">
+							<li><a href="/web/cms/index"> 房产网站</a></li>
+							<li><a href="/web/cms/indexT"> 旅游网站 </a></li>
+							<li><a href="/web/cms/blog"> blog </a></li>
+						</ul></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="get">
+		<div class="am-g">
+			<div class="am-u-lg-12">
+				<div class="get-title">
+					<div class="get_font_left">
+						<img src="/static/pc/img/font_yjy.png" alt="">
+					</div>
+					<div class="get_font_center" id="banner_num"></div>
+					<div class="get_font_rigth">
+						<img src="/static/pc/img/font_zty.png" alt="">
+					</div>
+				</div>
+
+				<div class="font_line">
+					<img src="/static/pc/img/font_line.png" alt="">
+				</div>
+				<p>
+					<a href="###"
+						class="am-btn am-btn-sm get-btn  am-radius banner_ios am-icon-apple">
+						App store</a> <a href="###"
+						class="am-btn am-btn-sm  am-radius get-btn banner_android am-icon-android">
+						Android</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="banner_navbg">
+		<div class="am-g">
+			<div class="banner_nav">
+				<span class="am-icon-caret-right"> 筛选：</span>
+				   <a href="###" class="banner_hover" onclick="bna('hot',this)">人气最高</a>
+				   <a href="###"  onclick="bna('reco',this)">推荐</a>
+					<a onclick="bna('late',this)" href="###">最新房产</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="am-g am-imglist">
+		<ul id="bna" data-am-widget="gallery"
+			class="am-gallery am-avg-sm-2
+  am-avg-md-3 am-avg-lg-6 am-gallery-default">
+			
+			
+
+		</ul>
+	</div>
+	<footer class="am_footer">
+		<div class="am_footer_con">
+			<div class="am_footer_link">
+				<span>关于宠物秀</span>
+				<ul>
+					<li><a href="/web/cms/aboutus">关于我们</a></li>
+					<li><a href="/web/cms/history">发展历程</a></li>
+					<li><a href="/web/cms/link">友情链接</a></li>
+				</ul>
+			</div>
+
+
+			<div class="am_footer_don">
+				<span>房产秀</span>
+				<dl>
+					<dt>
+						<img src="/static/pc/img/footdon.png?1" alt="">
+					</dt>
+					<dd>
+						一起Show我们的房产吧！宠物秀是图片配文字、涂鸦、COSPLAY的移动手机社区，这里有猫狗鱼龟兔子仓鼠龙猫等各种萌图。 <a
+							href="###" class="footdon_pg ">
+							<div class="foot_d_pg am-icon-apple ">App store</div>
+						</a><a href="###" class="footdon_az animated">
+							<div class="foot_d_az am-icon-android ">Android</div>
+						</a>
+					</dd>
+
+				</dl>
+			</div>
+
+			<div class="am_footer_erweima">
+				<div class="am_footer_weixin">
+					<img src="/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_gzwx am-icon-weixin">关注微信</div>
+				</div>
+				<div class="am_footer_ddon">
+					<img src="/static/pc/img/wx.jpg" alt="">
+
+					<div class="am_footer_d_dxz am-icon-cloud-download">扫码下载</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="am_info_line">
+			Copyright(c)2015 <span>zscat</span> All Rights Reserved
+		</div>
+	</footer>
+	<script src="/static/pc/js/petshow.js"></script>
+	<script>
+	$(".banner_hover").click();
+	//精品、最新、全部课程
+	function bna(type,obj) {
+		var lodingHtml = '<div class="tac"><img width="100" height="108" alt="" src="/static/loading.gif"></div>' , _timer = null;
+		$(obj).addClass('banner_hover').siblings().removeClass('banner_hover');
+		$.ajax({
+			url :"/web/cms/index/ajax/bna",
+			data : {
+				"order" : type
+			},
+			type : 'post',
+			dataType : 'text',
+			beforeSend:function(){
+				$("#bna").html(lodingHtml);
+				clearTimeout(_timer);
+				
+			},
+			success : function(result) { 
+				_timer = setTimeout(function(){
+					$("#bna").html(result);
+					
+				}, 300);
+			}
+		});
+	}
+ 
+</script>
+</body>
+</html>
