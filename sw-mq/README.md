@@ -2,9 +2,11 @@
 
 ### 2.在对应的模块添加 producer.properties 配置kafaka信息
 
-partitioner.class=com.sankuai.xm.kafka.client.partitioner.CustomizeCommonPartitioner
-slow.kafka.topic=slow
-slow.metadata.broker.list=192.168.1.238:9092
+
+
+- partitioner.class=com.sankuai.xm.kafka.client.partitioner.CustomizeCommonPartitioner
+- slow.kafka.topic=slow
+- slow.metadata.broker.list=192.168.1.238:9092
 ### 3.将消息打入kafka
 
          ```
