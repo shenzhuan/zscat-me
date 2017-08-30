@@ -1,7 +1,12 @@
 # zscat_sw
 springboot dubbo redis solr mq kafka 商城 blog cms
- qq群 483681368
  
+
+### qq群 483681368
+
+<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=a00f8452d401d9302d7f1fe04e77a5d2760824a9ed6bb77662d93fedfecb26d8"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="springboot-dubbo分布式框" title="springboot-dubbo分布式框"></a>
+ 
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0830/111141_ed72ed26_134431.png "1504062698384.png")
 zscat
 
 
