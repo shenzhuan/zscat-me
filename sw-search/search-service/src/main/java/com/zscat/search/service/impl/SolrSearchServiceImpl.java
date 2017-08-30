@@ -17,17 +17,12 @@ package com.zscat.search.service.impl;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.zscat.search.model.IndexObject;
 import com.zscat.search.service.SolrSearchService;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.document.StoredField;
-import org.apache.lucene.document.TextField;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.impl.HttpSolrClient;

@@ -5,7 +5,6 @@ import com.github.pagehelper.PageInfo;
 import com.zscat.search.lucene.util.DocumentUtil;
 import com.zscat.search.lucene.util.IKAnalyzer5x;
 import com.zscat.search.lucene.util.QueryUtil;
-import com.zscat.search.model.IndexObject;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.*;

@@ -7,13 +7,13 @@
   <modules>
 	  <module>dubbo-cache-starter</module>
 	    <module>sw-common</module>
-	  <module>sw-cms</module>
+	  <module>sw-search</module>
 	  <!--
 	  <module>sw-cms</module>
 
 	  <module>sw-shop</module>
 	  <module>sw_manager</module>-->
-	  <module>sw-demo</module>
+	  <module>sw-shop</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -30,7 +30,7 @@
 				<!-- Import dependency management from Spring Boot -->
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>1.4.4.RELEASE</version>
+				<version>1.5.6.RELEASE</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

@@ -1,6 +1,5 @@
 package com.zscat.search.lucene.util;
 
-import com.zscat.search.model.IndexObject;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.document.*;

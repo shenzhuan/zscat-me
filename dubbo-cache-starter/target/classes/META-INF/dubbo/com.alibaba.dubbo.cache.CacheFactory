@@ -1,3 +1,0 @@
-redis=com.huluuu.dubbo.cache.redis.RedisCacheFactory
-ehcache=com.huluuu.dubbo.cache.ehcache.EhCacheFactory
-mixcache=com.huluuu.dubbo.cache.mixcache.MixCacheFactory
