@@ -7,13 +7,13 @@
   <modules>
 	  <module>dubbo-cache-starter</module>
 	    <module>sw-common</module>
-	  <module>sw-blog</module>
+	  <module>sw-cms</module>
 	  <!--
 	  <module>sw-cms</module>
 
 	  <module>sw-shop</module>
 	  <module>sw_manager</module>-->
-	  <module>sw-search</module>
+	  <module>sw-portl</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

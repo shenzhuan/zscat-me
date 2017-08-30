@@ -23,8 +23,12 @@ zscat
 - |    ├── cms-service -- cms相关的service实现  dubbo服务
 - |    ├── cms-web -- cms消费者 前端展示
 - ├── sw-shop-- shop管理系统
-- |    ├── shop-api -- shop相关的service
-- |    ├── shop-service -- shop相关的service实现  dubbo服务
+- |    ├── shop-goods-api -- shop相关的service
+- |    ├── shop-goods-service -- shop相关的service实现  dubbo服务
+- |    ├── shop-member-api -- shop相关的service
+- |    ├── shop-member-service -- shop相关的service实现  dubbo服务
+- |    ├── shop-order-api -- shop相关的service
+- |    ├── shop-order-service -- shop相关的service实现  dubbo服务
 - |    ├── shop-web -- shop消费者 前端展示
 - |    ├── shop-h5-- h5消费者 前端展示
 
