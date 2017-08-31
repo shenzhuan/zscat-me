@@ -91,15 +91,13 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 - [dubbo监控和统计具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/dubbo-monitor/README.md)
 
 ##商城效果图
-![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101032_1320272c_134431.png "在这里输入图片标题")
+
 商品管理
 ![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101314_811d498c_134431.png "在这里输入图片标题")
 楼层管理
 ![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101322_82a87832_134431.png "在这里输入图片标题")
 
-### 5.用tomcat添加shop-web， 访问 http://localhost:8080/shop-web/front
-
-![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101020_3545076d_134431.png "在这里输入图片标题")
+### 5.用tomcat添加shop-web， 
 ![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101514_9c2830ca_134431.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101530_73ba9328_134431.png "在这里输入图片标题")
 
@@ -119,6 +117,10 @@ http://git.oschina.net/handu/dubbo-monitor
 启动elk
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0503/101306_d0720500_791098.png "在这里输入图片标题")
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0503/101315_fbfcd126_791098.png "在这里输入图片标题")
+
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200708_69a36cca_134431.png "dubbo1.png")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200719_3bddc084_134431.png "dubbo2.png")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200734_21fc3537_134431.png "dubbo3.png")
 
 ##后台效果图
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0604/194616_36ed7fd6_551203.png "在这里输入图片标题")
