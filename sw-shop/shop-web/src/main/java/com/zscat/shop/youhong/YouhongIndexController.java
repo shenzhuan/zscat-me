@@ -1,4 +1,4 @@
-package com.zscat.youhong;
+package com.zscat.shop.youhong;
 
 
 import java.util.Date;
@@ -10,6 +10,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.zscat.shop.util.SysUserUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -44,16 +45,16 @@ import com.zscat.util.PasswordEncoder;
 @RequestMapping("/youhong")
 public class YouhongIndexController {
 
-	@Resource
+	@Reference(version = "1.0.0")
 	private ProductClassService ProductClassService;
-	@Resource
+	@Reference(version = "1.0.0")
 	private ProductService ProductService;
-	@Resource
+	@Reference(version = "1.0.0")
 	private MemberService MemberService;
-	@Resource
+	@Reference(version = "1.0.0")
 	private  FloorService floorService;
-	
-	@Resource
+
+	@Reference(version = "1.0.0")
 	private ProductTypeService ProductTypeService;
 	
 	 @RequestMapping("")
