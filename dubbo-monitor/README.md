@@ -84,11 +84,14 @@
 
 ---
 
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200708_69a36cca_134431.png "dubbo1.png")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200719_3bddc084_134431.png "dubbo2.png")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200734_21fc3537_134431.png "dubbo3.png")
 # 五、获取帮助
 
 如果你在使用过程中遇到任何问题，请在这里告诉我们。<br>
 代码维护：<a href="https://github.com/zhongxig/dubbo-d-monitor">https://github.com/zhongxig/dubbo-d-monitor</a><br>
-dubbo-d-monitor讨论QQ群号是：413255856， 加前请注明 dubbo监控中心学习讨论。
+dubbo-monitor讨论QQ群号是：483681368， 加前请注明 dubbo监控中心学习讨论。
 
 ---
 

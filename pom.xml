@@ -14,11 +14,11 @@
 
 	  <module>sw-demo</module>
 	  <module>sw_portl</module>
-	  <!--
-	  <module>sw-cms</module>
 
-	  <module>sw-shop</module>
-	  <module>sw_manager</module>-->
+	  <module>sw-marketing</module>
+	  <!--
+            <module>sw-shop</module>
+            <module>sw_manager</module>-->
 	  <module>sw-shop</module>
 	</modules>
 	<parent>
