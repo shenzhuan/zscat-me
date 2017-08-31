@@ -83,6 +83,7 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 
 blog演示
 
+![输入图片说明](http://git.oschina.net/catshen/zscat_sw/blob/master/sw-blog/png/1.jpg "weixin.jpg")
 请作者喝杯咖啡
 
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0829/203712_6694b4c1_134431.jpeg "weixin.jpg")
