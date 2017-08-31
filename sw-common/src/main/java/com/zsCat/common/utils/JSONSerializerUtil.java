@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 基于jackson的json工具类
  *
- * @author : Hui.Wang [huzi.wh@gmail.com]
+ * @author : zscat
  * @version : 1.0
  * @created on  : 2016/11/17  下午9:07
  */

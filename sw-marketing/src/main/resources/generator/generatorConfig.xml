@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <properties resource="application.properties"/>
+
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.zscat.base.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="${druid.driver-class}"
+                        connectionURL="${druid.url}"
+                        userId="${druid.username}"
+                        password="${druid.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.zscat.marketing.model" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper.marketing" targetProject="src/main/resources"/>
+
+        <javaClientGenerator targetPackage="com.zscat.marketing.mapper" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+
+        <table tableName="tg_active_user_log" domainObjectName="ActiveUserLog"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"><generatedKey column="id" sqlStatement="Mysql" identity="true"/></table>
+        <table tableName="tg_withdraw" domainObjectName="Withdraw" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"><generatedKey column="id" sqlStatement="Mysql" identity="true"/></table>
+
+
+        <!--
+        mvn mybatis-generator:generate
+        <table tableName="tg_active_user" domainObjectName="ActiveUser"  enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"><generatedKey column="id" sqlStatement="Mysql" identity="true"/></table>
+         <table tableName="tg_income" domainObjectName="Income" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"><generatedKey column="id" sqlStatement="Mysql" identity="true"/></table>
+          <table tableName="tg_promotion_user" domainObjectName="PromotionUser" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"><generatedKey column="id" sqlStatement="Mysql" identity="true"/></table>
+       -->
+
+    </context>
+</generatorConfiguration>

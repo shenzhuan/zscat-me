@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zscat.marketing.mapper.IncomeMapper">
+  <resultMap id="BaseResultMap" type="com.zscat.marketing.model.Income">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="income" jdbcType="BIGINT" property="income" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="income_date" jdbcType="TIMESTAMP" property="incomeDate" />
+    <result column="from_uid" jdbcType="BIGINT" property="fromUid" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+
+  <!-- 收入查询 -->
+  <select id="getIncomeDetails">
+    select uid, type, sum(income) income, from_uid from tg_income where uid=#{uid} and income_date &gt; #{startTime} and income_date &lt; #{endTime} group by from_uid, type;
+  </select>
+
+  <select id="getIncomeDatas" resultType="com.zscat.marketing.model.IncomeData">
+  SELECT t.from_uid fromUid, t.uid, SUM(IF(t.type=1,t.income,0)) income1,SUM(IF(t.type=2,t.income,0)) income2,SUM(IF(t.type=3,t.income,0)) income3,SUM(IF(t.type=4,t.income,0)) income4
+  FROM `tg_income` t
+  WHERE t.uid= #{uid}
+    <if test="startTime != null and startTime!= '' ">
+      and t.income_date &gt; #{startTime}
+    </if>
+    <if test="endTime != null and endTime!= '' ">
+      and t.income_date &lt; #{endTime}
+    </if>
+  GROUP BY t.from_uid
+  </select>
+
+</mapper>

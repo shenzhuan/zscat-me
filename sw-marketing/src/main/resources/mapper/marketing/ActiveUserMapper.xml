@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zscat.marketing.mapper.ActiveUserMapper">
+  <resultMap id="BaseResultMap" type="com.zscat.marketing.model.ActiveUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="pro_uid" jdbcType="BIGINT" property="proUid" />
+    <result column="pro_ifcode" jdbcType="VARCHAR" property="proIfcode" />
+    <result column="register_time" jdbcType="TIMESTAMP" property="registerTime" />
+    <result column="new_reward" jdbcType="TINYINT" property="newReward" />
+    <result column="active_days" jdbcType="TINYINT" property="activeDays" />
+    <result column="last_active_date" jdbcType="DATE" property="lastActiveDate" />
+  </resultMap>
+
+</mapper>

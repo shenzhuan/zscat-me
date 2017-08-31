@@ -1,0 +1,22 @@
+
+    <div class="page__bd">
+        <div class="weui-tab">
+            <div class="weui-tab__panel">
+                <div class="weui-table">
+                    <div class="weui-cells weui-cells_form">
+                        <div class="weui-cell" th:each="cuser:${pages.list}">
+                            <div class="weui-cell__hd weui-money"><label class="weui-label" style=""><p th:text="${#dates.format(cuser.operationtime,'yyyy-MM-dd HH:mm:ss')}" class="span_mar" style="margin-right:20px;">2017/6/28 23:23:23</p >
+                                <p th:text="${#numbers.formatDecimal(cuser.money/100.0, 1, 2)}">1</p ></label></div>
+                            <div class="weui-cell__bd weui-cell-history">
+                                <p th:if="${cuser.status} eq 0" th:text="等待处理"> </p>
+                                <p th:if="${cuser.status} eq 1" th:text="操作成功"> </p>
+                                <p th:if="${cuser.status} eq 2" th:text="处理失败"> </p>
+                                <p th:if="${cuser.status} eq -1" th:text="无效数据"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

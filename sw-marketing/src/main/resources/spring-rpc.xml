@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
+
+    <!-- service implemention bean -->
+    <context:property-placeholder location="classpath:dubbo.properties"/>
+    <context:annotation-config/>
+    <context:component-scan base-package="com.zscat.marketing"/>
+
+    <dubbo:application name="hulu.business" logger="log4j"/>
+
+    <dubbo:registry protocol="zookeeper" address="${dubbo.registry.address}"/>
+    <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" accesslog="true"/>
+
+
+    <dubbo:reference id="userService" interface="com.zscat.user.spi.IUserService" check="false"/>
+    <dubbo:reference id="codeService" interface="com.zscat.base.spi.ICodeService" check="false"/>
+</beans>

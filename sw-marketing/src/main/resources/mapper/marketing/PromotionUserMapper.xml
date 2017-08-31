@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zscat.marketing.mapper.PromotionUserMapper">
+  <resultMap id="BaseResultMap" type="com.zscat.marketing.model.PromotionUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="uid" jdbcType="BIGINT" property="uid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="ifcode" jdbcType="VARCHAR" property="ifcode" />
+    <result column="up_uid" jdbcType="BIGINT" property="upUid" />
+    <result column="up_uids" jdbcType="VARCHAR" property="upUids" />
+    <result column="up_ifcode" jdbcType="VARCHAR" property="upIfcode" />
+    <result column="level" jdbcType="TINYINT" property="level" />
+    <result column="total_income" jdbcType="BIGINT" property="totalIncome" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="wx_open_id" jdbcType="VARCHAR" property="wxOpenId" />
+    <result column="wx_unionid" jdbcType="VARCHAR" property="wxUnionid" />
+    <result column="wx_nickname" jdbcType="VARCHAR" property="wxNickname" />
+    <result column="wx_avatar" jdbcType="VARCHAR" property="wxAvatar" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+
+  <!-- 菜单管理分页显示筛选查询 -->
+  <select id="findAllChild" resultType="com.zscat.marketing.model.PromotionUser">
+    SELECT DISTINCT t.uid,t.up_uids,t.up_uid, t.wx_nickname, t.level level,t.ifcode,CONCAT((SELECT count(1) from tg_promotion_user tt where tt.up_uid=t.uid),"/7") countlevel
+    FROM tg_promotion_user t
+    <where>
+      FIND_IN_SET(#{uid},t.up_uids)
+    </where>
+    order by t.level desc
+  </select>
+
+  <!-- 菜单管理分页显示筛选查询 -->
+  <select id="findAllOneChild" resultType="com.zscat.marketing.model.PromotionUser">
+    SELECT DISTINCT t.uid, t.level,  t.wx_nickname wxNickname, t.up_ifcode upIfcode,t.ifcode,(SELECT count(1) from tg_promotion_user tt where tt.up_uid=t.uid) countlevel
+    FROM tg_promotion_user t where t.up_ifcode=#{ifcode} ORDER BY t.create_time
+  </select>
+</mapper>

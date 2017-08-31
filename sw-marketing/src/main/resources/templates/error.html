@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8"/>
+        <!--让IE以最新的内核渲染 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <!--让视口宽度为设备宽度,不允许用户缩放 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+        <!--不自动识别电话号码和邮编 -->
+        <meta name="format-detection" content="telephone=no,email=no"/>
+        <!--开启对webapp的支持 -->
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <!--强制全屏显示 -->
+        <meta name="full-screen" content="yes"/>
+        <!--禁止浏览器从缓存中访问页面内容 -->
+        <meta http-equiv="Pragma" content="no-cache"/>
+        <!--web app 应用下状态(屏幕顶部条)的颜色,默认值为 default(白色) -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+        <title>错误页面</title>
+    </head>
+</head>
+<body>
+<img src="https://qiniustatic.if-chat.com/h5/staticv2/logoMax.png" class='bgImg'/>
+<div>
+    <section>
+        <dl>
+            <dt><img src="https://qiniustatic.if-chat.com/h5/staticv2/happy.png" alt=""/></dt>
+            <dd th:text="${error}">加载失败，请重新尝试！</dd>
+        </dl>
+    </section>
+</div>
+</body>
+</html>

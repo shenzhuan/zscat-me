@@ -1,0 +1,40 @@
+<div class="page__bd">
+    <div class="weui-tab">
+        <div class="weui-tab__panel">
+            <div class="weui-table" >
+                <div class="weui-flex table-header">
+                    <div class="weui-flex__item">
+                        <div class="placeholder">IF号</div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">昵称</div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">等级</div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder">升级进度</div>
+                    </div>
+                </div>
+                <div class="weui-flex" th:each="cuser:${pages.list}">
+                    <div class="weui-flex__item">
+                        <div class="placeholder" >
+                            <a href="#" th:onclick="'javascript:belowIf('+${cuser.ifcode}+','+${cuser.upIfcode}+',\''+${cuser.wxNickname}+'\');'" th:text="${cuser.ifcode}"></a>
+                        </div>
+                    </div>
+                    <div class="weui-flex__item" >
+                        <div class="placeholder" th:text="${#strings.abbreviate(cuser.wxNickname,10)}"></div>
+                    </div>
+                    <div class="weui-flex__item" >
+                        <div class="placeholder" th:text="${cuser.level}+'级'"></div>
+                    </div>
+                    <div class="weui-flex__item">
+                        <div class="placeholder" th:text="${cuser.countlevel}+'/'+${upSchedule}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
