@@ -14,7 +14,7 @@
 	<dubbo:application name="cat-time" />
 	
 	<!-- registry address, used for consumer to discover services -->
-	<dubbo:registry address="${zookeeper.address}" id="cat" />
+	<dubbo:registry address="${zookeeper.address}"  />
 	
 	<!-- 用dubbo协议在20880端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="${dubbo.service.port}" />

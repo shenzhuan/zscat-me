@@ -33,7 +33,7 @@ public class Bootstrap extends AbstractIdleService  implements ServletContextLis
     protected void startUp() throws Exception {
         LOGGER.info("===================cat-cms START BEGIN==========================");
         Long startTime = System.nanoTime();
-        context = new ClassPathXmlApplicationContext(new String[]{"config/spring/cms-context.xml"});
+        context = new ClassPathXmlApplicationContext(new String[]{"config/spring/time-context.xml"});
         context.start();
         context.registerShutdownHook();
         LOGGER.info("zs-filepush service started successfully");
