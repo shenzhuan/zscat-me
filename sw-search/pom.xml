@@ -10,6 +10,7 @@
 	<modules>
 		<module>search-api</module>
 		<module>search-service</module>
+        <module>search-elasticsearch</module>
 		<module>search-web</module>
 	</modules>
 
