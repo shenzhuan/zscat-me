@@ -8,8 +8,9 @@
 #### `monitor-redis` - redis版本（维护截至到2016-06-03，后续暂时不维护）
 
 ## 界面效果图：
-![image](https://github.com/zhongxig/ants-monitor-on-Redis/raw/master/monitor-dashboard.png)
-
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200708_69a36cca_134431.png "dubbo1.png")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200719_3bddc084_134431.png "dubbo2.png")
+![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200734_21fc3537_134431.png "dubbo3.png")
 
 ## 
 ---

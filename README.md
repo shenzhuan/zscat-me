@@ -102,41 +102,10 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 ![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101530_73ba9328_134431.png "在这里输入图片标题")
 
 
-brave-dubbo.xml 采集数据到zikpin，生成分布式调研链数据
- **_启动zipkin_** 
-![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101932_4d1f56da_134431.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101956_c632c810_134431.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/102006_e8778091_134431.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/102015_2204af0a_134431.png "在这里输入图片标题")
 
-### 启动dubbo-montior
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0503/101233_d7915d97_791098.png "在这里输入图片标题")
-http://git.oschina.net/handu/dubbo-monitor
-启动dubbo-admin
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0503/101252_5a239aec_791098.png "在这里输入图片标题")
-启动elk
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0503/101306_d0720500_791098.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0503/101315_fbfcd126_791098.png "在这里输入图片标题")
 
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200708_69a36cca_134431.png "dubbo1.png")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200719_3bddc084_134431.png "dubbo2.png")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0718/200734_21fc3537_134431.png "dubbo3.png")
 
-##后台效果图
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0604/194616_36ed7fd6_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0604/194623_a0761bc3_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0604/194630_640dfd35_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/104015_bdb14c74_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0516/000735_b83c5c46_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/103734_bd3e8f6b_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0604/194539_f9bb482a_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/103746_6b4129ed_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/103755_7729b916_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/103801_b8216865_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/103807_20bfb868_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/103814_67e078bb_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/103822_58fd5d91_551203.png "在这里输入图片标题")
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0526/103827_d6218c74_551203.png "在这里输入图片标题")
+https://gitee.com/jmdhappy/xxpay-master 支付
 请作者喝杯咖啡
 
 ![输入图片说明](https://git.oschina.net/uploads/images/2017/0829/203712_6694b4c1_134431.jpeg "weixin.jpg")
