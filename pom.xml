@@ -7,13 +7,13 @@
   <modules>
 	  <module>dubbo-cache-starter</module>
 	    <module>sw-common</module>
-	  <module>sw-cms</module>
+	 <!-- <module>sw-cms</module>
 	  <module>sw-blog</module>
 	  <module>sw_manager</module>
 	  <module>sw-search</module>
 
 	  <module>sw-demo</module>
-	  <module>sw_portl</module>
+	  <module>sw_portl</module>-->
 
 	  <module>sw-marketing</module>
 	  <!--

@@ -1,37 +1,30 @@
 package com.zscat.beetl.function;
 
-import java.util.List;
-
-import javax.annotation.Resource;
-
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
-import com.zscat.shop.model.Cart;
-import com.zscat.shop.model.Order;
-import com.zscat.shop.model.Product;
-import com.zscat.shop.model.ProductClass;
-import com.zscat.shop.service.OrderService;
-import com.zscat.shop.service.ProductClassService;
-import com.zscat.shop.service.ProductService;
-import com.zscat.shop.service.CartService;
-import org.springframework.stereotype.Component;
+import com.zscat.conf.JbaseFunctionPackage;
+import com.zscat.shop.model.*;
+import com.zscat.shop.service.*;
+import com.zscat.shop.util.SysUserUtils;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
+import java.util.List;
 
 @Service("goods")
-public class GoodsFunction {
+public class GoodsFunction implements JbaseFunctionPackage {
 
 
 	@Reference(version = "1.0.0")
 	private OrderService orderService;
 	@Reference(version = "1.0.0")
-	private ProductClassService productClassService;
+	private ProductClassService ProductClassService;
 	@Reference(version = "1.0.0")
-	private CartService cartService;
+	private CartService CartService;	
 	@Reference(version = "1.0.0")
 	private ProductService productService;
-
+	@Reference(version = "1.0.0")
+	private ArticleService ArticleService;
 	
 	public PageInfo<Product> getLatestGoods(int pageSize){
 		return productService.selectPage(1, pageSize, new Product()," create_date desc");
@@ -68,20 +61,26 @@ public class GoodsFunction {
 		return orderService.selectPage(1, pageSize, new Order());
 	}
 	//得到菜单类别
-	public PageInfo<ProductClass> getProductClass(int pageSize, Long parentId){
+	public PageInfo<ProductClass> getProductClass(int pageSize,Long parentId){
 		 ProductClass gc=new ProductClass();
          gc.setParentId(parentId);
-		return productClassService.selectPage(1, pageSize, gc);
+		return ProductClassService.selectPage(1, pageSize, gc);
 	}
 	public List<ProductClass> getAllProductClass(){
 		 ProductClass gc=new ProductClass();
-		return productClassService.select(gc);
+		return ProductClassService.select(gc);
 	}
 	
 	//得到购物车
 	public List<Cart> getCartList() {
-		 return cartService.selectOwnCart();
+		if(SysUserUtils.getSessionLoginUser()!=null){
+			return CartService.selectOwnCart(SysUserUtils.getSessionLoginUser().getId());
+		}
+		return new ArrayList<>();
 	 }
-	
 
+	public PageInfo<Article> getAdvArticle(int count){
+		return  ArticleService.selectPage(1, count, new Article());
+	}
+	
 }

@@ -6,8 +6,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -21,10 +19,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 @ServletComponentScan
 @SpringBootApplication
-public class BlogWebApplication extends WebMvcConfigurerAdapter {
-    private static final Logger LOG = LoggerFactory.getLogger(BlogWebApplication.class.getName());
+public class H5WebApplication extends WebMvcConfigurerAdapter {
+    private static final Logger LOG = LoggerFactory.getLogger(H5WebApplication.class.getName());
 
     public static void main(String[] args) {
-        SpringApplication.run(BlogWebApplication.class, args);
+        SpringApplication.run(H5WebApplication.class, args);
     }
 }

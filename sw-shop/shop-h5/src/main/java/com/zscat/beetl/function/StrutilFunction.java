@@ -3,7 +3,7 @@ package com.zscat.beetl.function;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service("auth")
+@Service("strutil")
 public class StrutilFunction {
 
 	public String subStringTo(String str,int start,int end){

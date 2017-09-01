@@ -17,9 +17,8 @@ import java.util.UUID;
 /**
  * Check if an user is authorized
  */
-@Component
-@Order(2)
-//@WebFilter(filterName = "authFilter", urlPatterns = "/api/*")
+//@Component
+//@Order(2)
 public class AuthFilter implements Filter {
     private static final Logger logger = LoggerFactory.getLogger(AuthFilter.class);
 

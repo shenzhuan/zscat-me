@@ -20,5 +20,5 @@
     <dubbo:protocol name="dubbo" port="${dubbo.protocol.port}" accesslog="true"/>
 
 
-    <dubbo:reference id="userService" interface="com.huluuu.user.spi.IUserService" check="false" />
+    <dubbo:reference id="userService" interface="com.zscat.user.spi.IUserService" check="false" />
 </beans>
