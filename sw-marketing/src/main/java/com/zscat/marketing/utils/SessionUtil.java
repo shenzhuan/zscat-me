@@ -29,14 +29,17 @@ public class SessionUtil {
     @Resource
     private IPromotionUserService ipromotionUserService;
     public PromotionUser getCurrentUser() {
-//        String token = CookieUtil.getToken();
-//        String redisKey = String.format(Constant.SESSION_REDIS_KEY, token);
-//        byte[] userBytes = redisLink.get(redisKey);
-//        PromotionUser user = null;
-//        if (null != userBytes) {
-//            user = JSONSerializerUtil.unserialize(userBytes, PromotionUser.class);
-//        }
-        return ipromotionUserService.selectById(102764L);
+        String token = CookieUtil.getToken();
+        if (token==null){
+            return  null;
+        }
+        String redisKey = String.format(Constant.SESSION_REDIS_KEY, token);
+        byte[] userBytes = redisLink.get(redisKey);
+        PromotionUser user = null;
+        if (null != userBytes) {
+            user = JSONSerializerUtil.unserialize(userBytes, PromotionUser.class);
+        }
+        return user;
     }
 
 

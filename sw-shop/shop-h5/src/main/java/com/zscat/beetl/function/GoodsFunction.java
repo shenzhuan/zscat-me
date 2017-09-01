@@ -2,6 +2,7 @@ package com.zscat.beetl.function;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.github.pagehelper.PageInfo;
+import com.zsCat.common.utils.AddressUtils;
 import com.zscat.conf.JbaseFunctionPackage;
 import com.zscat.shop.model.*;
 import com.zscat.shop.service.*;
@@ -25,7 +26,9 @@ public class GoodsFunction implements JbaseFunctionPackage {
 	private ProductService productService;
 	@Reference(version = "1.0.0")
 	private ArticleService ArticleService;
-	
+	public   String getCityByIp() throws Exception {
+		return AddressUtils.getCityByIp();
+	}
 	public PageInfo<Product> getLatestGoods(int pageSize){
 		return productService.selectPage(1, pageSize, new Product()," create_date desc");
 	}

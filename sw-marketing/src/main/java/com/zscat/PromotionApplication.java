@@ -19,7 +19,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  * @version : 1.0
  * @created on  : 14/03/2017  4:28 PM
  */
-/*@SpringBootApplication
+@SpringBootApplication
 @MapperScan(basePackages = "com.zscat.*.mapper")
 public class PromotionApplication  extends SpringBootServletInitializer implements WebApplicationInitializer {
 
@@ -30,23 +30,23 @@ public class PromotionApplication  extends SpringBootServletInitializer implemen
     }
     public static void main(String[] args) {
         SpringApplication.run(PromotionApplication.class, args);
-    }*/
+    }
 /**
  * @author : zscat [951449465]
  * @version : 1.0
  * @created on  : 14/03/2017  4:28 PM
  */
 
-@EnableWebMvc
-@SpringBootApplication
-@MapperScan(basePackages = "com.zscat.*.mapper")
-public class PromotionApplication  extends WebMvcConfigurerAdapter {
-    private static final Logger LOG = LoggerFactory.getLogger(PromotionApplication.class.getName());
-
-    public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(PromotionApplication.class);
-        application.run(args);
-    }
+//@EnableWebMvc
+//@SpringBootApplication
+//@MapperScan(basePackages = "com.zscat.*.mapper")
+//public class PromotionApplication  extends WebMvcConfigurerAdapter {
+//    private static final Logger LOG = LoggerFactory.getLogger(PromotionApplication.class.getName());
+//
+//    public static void main(String[] args) {
+//        SpringApplication application = new SpringApplication(PromotionApplication.class);
+//        application.run(args);
+//    }
 
 }
 

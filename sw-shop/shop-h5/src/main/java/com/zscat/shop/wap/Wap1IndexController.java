@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.zsCat.common.utils.AddressUtils;
+import com.zsCat.common.utils.CustomSystemUtil;
+import com.zsCat.common.utils.IPUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -57,7 +60,7 @@ public class Wap1IndexController {
 	private ProductTypeService ProductTypeService;
 	
 	 @RequestMapping("")
-	  public ModelAndView index() {
+	  public ModelAndView index(HttpServletRequest req) {
 	        try {
 	            ModelAndView model = new ModelAndView("/wap1/index");
 	            Product goods=new Product();
@@ -72,7 +75,10 @@ public class Wap1IndexController {
 //	            model.addObject("artList", artList);
 	            List<Member> useList=MemberService.select(new Member());
 		        model.addObject("useList", useList);
-		        
+//				model.addObject("city", AddressUtils.getCityByIp(CustomSystemUtil.INTERNET_IP));
+//				model.addObject("city1", AddressUtils.getCityByIp(CustomSystemUtil.INTRANET_IP));
+//				model.addObject("city2", AddressUtils.getCityByIp(IPUtils.getClientAddress(req)));
+				model.addObject("city", AddressUtils.getCityByIp(IPUtils.getIp2(req)));
 		        List<ProductType> typeList=ProductTypeService.select(new ProductType());
 		        model.addObject("typeList", typeList);
 	            return model;

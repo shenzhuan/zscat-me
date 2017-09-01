@@ -51,7 +51,7 @@ public class WxServerController extends BaseController {
      * @param response
      * @throws Exception
      */
-    @RequestMapping(value = {""})
+    @RequestMapping(value = {"index"})
     public void wechatCore(HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
@@ -117,9 +117,9 @@ public class WxServerController extends BaseController {
             WxMenu menu = new WxMenu();
             WxMenuButton button2 = new WxMenuButton();
             button2.setType("click");
-            button2.setName("客服中心");
+            button2.setName("营销后台");
             button2.setKey("to_kefu");
-
+            button2.setUrl(appDomain + Constant.WX_H5_URI + "user/tginfo");
             WxMenuButton button3 = new WxMenuButton();
             button3.setName("推广计划");
 

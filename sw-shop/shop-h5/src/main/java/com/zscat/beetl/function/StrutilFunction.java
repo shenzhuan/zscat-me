@@ -1,7 +1,12 @@
 package com.zscat.beetl.function;
 
+import com.zsCat.common.utils.AddressUtils;
+import com.zsCat.common.utils.IpGetter;
+import net.sf.json.JSONObject;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+
+import java.io.UnsupportedEncodingException;
 
 @Service("strutil")
 public class StrutilFunction {
@@ -19,5 +24,7 @@ public class StrutilFunction {
 		}
 		return str;
 	}
-	
+	public   String getCityByIp() throws Exception {
+		return AddressUtils.getCityByIp();
+	}
 }

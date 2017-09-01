@@ -126,6 +126,7 @@ public class UserController extends BaseController {
             } else {
                 PromotionUser puser = this.getCurrentUser();
                 puser.setPhone(phone);
+                puser.setUid(System.currentTimeMillis());
                 promotionUserService.insert(puser);
                 //保存session
                 this.setSession(response, puser);

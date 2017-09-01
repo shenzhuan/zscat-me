@@ -14,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -33,7 +34,7 @@ import java.util.Map;
  * @version : 1.0
  * @created on  : 2017/6/28  下午4:18
  */
-
+@Component
 public class WxAuthFilter implements Filter {
     private static final Logger logger = LoggerFactory.getLogger(WxAuthFilter.class);
 
