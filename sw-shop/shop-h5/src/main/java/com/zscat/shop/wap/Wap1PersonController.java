@@ -2,11 +2,7 @@ package com.zscat.shop.wap;
 
 
 import java.awt.geom.Area;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -506,9 +502,10 @@ public class Wap1PersonController {
 	 @RequestMapping("/cartList")
 	  public ModelAndView cartList() {
 		 ModelAndView model = new ModelAndView("/wap1/cart");
-		 
-		 List<Cart> cartList=CartService.selectOwnCart();
-		 model.addObject("cartList", cartList);
+		 if(com.zscat.shop.util.SysUserUtils.getSessionLoginUser()!=null){
+			 model.addObject("cartList", CartService.selectOwnCart(com.zscat.shop.util.SysUserUtils.getSessionLoginUser().getId()));
+		 }
+		 model.addObject("cartList", new ArrayList<>());
 		 return model;
 	 }
 	 /**
@@ -567,7 +564,8 @@ public class Wap1PersonController {
 				@RequestParam(value = "paymentid",defaultValue="无留言") String usercontent
 				)throws Exception{
 			ModelAndView mav=new ModelAndView();
-			Order order=OrderService.insertOrder(cartIds,addressid,paymentid,usercontent);
+			Member m =SysUserUtils.getSessionLoginUser();
+			Order order=OrderService.insertOrder(cartIds,addressid,paymentid,usercontent,m.getId(),m.getUsername());
 			 Payment Payment=new Payment();
 			 Payment.setIsDel(1);
 			 List<Payment> payList=PaymentService.select(Payment);

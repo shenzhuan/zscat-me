@@ -1,35 +1,33 @@
 package com.zscat.beetl.function;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.zscat.shop.model.*;
+import com.zscat.shop.service.*;
+import com.zscat.shop.util.SysUserUtils;
 import org.springframework.stereotype.Service;
 
 import com.github.pagehelper.PageInfo;
 import com.zscat.conf.JbaseFunctionPackage;
-import com.zscat.shop.model.Cart;
-import com.zscat.shop.model.Order;
-import com.zscat.shop.model.Product;
-import com.zscat.shop.model.ProductClass;
-import com.zscat.shop.service.CartService;
-import com.zscat.shop.service.OrderService;
-import com.zscat.shop.service.ProductClassService;
-import com.zscat.shop.service.ProductService;
 
 @Service("goods")
 public class GoodsFunction implements JbaseFunctionPackage {
 
-	
-	@Resource
+
+	@Reference(version = "1.0.0")
 	private OrderService orderService;
-	@Resource
+	@Reference(version = "1.0.0")
 	private ProductClassService ProductClassService;
-	@Resource
+	@Reference(version = "1.0.0")
 	private CartService CartService;	
-	@Resource
+	@Reference(version = "1.0.0")
 	private ProductService productService;
-	
+	@Reference(version = "1.0.0")
+	private ArticleService ArticleService;
 	
 	public PageInfo<Product> getLatestGoods(int pageSize){
 		return productService.selectPage(1, pageSize, new Product()," create_date desc");
@@ -78,8 +76,14 @@ public class GoodsFunction implements JbaseFunctionPackage {
 	
 	//得到购物车
 	public List<Cart> getCartList() {
-		 return CartService.selectOwnCart();
+		if(SysUserUtils.getSessionLoginUser()!=null){
+			return CartService.selectOwnCart(SysUserUtils.getSessionLoginUser().getId());
+		}
+		return new ArrayList<>();
 	 }
-	
+
+	public PageInfo<Article> getAdvArticle(int count){
+		return  ArticleService.selectPage(1, count, new Article());
+	}
 	
 }

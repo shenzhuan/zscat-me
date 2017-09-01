@@ -5,11 +5,12 @@ package com.zscat.shop.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 
+import com.zsCat.common.base.BaseService;
 import com.zsCat.common.base.ServiceMybatis;
 import com.zscat.shop.model.ProductType;
 import com.zscat.shop.service.ProductTypeService;
 
-/**
+ /**
  * 
  * @author zsCat 2017-4-14 13:56:18
  * @Email: 951449465@qq.com

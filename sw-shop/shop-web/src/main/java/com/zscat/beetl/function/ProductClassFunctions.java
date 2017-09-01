@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import com.alibaba.dubbo.config.annotation.Reference;
+import com.zscat.shop.util.SysUserUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -17,13 +19,13 @@ import com.zscat.shop.service.ProductService;
 
 	@Service("productClass")
 	public class ProductClassFunctions implements JbaseFunctionPackage {
-	@Resource
+		@Reference(version = "1.0.0")
 	private ProductClassService goodsClassService;
-//	@Resource
+//	@Reference(version = "1.0.0")
 //	private ShopTypeService ShopTypeService;
-	@Resource
+@Reference(version = "1.0.0")
 	private ProductService ProductService;
-	@Resource
+		@Reference(version = "1.0.0")
 	private CartService CartService;
 	public List<ProductClass> getProductClassListByPid(Long pid){
 		ProductClass gc=new ProductClass();
@@ -68,6 +70,9 @@ import com.zscat.shop.service.ProductService;
 	 * @return
 	 */
 	public int selectOwnCartCount(){
-		return CartService.selectOwnCartCount();
+		if(SysUserUtils.getSessionLoginUser()!=null){
+			return CartService.selectOwnCartCount(SysUserUtils.getSessionLoginUser().getId());
+		}
+		return 0;
 	}
 }

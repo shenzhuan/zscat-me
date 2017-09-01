@@ -16,9 +16,9 @@ import com.zscat.shop.model.Cart;
  */
 public interface CartService extends BaseService<Cart>  {
 
-	List<Cart> selectOwnCart();
+	List<Cart> selectOwnCart(Long uid);
 
-	int selectOwnCartCount();
+	int selectOwnCartCount(Long uid);
 
 
 }

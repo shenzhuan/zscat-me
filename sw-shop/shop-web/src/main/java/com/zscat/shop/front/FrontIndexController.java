@@ -52,7 +52,7 @@ public class FrontIndexController {
 		@Reference(version = "1.0.0")
 	private MemberService MemberService;
 		@Reference(version = "1.0.0")
-	private  FloorService floorService;
+	private  FloorService FloorService;
 //	@Resource
 //	private ArticleService articleService;
 
@@ -69,7 +69,7 @@ public class FrontIndexController {
 	            ProductClass gc=new ProductClass();
 	            gc.setParentId(1L);
 	            List<ProductClass> gcList=ProductClassService.selectPage(1, 15, gc).getList();
-	            model.addObject("spList", floorService.select(new Floor()));
+	            model.addObject("spList", FloorService.select(new Floor()));
 	            model.addObject("gcList", gcList);
 //	            List<Article> artList=articleService.select(new Article());
 //	            model.addObject("artList", artList);
@@ -94,7 +94,7 @@ public class FrontIndexController {
 	            ProductClass gc=new ProductClass();
 	            gc.setParentId(1L);
 	            List<ProductClass> gcList=ProductClassService.selectPage(1, 15, gc).getList();
-	            model.addObject("spList", floorService.select(new Floor()));
+	            model.addObject("spList", FloorService.select(new Floor()));
 	            model.addObject("gcList", gcList);
 //	            List<Article> artList=articleService.select(new Article());
 //	            model.addObject("artList", artList);

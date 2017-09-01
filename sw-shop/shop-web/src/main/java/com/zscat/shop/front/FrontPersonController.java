@@ -2,12 +2,7 @@ package com.zscat.shop.front;
 
 
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -459,9 +454,11 @@ public class FrontPersonController {
 	 @RequestMapping("/cartList")
 	  public ModelAndView cartList() {
 		 ModelAndView model = new ModelAndView("/mall/cartList");
-		 
-		 List<Cart> cartList=CartService.selectOwnCart();
-		 model.addObject("cartList", cartList);
+
+		 if(SysUserUtils.getSessionLoginUser()!=null){
+			 model.addObject("cartList", CartService.selectOwnCart(SysUserUtils.getSessionLoginUser().getId()));
+		 }
+		 model.addObject("cartList", new ArrayList<>());
 		 return model;
 	 }
 	 /**
@@ -509,7 +506,7 @@ public class FrontPersonController {
 		}
 	 /**
 	  * 提交订单
-	  * @param id
+	  * @param
 	  * @return
 	  * @throws Exception
 	  */
@@ -520,7 +517,8 @@ public class FrontPersonController {
 				@RequestParam(value = "paymentid",defaultValue="无留言") String usercontent
 				)throws Exception{
 			ModelAndView mav=new ModelAndView();
-			Order order=OrderService.insertOrder(cartIds,addressid,paymentid,usercontent);
+			Member m = SysUserUtils.getSessionLoginUser();
+			Order order=OrderService.insertOrder(cartIds,addressid,paymentid,usercontent,m.getId(),m.getUsername());
 			 Payment Payment=new Payment();
 			 Payment.setIsDel(1);
 			 List<Payment> payList=PaymentService.select(Payment);
@@ -610,7 +608,7 @@ public class FrontPersonController {
 	 /**
 	  * 加入购物车
 	  * @param goodsid
-	  * @param content
+	  * @param
 	  * @return
 	  * @throws Exception
 	  */
