@@ -50,9 +50,11 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 - [dubbo监控和统计具体介绍](http://git.oschina.net/catshen/zscat_sw/tree/master/dubbo-monitor/README.md)
 
 
-1.项目部署，根据doc目录下的 zsboot.sql，weixin.sql，分别创建数据库，相关数据库配置 参考application.properties
-先安装 spring-boot-starter-dubbo模块到本地
-加群下载 zscat-tools.jar  解压运行zscat-tools 下面的run.bat 同时启动zookeep Redis nginx，默认配置 参考application.properties修改
+
+
+1. 1.项目部署，根据doc目录下的 zsboot.sql，weixin.sql，分别创建数据库，相关数据库配置 参考application.properties
+2. 加群下载 spring-boot-starter-dubbo 然后安装 spring-boot-starter-dubbo模块到本地
+3. 加群下载 zscat-tools.jar  解压运行zscat-tools 下面的run.bat 同时启动zookeep Redis nginx，默认配置 参考application.properties修改
 ### 2.blog模块为例  
 
 
