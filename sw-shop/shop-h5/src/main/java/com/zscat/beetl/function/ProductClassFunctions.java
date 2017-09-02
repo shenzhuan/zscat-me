@@ -8,6 +8,7 @@ import com.zscat.shop.service.CartService;
 import com.zscat.shop.service.ProductClassService;
 import com.zscat.shop.service.ProductService;
 import com.zscat.shop.util.SysUserUtils;
+import com.zscat.util.MemberUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -66,8 +67,8 @@ public List<Product> getProductByFloorid(Long tid){
  * @return
  */
 public int selectOwnCartCount(){
-    if(SysUserUtils.getSessionLoginUser()!=null){
-        return CartService.selectOwnCartCount(SysUserUtils.getSessionLoginUser().getId());
+    if(MemberUtils.getSessionLoginUser()!=null){
+        return CartService.selectOwnCartCount(MemberUtils.getSessionLoginUser().getId());
     }
     return 0;
 }

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>分类</title>
+<meta name="keywords" content="KEYWORDS..." />
+<meta name="description" content="DESCRIPTION..." />
+<meta name="author" content="DeathGhost" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name='apple-touch-fullscreen' content='yes'>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<link rel="icon" href="${ctxPath}/static/wap/images/icon/favicon.ico"
+	type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="57x57"
+	href="${ctxPath}/static/wap/images/icon/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120"
+	href="${ctxPath}/static/wap/images/icon/apple-touch-icon-120x120-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="196x196"
+	href="${ctxPath}/static/wap/images/icon/apple-touch-icon-196x196-precomposed.png">
+<meta name="viewport"
+	content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css"
+	href="${ctxPath}/static/wap/css/style.css" />
+<script src="${ctxPath}/static/wap/js/jquery.js"></script>
+</head>
+<body style="background: white;">
+	<!--header-->
+	<header>
+		<a href="javascript:history.go(-1);" class="iconfont backIcon">&#60;</a>
+		<h1>动态分类名称</h1>
+		<a href="search.html" class="rt_searchIcon">&#37;</a>
+	</header>
+	<div style="height: 1rem;"></div>
+	<!--category list-->
+	<!--模板不变，异步处理，链接传参数，静态写过于累赘-->
+	<aside class="class_tree">
+		<ul>
+		@var gcList =goods.getProductClass(13,1);
+						@for(gc in gcList.list!){
+			<li class="current_style" onclick="bna('${gc.id}',this)"><a> <img
+					src="${ctxPath}/static/wap/upload/menu_bg_01.png" /> <strong>${gc.name!}</strong>
+			</a></li>
+			@}
+		</ul>
+	</aside>
+	<!--category content-->
+	<ul class="category_cont" id="bna">
+		
+		
+	</ul>
+	<div style="height: 1.2rem;"></div>
+	@layout("/wap/layout/footNav.html"){}
+	<script>
+
+bna(1);
+function bna(type,obj) {
+	var lodingHtml = '<div class="tac"><img width="100" height="108" alt="" src="${ctxPath}/static/loading.gif"></div>' , _timer = null;;
+	$.ajax({
+		url :"${ctxPath}/wap/ajax/category",
+		data : {
+			"order" : type
+		},
+		type : 'post',
+		dataType : 'text',
+		beforeSend:function(){
+			$("#bna").html(lodingHtml);
+			clearTimeout(_timer);
+			
+		},
+		success : function(result) { 
+			_timer = setTimeout(function(){
+				$("#bna").html(result);
+			}, 300);
+		}
+	});
+}
+
+
+</script>
+	<script>
+  document.oncontextmenu=new Function("event.returnValue=false;");
+  document.onselectstart=new Function("event.returnValue=false;"); 
+</script>
+
+</body>
+</html>

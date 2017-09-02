@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.zsCat.common.utils.JSONSerializerUtil;
+import com.zsCat.common.utils.RedisUtils;
 import com.zscat.shop.util.SysUserUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -55,7 +57,7 @@ public class FrontIndexController {
 	private  FloorService FloorService;
 //	@Resource
 //	private ArticleService articleService;
-
+RedisUtils redisUtils = new RedisUtils();
 		@Reference(version = "1.0.0")
 	private ProductTypeService ProductTypeService;
 	
@@ -131,13 +133,13 @@ public class FrontIndexController {
 			}
 			return "/mall/login";
 		}
-		
+
 		/**
 		 * 登录验证
 		 * 
 		 * @param username
 		 * @param password
-		 * @param code
+		 * @param
 		 * @return
 		 */
 		@RequestMapping(value = "login", method = RequestMethod.POST)
@@ -159,7 +161,8 @@ public class FrontIndexController {
 //			}
 			Member user = MemberService.checkUser(username, password);
 			if (null != user) {
-				session.setAttribute(SysUserUtils.SESSION_LOGIN_USER, user);
+				redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(user),30*60);
+			//	session.setAttribute(SysUserUtils.SESSION_LOGIN_USER, user);
 			} else {
 				msg.put("error", "用户名或密码错误");
 			}
@@ -182,8 +185,8 @@ public class FrontIndexController {
 		@RequestMapping(value = "reg", method = RequestMethod.POST)
 		public @ResponseBody Map<String, Object> reg(
 				@RequestParam(value = "password",required=true)String  password,
-				@RequestParam(value = "username",required=true)String  username,
-				@RequestParam(value = "email",required=false)String email,
+
+				@RequestParam(value = "email",required=true)String email,
 				@RequestParam(value = "phone",required=false)String phone,
 				@RequestParam(value = "passwordRepeat",required=true)String passwordRepeat,HttpServletRequest request) {
 			Map<String, Object> msg = new HashMap<String, Object>();
@@ -193,19 +196,19 @@ public class FrontIndexController {
 			}
 			String secPwd = null ;
 			Member m=new Member();
-				m.setUsername(username);
-				secPwd = PasswordEncoder.encrypt(password, username);
+				m.setUsername(email);
+				secPwd = PasswordEncoder.encrypt(password, email);
 			    m.setPassword(secPwd);
 			    m.setStatus(1);m.setAddtime(new Date());
 			    m.setTruename(m.getUsername());
 			try {
 				
 				int result = MemberService.insertSelective(m);
-				
-				MemberService.insertSelective(m);
+
 				HttpSession session = request.getSession();
 				if (result>0) {
-					session.setAttribute(SysUserUtils.SESSION_LOGIN_USER, m);
+					redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(m),30*60);
+				//	session.setAttribute(SysUserUtils.SESSION_LOGIN_USER, m);
 				} else {
 					msg.put("error", "注册失败");
 				}

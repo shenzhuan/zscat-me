@@ -26,6 +26,7 @@ package com.zscat.conf;
 
 import java.util.List;
 
+import com.zscat.filter.MyInterceptor1;
 import org.beetl.core.resource.ClasspathResourceLoader;
 import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
 import org.beetl.ext.spring.BeetlSpringViewResolver;
@@ -36,6 +37,7 @@ import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternUtils;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -47,6 +49,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
+	@Override
+	public void addInterceptors(InterceptorRegistry registry) {
+		// 多个拦截器组成一个拦截器链
+		// addPathPatterns 用于添加拦截规则
+		// excludePathPatterns 用户排除拦截
+	//	registry.addInterceptor(new MyInterceptor1()).addPathPatterns("/**");
+
+		super.addInterceptors(registry);
+	}
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");

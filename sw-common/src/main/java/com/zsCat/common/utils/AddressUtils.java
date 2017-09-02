@@ -241,11 +241,16 @@ public class AddressUtils {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        System.out.println("ip数据： " + ip);
+        if ("0:0:0:0:0:0:0:1".equals(ip)){
+            return "迪拜";
+        }
         JSONObject json = JSONObject.fromObject(json_result);
-        System.out.println("json数据： " + json);
         if (json.isNullObject()){
             return "迪拜";
         }
+        System.out.println("json数据： " + json);
+
         String city = JSONObject.fromObject(json.get("data")).get("city").toString();
         return city;
     }
@@ -257,6 +262,9 @@ public class AddressUtils {
             json_result = AddressUtils.getAddresses("ip=" + ip, "utf-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
+        }
+        if ("0:0:0:0:0:0:0:1".equals(ip)){
+            return "迪拜";
         }
         System.out.println("json_result： " + json_result);
 

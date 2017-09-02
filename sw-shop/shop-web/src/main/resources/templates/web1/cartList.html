@@ -199,7 +199,7 @@ $(document).ready(function () {
 		function deleteC(id){
 			$.ajax({
 				type: "post",
-		 		url: '${ctxPath}/wap1/person/deleteCart',
+		 		url: '${ctxPath}/wap/person/deleteCart',
 				data: {id:id},
 				dataType: "json",
 				success:function(data) {
@@ -216,7 +216,7 @@ function addCart(type){
 	var goodsid=$("#goodsid").val();
 	$.ajax({
 		type: "post",
- 		url: '${ctxPath}/wap1/person/addCart',
+ 		url: '${ctxPath}/wap/person/addCart',
 		data: {goodsid:goodsid},
 		dataType: "json",
 		success:function(data) {
@@ -225,7 +225,7 @@ function addCart(type){
 					layer.msg("加入购车成功!",2,8);
 				}else{
 					var goodsid1=$("#goodsid").val();
-					window.location.href = "${ctxPath!}/wap1/person/LikBuy/"+goodsid1;
+					window.location.href = "${ctxPath!}/wap/person/LikBuy/"+goodsid1;
 				}
 				
 				

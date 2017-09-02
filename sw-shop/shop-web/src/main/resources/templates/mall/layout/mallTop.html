@@ -5,7 +5,7 @@
 					<div class="menu-hd">
 					@if(auth.isLogin()){
 					您好，<a href="${ctxPath}/person" target="_blank"><i
-								class="am-icon-user am-icon-fw"></i>${auth.getLoginUser().name}</a>
+								class="am-icon-user am-icon-fw"></i>${auth.getLoginUser().username}</a>
 								 欢迎来到zsTrade交易平台 <a href="${ctxPath}/index"
 							target="_blank">【后台管理】</a> |<a href="${ctxPath}/front/logout"
 							target="_top">退出</a>

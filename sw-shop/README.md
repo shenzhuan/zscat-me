@@ -78,7 +78,7 @@ http://git.oschina.net/catshen/cat
 ### 运行部署
 - a.启动shop-services下面的ShopServiceApplication主类，启动blog的dubbo服务
 - b.启动shop-web下面的ShopWebApplication主类，访问  http://localhost:2007/front http://localhost:2007/youhong
-- c.启动shop-h5下面的ShopWebApplication主类，访问 http://localhost:2006/wap1 
+- c.启动shop-h5下面的ShopWebApplication主类，访问 http://localhost:2006/wap 
 ### 5.search模块为例
 
 ![输入图片说明](http://git.oschina.net/uploads/images/2017/0412/101032_1320272c_134431.png "在这里输入图片标题")

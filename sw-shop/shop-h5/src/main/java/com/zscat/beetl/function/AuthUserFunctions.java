@@ -6,7 +6,7 @@ import com.zscat.shop.model.Member;
 import com.zscat.shop.util.SysUserUtils;
 
 
-
+import com.zscat.util.MemberUtils;
 import org.springframework.stereotype.Service;
 
 @Service("auth")
@@ -19,7 +19,7 @@ public class AuthUserFunctions {
 	* @return
 	 */
 	public Member getLoginUser(){
-		return (Member) SysUserUtils.getSessionLoginUser();
+		return (Member) MemberUtils.getSessionLoginUser();
 	}
 	
 
@@ -30,6 +30,6 @@ public class AuthUserFunctions {
 	* @return
 	 */
 	public boolean isLogin(){
-		return SysUserUtils.getSessionLoginUser()!=null;
+		return MemberUtils.getSessionLoginUser()!=null;
 	}
 }

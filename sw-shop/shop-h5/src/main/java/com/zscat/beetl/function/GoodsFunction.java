@@ -7,6 +7,7 @@ import com.zscat.conf.JbaseFunctionPackage;
 import com.zscat.shop.model.*;
 import com.zscat.shop.service.*;
 import com.zscat.shop.util.SysUserUtils;
+import com.zscat.util.MemberUtils;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -76,8 +77,8 @@ public class GoodsFunction implements JbaseFunctionPackage {
 	
 	//得到购物车
 	public List<Cart> getCartList() {
-		if(SysUserUtils.getSessionLoginUser()!=null){
-			return CartService.selectOwnCart(SysUserUtils.getSessionLoginUser().getId());
+		if(MemberUtils.getSessionLoginUser()!=null){
+			return CartService.selectOwnCart(MemberUtils.getSessionLoginUser().getId());
 		}
 		return new ArrayList<>();
 	 }

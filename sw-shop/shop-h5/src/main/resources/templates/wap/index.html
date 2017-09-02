@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>新鲜蔬菜</title>
+<meta name="keywords" content="KEYWORDS..." />
+<meta name="description" content="DESCRIPTION..." />
+<meta name="author" content="DeathGhost" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name='apple-touch-fullscreen' content='yes'>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<link rel="icon" href="${ctxPath}/static/wap/images/icon/favicon.ico"
+	type="image/x-icon">
+<link rel="apple-touch-icon-precomposed" sizes="57x57"
+	href="${ctxPath}/static/wap/images/icon/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120"
+	href="${ctxPath}/static/wap/images/icon/apple-touch-icon-120x120-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="196x196"
+	href="${ctxPath}/static/wap/images/icon/apple-touch-icon-196x196-precomposed.png">
+<meta name="viewport"
+	content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css"
+	href="${ctxPath}/static/wap/css/style.css" />
+<script src="${ctxPath}/static/wap/js/jquery.js"></script>
+<script src="${ctxPath}/static/wap/js/swiper.min.js"></script>
+<script>
+$(document).ready(function(){
+	var mySwiper = new Swiper('#slide',{
+		  autoplay:5000,
+		  visibilityFullFit : true,
+		  loop:true,
+		  pagination : '.pagination',
+	  });
+	//product list:Tab
+	$(".tab_proList dd").eq(0).show().siblings(".tab_proList dd").hide();
+	$(".tab_proList dt a").eq(0).addClass("currStyle");
+	$(".tab_proList dt a").click(function(){
+	var liindex = $(".tab_proList dt a").index(this);
+	$(this).addClass("currStyle").siblings().removeClass("currStyle");
+	$(".tab_proList dd").eq(liindex).fadeIn(150).siblings(".tab_proList dd").hide();
+	});
+   //飞入动画，具体根据实际情况调整
+   $(".addToCart").click(function(){
+	        $(".hoverCart a").html(parseInt($(".hoverCart a").html())+1);/*测试+1*/
+            var shopOffset = $(".hoverCart").offset();
+            var cloneDiv = $(this).parent().siblings(".goodsPic").clone();
+            var proOffset = $(this).parent().siblings(".goodsPic").offset();
+            cloneDiv.css({ "position": "absolute", "top": proOffset.top, "left": proOffset.left });
+            $(this).parent().siblings(".goodsPic").parent().append(cloneDiv);
+            cloneDiv.animate({
+				width:0,
+				height:0,
+                left: shopOffset.left,
+                top: shopOffset.top,
+				opacity:1
+            },"slow");
+	   });
+});
+</script>
+</head>
+<body>
+	<!--header-->
+	<header>
+		<a href="location.html" class="location">${city}</a>
+		<h1 class="logoIcon" style="font-size: .85rem;">&#35;</h1>
+		<a href="search.html" class="rt_searchIcon">&#37;</a>
+	</header>
+	<div style="height: 1rem;"></div>
+	<!--slide-->
+	<div id="slide">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<a href="#"> <img src="${ctxPath}/static/wap/upload/slide001.jpg" />
+				</a>
+			</div>
+			<div class="swiper-slide">
+				<a href="#"> <img src="${ctxPath}/static/wap/upload/slide002.jpg" />
+				</a>
+			</div>
+		</div>
+		<div class="pagination"></div>
+	</div>
+	<!--categoryList-->
+	<ul class="categoryLiIcon">
+		<li><a href="#"> <img src="${ctxPath}/static/wap/upload/menu_bg_01.png" />
+				<em>蔬菜水果</em>
+		</a></li>
+		<li><a href="#"> <img src="${ctxPath}/static/wap/upload/menu_bg_06.png" />
+				<em>禽蛋肉类</em>
+		</a></li>
+		<li><a href="#"> <img src="${ctxPath}/static/wap/upload/menu_bg_10.png" />
+				<em>水产火锅</em>
+		</a></li>
+		<li><a href="#"> <img src="${ctxPath}/static/wap/upload/menu_bg_14.png" />
+				<em>熟食豆制</em>
+		</a></li>
+		<li><a href="#"> <img src="${ctxPath}/static/wap/upload/menu_bg_03.png" />
+				<em>米面粮油</em>
+		</a></li>
+		<li><a href="#"> <img src="${ctxPath}/static/wap/upload/menu_bg_07.png" />
+				<em>调料干货</em>
+		</a></li>
+		<li><a href="#"> <img src="${ctxPath}/static/wap/upload/menu_bg_11.png" />
+				<em>餐厨用品</em>
+		</a></li>
+		<li><a href="#"> <img src="${ctxPath}/static/wap/upload/menu_bg_15.png" />
+				<em>常购品</em>
+		</a></li>
+	</ul>
+	<!--Tab:productList-->
+	<dl class="tab_proList">
+		<dt>
+			<a>热销</a> <a>新品</a> <a>推荐</a>
+		</dt>
+		<dd>
+			<ul>
+			 @var hitList = goods.getHitGoods(8);
+				      @for(hit in hitList.list!){
+				<li><a href="${ctxPath!}/wap/goodsDetail/${hit.id!}" class="goodsPic"> <img
+						src="${ctxPath!}/static/upload/project/${hit.img!}" />
+				</a>
+					<div class="goodsInfor">
+						<h2>
+							<a href="${ctxPath!}/wap/goodsDetail/${hit.id!}">${hit.title!}</a>
+						</h2>
+						<p>
+							<del>${hit.prices!}</del>
+						</p>
+						<p>
+							<strong class="price">${hit.prices!}</strong>
+						</p>
+						<a href="${ctxPath!}/wap/goodsDetail/${hit.id!}" class="addToCart">&#126;</a>
+					</div></li>
+					@}
+			</ul>
+		</dd>
+		<dd>
+			<ul>
+				 @var xinpinList = goods.getLatestGoods(8);
+				      @for(xinpin in xinpinList.list!){
+				<li><a href="${ctxPath!}/wap/goodsDetail/${xinpin.id!}" class="goodsPic"> <img
+						src="${ctxPath!}/static/upload/project/${xinpin.img!}" />
+				</a>
+					<div class="goodsInfor">
+						<h2>
+							<a href="${ctxPath!}/wap/goodsDetail/${xinpin.id!}">${xinpin.title!}</a>
+						</h2>
+						<p>
+							<del>${xinpin.prices!}</del>
+						</p>
+						<p>
+							<strong class="price">${xinpin.prices!}</strong>
+						</p>
+						<a href="${ctxPath!}/wap/goodsDetail/${xinpin.id!}" class="addToCart">&#126;</a>
+					</div></li>
+					@}
+			</ul>	
+		</dd>
+		<dd>
+			<ul>
+				 @var commList = goods.getCommendGoods(8);
+				      @for(com in commList.list!){
+				<li><a href="${ctxPath!}/wap/goodsDetail/${com.id!}" class="goodsPic"> <img
+						src="${ctxPath!}/static/upload/project/${com.img!}" />
+				</a>
+					<div class="goodsInfor">
+						<h2>
+							<a href="${ctxPath!}/wap/goodsDetail/${com.id!}">${com.title!}</a>
+						</h2>
+						<p>
+							<del>${com.prices!}</del>
+						</p>
+						<p>
+							<strong class="price">${com.prices!}</strong>
+						</p>
+						<a href="${ctxPath!}/wap/goodsDetail/${com.id!}" class="addToCart">&#126;</a>
+					</div></li>
+					@}
+			</ul>	
+		</dd>
+	</dl>
+	<!--floatCart-->
+	<div class="hoverCart">
+		<a href="${ctxPath}/wap/person/cartList">0</a>
+	</div>
+	<div style="height: 1.2rem;"></div>
+	@layout("/wap/layout/footNav.html"){}
+	
+	<script>
+  document.oncontextmenu=new Function("event.returnValue=false;");
+  document.onselectstart=new Function("event.returnValue=false;"); 
+</script>
+
+</body>
+</html>

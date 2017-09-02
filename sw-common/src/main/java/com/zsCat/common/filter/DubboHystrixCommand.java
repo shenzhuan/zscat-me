@@ -66,7 +66,7 @@ public class DubboHystrixCommand extends HystrixCommand<Result> {
 
     @Override
     protected Result run() throws Exception {
-        System.out.println("method:"+invocation.getMethodName());
+      //  System.out.println("method:"+invocation.getMethodName());
 
         return invoker.invoke(invocation);
     }

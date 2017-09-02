@@ -1,15 +1,16 @@
 package com.zscat.shop.wap;
 
 
-import java.awt.geom.Area;
 import java.util.*;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 
 import com.alibaba.dubbo.config.annotation.Reference;
+
+import com.zscat.shop.util.SysUserUtils;
+import com.zscat.util.MemberUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,8 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.github.pagehelper.PageInfo;
 import com.zscat.shop.model.Address;
 import com.zscat.shop.model.Cart;
@@ -41,8 +40,8 @@ import com.zscat.shop.service.ProductClassService;
 import com.zscat.shop.service.ProductService;
 import com.zscat.shop.service.ReplyService;
 import com.zscat.util.IPUtils;
-import com.zscat.util.SysUserUtils;
-	/**
+
+/**
 	 * 
 	 * @author zsCat 2016-10-31 14:01:30
 	 * @Email: 951449465@qq.com
@@ -50,8 +49,8 @@ import com.zscat.util.SysUserUtils;
 	 *	商品管理
 	 */
 @Controller
-@RequestMapping("/wap1/person")
-public class Wap1PersonController {
+@RequestMapping("/wap/person")
+public class Wap1PersonController extends BaseController{
 		
 	@Reference(version = "1.0.0")
 	private ProductClassService ProductClassService;
@@ -81,13 +80,13 @@ public class Wap1PersonController {
 	 @RequestMapping("")
 	  public ModelAndView index() {
 	        try {
-	            ModelAndView model = new ModelAndView("/wap1/user");
-//	            Member member=SysUserUtils.getSessionLoginUser();
+	            ModelAndView model = new ModelAndView("/wap/user");
+//	            Member member=MemberUtils.getSessionLoginUser();
 //	            model.addObject("member", member);
 //	            
 //	            Order o=new Order();
-//				o.setStatus(ZsCatSysUserUtils.ORDER_TWO);
-//				o.setUserid(SysUserUtils.getSessionLoginUser().getId());
+//				o.setStatus(ZsCatMemberUtils.ORDER_TWO);
+//				o.setUserid(MemberUtils.getSessionLoginUser().getId());
 //				List<Order> orderList=OrderService.select(o);
 //				model.addObject("orderList", orderList);
 //				
@@ -120,8 +119,8 @@ public class Wap1PersonController {
 	 //个人资料
 	 @RequestMapping("/profile")
 	  public ModelAndView profile() {
-		  ModelAndView model = new ModelAndView("/wap1/profile");
-          Member member=SysUserUtils.getSessionLoginUser();
+		  ModelAndView model = new ModelAndView("/wap/profile");
+          Member member=MemberUtils.getSessionLoginUser();
           model.addObject("member", member);
 		  return model;
 	 }
@@ -129,21 +128,21 @@ public class Wap1PersonController {
 	 
 	 @RequestMapping("/change_name")
 	  public ModelAndView change_name() {
-		  ModelAndView model = new ModelAndView("/wap1/change_name");
-         Member member=SysUserUtils.getSessionLoginUser();
+		  ModelAndView model = new ModelAndView("/wap/change_name");
+         Member member= MemberUtils.getSessionLoginUser();
          model.addObject("member", member);
 		  return model;
 	 }
 	 @RequestMapping("/change_tel")
 	  public ModelAndView change_tel() {
-		  ModelAndView model = new ModelAndView("/wap1/change_tel");
-         Member member=SysUserUtils.getSessionLoginUser();
+		  ModelAndView model = new ModelAndView("/wap/change_tel");
+         Member member=MemberUtils.getSessionLoginUser();
          model.addObject("member", member);
 		  return model;
 	 }
 	 @RequestMapping("/change_pwd")
 	  public ModelAndView change_pwd() {
-		  ModelAndView model = new ModelAndView("/wap1/change_tel");
+		  ModelAndView model = new ModelAndView("/wap/change_tel");
        
 		  return model;
 	 }
@@ -153,7 +152,7 @@ public class Wap1PersonController {
 		 */
 		@RequestMapping(value = "updateUser1", method = RequestMethod.POST)
 		public ModelAndView updateUser1(@ModelAttribute Member Member,HttpServletRequest request){
-			 ModelAndView model = new ModelAndView("/wap1/profile");
+			 ModelAndView model = new ModelAndView("/wap/profile");
 			 MemberService.insertSelective(Member);
 			 return model;
 		}
@@ -163,7 +162,7 @@ public class Wap1PersonController {
 		 */
 		@RequestMapping(value = "updateUser", method = RequestMethod.POST)
 		public ModelAndView updateUser(@ModelAttribute Member Member,HttpServletRequest request){
-			 ModelAndView model = new ModelAndView("/wap1/profile");
+			 ModelAndView model = new ModelAndView("/wap/profile");
 			 MemberService.insertSelective(Member);
 			 return model;
 		}
@@ -190,8 +189,8 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/information")
 	  public ModelAndView information() {
-		 ModelAndView model = new ModelAndView("/wap1/information");
-         Member member=SysUserUtils.getSessionLoginUser();
+		 ModelAndView model = new ModelAndView("/wap/information");
+         Member member=MemberUtils.getSessionLoginUser();
          model.addObject("member", member);
 		 
          
@@ -204,7 +203,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/safety")
 	  public ModelAndView safety() {
-		 ModelAndView model = new ModelAndView("/wap1/safety");
+		 ModelAndView model = new ModelAndView("/wap/safety");
 		 
 		 
 		 return model;
@@ -229,7 +228,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/address")
 	  public ModelAndView address() {
-		 ModelAndView model = new ModelAndView("/wap1/address");
+		 ModelAndView model = new ModelAndView("/wap/address");
 		 List<Address> addressList= AddressService.selectByMemberId();
 		 model.addObject("page", addressList);
 		
@@ -249,7 +248,7 @@ public class Wap1PersonController {
 	@RequestMapping(value = "/saveAddress", method = RequestMethod.POST)
 	public String saveAddress(@ModelAttribute Address address) throws Exception {
 		address.setIsDefault("0");
-		address.setMemberId(SysUserUtils.getSessionLoginUser().getId());
+		address.setMemberId(MemberUtils.getSessionLoginUser().getId());
 		AddressService.insertSelective(address);
 		return "redirect:/person/address";
 		
@@ -269,7 +268,7 @@ public class Wap1PersonController {
 	public @ResponseBody
 	Map<String, String> saveAddress1(@ModelAttribute Address address) throws Exception {
 		address.setIsDefault("0");
-		address.setMemberId(SysUserUtils.getSessionLoginUser().getId());
+		address.setMemberId(MemberUtils.getSessionLoginUser().getId());
 		AddressService.insertSelective(address);
 		Map<String, String> map = new HashMap<>();
 		map.put("sucess", "true");
@@ -292,7 +291,7 @@ public class Wap1PersonController {
 		Map<String, String> updateDef(@RequestParam(value = "addressId") String addressId) throws Exception {
 
 			Map<String, String> map = new HashMap<>();
-			int result = AddressService.updateDef(addressId, SysUserUtils.getSessionLoginUser().getId().toString());
+			int result = AddressService.updateDef(addressId, MemberUtils.getSessionLoginUser().getId().toString());
 			if(result == 1){
 				map.put("success", "true");
 			}else{
@@ -306,7 +305,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/cardlist")
 	  public ModelAndView cardlist() {
-		 ModelAndView model = new ModelAndView("/wap1/cardlist");
+		 ModelAndView model = new ModelAndView("/wap/cardlist");
 		 Payment Payment=new Payment();
 		 Payment.setIsDel(1);
 		 List<Payment> payList=PaymentService.select(Payment);
@@ -319,7 +318,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/cardmethod")
 	  public ModelAndView cardmethod() {
-		 ModelAndView model = new ModelAndView("/wap1/cardmethod");
+		 ModelAndView model = new ModelAndView("/wap/cardmethod");
 		 Payment Payment=new Payment();
 		 Payment.setIsDel(1);
 		 List<Payment> payList=PaymentService.select(Payment);
@@ -334,7 +333,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/order")
 	  public ModelAndView order() {
-		 ModelAndView model = new ModelAndView("/wap1/order");
+		 ModelAndView model = new ModelAndView("/wap/order");
 		
 		 return model;
 	 }
@@ -345,7 +344,7 @@ public class Wap1PersonController {
 					if (id != null && !id.equals("")) {
 						Order o=new Order();
 						o.setStatus(Integer.parseInt(id));
-						o.setUserid(SysUserUtils.getSessionLoginUser().getId());
+						o.setUserid(MemberUtils.getSessionLoginUser().getId());
 						List<Order> orderList=OrderService.select(o);
 					//	request.setAttribute("imgServer", "http://image.zscat.com");
 						request.setAttribute("orderList", orderList);
@@ -353,7 +352,7 @@ public class Wap1PersonController {
 				} catch (Exception e) {
 
 				}
-				return "wap1/ajax-order";
+				return "wap/ajax-order";
 	}
 		
 	 /**
@@ -362,7 +361,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/change")
 	  public ModelAndView change() {
-		 ModelAndView model = new ModelAndView("/wap1/change");
+		 ModelAndView model = new ModelAndView("/wap/change");
 		 
 		 
 		 return model;
@@ -373,7 +372,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/comment")
 	  public ModelAndView comment() {
-		 ModelAndView model = new ModelAndView("/wap1/comment");
+		 ModelAndView model = new ModelAndView("/wap/comment");
 		 Consult Consult=new Consult();
 		 PageInfo<Consult> page=ConsultService.selectPage(1, 40, Consult);
 		 model.addObject("page", page);
@@ -385,7 +384,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/points")
 	  public ModelAndView points() {
-		 ModelAndView model = new ModelAndView("/wap1/points");
+		 ModelAndView model = new ModelAndView("/wap/points");
 		 
 		 
 		 return model;
@@ -397,7 +396,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/coupon")
 	  public ModelAndView coupon() {
-		 ModelAndView model = new ModelAndView("/wap1/coupon");
+		 ModelAndView model = new ModelAndView("/wap/coupon");
 		 
 		 
 		 return model;
@@ -408,7 +407,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/bonus")
 	  public ModelAndView bonus() {
-		 ModelAndView model = new ModelAndView("/wap1/bonus");
+		 ModelAndView model = new ModelAndView("/wap/bonus");
 		 
 		 
 		 return model;
@@ -419,7 +418,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/walletlist")
 	  public ModelAndView walletlist() {
-		 ModelAndView model = new ModelAndView("/wap1/walletlist");
+		 ModelAndView model = new ModelAndView("/wap/walletlist");
 		 
 		 
 		 return model;
@@ -430,7 +429,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/bill")
 	  public ModelAndView bill() {
-		 ModelAndView model = new ModelAndView("/wap1/bill");
+		 ModelAndView model = new ModelAndView("/wap/bill");
 		 
 		 
 		 return model;
@@ -441,9 +440,9 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/collection")
 	  public ModelAndView collection() {
-		 ModelAndView model = new ModelAndView("/wap1/collection");
+		 ModelAndView model = new ModelAndView("/wap/collection");
 		 Favorites fa=new Favorites();
-		 fa.setMemberId(SysUserUtils.getSessionLoginUser().getId());
+		 fa.setMemberId(MemberUtils.getSessionLoginUser().getId());
 //		 PageInfo<Product> page= ProductService.selectFavoritePageInfo(1, 30, fa);
 //		 model.addObject("page", page);
 		 return model;
@@ -454,10 +453,10 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/foot")
 	  public ModelAndView foot(HttpServletRequest req) {
-		 ModelAndView model = new ModelAndView("/wap1/foot");
+		 ModelAndView model = new ModelAndView("/wap/foot");
 		  String ip=IPUtils.getClientAddress(req);
 //		    RedisUtils  RedisUtils=new RedisUtils();
-//			Map<String,String> map=RedisUtils.hgetall(SysUserUtils.SHOPPING_HISTORY+ip);
+//			Map<String,String> map=RedisUtils.hgetall(MemberUtils.SHOPPING_HISTORY+ip);
 //			List<Object> ProductList=JsonUtils.readJsonList(JsonUtils.toJsonStr(map), Product.class);
 //			model.addObject("ProductList",ProductList);
 		 return model;
@@ -468,7 +467,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/consultation")
 	  public ModelAndView consultation() {
-		 ModelAndView model = new ModelAndView("/wap1/consultation");
+		 ModelAndView model = new ModelAndView("/wap/consultation");
 		 
 		 
 		 return model;
@@ -479,7 +478,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/suggest")
 	  public ModelAndView suggest() {
-		 ModelAndView model = new ModelAndView("/wap1/suggest");
+		 ModelAndView model = new ModelAndView("/wap/suggest");
 		 
 		 
 		 return model;
@@ -490,7 +489,7 @@ public class Wap1PersonController {
 	  */
 	 @RequestMapping("/news")
 	  public ModelAndView news() {
-		 ModelAndView model = new ModelAndView("/wap1/news");
+		 ModelAndView model = new ModelAndView("/wap/news");
 		 
 		 
 		 return model;
@@ -501,9 +500,9 @@ public class Wap1PersonController {
 	 */
 	 @RequestMapping("/cartList")
 	  public ModelAndView cartList() {
-		 ModelAndView model = new ModelAndView("/wap1/cart");
-		 if(com.zscat.shop.util.SysUserUtils.getSessionLoginUser()!=null){
-			 model.addObject("cartList", CartService.selectOwnCart(com.zscat.shop.util.SysUserUtils.getSessionLoginUser().getId()));
+		 ModelAndView model = new ModelAndView("/wap/cart");
+		 if(MemberUtils.getSessionLoginUser()!=null){
+			 model.addObject("cartList", CartService.selectOwnCart(MemberUtils.getSessionLoginUser().getId()));
 		 }
 		 model.addObject("cartList", new ArrayList<>());
 		 return model;
@@ -521,7 +520,7 @@ public class Wap1PersonController {
 //			 Product goods=ProductService.selectByPrimaryKey(ProductId);
 //			Cart cart=new Cart();
 //		 	cart.setGoodsid(ProductId);
-//		 	cart.setUserid(SysUserUtils.getSessionLoginUser().getId());
+//		 	cart.setUserid(MemberUtils.getSessionLoginUser().getId());
 //		 	Cart check=CartService.selectOne(cart);
 //		 	Map<String, String> map = Maps.newHashMap();
 //		 	int result=0;
@@ -536,7 +535,7 @@ public class Wap1PersonController {
 //		 	}
 			
 			Cart cart1 = new Cart();
-			cart1.setUserid(SysUserUtils.getSessionLoginUser().getId());
+			cart1.setUserid(MemberUtils.getSessionLoginUser().getId());
 			List<Cart> cartList=CartService.select(cart1);
 			mav.addObject("cartList", cartList);
 			
@@ -548,7 +547,7 @@ public class Wap1PersonController {
 			 List<Payment> payList=PaymentService.select(Payment);
 			 mav.addObject("payList", payList);
 			 
-			mav.setViewName("wap1/LikBuy");
+			mav.setViewName("wap/LikBuy");
 			return mav;
 		}
 	 /**
@@ -564,16 +563,16 @@ public class Wap1PersonController {
 				@RequestParam(value = "paymentid",defaultValue="无留言") String usercontent
 				)throws Exception{
 			ModelAndView mav=new ModelAndView();
-			Member m =SysUserUtils.getSessionLoginUser();
+			Member m =MemberUtils.getSessionLoginUser();
 			Order order=OrderService.insertOrder(cartIds,addressid,paymentid,usercontent,m.getId(),m.getUsername());
 			 Payment Payment=new Payment();
 			 Payment.setIsDel(1);
 			 List<Payment> payList=PaymentService.select(Payment);
 			 mav.addObject("payList", payList);
 			 if(order==null){
-				 mav.setViewName("wap1/forwad");
+				 mav.setViewName("wap/forwad");
 			 }else{
-				 mav.setViewName("wap1/success");
+				 mav.setViewName("wap/success");
 			 }
 			
 			mav.addObject("order", order);
@@ -592,7 +591,7 @@ public class Wap1PersonController {
 			ModelAndView mav=new ModelAndView();
 			Product b=ProductService.selectByPrimaryKey(id);
 			mav.addObject("Product", b);
-			mav.setViewName("wap1/order");
+			mav.setViewName("wap/order");
 			return mav;
 		}
 	 /**
@@ -606,7 +605,7 @@ public class Wap1PersonController {
 			ModelAndView mav=new ModelAndView();
 			Product b=ProductService.selectByPrimaryKey(id);
 			mav.addObject("Product", b);
-			mav.setViewName("wap1/orderinfo");
+			mav.setViewName("wap/orderinfo");
 			return mav;
 		}
 	 /**
@@ -620,7 +619,7 @@ public class Wap1PersonController {
 			ModelAndView mav=new ModelAndView();
 			Product b=ProductService.selectByPrimaryKey(id);
 			mav.addObject("Product", b);
-			mav.setViewName("wap1/orderinfo");
+			mav.setViewName("wap/orderinfo");
 			return mav;
 		}
 	 /**
@@ -640,8 +639,8 @@ public class Wap1PersonController {
 				@RequestParam(value = "content") String content) throws Exception {
 		 	Reply r=new Reply();
 		 	r.setContent(content);r.setCreatedate(new Date());
-		 	r.setGoodsid(goodsid);r.setStatus(1);r.setUsername(SysUserUtils.getSessionLoginUser().getUsername());
-		 	r.setUserid(SysUserUtils.getSessionLoginUser().getId());
+		 	r.setGoodsid(goodsid);r.setStatus(1);r.setUsername(MemberUtils.getSessionLoginUser().getUsername());
+		 	r.setUserid(MemberUtils.getSessionLoginUser().getId());
 		 	
 			Map<String, String> map = new HashMap<>();
 			int result = ReplyService.insertSelective(r);
@@ -665,7 +664,7 @@ public class Wap1PersonController {
 		 Product goods=ProductService.selectByPrimaryKey(goodsid);
 		 	Cart cart=new Cart();
 		 	cart.setGoodsid(goodsid);
-		 	cart.setUserid(SysUserUtils.getSessionLoginUser().getId());
+		 	cart.setUserid(MemberUtils.getSessionLoginUser().getId());
 		 	Cart check=CartService.selectOne(cart);
 		 	Map<String, String> map =new HashMap<>();
 		 	int result=0;

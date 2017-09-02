@@ -10,7 +10,7 @@
 	<modules>
 		<module>shop-api</module>
 		<module>shop-service</module>
-		<module>shop-web</module>
+
         <module>shop-h5</module>
 	</modules>
 

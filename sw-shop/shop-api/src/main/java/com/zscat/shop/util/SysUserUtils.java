@@ -8,6 +8,8 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import com.zsCat.common.utils.JSONSerializerUtil;
+import com.zsCat.common.utils.RedisUtils;
 import com.zscat.shop.model.Member;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,21 +29,28 @@ public class SysUserUtils {
 	public static String SESSION_LOGIN_USER ="loginMember";
 	public static Integer ORDER_TWO=2;
 	public static Integer ORDER_NiNe=9;
-
+	static RedisUtils redisUtils = new RedisUtils();
 
 	/**
 	 * 得到当前session
 	 */
-	public static HttpSession getSession() {
-		HttpSession session = getCurRequest().getSession();
-		return session;
-	}
+//	public static HttpSession getSession() {
+//		HttpSession session = getCurRequest().getSession();
+//		return session;
+//	}
 	
 	/**
 	 * session中的用户
 	 */
-	public static Member getSessionLoginUser(){
-		return (Member) getSession().getAttribute(SysUserUtils.SESSION_LOGIN_USER);
+	public static Member getSessionLoginUser(HttpServletRequest request){
+		System.out.println("getSessionLoginUser:"+request.getSession().getId());
+		byte[] userBytes = redisUtils.getByte(request.getSession().getId());
+		Member user = null;
+		if (null != userBytes) {
+			user = JSONSerializerUtil.unserialize(userBytes, Member.class);
+		}
+		System.out.println("getSessionLoginUser:"+user);
+		return user;
 	}
 
 	
@@ -51,13 +60,13 @@ public class SysUserUtils {
 	 * @param:@return 
 	 * @return:HttpServletRequest
 	 */
-	public static HttpServletRequest getCurRequest(){
-		RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
-		if(requestAttributes != null && requestAttributes instanceof ServletRequestAttributes){
-			ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes)requestAttributes;
-			return servletRequestAttributes.getRequest();
-		}
-		return null;
-	}
+//	public static HttpServletRequest getCurRequest(){
+//		RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
+//		if(requestAttributes != null && requestAttributes instanceof ServletRequestAttributes){
+//			ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes)requestAttributes;
+//			return servletRequestAttributes.getRequest();
+//		}
+//		return null;
+//	}
 
 }

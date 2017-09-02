@@ -5,14 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.zsCat.common.utils.AddressUtils;
-import com.zsCat.common.utils.CustomSystemUtil;
 import com.zsCat.common.utils.IPUtils;
+import com.zsCat.common.utils.JSONSerializerUtil;
+import com.zsCat.common.utils.RedisUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,9 +35,8 @@ import com.zscat.shop.service.ProductClassService;
 import com.zscat.shop.service.ProductService;
 import com.zscat.shop.service.ProductTypeService;
 import com.zscat.util.PasswordEncoder;
-import com.zscat.util.SysUserUtils;
 
-	/**
+/**
 	 * 
 	 * @author zsCat 2016-10-31 14:01:30
 	 * @Email: 951449465@qq.com
@@ -44,8 +44,8 @@ import com.zscat.util.SysUserUtils;
 	 *	商品管理
 	 */
 @Controller
-@RequestMapping("/wap1")
-public class Wap1IndexController {
+@RequestMapping("/wap")
+public class Wap1IndexController extends BaseController{
 
 	@Reference(version = "1.0.0")
 	private ProductClassService ProductClassService;
@@ -55,14 +55,14 @@ public class Wap1IndexController {
 	private MemberService MemberService;
 	@Reference(version = "1.0.0")
 	private  FloorService floorService;
-	
+	RedisUtils redisUtils = new RedisUtils();
 	@Reference(version = "1.0.0")
 	private ProductTypeService ProductTypeService;
 	
 	 @RequestMapping("")
 	  public ModelAndView index(HttpServletRequest req) {
 	        try {
-	            ModelAndView model = new ModelAndView("/wap1/index");
+	            ModelAndView model = new ModelAndView("/wap/index");
 	            Product goods=new Product();
 	            PageInfo<Product> page = ProductService.selectPage(1, 4, goods,"orderby desc");
 	            model.addObject("page", page);
@@ -77,8 +77,8 @@ public class Wap1IndexController {
 		        model.addObject("useList", useList);
 //				model.addObject("city", AddressUtils.getCityByIp(CustomSystemUtil.INTERNET_IP));
 //				model.addObject("city1", AddressUtils.getCityByIp(CustomSystemUtil.INTRANET_IP));
-//				model.addObject("city2", AddressUtils.getCityByIp(IPUtils.getClientAddress(req)));
-				model.addObject("city", AddressUtils.getCityByIp(IPUtils.getIp2(req)));
+				model.addObject("city", AddressUtils.getCityByIp(IPUtils.getClientAddress(req)));
+			//	model.addObject("city", AddressUtils.getCityByIp(IPUtils.getIp2(req)));
 		        List<ProductType> typeList=ProductTypeService.select(new ProductType());
 		        model.addObject("typeList", typeList);
 	            return model;
@@ -95,7 +95,7 @@ public class Wap1IndexController {
 			if(goods.getImgmore()!=null && goods.getImgmore().indexOf(",")>-1){
 				mav.addObject("imgs", goods.getImgmore().split(","));
 			}
-			mav.setViewName("wap1/goodsDetail");
+			mav.setViewName("wap/goodsDetail");
 			goods.setClickhit(goods.getClickhit()+1);
 			ProductService.updateByPrimaryKeySelective(goods);
 			//查询详情商品的 其他商品
@@ -106,7 +106,7 @@ public class Wap1IndexController {
 //			String ip=IPUtils.getClientAddress(req);
 //			    RedisUtils  RedisUtils=new RedisUtils();
 //			    String[] properties =new String[]{"id","price","title","img"};
-//				RedisUtils.hset(SysUserUtils.SHOPPING_HISTORY + ip ,id+"",JsonUtils.toJsonStr(goods,properties),24*60*60);
+//				RedisUtils.hset(this.SHOPPING_HISTORY + ip ,id+"",JsonUtils.toJsonStr(goods,properties),24*60*60);
 			
 //			String goodsSpec = goods.getProductSpec();
 //			String specName = goods.getSpecName();
@@ -138,7 +138,7 @@ public class Wap1IndexController {
 	 @RequestMapping("/index")
 	  public ModelAndView index1() {
 	        try {
-	            ModelAndView model = new ModelAndView("/wap1/home3");
+	            ModelAndView model = new ModelAndView("/wap/home3");
 	            Product goods=new Product();
 	            PageInfo<Product> page = ProductService.selectPage(1, 4, goods,"orderby desc");
 	            model.addObject("page", page);
@@ -165,7 +165,7 @@ public class Wap1IndexController {
 	    }
 	 @RequestMapping("/information/{createBy}")
 	  public ModelAndView information(@PathVariable("createBy") Long createBy) {
-		 ModelAndView model = new ModelAndView("/wap1/person/information");
+		 ModelAndView model = new ModelAndView("/wap/person/information");
         Member member=MemberService.selectByPrimaryKey(createBy);
         model.addObject("member", member);
 		 return model;
@@ -177,7 +177,7 @@ public class Wap1IndexController {
 	  */
 	 @RequestMapping("/newD/{id}")
 	  public ModelAndView newD(@PathVariable("id") Long id) {
-		 ModelAndView model = new ModelAndView("/wap1/person/blog");
+		 ModelAndView model = new ModelAndView("/wap/person/blog");
 //        Article article=articleService.selectByPrimaryKey(id);
 //        model.addObject("article", article);
 //        List<Article> articleList=articleService.select(new Article());
@@ -189,12 +189,14 @@ public class Wap1IndexController {
 		 * 
 		 * @return
 		 */
-		@RequestMapping(value = "login", method = RequestMethod.GET)
-		public String toLogin() {
-			if( SysUserUtils.getSessionLoginUser() != null){
-				return "redirect:/wap1";
-			}
-			return "/wap1/login";
+		@RequestMapping(value = "login")
+		public ModelAndView toLogin(HttpServletResponse response) {
+			response.setContentType("text/html;charset=UTF-8");
+			ModelAndView model = new ModelAndView("/wap/login");
+//			if( this.getSessionLoginUser() != null){
+//				return "redirect:/wap";
+//			}
+			return model;
 		}
 		
 		/**
@@ -224,7 +226,7 @@ public class Wap1IndexController {
 //			}
 			Member user = MemberService.checkUser(username, password);
 			if (null != user) {
-				session.setAttribute(SysUserUtils.SESSION_LOGIN_USER, user);
+				redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(user),30*60);;
 			} else {
 				msg.put("error", "用户名或密码错误");
 			}
@@ -238,10 +240,10 @@ public class Wap1IndexController {
 		 */
 		@RequestMapping(value = "reg", method = RequestMethod.GET)
 		public String reg() {
-			if( SysUserUtils.getSessionLoginUser() != null){
-				return "redirect:/wap1";
+			if( this.getSessionLoginUser() != null){
+				return "redirect:/wap";
 			}
-			return "/wap1/register";
+			return "/wap/register";
 		}
 	
 		@RequestMapping(value = "reg", method = RequestMethod.POST)
@@ -270,7 +272,7 @@ public class Wap1IndexController {
 				
 				HttpSession session = request.getSession();
 				if (result>0) {
-					session.setAttribute(SysUserUtils.SESSION_LOGIN_USER, m);
+					redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(m),30*60);
 				} else {
 					msg.put("error", "注册失败");
 				}
@@ -287,12 +289,12 @@ public class Wap1IndexController {
 		@RequestMapping("logout")
 		public String logout(HttpServletRequest request) {
 			request.getSession().invalidate();
-			return "redirect:/wap1/login";
+			return "redirect:/wap/login";
 		}
 	
 		@RequestMapping("/search/{createBy}")
 		  public ModelAndView search(@PathVariable("createBy") Long createBy) {
-			 ModelAndView model = new ModelAndView("/wap1/search");
+			 ModelAndView model = new ModelAndView("/wap/search");
 			 Product p=new Product();
 			 p.setCreateBy(createBy);
 	        PageInfo<Product> page=ProductService.selectPage(1, 15, p, "orderby desc");
@@ -304,14 +306,14 @@ public class Wap1IndexController {
 		 }
 		@RequestMapping("/memberList")
 		  public ModelAndView memberList() {
-			 ModelAndView model = new ModelAndView("/wap1/member");
+			 ModelAndView model = new ModelAndView("/wap/member");
 			 List<Member> page=MemberService.select(new Member(), "no desc");
 	        model.addObject("page", page);
 			 return model;
 		 }
 		@RequestMapping("/type")
 		  public ModelAndView type() {
-			 ModelAndView model = new ModelAndView("/wap1/type");
+			 ModelAndView model = new ModelAndView("/wap/type");
 			 ProductClass gc=new ProductClass();
 	            gc.setParentId(1L);
 	            List<ProductClass> gcList=ProductClassService.selectPage(1, 15, gc).getList();
@@ -324,7 +326,7 @@ public class Wap1IndexController {
 		  */
 		 @RequestMapping("/category")
 		  public ModelAndView categoty() {
-			 ModelAndView model = new ModelAndView("/wap1/category");
+			 ModelAndView model = new ModelAndView("/wap/category");
 			
 			 return model;
 		 }
@@ -341,6 +343,6 @@ public class Wap1IndexController {
 					} catch (Exception e) {
 
 					}
-					return "wap1/ajax-category";
+					return "wap/ajax-category";
 		}
 }

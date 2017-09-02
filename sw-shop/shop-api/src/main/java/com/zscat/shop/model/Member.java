@@ -186,4 +186,17 @@ public class Member extends BaseEntity{
     public void setAddress(String address) {
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", addtime=" + addtime +
+                ", phone='" + phone + '\'' +
+                ", qq='" + qq + '\'' +
+                ", email='" + email + '\'' +
+                ", truename='" + truename + '\'' +
+                '}';
+    }
 }
