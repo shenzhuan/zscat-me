@@ -1,5 +1,6 @@
 import com.alibaba.fastjson.JSONObject;
 
+import com.zsCat.common.utils.RedisUtils;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -35,15 +36,28 @@ public class AuthControllerTest extends MockMvcBase {
     }
 
     public static void main(String[] args) {
-        String uid="11";
-        String msg = String.format("getStat param uid=%s over time=%s",uid,1);
-        System.out.println(msg);
-     
-        List l = new ArrayList();
-        l.add("a");l.add("b");l.add("c");
-        for (int i =0; i<l.size();i++){
-            System.out.println(l.get(i));
-        }
+        RedisUtils r =new RedisUtils();
+//        r.set("string","string");
+//        r.set("string:12","string:1");
+//        r.sadd("sets", "element001");
+//        r.sadd("sets", "element002");
+//        r.sadd("sets", "element003");
+//        r.sadd("sets", "element004");
+//
+//        r.lpush("stringlists", "vector");
+//        r.lpush("stringlists", "ArrayList");
+//        r.lpush("stringlists", "vector");
+//        r.lpush("stringlists", "vector");
+//        r.lpush("stringlists", "LinkedList");
+//
+//        r.hset("map", "key001", "value001");
+//        r.hset("map", "key002", "value002");
+//        r.hset("map", "key003", "value003");
+//        r.hset("map", "key004", "value004");
+        r.zadd("zset", 7.0, "element007");
+        r.zadd("zset", 4.0, "element004");
+        r.zadd("zset", 3.0, "element003");
+        r.zadd("zset", 1.0, "element001");
 
     }
 }

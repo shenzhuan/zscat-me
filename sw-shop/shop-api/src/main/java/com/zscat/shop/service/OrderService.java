@@ -17,4 +17,5 @@ public interface OrderService extends BaseService<Order>  {
 	 Order insertOrder(String[] cartIds,Long addressid, Long paymentid, String usercontent,Long uid,String uname) ;
 
 
+	Order insertWapOrder(Long productId, Long addressid, Long paymentid, String usercontent, Long id, String username);
 }

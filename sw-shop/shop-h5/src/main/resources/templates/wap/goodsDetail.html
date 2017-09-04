@@ -88,6 +88,7 @@ $(document).ready(function(){
 </aside>
 <script type="text/javascript">
 function addCart(type){
+
 	var goodsid=$("#goodsid").val();
 	$.ajax({
 		type: "post",
@@ -95,17 +96,15 @@ function addCart(type){
 		data: {goodsid:goodsid},
 		dataType: "json",
 		success:function(data) {
-			if(data.success){
+			if(data.success=='true'){
 				if(type==1){
 					layer.msg("加入购车成功!",2, 8);
 				}else{
 					var goodsid1=$("#goodsid").val();
 					window.location.href = "${ctxPath!}/wap/person/LikBuy/"+goodsid1;
 				}
-				
-				
-			}else{
-				layer.msg("加入购车成功!",2, 8);
+			}else if(data.success=='login'){
+                window.location.href = "${ctxPath!}/wap/login"
 			}
 		}
 	});

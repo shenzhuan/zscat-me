@@ -28,8 +28,8 @@
 		});
     //测试流程效果，程序对接可将其删除！
 	$(".btmNav a:last").click(function(){
-		alert("点击提交订单后跳转支付接口，再返回支付状态！");
-		location.href="return_state.html";
+	//	alert("点击提交订单后跳转支付接口，再返回支付状态！");
+	//	location.href="return_state.html";
 		});
  });
 </script>
@@ -62,11 +62,13 @@
  <textarea placeholder="选填(亲可以在这里添加想说的话)"></textarea>
 </section>
 <!--bottom nav-->
+
+ <input type="hidden" value="${goods.prices!}" id="productId" name="productId" />
 <input type="hidden" value="1" id="addressid" name="addressid"/>
 <input type="hidden" value="1" id="paymentid" name="paymentid"/>
 <div style="height:1rem;"></div>
 <aside class="btmNav">
- <a style="background:#64ab5b;color:white;text-shadow:none;">合计：￥0.00</a>
+ <a style="background:#64ab5b;color:white;text-shadow:none;">合计：￥${goods.prices!}</a>
  <a style="background:#6bc75f;color:white;text-shadow:none;" onclick="submitF()">提交订单</a>
 
 </aside>

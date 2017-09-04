@@ -14,13 +14,11 @@ import com.zsCat.common.utils.AddressUtils;
 import com.zsCat.common.utils.IPUtils;
 import com.zsCat.common.utils.JSONSerializerUtil;
 import com.zsCat.common.utils.RedisUtils;
+import com.zscat.util.MemberUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageInfo;
@@ -77,7 +75,13 @@ public class Wap1IndexController extends BaseController{
 		        model.addObject("useList", useList);
 //				model.addObject("city", AddressUtils.getCityByIp(CustomSystemUtil.INTERNET_IP));
 //				model.addObject("city1", AddressUtils.getCityByIp(CustomSystemUtil.INTRANET_IP));
-				model.addObject("city", AddressUtils.getCityByIp(IPUtils.getClientAddress(req)));
+				if (MemberUtils.getSessionLoginUser()!=null){
+					model.addObject("city", MemberUtils.getSessionLoginUser().getUsername());
+				}else{
+					model.addObject("city", "未登录");
+				}
+
+
 			//	model.addObject("city", AddressUtils.getCityByIp(IPUtils.getIp2(req)));
 		        List<ProductType> typeList=ProductTypeService.select(new ProductType());
 		        model.addObject("typeList", typeList);
@@ -189,16 +193,8 @@ public class Wap1IndexController extends BaseController{
 		 * 
 		 * @return
 		 */
-		@RequestMapping(value = "login")
-		public ModelAndView toLogin(HttpServletResponse response) {
-			response.setContentType("text/html;charset=UTF-8");
-			ModelAndView model = new ModelAndView();
-			if( this.getSessionLoginUser() != null){
-				return new ModelAndView("redirect:/wap");
-			}
-			return new ModelAndView("redirect:/wap/login1");
-		}
-	@RequestMapping(value = "login1")
+
+	@RequestMapping(value = "login")
 	public ModelAndView toLogin1() {
 		ModelAndView model = new ModelAndView("/wap/login");
 		if( this.getSessionLoginUser() != null){
@@ -206,7 +202,7 @@ public class Wap1IndexController extends BaseController{
 		}
 		return model;
 	}
-		
+
 		/**
 		 * 登录验证
 		 * 
@@ -224,14 +220,7 @@ public class Wap1IndexController extends BaseController{
 			//code = StringUtils.trim(code);
 			username = StringUtils.trim(username);
 			password = StringUtils.trim(password);
-			//Object scode = session.getAttribute("code");
-			String sessionCode = null;
-//			if (scode != null)
-//				sessionCode = scode.toString();
-//			if (!StringUtils.equalsIgnoreCase(code, sessionCode)) {
-//				msg.put("error", "验证码错误");
-//				return msg;
-//			}
+
 			Member user = MemberService.checkUser(username, password);
 			if (null != user) {
 				redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(user),30*60);;
@@ -259,7 +248,7 @@ public class Wap1IndexController extends BaseController{
 				@RequestParam(value = "password",required=true)String  password,
 				@RequestParam(value = "email",required=false)String email,
 				@RequestParam(value = "phone",required=false)String phone,
-				@RequestParam(value = "username",required=false)String username,
+				@RequestParam(value = "username")String username,
 				@RequestParam(value = "passwordRepeat",required=true)String passwordRepeat,HttpServletRequest request) {
 			Map<String, Object> msg = new HashMap<String, Object>();
 			if (!StringUtils.equalsIgnoreCase(password, passwordRepeat)) {
@@ -268,19 +257,17 @@ public class Wap1IndexController extends BaseController{
 			}
 			String secPwd = null ;
 			Member m=new Member();
-			
-				m.setUsername(username);
-				secPwd = PasswordEncoder.encrypt(password, username);
-			
+			secPwd = PasswordEncoder.encrypt(password, username);
+			m.setUsername(username);
 			m.setPassword(secPwd);
 			m.setTruename(m.getUsername());
+			m.setPhone(phone);
 			try {
 				
 				int result = MemberService.insertSelective(m);
-				
-				HttpSession session = request.getSession();
+				System.out.println(m.getId());
 				if (result>0) {
-					redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(m),30*60);
+					//redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(m),30*60);
 				} else {
 					msg.put("error", "注册失败");
 				}

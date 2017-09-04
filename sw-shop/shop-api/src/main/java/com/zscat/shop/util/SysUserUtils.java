@@ -27,8 +27,9 @@ public class SysUserUtils {
 	
 	private static final Logger logger = LoggerFactory.getLogger(SysUserUtils.class);
 	public static String SESSION_LOGIN_USER ="loginMember";
-	public static Integer ORDER_TWO=2;
-	public static Integer ORDER_NiNe=9;
+	public static Integer ORDER_ONE=1; // 微未支付
+	public static Integer ORDER_TWO=2; // 已支付
+	public static Integer ORDER_NiNe=9;// 已取消
 	static RedisUtils redisUtils = new RedisUtils();
 
 	/**
@@ -48,13 +49,13 @@ public class SysUserUtils {
 	 * session中的用户
 	 */
 	public static Member getSessionLoginUser(HttpServletRequest request){
-		System.out.println("getSessionLoginUser:"+request.getSession().getId());
+		System.out.println("getSessionLoginUser--sessionId:"+request.getSession().getId());
 		byte[] userBytes = redisUtils.getByte(request.getSession().getId());
 		Member user = null;
 		if (null != userBytes) {
 			user = JSONSerializerUtil.unserialize(userBytes, Member.class);
 		}
-		System.out.println("getSessionLoginUser:"+user);
+		System.out.println("getSessionLoginUser--user:"+user);
 		return user;
 	}
 

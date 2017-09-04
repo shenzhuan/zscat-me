@@ -32,7 +32,7 @@
 <ul class="formarea">
  <li>
   <label class="lit">账号：</label>
-  <input type="tel" name="phone" placeholder="手机号码" class="textbox"/>
+  <input type="tel" name="username" placeholder="账号" class="textbox"/>
  </li>
  <li>
   <label class="lit">密码：</label>
@@ -50,22 +50,12 @@
    </optgroup>
   </select>
  </li>
- <li>
-  <label class="lit">餐馆名称：</label>
-  <input type="text" placeholder="餐馆名称" class="textbox"/>
- </li>
- <li>
-  <label class="lit">收货人：</label>
-  <input type="text" placeholder="收件人真实姓名" class="textbox"/>
- </li>
+
  <li>
   <label class="lit">联系电话：</label>
-  <input type="tel" placeholder="联系电话" class="textbox"/>
+  <input type="tel" name="phone" placeholder="联系电话" class="textbox"/>
  </li>
- <li>
-  <label class="lit">收货地址：</label>
-  <input type="text" placeholder="区-街道-小区-门牌号" class="textbox"/>
- </li>
+
  <li class="liLink">
   <a href="article.html" class="fl">《用户协议》</a>
   <a href="login.html" class="fr">已有账号，登陆</a>
@@ -100,7 +90,7 @@
 								style : ['background-color:#F26C4F; color:#fff','#F26C4F' ],
 							});
 						}else{
-							window.location.href = "${ctxPath!}/wap";
+							window.location.href = "${ctxPath!}/wap/login";
 						}
 					},
 					tiptype : function(msg, o, cssctl) {

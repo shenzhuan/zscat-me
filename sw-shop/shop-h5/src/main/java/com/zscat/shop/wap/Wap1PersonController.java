@@ -146,6 +146,12 @@ public class Wap1PersonController extends BaseController{
        
 		  return model;
 	 }
+	@RequestMapping("/favorite")
+	public ModelAndView favorite() {
+		ModelAndView model = new ModelAndView("/wap/favorite");
+
+		return model;
+	}
 	 /**
 		 * 修改密码
 		* @return
@@ -153,7 +159,7 @@ public class Wap1PersonController extends BaseController{
 		@RequestMapping(value = "updateUser1", method = RequestMethod.POST)
 		public ModelAndView updateUser1(@ModelAttribute Member Member,HttpServletRequest request){
 			 ModelAndView model = new ModelAndView("/wap/profile");
-			 MemberService.insertSelective(Member);
+			 MemberService.updateByPrimaryKeySelective(Member);
 			 return model;
 		}
 		/**
@@ -163,7 +169,7 @@ public class Wap1PersonController extends BaseController{
 		@RequestMapping(value = "updateUser", method = RequestMethod.POST)
 		public ModelAndView updateUser(@ModelAttribute Member Member,HttpServletRequest request){
 			 ModelAndView model = new ModelAndView("/wap/profile");
-			 MemberService.insertSelective(Member);
+			 MemberService.updateByPrimaryKeySelective(Member);
 			 return model;
 		}
 	 // 自定义比较器：按销售情况排序  
@@ -517,22 +523,6 @@ public class Wap1PersonController extends BaseController{
 		public ModelAndView ProductDetail(@PathVariable("ProductId") Long ProductId,
 				 HttpSession session)throws Exception{
 			ModelAndView mav=new ModelAndView();
-//			 Product goods=ProductService.selectByPrimaryKey(ProductId);
-//			Cart cart=new Cart();
-//		 	cart.setGoodsid(ProductId);
-//		 	cart.setUserid(MemberUtils.getSessionLoginUser().getId());
-//		 	Cart check=CartService.selectOne(cart);
-//		 	Map<String, String> map = Maps.newHashMap();
-//		 	int result=0;
-//		 	if(check==null){
-//		 		cart.setCount(1);
-//		 		cart.setGoodsname(goods.getTitle());
-//			 	cart.setPrice(goods.getPrices());
-//				 result = CartService.insertSelective(cart);
-//		 	}else{
-//		 		check.setCount(check.getCount()+1);
-//		 		result=CartService.updateByPrimaryKeySelective(check);
-//		 	}
 			
 			Cart cart1 = new Cart();
 			cart1.setUserid(MemberUtils.getSessionLoginUser().getId());
@@ -546,7 +536,7 @@ public class Wap1PersonController extends BaseController{
 			 Payment.setIsDel(1);
 			 List<Payment> payList=PaymentService.select(Payment);
 			 mav.addObject("payList", payList);
-			 
+		 mav.addObject("goods", ProductService.selectByPrimaryKey(ProductId) );
 			mav.setViewName("wap/LikBuy");
 			return mav;
 		}
@@ -557,14 +547,14 @@ public class Wap1PersonController extends BaseController{
 	  * @throws Exception
 	  */
 	 @RequestMapping("submitOrder")
-		public ModelAndView submitOrder(@RequestParam(value = "cartIds") String[] cartIds,
+		public ModelAndView submitOrder(@RequestParam(value = "productId") Long productId,
 				@RequestParam(value = "addressid") Long addressid,
 				@RequestParam(value = "paymentid") Long paymentid,
 				@RequestParam(value = "paymentid",defaultValue="无留言") String usercontent
 				)throws Exception{
 			ModelAndView mav=new ModelAndView();
 			Member m =MemberUtils.getSessionLoginUser();
-			Order order=OrderService.insertOrder(cartIds,addressid,paymentid,usercontent,m.getId(),m.getUsername());
+			Order order=OrderService.insertWapOrder(productId,addressid,paymentid,usercontent,m.getId(),m.getUsername());
 			 Payment Payment=new Payment();
 			 Payment.setIsDel(1);
 			 List<Payment> payList=PaymentService.select(Payment);
@@ -661,12 +651,14 @@ public class Wap1PersonController extends BaseController{
 	 @RequestMapping(value = "/addCart", method = RequestMethod.POST)
 		public @ResponseBody
 		Map<String, String> addCart(@RequestParam(value = "goodsid") Long goodsid) throws Exception {
+		 Map<String, String> map =new HashMap<>();
+		 if (this.isLogin(map)) return map;
 		 Product goods=ProductService.selectByPrimaryKey(goodsid);
 		 	Cart cart=new Cart();
 		 	cart.setGoodsid(goodsid);
 		 	cart.setUserid(MemberUtils.getSessionLoginUser().getId());
 		 	Cart check=CartService.selectOne(cart);
-		 	Map<String, String> map =new HashMap<>();
+
 		 	int result=0;
 		 	if(check==null){
 		 		cart.setCount(1);
@@ -686,7 +678,10 @@ public class Wap1PersonController extends BaseController{
 			}
 			return map;
 		}
-	 /**
+
+
+
+	/**
 	  * 删除购物车
 	  * @param id
 	  * @return

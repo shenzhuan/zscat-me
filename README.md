@@ -70,7 +70,7 @@ springboot dubbo redis solr mq kafka 商城 blog cms
 ### 4.shop模块为例  
 
 
-
+### 需要启动redis 127.0.0.1 6379 没有密码
 - a.启动shop-services下面的ShopServiceApplication主类，启动blog的dubbo服务
 - b.启动shop-web下面的ShopWebApplication主类，访问  http://localhost:2007/front http://localhost:2007/youhong
 - c.启动shop-h5下面的ShopWebApplication主类，访问 http://localhost:2006/wap1 

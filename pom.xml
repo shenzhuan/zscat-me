@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-	  <module>dubbo-cache-starter</module>
+
 	    <module>sw-common</module>
 	 <!-- <module>sw-cms</module>
 	  <module>sw-blog</module>
@@ -15,7 +15,7 @@
 	  <module>sw-demo</module>
 	  <module>sw_portl</module>-->
 
-	  <module>sw-schedule</module>
+
 	  <!--
             <module>sw-shop</module>
             <module>sw_manager</module>-->

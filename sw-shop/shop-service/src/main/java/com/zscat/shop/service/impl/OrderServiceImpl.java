@@ -13,15 +13,10 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.zsCat.common.base.ServiceMybatis;
 
 import com.zsCat.common.utils.RandomString;
-import com.zscat.shop.mapper.CartMapper;
-import com.zscat.shop.mapper.GoodsOrderMapper;
-import com.zscat.shop.mapper.OrderLogMapper;
-import com.zscat.shop.mapper.OrderMapper;
-import com.zscat.shop.model.Cart;
-import com.zscat.shop.model.GoodsOrder;
-import com.zscat.shop.model.Order;
-import com.zscat.shop.model.OrderLog;
+import com.zscat.shop.mapper.*;
+import com.zscat.shop.model.*;
 import com.zscat.shop.service.OrderService;
+import com.zscat.shop.util.SysUserUtils;
 
 
  /**
@@ -38,13 +33,16 @@ public class OrderServiceImpl extends ServiceMybatis<Order> implements OrderServ
 	
 	@Resource
 	private GoodsOrderMapper GoodsOrderMapper;
-	@Resource
+	 @Resource
+	 private ProductMapper productMapper;
+	 @Resource
 	private  CartMapper CartMapper;
 	@Resource
 	private OrderLogMapper  OrderLogMapper;
 	@Override
 	public Order insertOrder(String[] cartIds,Long addressid, Long paymentid, String usercontent,Long uid,String uname) {
 		Order order=new Order();
+
 		if(cartIds!=null && cartIds.length>0){
 			int count=0;
 			BigDecimal total=BigDecimal.ZERO;
@@ -88,6 +86,32 @@ public class OrderServiceImpl extends ServiceMybatis<Order> implements OrderServ
 		
 	}
 
- 
-    
-}
+	 @Override
+	 public Order insertWapOrder(Long productId, Long addressid, Long paymentid, String usercontent, Long uid, String uname) {
+		 Order order=new Order();
+		 Product p =productMapper.selectByPrimaryKey(productId);
+		  order.setOrdersn(RandomString.generateRandomString(8));
+		 order.setCreatedate(new Date());
+		 order.setStatus(SysUserUtils.ORDER_ONE);
+		 order.setUserid(uid);
+		 order.setUsername(uname);
+		 order.setPaymentid(paymentid);
+		 order.setUsercontent(usercontent);
+		 order.setAddressid(addressid);
+		 order.setTotalcount(1);
+		 order.setTotalprice(BigDecimal.valueOf(Double.valueOf(p.getPrices())));
+		 OrderMapper.insertSelective(order);
+
+		 OrderLog log=new OrderLog();
+		 log.setOrderId(order.getId());
+		 log.setOrderState("1");
+		 log.setStateInfo("提交订单");
+		 log.setCreateTime(new Date().getTime());
+		 log.setOperator(uname);
+		 OrderLogMapper.insertSelective(log);
+
+		 return order;
+	 }
+
+
+ }
