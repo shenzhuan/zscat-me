@@ -17,7 +17,7 @@ import java.util.UUID;
 /**
  * Check if an user is authorized
  */
-@Component
+
 public class ShopAuthFilter implements Filter {
     private static final Logger logger = LoggerFactory.getLogger(ShopAuthFilter.class);
 

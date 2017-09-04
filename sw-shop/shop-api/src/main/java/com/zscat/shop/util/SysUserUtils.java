@@ -34,11 +34,16 @@ public class SysUserUtils {
 	/**
 	 * 得到当前session
 	 */
-//	public static HttpSession getSession() {
-//		HttpSession session = getCurRequest().getSession();
-//		return session;
-//	}
-	
+	public static HttpSession getSession() {
+		HttpSession session = getCurRequest().getSession();
+		return session;
+	}
+	/**
+	 * session中的用户
+	 */
+	public static Member getSessionLoginUser(){
+		return (Member) getSession().getAttribute(SysUserUtils.SESSION_LOGIN_USER);
+	}
 	/**
 	 * session中的用户
 	 */
@@ -60,13 +65,13 @@ public class SysUserUtils {
 	 * @param:@return 
 	 * @return:HttpServletRequest
 	 */
-//	public static HttpServletRequest getCurRequest(){
-//		RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
-//		if(requestAttributes != null && requestAttributes instanceof ServletRequestAttributes){
-//			ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes)requestAttributes;
-//			return servletRequestAttributes.getRequest();
-//		}
-//		return null;
-//	}
+	public static HttpServletRequest getCurRequest(){
+		RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
+		if(requestAttributes != null && requestAttributes instanceof ServletRequestAttributes){
+			ServletRequestAttributes servletRequestAttributes = (ServletRequestAttributes)requestAttributes;
+			return servletRequestAttributes.getRequest();
+		}
+		return null;
+	}
 
 }

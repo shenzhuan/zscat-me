@@ -192,12 +192,20 @@ public class Wap1IndexController extends BaseController{
 		@RequestMapping(value = "login")
 		public ModelAndView toLogin(HttpServletResponse response) {
 			response.setContentType("text/html;charset=UTF-8");
-			ModelAndView model = new ModelAndView("/wap/login");
-//			if( this.getSessionLoginUser() != null){
-//				return "redirect:/wap";
-//			}
-			return model;
+			ModelAndView model = new ModelAndView();
+			if( this.getSessionLoginUser() != null){
+				return new ModelAndView("redirect:/wap");
+			}
+			return new ModelAndView("redirect:/wap/login1");
 		}
+	@RequestMapping(value = "login1")
+	public ModelAndView toLogin1() {
+		ModelAndView model = new ModelAndView("/wap/login");
+		if( this.getSessionLoginUser() != null){
+			return new ModelAndView("redirect:/wap");
+		}
+		return model;
+	}
 		
 		/**
 		 * 登录验证
