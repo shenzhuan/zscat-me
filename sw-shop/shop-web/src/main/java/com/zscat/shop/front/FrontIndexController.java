@@ -207,7 +207,7 @@ RedisUtils redisUtils = new RedisUtils();
 
 				HttpSession session = request.getSession();
 				if (result>0) {
-					redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(m),30*60);
+				//	redisUtils.set(request.getSession().getId(), JSONSerializerUtil.serialize(m),30*60);
 				//	session.setAttribute(SysUserUtils.SESSION_LOGIN_USER, m);
 				} else {
 					msg.put("error", "注册失败");
