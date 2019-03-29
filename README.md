@@ -1,7 +1,7 @@
 springboot dubbo redis solr mq kafka 商城 blog cms
  
 
-### qq群 483681368
+### qq群 171826977
 
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=a00f8452d401d9302d7f1fe04e77a5d2760824a9ed6bb77662d93fedfecb26d8"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="springboot-dubbo分布式框" title="springboot-dubbo分布式框"></a>
  
