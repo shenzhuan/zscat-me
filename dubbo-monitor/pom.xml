@@ -19,7 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <test.version>4.12</test.version>
 
-        <dubbo.version>2.5.3</dubbo.version>
+        <dubbo.version>2.6.9</dubbo.version>
         <!--<spring.version>4.0.5.RELEASE</spring.version>-->
         <spring.version>4.0.5.RELEASE</spring.version>
         <zookeeper.version>3.4.6</zookeeper.version>
