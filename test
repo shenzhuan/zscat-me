@@ -1,0 +1,22 @@
+CartMarkingVo vo = new CartMarkingVo();
+                            vo.setMemberId(orderInfo.getMemberId());
+                            vo.setPayAmount(orderInfo.getPayPrice());
+                            vo.setShopOrderGoodsList(orderGoods);
+                            vo.setScope(2);
+                            vo.setOpenId(user.getOpenid());
+                            markingFegin.sendManualCoupon(vo);
+                            markingFegin.sendFillFillCoupon(vo);
+                            markingFegin.sendShopCoupon(vo);
+
+项目启动：
+启动认证中心mall-uaa
+启动用户中心mall-bussiness/user-center
+启动网关mall-gateway/zuul-gateway
+下面是业务模块，不一定需要全部启动
+启动订单中心mall-bussiness/order-center
+启动会员中心mall-bussiness/member-center
+启动商品中心mall-bussiness/goods-center
+启动营销中心mall-bussiness/marking-center
+启动内容中心mall-bussiness/cms-center
+启动前端工程： 解压跟目录的mallcloud-admin-vue.zip,为后台管理的vue前端，
+需要安装nodejs环境，然后进入此目录，npm install ,成功后执行 npm run dev
