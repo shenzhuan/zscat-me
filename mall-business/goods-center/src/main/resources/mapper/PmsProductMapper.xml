@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.goods.mapper.PmsProductMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.pms.PmsProduct">
+        <id column="id" property="id" />
+        <result column="brand_id" property="brandId" />
+        <result column="product_category_id" property="productCategoryId" />
+        <result column="feight_template_id" property="feightTemplateId" />
+        <result column="product_attribute_category_id" property="productAttributeCategoryId" />
+        <result column="name" property="name" />
+        <result column="pic" property="pic" />
+        <result column="product_sn" property="productSn" />
+        <result column="delete_status" property="deleteStatus" />
+        <result column="publish_status" property="publishStatus" />
+        <result column="new_status" property="newStatus" />
+        <result column="recommand_status" property="recommandStatus" />
+        <result column="verify_status" property="verifyStatus" />
+        <result column="sort" property="sort" />
+        <result column="sale" property="sale" />
+        <result column="price" property="price" />
+        <result column="promotion_price" property="promotionPrice" />
+        <result column="gift_growth" property="giftGrowth" />
+        <result column="gift_point" property="giftPoint" />
+        <result column="use_point_limit" property="usePointLimit" />
+        <result column="sub_title" property="subTitle" />
+        <result column="description" property="description" />
+        <result column="original_price" property="originalPrice" />
+        <result column="stock" property="stock" />
+        <result column="low_stock" property="lowStock" />
+        <result column="unit" property="unit" />
+        <result column="weight" property="weight" />
+        <result column="preview_status" property="previewStatus" />
+        <result column="service_ids" property="serviceIds" />
+        <result column="keywords" property="keywords" />
+        <result column="note" property="note" />
+        <result column="album_pics" property="albumPics" />
+        <result column="detail_title" property="detailTitle" />
+        <result column="detail_desc" property="detailDesc" />
+        <result column="detail_html" property="detailHtml" />
+        <result column="detail_mobile_html" property="detailMobileHtml" />
+        <result column="promotion_start_time" property="promotionStartTime" />
+        <result column="promotion_end_time" property="promotionEndTime" />
+        <result column="promotion_per_limit" property="promotionPerLimit" />
+        <result column="promotion_type" property="promotionType" />
+        <result column="brand_name" property="brandName" />
+        <result column="product_category_name" property="productCategoryName" />
+        <result column="supply_id" property="supplyId" />
+        <result column="create_time" property="createTime" />
+        <result column="school_id" property="schoolId" />
+    </resultMap>
+
+    <resultMap id="cartProductMap" type="com.mallplus.goods.vo.CartProduct" autoMapping="true">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <collection property="productAttributeList" columnPrefix="attr_"
+                    resultMap="com.mallplus.goods.mapper.PmsProductAttributeMapper.BaseResultMap">
+        </collection>
+        <collection property="skuStockList" columnPrefix="sku_"
+                    resultMap="com.mallplus.goods.mapper.PmsSkuStockMapper.BaseResultMap">
+        </collection>
+    </resultMap>
+    <resultMap id="promotionProductMap" type="com.mallplus.goods.vo.PromotionProduct"
+               extends="BaseResultMap">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <collection property="skuStockList" columnPrefix="sku_"
+                    resultMap="com.mallplus.goods.mapper.PmsSkuStockMapper.BaseResultMap">
+        </collection>
+        <collection property="productLadderList" columnPrefix="ladder_"
+                    resultMap="com.mallplus.goods.mapper.PmsProductLadderMapper.BaseResultMap">
+        </collection>
+        <collection property="productFullReductionList" columnPrefix="full_"
+                    resultMap="com.mallplus.goods.mapper.PmsProductFullReductionMapper.BaseResultMap">
+        </collection>
+    </resultMap>
+
+    <resultMap id="updateInfoMap" type="com.mallplus.goods.vo.PmsProductResult"
+               extends="BaseResultMap">
+        <result column="cateParentId" jdbcType="BIGINT" property="cateParentId"/>
+        <collection property="productLadderList" columnPrefix="ladder_"
+                    resultMap="com.mallplus.goods.mapper.PmsProductLadderMapper.BaseResultMap">
+        </collection>
+        <collection property="productFullReductionList" columnPrefix="full_"
+                    resultMap="com.mallplus.goods.mapper.PmsProductFullReductionMapper.BaseResultMap">
+        </collection>
+        <collection property="memberPriceList" columnPrefix="member_"
+                    resultMap="com.mallplus.goods.mapper.PmsMemberPriceMapper.BaseResultMap">
+        </collection>
+        <collection property="skuStockList" columnPrefix="sku_"
+                    resultMap="com.mallplus.goods.mapper.PmsSkuStockMapper.BaseResultMap">
+        </collection>
+        <collection property="productAttributeValueList" columnPrefix="attribute_"
+                    resultMap="com.mallplus.goods.mapper.PmsProductAttributeValueMapper.BaseResultMap">
+        </collection>
+        <collection property="subjectProductRelationList" column="{productId=id}"
+                    select="selectSubjectProductRelationByProductId"/>
+        <collection property="prefrenceAreaProductRelationList" column="{productId=id}"
+                    select="selectPrefrenceAreaProductRelationByProductId"/>
+
+    </resultMap>
+
+    <select id="getUpdateInfo" resultMap="updateInfoMap">
+        SELECT *,
+        pc.parent_id cateParentId,
+        l.id ladder_id,l.product_id ladder_product_id,l.discount ladder_discount,l.count ladder_count,l.price
+        ladder_price,
+        pf.id full_id,pf.product_id full_product_id,pf.full_price full_full_price,pf.reduce_price full_reduce_price,
+        m.id member_id,m.product_id member_product_id,m.member_level_id member_member_level_id,m.member_price
+        member_member_price,m.member_level_name member_member_level_name,
+        s.id sku_id,s.product_id sku_product_id,s.price sku_price,s.low_stock sku_low_stock,s.pic sku_pic,s.sale
+        sku_sale,s.sku_code sku_sku_code,s.sp1 sku_sp1,s.sp2 sku_sp2,s.sp3 sku_sp3,s.stock sku_stock,s.lock_stock sku_lock_stock,
+        a.id attribute_id,a.product_id attribute_product_id,a.product_attribute_id
+        attribute_product_attribute_id,a.value attribute_value
+        FROM pms_product p
+        LEFT JOIN pms_product_category pc on pc.id = p.product_category_id
+        LEFT JOIN pms_product_ladder l ON p.id = l.product_id
+        LEFT JOIN pms_product_full_reduction pf ON pf.product_id=p.id
+        LEFT JOIN pms_member_price m ON m.product_id = p.id
+        LEFT JOIN pms_sku_stock s ON s.product_id = p.id
+        LEFT JOIN pms_product_attribute_value a ON a.product_id=p.id
+        WHERE p.id=#{id};
+    </select>
+    <select id="selectSubjectProductRelationByProductId"
+            resultMap="com.mallplus.goods.mapper.CmsSubjectProductRelationMapper.BaseResultMap">
+        select * from cms_subject_product_relation where product_id=#{productId}
+    </select>
+    <select id="selectPrefrenceAreaProductRelationByProductId"
+            resultMap="com.mallplus.goods.mapper.CmsPrefrenceAreaProductRelationMapper.BaseResultMap">
+        select * from cms_prefrence_area_product_relation where product_id=#{productId}
+    </select>
+    <select id="getCartProduct" resultMap="cartProductMap">
+        SELECT
+        p.id id,
+        p.`name` name,
+        p.sub_title subTitle,
+        p.price price,
+        p.pic pic,
+        p.product_attribute_category_id productAttributeCategoryId,
+        p.stock stock,
+        pa.id attr_id,
+        pa.`name` attr_name,
+        ps.id sku_id,
+        ps.sku_code sku_code,
+        ps.price sku_price,
+        ps.sp1 sku_sp1,
+        ps.sp2 sku_sp2,
+        ps.sp3 sku_sp3,
+        ps.stock sku_stock,
+        ps.pic sku_pic
+        FROM
+        pms_product p
+        LEFT JOIN pms_product_attribute pa ON p.product_attribute_category_id = pa.product_attribute_category_id
+        LEFT JOIN pms_sku_stock ps ON p.id=ps.product_id
+        WHERE
+        p.id = #{id}
+        AND pa.type = 0
+        ORDER BY pa.sort desc
+    </select>
+    <select id="getPromotionProductList" resultMap="promotionProductMap">
+        SELECT
+        p.id,
+        p.`name`,
+        p.promotion_type,
+        p.gift_growth,
+        p.gift_point,
+        sku.id sku_id,
+        sku.price sku_price,
+        sku.sku_code sku_sku_code,
+        sku.promotion_price sku_promotion_price,
+        sku.stock sku_stock,
+        sku.lock_stock sku_lock_stock,
+        ladder.id ladder_id,
+        ladder.count ladder_count,
+        ladder.discount ladder_discount,
+        full_re.id full_id,
+        full_re.full_price full_full_price,
+        full_re.reduce_price full_reduce_price
+        FROM
+        pms_product p
+        LEFT JOIN pms_sku_stock sku ON p.id = sku.product_id
+        LEFT JOIN pms_product_ladder ladder ON p.id = ladder.product_id
+        LEFT JOIN pms_product_full_reduction full_re ON p.id = full_re.product_id
+        WHERE
+        p.id IN
+        <foreach collection="ids" open="(" close=")" item="id" separator=",">
+            #{id}
+        </foreach>
+    </select>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, brand_id, product_category_id, feight_template_id, product_attribute_category_id, name, pic, product_sn, delete_status, publish_status, new_status, recommand_status, verify_status, sort, sale, price, promotion_price, gift_growth, gift_point, use_point_limit, sub_title, description, original_price, stock, low_stock, unit, weight, preview_status, service_ids, keywords, note, album_pics, detail_title, detail_desc, detail_html, detail_mobile_html, promotion_start_time, promotion_end_time, promotion_per_limit, promotion_type, brand_name, product_category_name, supply_id, create_time, school_id
+    </sql>
+
+</mapper>

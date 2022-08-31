@@ -1,0 +1,71 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${mall.datasource.ip}:3306/mallcloud?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: ${mall.datasource.username}
+    password: ${mall.datasource.password}
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.mallplus.goods.entity
+  global-config:
+    db-config:
+      id-type: auto
+
+mall:
+  swagger:
+    enabled: true
+    title: 商品中心
+    description: 商品中心接口文档
+    version: 1.0
+    base-package: com.mallplus.goods.controller
+  cache-manager:
+    configs:
+      - key: menu
+        second: 600
+      - key: user
+        second: 1800
+aliyun:
+  oss:
+    accessKeyId: 5Jii89BFukxmun5j
+    accessKeySecret: JvE9FcILlHu5gClmAJr89ZkEv00l9s
+    bucketName: yjlive160322
+    callback: http://localhost:8080/aliyun/oss/callback
+    dir:
+      prefix: mall/images/
+    endpoint: oss-cn-beijing.aliyuncs.com
+    maxSize: 10
+    policy:
+      expire: 300
+oss:
+  aliyun:
+    defalut:
+      accessKeyId: 5Jii89BFukxmun5j
+      accessKeySecret: JvE9FcILlHu5gClmAJr89ZkEv00l9s
+      bucketName: yjlive160322
+      endPoint: oss-cn-beijing.aliyuncs.com
+      prefix: web
+      styleName: ''
+    domain: http://yjlive160322.oss-cn-beijing.aliyuncs.com/
+    first:
+      accessKeyId: 5Jii89BFukxmun5j
+      accessKeySecret: JvE9FcILlHu5gClmAJr89ZkEv00l9s
+      bucketName: yjlive160322
+      endPoint: oss-cn-beijing.aliyuncs.com
+      prefix: web
+      styleName: ''
+    second:
+      accessKeyId: ʡ��...
+      accessKeySecret: ʡ��...
+      bucketName: peterjava
+      endPoint: oss-cn-beijing.aliyuncs.com
+      prefix: user
+      styleName: ''
+  type: 1
+qiniu:
+  accessKey: AMJ_CEvgX1eUYtSwC1ioo_WnmR73ufqYYmwrrPDV
+  basePath: http://p0bt2oaom.bkt.clouddn.com/
+  bucketName: j5shop
+  max-size: 15
+  secretKey: 1iUDYRKdibiVP-WZLrGoErtdWWCqYWXjKUbQtAYQ

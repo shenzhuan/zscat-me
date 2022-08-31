@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.goods.mapper.PmsCommentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.pms.PmsComment">
+        <id column="id" property="id" />
+        <result column="product_id" property="productId" />
+        <result column="member_nick_name" property="memberNickName" />
+        <result column="product_name" property="productName" />
+        <result column="star" property="star" />
+        <result column="member_ip" property="memberIp" />
+        <result column="create_time" property="createTime" />
+        <result column="show_status" property="showStatus" />
+        <result column="product_attribute" property="productAttribute" />
+        <result column="collect_couont" property="collectCouont" />
+        <result column="read_count" property="readCount" />
+        <result column="content" property="content" />
+        <result column="pics" property="pics" />
+        <result column="member_icon" property="memberIcon" />
+        <result column="replay_count" property="replayCount" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_id, member_nick_name, product_name, star, member_ip, create_time, show_status, product_attribute, collect_couont, read_count, content, pics, member_icon, replay_count
+    </sql>
+
+</mapper>

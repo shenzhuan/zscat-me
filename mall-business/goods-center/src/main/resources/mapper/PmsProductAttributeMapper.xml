@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.goods.mapper.PmsProductAttributeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.pms.PmsProductAttribute">
+        <id column="id" property="id" />
+        <result column="product_attribute_category_id" property="productAttributeCategoryId" />
+        <result column="name" property="name" />
+        <result column="select_type" property="selectType" />
+        <result column="input_type" property="inputType" />
+        <result column="input_list" property="inputList" />
+        <result column="sort" property="sort" />
+        <result column="filter_type" property="filterType" />
+        <result column="search_type" property="searchType" />
+        <result column="related_status" property="relatedStatus" />
+        <result column="hand_add_status" property="handAddStatus" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_attribute_category_id, name, select_type, input_type, input_list, sort, filter_type, search_type, related_status, hand_add_status, type
+    </sql>
+
+    <select id="getProductAttrInfo" resultType="com.mallplus.goods.vo.ProductAttrInfo">
+        SELECT
+        pa.id attributeId,
+        pac.id attributeCategoryId
+        FROM
+        pms_product_category_attribute_relation pcar
+        LEFT JOIN pms_product_attribute pa ON pa.id = pcar.product_attribute_id
+        LEFT JOIN pms_product_attribute_category pac ON pa.product_attribute_category_id = pac.id
+        WHERE
+        pcar.product_category_id = #{productCategoryId}
+    </select>
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.goods.mapper.PmsCommentReplayMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.pms.PmsCommentReplay">
+        <id column="id" property="id" />
+        <result column="comment_id" property="commentId" />
+        <result column="member_nick_name" property="memberNickName" />
+        <result column="member_icon" property="memberIcon" />
+        <result column="content" property="content" />
+        <result column="create_time" property="createTime" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, comment_id, member_nick_name, member_icon, content, create_time, type
+    </sql>
+
+</mapper>

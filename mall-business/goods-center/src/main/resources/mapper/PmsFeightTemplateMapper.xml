@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.goods.mapper.PmsFeightTemplateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.pms.PmsFeightTemplate">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="charge_type" property="chargeType" />
+        <result column="first_weight" property="firstWeight" />
+        <result column="first_fee" property="firstFee" />
+        <result column="continue_weight" property="continueWeight" />
+        <result column="continme_fee" property="continmeFee" />
+        <result column="dest" property="dest" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, charge_type, first_weight, first_fee, continue_weight, continme_fee, dest
+    </sql>
+
+</mapper>

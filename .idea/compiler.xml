@@ -39,46 +39,5 @@
         <module name="mall-db-spring-boot-starter" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="cms-center" target="1.8" />
-      <module name="code-generator" target="1.8" />
-      <module name="file-center" target="1.8" />
-      <module name="goods-center" target="1.8" />
-      <module name="job-admin" target="1.7" />
-      <module name="job-core" target="1.7" />
-      <module name="job-executor-samples" target="1.7" />
-      <module name="log-center" target="1.8" />
-      <module name="mall-auth-client-spring-boot-starter" target="1.8" />
-      <module name="mall-business" target="1.8" />
-      <module name="mall-common-spring-boot-starter" target="1.8" />
-      <module name="mall-commons" target="1.8" />
-      <module name="mall-config" target="1.8" />
-      <module name="mall-db-spring-boot-starter" target="1.8" />
-      <module name="mall-demo" target="1.8" />
-      <module name="mall-gateway" target="1.8" />
-      <module name="mall-job" target="1.7" />
-      <module name="mall-log-spring-boot-starter" target="1.8" />
-      <module name="mall-monitor" target="1.8" />
-      <module name="mall-pay-spring-boot-starter" target="1.8" />
-      <module name="mall-redis-spring-boot-starter" target="1.8" />
-      <module name="mall-ribbon-spring-boot-starter" target="1.8" />
-      <module name="mall-sentinel-spring-boot-starter" target="1.8" />
-      <module name="mall-swagger2-spring-boot-starter" target="1.8" />
-      <module name="mall-transaction" target="1.8" />
-      <module name="mall-uaa" target="1.8" />
-      <module name="marking-center" target="1.8" />
-      <module name="member-center" target="1.8" />
-      <module name="order-center" target="1.8" />
-      <module name="sc-admin" target="1.8" />
-      <module name="sharding-jdbc-demo" target="1.8" />
-      <module name="txlcn-demo" target="1.8" />
-      <module name="txlcn-demo-common" target="1.8" />
-      <module name="txlcn-demo-spring-service-a" target="1.8" />
-      <module name="txlcn-demo-spring-service-b" target="1.8" />
-      <module name="txlcn-demo-spring-service-c" target="1.8" />
-      <module name="txlcn-tm" target="1.8" />
-      <module name="user-center" target="1.8" />
-      <module name="zuul-gateway" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

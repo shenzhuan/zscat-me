@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.goods.mapper.PmsProductOperateLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.pms.PmsProductOperateLog">
+        <id column="id" property="id" />
+        <result column="product_id" property="productId" />
+        <result column="price_old" property="priceOld" />
+        <result column="price_new" property="priceNew" />
+        <result column="sale_price_old" property="salePriceOld" />
+        <result column="sale_price_new" property="salePriceNew" />
+        <result column="gift_point_old" property="giftPointOld" />
+        <result column="gift_point_new" property="giftPointNew" />
+        <result column="use_point_limit_old" property="usePointLimitOld" />
+        <result column="use_point_limit_new" property="usePointLimitNew" />
+        <result column="operate_man" property="operateMan" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_id, price_old, price_new, sale_price_old, sale_price_new, gift_point_old, gift_point_new, use_point_limit_old, use_point_limit_new, operate_man, create_time
+    </sql>
+
+</mapper>

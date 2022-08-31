@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.goods.mapper.PmsProductConsultMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.pms.PmsProductConsult">
+        <id column="id" property="id" />
+        <result column="goods_id" property="goodsId" />
+        <result column="goods_name" property="goodsName" />
+        <result column="member_id" property="memberId" />
+        <result column="member_name" property="memberName" />
+        <result column="store_id" property="storeId" />
+        <result column="email" property="email" />
+        <result column="consult_content" property="consultContent" />
+        <result column="consult_addtime" property="consultAddtime" />
+        <result column="consult_reply" property="consultReply" />
+        <result column="consult_reply_time" property="consultReplyTime" />
+        <result column="isanonymous" property="isanonymous" />
+        <result column="is_del" property="isDel" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods_id, goods_name, member_id, member_name, store_id, email, consult_content, consult_addtime, consult_reply, consult_reply_time, isanonymous, is_del
+    </sql>
+
+</mapper>
