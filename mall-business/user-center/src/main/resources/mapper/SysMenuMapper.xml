@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.user.mapper.SysMenuMapper">
+
+    <select id="listMenuByUserId" resultType="com.mallplus.common.model.SysPermission">
+      select distinct
+        m.id , pid, name, uri,
+        `value`,`type`,icon,sort,create_time
+        from sys_permission m
+        left
+        join sys_role_permission rm on m.id = rm.permission_id left join
+        sys_role_user ur
+        on rm.role_id =ur.role_id where ur.user_id =  #{id}
+        and
+        m.type in(0,1) and m.status=1
+        order by
+        m.sort
+
+    </select>
+
+    <select id="listPermissByUserId" resultType="com.mallplus.common.model.SysPermission">
+        select distinct
+        m.id , pid, name, uri,
+        `value`,`type`,icon,sort,create_time
+        from sys_permission m
+        left
+        join sys_role_permission rm on m.id = rm.permission_id left join
+        sys_role_user ur
+        on rm.role_id =ur.role_id where ur.user_id =  #{id}
+       and m.status=1
+        order by
+        m.sort
+
+    </select>
+
+</mapper>

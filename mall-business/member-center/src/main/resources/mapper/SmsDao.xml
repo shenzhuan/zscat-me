@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.member.mapper.SmsDao">
+
+	<update id="update">
+		update sys_sms
+		<set>
+			<if test="signName != null and signName != ''">
+				signName = #{signName,jdbcType=VARCHAR},
+			</if>
+			<if test="templateCode != null and templateCode != ''">
+				templateCode = #{templateCode,jdbcType=VARCHAR},
+			</if>
+			<if test="bizId != null and bizId != ''">
+				bizId = #{bizId,jdbcType=VARCHAR},
+			</if>
+			<if test="code != null and code != ''">
+				code = #{code,jdbcType=VARCHAR},
+			</if>
+			<if test="message != null and message != ''">
+				message = #{message,jdbcType=VARCHAR},
+			</if>
+			<if test="updateTime != null">
+				updateTime = #{updateTime,jdbcType=TIMESTAMP},
+			</if>
+		</set>
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	
+	<sql id="where">
+		<where>
+			<if test="phone != null and phone != ''">
+				and t.phone = #{phone}
+			</if>
+			 <if test="searchKey != null and searchKey != ''">
+                and t.message like concat('%', #{searchKey}, '%')
+            </if>
+		</where>
+	</sql>
+	<select id="count" resultType="int">
+		select count(*) from sys_sms t
+		<include refid="where" />
+	</select>
+
+	<select id="findList" resultType="com.mallplus.common.entity.ums.Sms">
+		select * from sys_sms t
+		<include refid="where" />
+		order by t.createTime desc
+	</select>
+</mapper>

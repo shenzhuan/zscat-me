@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.order.mapper.OmsOrderSettingMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.oms.OmsOrderSetting">
+        <id column="id" property="id" />
+        <result column="flash_order_overtime" property="flashOrderOvertime" />
+        <result column="normal_order_overtime" property="normalOrderOvertime" />
+        <result column="confirm_overtime" property="confirmOvertime" />
+        <result column="finish_overtime" property="finishOvertime" />
+        <result column="comment_overtime" property="commentOvertime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, flash_order_overtime, normal_order_overtime, confirm_overtime, finish_overtime, comment_overtime
+    </sql>
+
+</mapper>

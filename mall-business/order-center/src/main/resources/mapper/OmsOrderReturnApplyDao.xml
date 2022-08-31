@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.order.mapper.OmsOrderReturnApplyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.oms.OmsOrderReturnApply">
+        <id column="id" property="id" />
+        <result column="order_id" property="orderId" />
+        <result column="company_address_id" property="companyAddressId" />
+        <result column="product_id" property="productId" />
+        <result column="order_sn" property="orderSn" />
+        <result column="create_time" property="createTime" />
+        <result column="member_username" property="memberUsername" />
+        <result column="return_amount" property="returnAmount" />
+        <result column="return_name" property="returnName" />
+        <result column="return_phone" property="returnPhone" />
+        <result column="status" property="status" />
+        <result column="handle_time" property="handleTime" />
+        <result column="product_pic" property="productPic" />
+        <result column="product_name" property="productName" />
+        <result column="product_brand" property="productBrand" />
+        <result column="product_attr" property="productAttr" />
+        <result column="product_count" property="productCount" />
+        <result column="product_price" property="productPrice" />
+        <result column="product_real_price" property="productRealPrice" />
+        <result column="reason" property="reason" />
+        <result column="description" property="description" />
+        <result column="proof_pics" property="proofPics" />
+        <result column="handle_note" property="handleNote" />
+        <result column="handle_man" property="handleMan" />
+        <result column="receive_man" property="receiveMan" />
+        <result column="receive_time" property="receiveTime" />
+        <result column="receive_note" property="receiveNote" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, order_id, company_address_id, product_id, order_sn, create_time, member_username, return_amount, return_name, return_phone, status, handle_time, product_pic, product_name, product_brand, product_attr, product_count, product_price, product_real_price, reason, description, proof_pics, handle_note, handle_man, receive_man, receive_time, receive_note
+    </sql>
+
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.member.mapper.UmsMemberLevelMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.ums.UmsMemberLevel">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="growth_point" property="growthPoint" />
+        <result column="default_status" property="defaultStatus" />
+        <result column="free_freight_point" property="freeFreightPoint" />
+        <result column="comment_growth_point" property="commentGrowthPoint" />
+        <result column="priviledge_free_freight" property="priviledgeFreeFreight" />
+        <result column="priviledge_sign_in" property="priviledgeSignIn" />
+        <result column="priviledge_comment" property="priviledgeComment" />
+        <result column="priviledge_promotion" property="priviledgePromotion" />
+        <result column="priviledge_member_price" property="priviledgeMemberPrice" />
+        <result column="priviledge_birthday" property="priviledgeBirthday" />
+        <result column="articlecount" property="articlecount" />
+        <result column="goodscount" property="goodscount" />
+        <result column="price" property="price" />
+        <result column="note" property="note" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, growth_point, default_status, free_freight_point, comment_growth_point, priviledge_free_freight, priviledge_sign_in, priviledge_comment, priviledge_promotion, priviledge_member_price, priviledge_birthday, articlecount, goodscount, price, note
+    </sql>
+
+</mapper>

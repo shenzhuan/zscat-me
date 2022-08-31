@@ -1,0 +1,25 @@
+server:
+  port: 8000
+
+mall:
+  nacos:
+    server-addr: localhost:8848
+
+spring:
+  application:
+    name: uaa-server
+  cloud:
+    nacos:
+      config:
+        server-addr: ${mall.nacos.server-addr}
+        file-extension: yml
+        shared-dataids: common.yml
+        refreshable-dataids: common.yml
+      discovery:
+        server-addr: ${mall.nacos.server-addr}
+
+encrypt:
+  key-store:
+    location: classpath:zlt.jks
+    secret: zlt!@#$
+    alias: zlt

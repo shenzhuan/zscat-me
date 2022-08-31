@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.marking.mapper.SmsFlashPromotionLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.sms.SmsFlashPromotionLog">
+        <id column="id" property="id" />
+        <result column="member_id" property="memberId" />
+        <result column="product_id" property="productId" />
+        <result column="member_phone" property="memberPhone" />
+        <result column="product_name" property="productName" />
+        <result column="subscribe_time" property="subscribeTime" />
+        <result column="send_time" property="sendTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, member_id, product_id, member_phone, product_name, subscribe_time, send_time
+    </sql>
+
+</mapper>

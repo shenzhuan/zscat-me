@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.order.mapper.OmsCompanyAddressMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.oms.OmsCompanyAddress">
+        <id column="id" property="id" />
+        <result column="address_name" property="addressName" />
+        <result column="send_status" property="sendStatus" />
+        <result column="receive_status" property="receiveStatus" />
+        <result column="name" property="name" />
+        <result column="phone" property="phone" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="region" property="region" />
+        <result column="detail_address" property="detailAddress" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, address_name, send_status, receive_status, name, phone, province, city, region, detail_address
+    </sql>
+
+</mapper>

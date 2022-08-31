@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.marking.mapper.SmsUserRedPacketMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.sms.SmsUserRedPacket">
+        <id column="id" property="id" />
+        <result column="red_packet_id" property="redPacketId" />
+        <result column="admin_id" property="adminId" />
+        <result column="user_id" property="userId" />
+        <result column="amount" property="amount" />
+        <result column="grab_time" property="grabTime" />
+        <result column="note" property="note" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, red_packet_id, admin_id, user_id, amount, grab_time, note
+    </sql>
+    <select id="countOne" resultType="int">
+        select  count(*) from sms_user_red_packet
+        where red_packet_id = #{redPacketId} and user_id =${userId}
+    </select>
+
+    <select id="listUserRedOne" resultMap="BaseResultMap">
+        select  <include refid="Base_Column_List"/> from sms_user_red_packet
+        where red_packet_id = #{value} and user_id is null limit 1
+    </select>
+
+</mapper>

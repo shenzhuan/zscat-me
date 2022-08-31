@@ -1,0 +1,159 @@
+<template> 
+    <el-card class="form-container" shadow="never">
+        <el-form :model="${classname}" :rules="rules" ref="${classname}From" label-width="150px">
+            #foreach($column in $columns)
+                <el-form-item label="${column.comments}：" prop="${column.attrname}">
+                    <el-input v-model="${classname}.${column.attrname}"></el-input>
+                </el-form-item>
+            #end
+            <el-form-item>
+                <el-button type="primary" @click="onSubmit('${classname}From')">提交</el-button>
+                <el-button v-if="!isEdit" @click="resetForm('${classname}From')">重置</el-button>
+            </el-form-item>
+        </el-form>
+    </el-card>
+</template>
+<script>
+    import {create${className}, get${className}, update${className}} from '@/api/${module}/${classname}'
+    import SingleUpload from '@/components/Upload/singleUpload'
+    import {formatDate} from '@/utils/date';
+
+    const default${className}= {
+        name: ''
+    };
+    export default {
+        name: '${className}Detail',
+        components: {SingleUpload},
+        props: {
+            isEdit: {
+                type: Boolean,
+                default: false
+            }
+        },
+        data() {
+            return {
+            ${classname}:
+            Object.assign({},
+        default${className}),
+            rules: {
+                name: [
+                    {required: true, message: '请输入品牌名称', trigger: 'blur'},
+                    {min: 2, max: 140, message: '长度在 2 到 140 个字符', trigger: 'blur'}
+                ],
+                        logo
+            :
+                [
+                    {required: true, message: '请输入品牌logo', trigger: 'blur'}
+                ],
+                        sort
+            :
+                [
+                    {type: 'number', message: '排序必须为数字'}
+                ],
+            }
+        }
+        },
+        created() {
+            if (this.isEdit) {
+                get${className}(this.$route.query.id).then(response => {
+                    this.${classname} = response.data;
+            })
+                ;
+            } else {
+                this.${classname} = Object.assign({},
+            default${className})
+                ;
+            }
+        },
+        methods: {
+            onSubmit(formName) {
+                this.qwertyrefs[formName].validate((valid) => {
+                    if(valid) {
+                        this.$confirm('是否提交数据', '提示', {
+                            confirmButtonText: '确定',
+                            cancelButtonText: '取消',
+                            type: 'warning'
+                        }).then(() => {
+                            if(this.isEdit
+                    )
+                        {
+                            update${className}(this.$route.query.id, this.${classname}).then(response => {
+                                if(response.code == 200
+                        )
+                            {
+                                this.qwertyrefs[formName].resetFields();
+                                this.$message({
+                                    message: '修改成功',
+                                    type: 'success',
+                                    duration: 1000
+                                });
+                                this.$router.back();
+                            }
+                        else
+                            {
+                                this.$message({
+                                    message: response.msg,
+                                    type: 'error',
+                                    duration: 1000
+                                });
+                            }
+
+                        })
+                            ;
+                        }
+                    else
+                        {
+                            create${className}(this.${classname}).then(response => {
+                                if(response.code == 200
+                        )
+                            {
+                                this.qwertyrefs[formName].resetFields();
+                                this.${classname} = Object.assign({},
+                            default${className})
+                                ;
+                                this.$message({
+                                    message: '提交成功',
+                                    type: 'success',
+                                    duration: 1000
+                                });
+                                this.$router.back();
+                            }
+                        else
+                            {
+                                this.$message({
+                                    message: response.msg,
+                                    type: 'error',
+                                    duration: 1000
+                                });
+                            }
+
+                        })
+                            ;
+                        }
+                    })
+                        ;
+
+                    } else {
+                        this.$message({
+                        message: '验证失败',
+                        type: 'error',
+                        duration: 1000
+                    });
+                return false;
+            }
+            })
+                ;
+            },
+            resetForm(formName) {
+                this.qwertyrefs[formName].resetFields();
+                this.${classname} = Object.assign({},
+            default${className})
+                ;
+            }
+        }
+    }
+</script>
+<style>
+</style>
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.member.mapper.UmsMemberRuleSettingMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.ums.UmsMemberRuleSetting">
+        <id column="id" property="id" />
+        <result column="continue_sign_day" property="continueSignDay" />
+        <result column="continue_sign_point" property="continueSignPoint" />
+        <result column="consume_per_point" property="consumePerPoint" />
+        <result column="low_order_amount" property="lowOrderAmount" />
+        <result column="max_point_per_order" property="maxPointPerOrder" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, continue_sign_day, continue_sign_point, consume_per_point, low_order_amount, max_point_per_order, type
+    </sql>
+
+</mapper>

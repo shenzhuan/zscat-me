@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${mall.datasource.ip}:3306/mallcloud?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull
+    username: ${mall.datasource.username}
+    password: ${mall.datasource.password}
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.mallplus.sms.entity
+  global-config:
+    db-config:
+      id-type: auto
+
+mall:
+  swagger:
+    enabled: true
+    title: 营销中心
+    description: 营销中心接口文档
+    version: 1.0
+    base-package: com.mallplus.sms.controller
+  cache-manager:
+    configs:
+      - key: menu
+        second: 600
+      - key: user
+        second: 1800

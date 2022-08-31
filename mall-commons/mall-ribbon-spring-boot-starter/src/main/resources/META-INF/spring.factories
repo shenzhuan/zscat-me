@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.mallplus.common.ribbon.RibbonAutoConfigure,\
+com.mallplus.common.ribbon.FeignAutoConfigure,\
+com.mallplus.common.ribbon.RestTemplateAutoConfigure

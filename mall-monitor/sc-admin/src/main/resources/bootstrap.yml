@@ -1,0 +1,26 @@
+server:
+  port: 6500
+
+mall:
+  nacos:
+    server-addr: localhost:8848
+
+spring:
+  application:
+    name: sc-admin
+  security:
+    user:
+      name: 'admin'
+      password: 'admin'
+  cloud:
+    nacos:
+      config:
+        server-addr: ${mall.nacos.server-addr}
+        file-extension: yml
+        shared-dataids: common.yml
+        refreshable-dataids: common.yml
+      discovery:
+        server-addr: ${mall.nacos.server-addr}
+        metadata:
+          user.name: ${spring.security.user.name}
+          user.password: ${spring.security.user.password}

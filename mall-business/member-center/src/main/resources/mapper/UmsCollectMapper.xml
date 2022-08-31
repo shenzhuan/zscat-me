@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.member.mapper.UmsCollectMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.ums.UmsCollect">
+        <id column="id" property="id" />
+        <result column="member_id" property="memberId" />
+        <result column="goods_id" property="goodsId" />
+        <result column="goods_name" property="goodsName" />
+        <result column="goods_pic" property="goodsPic" />
+        <result column="goods_price" property="goodsPrice" />
+        <result column="type" property="type" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, member_id, goods_id, goods_name, goods_pic, goods_price, type, create_time
+    </sql>
+
+</mapper>

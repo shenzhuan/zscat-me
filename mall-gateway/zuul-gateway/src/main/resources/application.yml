@@ -1,0 +1,165 @@
+spring:
+  # sentinel动态配置规则
+  cloud:
+    sentinel:
+      datasource:
+        # 限流
+        ds1:
+          nacos:
+            server-addr: ${mall.nacos.server-addr}
+            dataId: sentinel-flow
+            groupId: DEFAULT_GROUP
+            rule-type: flow
+        # 熔断
+        ds2:
+          nacos:
+            server-addr: ${mall.nacos.server-addr}
+            dataId: sentinel-degrade
+            groupId: DEFAULT_GROUP
+            rule-type: degrade
+        # 系统负载保护
+        ds4:
+          nacos:
+            server-addr: ${mall.nacos.server-addr}
+            dataId: sentinel-system
+            groupId: DEFAULT_GROUP
+            rule-type: system
+
+mall:
+  oauth2:
+    token:
+      store:
+        type: resJwt
+  security:
+    ignore:
+      # 忽略认证的地址
+      httpUrls: >
+        /api-uaa/**,
+        /api-user/users-anon/**,
+        /login.html,
+        /user/login,
+        /api/applet/**,
+        /api-member/api/applet/**
+      # 配置只认证登录，登录后所有角色都能访问的url
+      menusPaths: /api-user/menus/current
+    auth:
+      # 配置必需认证的url
+      httpUrls: /api-uaa/clients/**
+      #是否开启url级别权限
+      urlEnabled: false
+
+ribbon:
+   ReadTimeout: 60000
+   ConnectTimeout: 60000
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  ribbon-isolation-strategy: thread
+  ribbon:
+    eager-load:
+      enabled: true
+    threadPool:
+      useSeparateThreadPools: true
+      threadPoolKeyPrefix: api-gateway
+  #关闭重试
+  retryable: false
+  #/oauth/token需要请求头处理
+  sensitive-headers:
+  ignored-headers: Access-Control-Allow-Credentials,Access-Control-Allow-Origin,Access-Control-Allow-Methods
+  add-host-header: true
+  routes:
+    auth:
+      path: /api-uaa/**
+      service-id: uaa-server
+      strip-prefix: true
+      custom-sensitive-headers: true
+    auth-login-page:
+      path: /login.html
+      service-id: uaa-server
+      strip-prefix: true
+      custom-sensitive-headers: true
+    auth-login-process:
+      path: /user/login
+      service-id: uaa-server
+      strip-prefix: true
+      custom-sensitive-headers: true
+    auth-login-token:
+      path: /oauth/token
+      service-id: uaa-server
+      strip-prefix: true
+      custom-sensitive-headers: true
+    auth-login-authorize:
+      path: /oauth/authorize
+      service-id: uaa-server
+      strip-prefix: true
+      custom-sensitive-headers: true
+    auth-check-process:
+      path: /oauth/check_token
+      service-id: uaa-server
+      strip-prefix: true
+      custom-sensitive-headers: true
+    user:
+      path: /api-user/**
+      service-id: user-center
+      strip-prefix: true
+      custom-sensitive-headers: true
+    file:
+      path: /api-file/**
+      service-id: file-center
+      strip-prefix: true
+    log:
+      path: /api-log/**
+      service-id: log-center
+      strip-prefix: true
+    generator:
+      path: /api-generator/**
+      service-id: code-generator
+      strip-prefix: true
+    member:
+      path: /api-member/**
+      service-id: ums-center
+      strip-prefix: true
+      custom-sensitive-headers: true
+    goods:
+      path: /api-goods/**
+      service-id: goods-center
+      strip-prefix: true
+      custom-sensitive-headers: true
+    order:
+      path: /api-order/**
+      service-id: order-center
+      strip-prefix: true
+      custom-sensitive-headers: true
+    marking:
+      path: /api-sms/**
+      service-id: sms-center
+      strip-prefix: true
+      custom-sensitive-headers: true
+    cms:
+      path: /api-cms/**
+      service-id: cms-center
+      strip-prefix: true
+      custom-sensitive-headers: true
+  ssl-hostname-validation-enabled: false
+
+hystrix:
+  threadpool:
+    default:
+      coreSize: 100
+      maximumSize: 2000
+      allowMaximumSizeToDivergeFromCoreSize: true
+      maxQueueSize: -1
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+swagger:
+  butler:
+    api-docs-path:  v2/api-docs
+    swagger-version: 2.0
+    auto-generate-from-zuul-routes: true
+    generate-routes: user,file,goods-center,ums-center,order-center,sms-center,cms-center

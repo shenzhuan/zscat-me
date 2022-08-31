@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.marking.mapper.SmsGroupMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.sms.SmsGroup">
+        <id column="id" property="id" />
+        <result column="goods_id" property="goodsId" />
+        <result column="goods_name" property="goodsName" />
+        <result column="origin_price" property="originPrice" />
+        <result column="group_price" property="groupPrice" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="hours" property="hours" />
+        <result column="peoples" property="peoples" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="max_people" property="maxPeople" />
+        <result column="limit_goods" property="limitGoods" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods_id, goods_name, origin_price, group_price, start_time, end_time, hours, peoples, status, create_time, max_people, limit_goods
+    </sql>
+
+</mapper>

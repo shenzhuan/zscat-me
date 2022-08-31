@@ -1,0 +1,16 @@
+<template> 
+    <${classname}-detail :is-edit='false'>
+</${classname}-detail>
+</template>
+<script>
+    import ${className}Detail from './components/${className}Detail'
+
+    export default {
+        name: 'add${className}',
+        components: {${className}Detail}
+    }
+</script>
+<style>
+</style>
+
+

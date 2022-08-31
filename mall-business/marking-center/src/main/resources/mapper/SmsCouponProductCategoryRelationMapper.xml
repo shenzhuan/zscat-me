@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.marking.mapper.SmsCouponProductCategoryRelationMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.sms.SmsCouponProductCategoryRelation">
+        <id column="id" property="id" />
+        <result column="coupon_id" property="couponId" />
+        <result column="product_category_id" property="productCategoryId" />
+        <result column="product_category_name" property="productCategoryName" />
+        <result column="parent_category_name" property="parentCategoryName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, coupon_id, product_category_id, product_category_name, parent_category_name
+    </sql>
+
+</mapper>

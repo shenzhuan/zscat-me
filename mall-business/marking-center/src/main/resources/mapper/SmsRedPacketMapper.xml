@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.marking.mapper.SmsRedPacketMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.sms.SmsRedPacket">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="amount" property="amount" />
+        <result column="send_date" property="sendDate" />
+        <result column="total" property="total" />
+        <result column="unit_amount" property="unitAmount" />
+        <result column="stock" property="stock" />
+        <result column="type" property="type" />
+        <result column="note" property="note" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, amount, send_date, total, unit_amount, stock, type, note
+    </sql>
+
+</mapper>

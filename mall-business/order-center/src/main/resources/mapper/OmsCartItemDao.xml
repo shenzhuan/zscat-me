@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.order.mapper.OmsCartItemMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.oms.OmsCartItem">
+        <id column="id" property="id" />
+        <result column="product_id" property="productId" />
+        <result column="product_sku_id" property="productSkuId" />
+        <result column="member_id" property="memberId" />
+        <result column="quantity" property="quantity" />
+        <result column="price" property="price" />
+        <result column="sp1" property="sp1" />
+        <result column="sp2" property="sp2" />
+        <result column="sp3" property="sp3" />
+        <result column="product_pic" property="productPic" />
+        <result column="product_name" property="productName" />
+        <result column="product_sub_title" property="productSubTitle" />
+        <result column="product_sku_code" property="productSkuCode" />
+        <result column="member_nickname" property="memberNickname" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="delete_status" property="deleteStatus" />
+        <result column="product_category_id" property="productCategoryId" />
+        <result column="product_brand" property="productBrand" />
+        <result column="product_sn" property="productSn" />
+        <result column="product_attr" property="productAttr" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, product_id, product_sku_id, member_id, quantity, price, sp1, sp2, sp3, product_pic, product_name, product_sub_title, product_sku_code, member_nickname, create_date, modify_date, delete_status, product_category_id, product_brand, product_sn, product_attr
+    </sql>
+
+</mapper>

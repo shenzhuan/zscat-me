@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.member.mapper.SysSchoolMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.ums.SysSchool">
+        <id column="id" property="id" />
+        <result column="longitude" property="longitude" />
+        <result column="latitude" property="latitude" />
+        <result column="name" property="name" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="region" property="region" />
+        <result column="address" property="address" />
+        <result column="hot" property="hot" />
+        <result column="is211" property="is211" />
+        <result column="is985" property="is985" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, longitude, latitude, name, province, city, region, address, hot, is211, is985
+    </sql>
+
+</mapper>

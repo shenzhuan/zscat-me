@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.marking.mapper.SmsCouponHistoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.sms.SmsCouponHistory">
+        <id column="id" property="id" />
+        <result column="coupon_id" property="couponId" />
+        <result column="member_id" property="memberId" />
+        <result column="coupon_code" property="couponCode" />
+        <result column="member_nickname" property="memberNickname" />
+        <result column="get_type" property="getType" />
+        <result column="create_time" property="createTime" />
+        <result column="use_status" property="useStatus" />
+        <result column="use_time" property="useTime" />
+        <result column="order_id" property="orderId" />
+        <result column="order_sn" property="orderSn" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="note" property="note" />
+    </resultMap>
+
+    <resultMap id="couponHistoryDetailMap" type="com.mallplus.common.vo.SmsCouponHistoryDetail"
+               extends="BaseResultMap">
+        <association property="coupon" resultMap="com.mallplus.marking.mapper.SmsCouponMapper.BaseResultMap"
+                     columnPrefix="c_">
+        </association>
+        <collection property="productRelationList" columnPrefix="cpr_"
+                    resultMap="com.mallplus.marking.mapper.SmsCouponProductRelationMapper.BaseResultMap">
+        </collection>
+        <collection property="categoryRelationList" columnPrefix="cpcr_"
+                    resultMap="com.mallplus.marking.mapper.SmsCouponProductCategoryRelationMapper.BaseResultMap">
+        </collection>
+    </resultMap>
+    <select id="getDetailList" resultMap="couponHistoryDetailMap">
+        SELECT
+        ch.*,
+        c.id c_id,
+        c.name c_name,
+        c.amount c_amount,
+        c.min_point c_min_point,
+        c.platform c_platform,
+        c.start_time c_start_time,
+        c.end_time c_end_time,
+        c.note c_note,
+        c.use_type c_use_type,
+        c.type c_type,
+        cpr.id cpr_id,cpr.product_id cpr_product_id,
+        cpcr.id cpcr_id,cpcr.product_category_id cpcr_product_category_id
+        FROM
+        sms_coupon_history ch
+        LEFT JOIN sms_coupon c ON ch.coupon_id = c.id
+        LEFT JOIN sms_coupon_product_relation cpr ON cpr.coupon_id = c.id
+        LEFT JOIN sms_coupon_product_category_relation cpcr ON cpcr.coupon_id = c.id
+        WHERE ch.member_id = #{memberId}
+        AND ch.use_status = 0 and now() >c.start_time and c.end_time>now()
+    </select>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, coupon_id, member_id, coupon_code, member_nickname, get_type, create_time, use_status, use_time, order_id, order_sn, start_time, end_time, note
+    </sql>
+
+</mapper>

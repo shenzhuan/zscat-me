@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.member.mapper.UmsIntegrationConsumeSettingMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.ums.UmsIntegrationConsumeSetting">
+        <id column="id" property="id" />
+        <result column="deduction_per_amount" property="deductionPerAmount" />
+        <result column="max_percent_per_order" property="maxPercentPerOrder" />
+        <result column="use_unit" property="useUnit" />
+        <result column="coupon_status" property="couponStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, deduction_per_amount, max_percent_per_order, use_unit, coupon_status
+    </sql>
+
+</mapper>

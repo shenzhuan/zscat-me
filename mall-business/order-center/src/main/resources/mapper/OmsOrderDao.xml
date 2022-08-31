@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.order.mapper.OmsOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.oms.OmsOrder">
+        <id column="id" property="id" />
+        <result column="member_id" property="memberId" />
+        <result column="coupon_id" property="couponId" />
+        <result column="order_sn" property="orderSn" />
+        <result column="create_time" property="createTime" />
+        <result column="member_username" property="memberUsername" />
+        <result column="total_amount" property="totalAmount" />
+        <result column="pay_amount" property="payAmount" />
+        <result column="freight_amount" property="freightAmount" />
+        <result column="promotion_amount" property="promotionAmount" />
+        <result column="integration_amount" property="integrationAmount" />
+        <result column="coupon_amount" property="couponAmount" />
+        <result column="discount_amount" property="discountAmount" />
+        <result column="pay_type" property="payType" />
+        <result column="source_type" property="sourceType" />
+        <result column="status" property="status" />
+        <result column="order_type" property="orderType" />
+        <result column="delivery_company" property="deliveryCompany" />
+        <result column="delivery_sn" property="deliverySn" />
+        <result column="auto_confirm_day" property="autoConfirmDay" />
+        <result column="integration" property="integration" />
+        <result column="growth" property="growth" />
+        <result column="promotion_info" property="promotionInfo" />
+        <result column="bill_type" property="billType" />
+        <result column="bill_header" property="billHeader" />
+        <result column="bill_content" property="billContent" />
+        <result column="bill_receiver_phone" property="billReceiverPhone" />
+        <result column="bill_receiver_email" property="billReceiverEmail" />
+        <result column="receiver_name" property="receiverName" />
+        <result column="receiver_phone" property="receiverPhone" />
+        <result column="receiver_post_code" property="receiverPostCode" />
+        <result column="receiver_province" property="receiverProvince" />
+        <result column="receiver_city" property="receiverCity" />
+        <result column="receiver_region" property="receiverRegion" />
+        <result column="receiver_detail_address" property="receiverDetailAddress" />
+        <result column="note" property="note" />
+        <result column="confirm_status" property="confirmStatus" />
+        <result column="delete_status" property="deleteStatus" />
+        <result column="use_integration" property="useIntegration" />
+        <result column="payment_time" property="paymentTime" />
+        <result column="delivery_time" property="deliveryTime" />
+        <result column="receive_time" property="receiveTime" />
+        <result column="comment_time" property="commentTime" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="prepay_id" property="prepayId" />
+        <result column="supply_id" property="supplyId" />
+        <result column="goods_id" property="goodsId" />
+        <result column="goods_name" property="goodsName" />
+        <result column="school_id" property="schoolId" />
+    </resultMap>
+    <resultMap id="orderDetailMap" type="com.mallplus.order.vo.OmsOrderDetail"
+               extends="BaseResultMap">
+        <collection property="orderItemList" columnPrefix="ot_"
+                    resultMap="com.mallplus.order.mapper.OmsOrderItemMapper.BaseResultMap">
+        </collection>
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, member_id, coupon_id, order_sn, create_time, member_username, total_amount, pay_amount, freight_amount, promotion_amount, integration_amount, coupon_amount, discount_amount, pay_type, source_type, status, order_type, delivery_company, delivery_sn, auto_confirm_day, integration, growth, promotion_info, bill_type, bill_header, bill_content, bill_receiver_phone, bill_receiver_email, receiver_name, receiver_phone, receiver_post_code, receiver_province, receiver_city, receiver_region, receiver_detail_address, note, confirm_status, delete_status, use_integration, payment_time, delivery_time, receive_time, comment_time, modify_time, prepay_id, supply_id, goods_id, goods_name, school_id
+    </sql>
+    <select id="getTimeOutOrders" resultMap="orderDetailMap">
+        SELECT
+        o.id,
+        o.order_sn,
+        o.coupon_id,
+        o.integration,
+        o.member_id,
+        o.use_integration,
+        ot.id ot_id,
+        ot.product_name ot_product_name,
+        ot.product_sku_id ot_product_sku_id,
+        ot.product_sku_code ot_product_sku_code,
+        ot.product_quantity ot_product_quantity
+        FROM
+        oms_order o
+        LEFT JOIN oms_order_item ot ON o.id = ot.order_id
+        WHERE
+        o.status = 0
+        AND o.create_time &lt; date_add(NOW(), INTERVAL -#{minute} MINUTE);
+    </select>
+    <update id="delivery">
+        UPDATE oms_order
+        SET
+        delivery_sn = CASE id
+        <foreach collection="list" item="item">
+            WHEN #{item.orderId} THEN #{item.deliverySn}
+        </foreach>
+        END,
+        delivery_company = CASE id
+        <foreach collection="list" item="item">
+            WHEN #{item.orderId} THEN #{item.deliveryCompany}
+        </foreach>
+        END,
+        delivery_time = CASE id
+        <foreach collection="list" item="item">
+            WHEN #{item.orderId} THEN now()
+        </foreach>
+        END,
+        `status` = CASE id
+        <foreach collection="list" item="item">
+            WHEN #{item.orderId} THEN 3
+        </foreach>
+        END
+        WHERE
+        id IN
+        <foreach collection="list" item="item" separator="," open="(" close=")">
+            #{item.orderId}
+        </foreach>
+        AND `status` = 2
+    </update>
+    <update id="updateSkuStock">
+        UPDATE pms_sku_stock
+        SET
+        stock = CASE id
+        <foreach collection="itemList" item="item">
+            WHEN #{item.productSkuId} THEN stock - #{item.productQuantity}
+        </foreach>
+        END,
+        lock_stock = CASE id
+        <foreach collection="itemList" item="item">
+            WHEN #{item.productSkuId} THEN lock_stock - #{item.productQuantity}
+        </foreach>
+        END
+        WHERE
+        id IN
+        <foreach collection="itemList" item="item" separator="," open="(" close=")">
+            #{item.productSkuId}
+        </foreach>
+    </update>
+
+
+    <update id="updateOrderStatus">
+        update oms_order
+        set status=#{status}
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </update>
+    <update id="releaseSkuStockLock">
+        UPDATE pms_sku_stock
+        SET
+        lock_stock = CASE id
+        <foreach collection="itemList" item="item">
+            WHEN #{item.productSkuId} THEN lock_stock - #{item.productQuantity}
+        </foreach>
+        END
+        WHERE
+        id IN
+        <foreach collection="itemList" item="item" separator="," open="(" close=")">
+            #{item.productSkuId}
+        </foreach>
+    </update>
+</mapper>
