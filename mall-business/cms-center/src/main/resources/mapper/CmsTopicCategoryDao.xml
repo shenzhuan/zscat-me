@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.cms.mapper.CmsTopicCategoryMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.cms.CmsTopicCategory">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="icon" property="icon" />
+        <result column="subject_count" property="subjectCount" />
+        <result column="show_status" property="showStatus" />
+        <result column="sort" property="sort" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, icon, subject_count, show_status, sort
+    </sql>
+
+</mapper>

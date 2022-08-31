@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.cms.mapper.CmsMemberReportMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.cms.CmsMemberReport">
+        <result column="id" property="id" />
+        <result column="report_type" property="reportType" />
+        <result column="report_member_name" property="reportMemberName" />
+        <result column="create_time" property="createTime" />
+        <result column="report_object" property="reportObject" />
+        <result column="report_status" property="reportStatus" />
+        <result column="handle_status" property="handleStatus" />
+        <result column="note" property="note" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, report_type, report_member_name, create_time, report_object, report_status, handle_status, note
+    </sql>
+
+</mapper>

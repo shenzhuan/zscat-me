@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.cms.mapper.CmsEmployInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.cms.CmsEmployInfo">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="age" property="age" />
+        <result column="gender" property="gender" />
+        <result column="hobby" property="hobby" />
+        <result column="peoplenote" property="peoplenote" />
+        <result column="phone" property="phone" />
+        <result column="address" property="address" />
+        <result column="suggestion" property="suggestion" />
+        <result column="guide" property="guide" />
+        <result column="guide1" property="guide1" />
+        <result column="guide2" property="guide2" />
+        <result column="createtime" property="createtime" />
+        <result column="type" property="type" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, age, gender, hobby, peoplenote, phone, address, suggestion, guide, guide1, guide2, createtime, type
+    </sql>
+
+</mapper>

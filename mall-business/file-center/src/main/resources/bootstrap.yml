@@ -1,0 +1,19 @@
+server:
+  port: 5000
+
+mall:
+  nacos:
+    server-addr: localhost:8848
+
+spring:
+  application:
+    name: file-center
+  cloud:
+    nacos:
+      config:
+        server-addr: ${mall.nacos.server-addr}
+        file-extension: yml
+        shared-dataids: common.yml
+        refreshable-dataids: common.yml
+      discovery:
+        server-addr: ${mall.nacos.server-addr}

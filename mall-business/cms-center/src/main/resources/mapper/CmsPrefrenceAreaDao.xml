@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.cms.mapper.CmsPrefrenceAreaMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.cms.CmsPrefrenceArea">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="sub_title" property="subTitle" />
+        <result column="pic" property="pic" />
+        <result column="sort" property="sort" />
+        <result column="show_status" property="showStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, sub_title, pic, sort, show_status
+    </sql>
+
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mallplus.cms.mapper.CmsTopicMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mallplus.common.entity.cms.CmsTopic">
+        <id column="id" property="id" />
+        <result column="category_id" property="categoryId" />
+        <result column="name" property="name" />
+        <result column="create_time" property="createTime" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="attend_count" property="attendCount" />
+        <result column="attention_count" property="attentionCount" />
+        <result column="read_count" property="readCount" />
+        <result column="award_name" property="awardName" />
+        <result column="attend_type" property="attendType" />
+        <result column="content" property="content" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, category_id, name, create_time, start_time, end_time, attend_count, attention_count, read_count, award_name, attend_type, content
+    </sql>
+
+</mapper>
