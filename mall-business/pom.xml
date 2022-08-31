@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mall</groupId>
+        <artifactId>mallcloud</artifactId>
+        <version>1.5.0</version>
+    </parent>
+    <artifactId>mall-business</artifactId>
+    <description>业务中心</description>
+    <packaging>pom</packaging>
+    <modules>
+        <!-- 用户中心 -->
+        <module>user-center</module>
+        <!-- 文件中心 -->
+        <module>file-center</module>
+        <!-- 代码生成器 -->
+        <module>code-generator</module>
+        <module>member-center</module>
+        <module>goods-center</module>
+        <module>order-center</module>
+        <module>marking-center</module>
+        <module>cms-center</module>
+
+    </modules>
+</project>

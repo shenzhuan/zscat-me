@@ -1,0 +1,24 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.mall</groupId>
+        <artifactId>mallcloud</artifactId>
+        <version>1.5.0</version>
+    </parent>
+    <artifactId>mall-commons</artifactId>
+    <description>通用组件</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>mall-redis-spring-boot-starter</module>
+        <module>mall-common-spring-boot-starter</module>
+        <module>mall-db-spring-boot-starter</module>
+        <module>mall-swagger2-spring-boot-starter</module>
+        <module>mall-log-spring-boot-starter</module>
+        <module>mall-ribbon-spring-boot-starter</module>
+        <module>mall-auth-client-spring-boot-starter</module>
+        <module>mall-sentinel-spring-boot-starter</module>
+        <module>mall-pay-spring-boot-starter</module>
+    </modules>
+</project>
