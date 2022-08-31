@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="blog-service:war">
-    <output-path>$PROJECT_DIR$/sw-blog/blog-service/target</output-path>
-    <root id="archive" name="blog-service.war">
-      <element id="artifact" artifact-name="blog-service:war exploded" />
-    </root>
-  </artifact>
-</component>

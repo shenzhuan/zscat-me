@@ -1,1 +1,0 @@
-<li><a href="[field:url /]">[field:title /]</a></li>
