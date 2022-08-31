@@ -6,63 +6,79 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="blog-api" />
-        <module name="blog-service" />
-        <module name="blog-web" />
-        <module name="cms-api" />
-        <module name="cms-service" />
-        <module name="cms-web" />
-        <module name="demo-api" />
-        <module name="demo-service" />
-        <module name="demo-web" />
-        <module name="dubbo-cache-starter" />
-        <module name="search-api" />
-        <module name="search-es" />
-        <module name="search-service" />
-        <module name="search-web" />
-        <module name="shop-api" />
-        <module name="shop-h5" />
-        <module name="shop-service" />
-        <module name="shop-web" />
-        <module name="storm-recommend" />
-        <module name="sw-common" />
-        <module name="sw-portl" />
-        <module name="sw_manager" />
+        <module name="sharding-jdbc-demo" />
+        <module name="code-generator" />
+        <module name="cms-center" />
+        <module name="mall-pay-spring-boot-starter" />
+        <module name="order-center" />
+        <module name="sc-admin" />
+        <module name="log-center" />
+        <module name="mall-config" />
+        <module name="mall-auth-client-spring-boot-starter" />
+        <module name="job-admin" />
+        <module name="job-executor-samples" />
+        <module name="txlcn-tm" />
+        <module name="txlcn-demo-common" />
+        <module name="file-center" />
+        <module name="job-core" />
+        <module name="mall-sentinel-spring-boot-starter" />
+        <module name="mall-redis-spring-boot-starter" />
+        <module name="user-center" />
+        <module name="txlcn-demo-spring-service-b" />
+        <module name="goods-center" />
+        <module name="zuul-gateway" />
+        <module name="txlcn-demo-spring-service-c" />
+        <module name="member-center" />
+        <module name="txlcn-demo-spring-service-a" />
+        <module name="mall-log-spring-boot-starter" />
+        <module name="mall-common-spring-boot-starter" />
+        <module name="mall-uaa" />
+        <module name="mall-swagger2-spring-boot-starter" />
+        <module name="mall-ribbon-spring-boot-starter" />
+        <module name="marking-center" />
+        <module name="mall-db-spring-boot-starter" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="blog-api" target="1.7" />
-      <module name="blog-service" target="1.7" />
-      <module name="blog-web" target="1.7" />
-      <module name="cms-api" target="1.7" />
-      <module name="cms-service" target="1.7" />
-      <module name="cms-web" target="1.7" />
-      <module name="demo-api" target="1.7" />
-      <module name="demo-service" target="1.7" />
-      <module name="demo-web" target="1.7" />
-      <module name="dubbo-cache-starter" target="1.7" />
-      <module name="search-api" target="1.7" />
-      <module name="search-es" target="1.7" />
-      <module name="search-service" target="1.7" />
-      <module name="search-web" target="1.7" />
-      <module name="shop-api" target="1.7" />
-      <module name="shop-h5" target="1.7" />
-      <module name="shop-service" target="1.7" />
-      <module name="shop-web" target="1.7" />
-      <module name="storm-recommend" target="1.7" />
-      <module name="sw" target="1.7" />
-      <module name="sw-blog" target="1.7" />
-      <module name="sw-cms" target="1.7" />
-      <module name="sw-cms (1)" target="1.7" />
-      <module name="sw-common" target="1.7" />
-      <module name="sw-demo" target="1.7" />
-      <module name="sw-portl" target="1.7" />
-      <module name="sw-search" target="1.7" />
-      <module name="sw-shop" target="1.7" />
-      <module name="sw-storm" target="1.7" />
-      <module name="sw_admin" target="1.8" />
-      <module name="sw_manager" target="1.8" />
-      <module name="sw_mq" target="1.7" />
+      <module name="cms-center" target="1.8" />
+      <module name="code-generator" target="1.8" />
+      <module name="file-center" target="1.8" />
+      <module name="goods-center" target="1.8" />
+      <module name="job-admin" target="1.7" />
+      <module name="job-core" target="1.7" />
+      <module name="job-executor-samples" target="1.7" />
+      <module name="log-center" target="1.8" />
+      <module name="mall-auth-client-spring-boot-starter" target="1.8" />
+      <module name="mall-business" target="1.8" />
+      <module name="mall-common-spring-boot-starter" target="1.8" />
+      <module name="mall-commons" target="1.8" />
+      <module name="mall-config" target="1.8" />
+      <module name="mall-db-spring-boot-starter" target="1.8" />
+      <module name="mall-demo" target="1.8" />
+      <module name="mall-gateway" target="1.8" />
+      <module name="mall-job" target="1.7" />
+      <module name="mall-log-spring-boot-starter" target="1.8" />
+      <module name="mall-monitor" target="1.8" />
+      <module name="mall-pay-spring-boot-starter" target="1.8" />
+      <module name="mall-redis-spring-boot-starter" target="1.8" />
+      <module name="mall-ribbon-spring-boot-starter" target="1.8" />
+      <module name="mall-sentinel-spring-boot-starter" target="1.8" />
+      <module name="mall-swagger2-spring-boot-starter" target="1.8" />
+      <module name="mall-transaction" target="1.8" />
+      <module name="mall-uaa" target="1.8" />
+      <module name="marking-center" target="1.8" />
+      <module name="member-center" target="1.8" />
+      <module name="order-center" target="1.8" />
+      <module name="sc-admin" target="1.8" />
+      <module name="sharding-jdbc-demo" target="1.8" />
+      <module name="txlcn-demo" target="1.8" />
+      <module name="txlcn-demo-common" target="1.8" />
+      <module name="txlcn-demo-spring-service-a" target="1.8" />
+      <module name="txlcn-demo-spring-service-b" target="1.8" />
+      <module name="txlcn-demo-spring-service-c" target="1.8" />
+      <module name="txlcn-tm" target="1.8" />
+      <module name="user-center" target="1.8" />
+      <module name="zuul-gateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
