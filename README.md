@@ -15,6 +15,8 @@
   * https://mojin.51wangshi.com/admin 平台运营管理
     https://mojin.51wangshi.com/store 商户管理
     https://mojin.51wangshi.com 13146587711 123456
+    ![扫码_搜索联合传播样式-微信标准绿版](https://user-images.githubusercontent.com/9524408/196321066-425dea03-f883-44ce-8d27-b7aa240b101a.png)
+
   * 账号密码：admin/admin
   * 应用监控账号密码：admin/admin
   * 配置中心账号密码：nacos/nacos
